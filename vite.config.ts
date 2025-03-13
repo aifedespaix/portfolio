@@ -18,9 +18,14 @@ import generateSitemap from 'vite-ssg-sitemap'
 import 'vitest/config'
 
 export default defineConfig({
+  server: {
+    host: true,
+    port: 3333,
+  },
   resolve: {
     alias: {
       '~/': `${path.resolve(__dirname, 'src')}/`,
+
     },
   },
 
@@ -70,6 +75,7 @@ export default defineConfig({
       // allow auto import and register components used in markdown
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       dts: 'src/components.d.ts',
+      directoryAsNamespace: true,
     }),
 
     // https://github.com/antfu/unocss

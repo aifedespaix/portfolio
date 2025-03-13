@@ -1,14 +1,49 @@
-button:
-  about: À propos
-  back: Retour
-  go: Essayer
-  home: Accueil
-  toggle_dark: Basculer en mode sombre
-  toggle_langs: Changer de langue
-intro:
-  desc: Exemple d'application Vite
-  dynamic-route: Démo de route dynamique
-  hi: Salut, {name}!
-  aka: Aussi connu sous le nom de
-  whats-your-name: Comment t'appelles-tu ?
+games:
+  crossword-grid:
+    description: Jeu de grille de mots croisés
+    name: Grille de mots croisés
+  play: Jouer maintenant
+  puzzle:
+    description: Jeu de puzzle classique
+    name: Puzzle
+  title: Jeux
+home:
+  description: >-
+    Découvrez mes projets et mes réalisations à travers mes différentes
+    expériences.
+  title: Accueil
+layout:
+  footer:
+    copyright: Tous droits réservés
+  fullscreen: Passer en plein écran
+  header:
+    menu:
+      extend: Étendre
+      reduce: Réduire
+    profile: Profil
+    title: Portfolio Joan T. - Développeur Web
+  nav:
+    bottom:
+      settings: Paramètres
+    category:
+      games: Jeux
+    top:
+      home: Accueil
+      profile: Profil
+      studies: Études
 not-found: Page non trouvée
+profile:
+  myProfile: Mon profil
+  settings: Paramètres
+  title: Profil
+settings:
+  language:
+    label: Changer de langue
+    title: Langue
+  theme:
+    description: Change le thème de l'application
+    label: Changer de thème
+    title: Thème
+  title: Paramètres
+studies:
+  title: Mon parcours universitaire

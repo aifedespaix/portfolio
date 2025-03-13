@@ -1,4 +1,6 @@
-@import './markdown.css';
+@use './colors.css';
+@use './markdown.css';
+@use './scrollbar.css';
 
 html,
 body,
@@ -18,7 +20,7 @@ html.dark {
 }
 
 #nprogress .bar {
-  background: rgb(13, 148, 136);
+  background: var(--sub);
   opacity: 0.75;
   position: fixed;
   z-index: 1031;

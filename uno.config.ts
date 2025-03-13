@@ -12,11 +12,46 @@ import {
   transformerVariantGroup,
 } from 'unocss'
 
+const safelist = [
+  'i-mdi:puzzle',
+  'i-mdi:format-letter-starts-with',  
+  'i-icon-park-outline:code-computer',
+  'i-mdi:map',
+  'i-mdi:map-marker-multiple',
+  'i-mdi:administrator',
+  'i-mdi:video',
+  'i-mdi:text',
+  'i-mdi:robot',
+  'i-mdi:color',
+  'i-mdi:gamepad',
+  'i-mdi:mine',
+  'i-mdi:fit-to-screen',
+  'i-mdi:school',
+  'i-mdi:company',
+]
+
 export default defineConfig({
-  shortcuts: [
-    ['btn', 'px-4 py-1 rounded inline-block bg-teal-700 text-white cursor-pointer !outline-none hover:bg-teal-800 disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50'],
-    ['icon-btn', 'inline-block cursor-pointer select-none opacity-75 transition duration-200 ease-in-out hover:opacity-100 hover:text-teal-600'],
-  ],
+  theme: {
+    breakpoints: {
+      xs: '420px',
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      xxl: '1536px',
+    },
+    colors: {
+      primary: 'var(--primary)',
+      secondary: 'var(--secondary)',
+      tertiary: 'var(--tertiary)',
+      main: 'var(--main)',
+      sub: 'var(--sub)',
+      sup: 'var(--sup)',
+      accent: 'var(--accent)',
+      gold: 'var(--gold)',
+      blue: 'var(--blue)',
+    },
+  },
   presets: [
     presetUno(),
     presetAttributify(),
@@ -37,5 +72,5 @@ export default defineConfig({
     transformerDirectives(),
     transformerVariantGroup(),
   ],
-  safelist: 'prose prose-sm m-auto text-left'.split(' '),
+  safelist: 'prose prose-sm m-auto text-left'.split(' ').concat(safelist),
 })

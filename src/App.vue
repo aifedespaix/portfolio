@@ -3,15 +3,15 @@
 // you can use this to manipulate the document head in any components,
 // they will be rendered correctly in the html results with vite-ssg
 useHead({
-  title: 'Vitesse',
+  title: 'Page d\'accueil - Zebra Pois Bleu',
   meta: [
     {
       name: 'description',
-      content: 'Opinionated Vite Starter Template',
+      content: 'Les jeux de Zebra Pois Bleu',
     },
     {
       name: 'theme-color',
-      content: () => isDark.value ? '#00aba9' : '#ffffff',
+      content: () => isDark.value ? '#083BA0' : '#A3BEF5',
     },
   ],
   link: [
@@ -22,8 +22,10 @@ useHead({
     },
   ],
 })
+
+const route = useRoute()
 </script>
 
 <template>
-  <RouterView />
+  <RouterView :key="route.fullPath" />
 </template>
