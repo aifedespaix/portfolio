@@ -3,11 +3,11 @@
 // you can use this to manipulate the document head in any components,
 // they will be rendered correctly in the html results with vite-ssg
 useHead({
-  title: 'Page d\'accueil - Zebra Pois Bleu',
+  title: 'Page d\'accueil - Aife Portfolio',
   meta: [
     {
       name: 'description',
-      content: 'Les jeux de Zebra Pois Bleu',
+      content: 'Portfolio de Aife',
     },
     {
       name: 'theme-color',

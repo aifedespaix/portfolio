@@ -8,23 +8,23 @@ const navButtonTitle = computed(() => layoutStore.isNavExtended ? t('layout.head
 </script>
 
 <template>
-    <header role="banner" class="h-full flex items-center justify-between p-x-4" >
-      <ButtonIcon
-        transparent
-        class="hidden text-xl"
-        md="block"
-        icon="i-carbon-menu"
-        :title="navButtonTitle"
-        @click="layoutStore.toggleNav"
-      />
+  <header role="banner" class="h-full flex items-center justify-between p-x-4" shadow="md dark:dark-800">
+    <ButtonIcon
+      transparent
+      class="hidden text-xl"
+      md="block"
+      icon="i-carbon-menu"
+      :title="navButtonTitle"
+      @click="layoutStore.toggleNav"
+    />
 
-      <div>{{ t('layout.header.title') }}</div>
+    <div>{{ t('layout.header.title') }}</div>
 
-      <div class="flex items-center gap-2">
-        <ButtonToggleTheme />
-        <router-link to="/profile">
-          <ButtonIcon icon="i-carbon-user" :title="t('layout.header.profile')" />
-        </router-link>
-      </div>
-    </header>
+    <div class="flex items-center gap-2">
+      <ButtonToggleTheme />
+      <router-link to="/profile">
+        <ButtonIcon icon="i-carbon-user" :title="t('layout.header.profile')" />
+      </router-link>
+    </div>
+  </header>
 </template>

@@ -1,0 +1,9 @@
+{
+  "hosting": {
+    "public": "dist",
+    "site": "aife-portfolio",
+    "cleanUrls": true,
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [{ "source": "**", "destination": "/index.html" }]
+  }
+}

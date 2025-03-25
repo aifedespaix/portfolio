@@ -1,0 +1,17 @@
+<script setup lang="ts">
+defineProps<{
+  to: string
+}>()
+</script>
+
+<template>
+  <RouterLink
+    :to="to"
+    class="rounded-full px-2 py-1 text-sm text-white dark:text-white"
+    bg="blue-500 dark:blue-600"
+    hover:bg="blue-600 dark:blue-800"
+    transition="bg duration-300 ease-in-out"
+  >
+    <slot />
+  </RouterLink>
+</template>

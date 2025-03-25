@@ -3,7 +3,7 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <Pager>
+  <Pager size="small">
     <TitleMain>{{ t('profile.myProfile') }}</TitleMain>
 
     <Card>

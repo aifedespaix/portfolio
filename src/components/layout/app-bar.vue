@@ -17,8 +17,8 @@ const links: Link[] = [
     icon: 'i-carbon-home',
   },
   {
-    label: 'Portfolio',
-    href: '/portfolio',
+    label: 'Projets',
+    href: '/projects',
     icon: 'i-icon-park-outline:code-computer',
     big: true,
   },
@@ -43,6 +43,7 @@ function sizeClass(link: Link) {
       transition="background-color duration-300"
       class="h-full flex flex-1 flex-col items-center justify-center p-2"
       hover="bg-secondary"
+      active-class="bg-blue-500/20"
     >
       <div :class="[link.icon, sizeClass(link)]" />
       <div class="font-size-2">

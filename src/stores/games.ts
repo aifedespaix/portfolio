@@ -17,14 +17,14 @@ export const useGamesStore = defineStore('games', () => {
       description: computed(() => t('games.puzzle.description')),
       image: 'image1.jpg',
       to: '/game/puzzle',
-      icon: 'i-mdi-puzzle',
+      icon: 'i-mdi:puzzle',
     },
     {
       name: computed(() => t('games.crossword-grid.name')),
       description: computed(() => t('games.crossword-grid.description')),
       image: 'image2.jpg',
       to: '/game/crossword-grid',
-      icon: 'i-mdi-format-letter-starts-with',
+      icon: 'i-mdi:format-letter-starts-with',
     },
   ])
 

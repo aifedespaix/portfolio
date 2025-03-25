@@ -110,9 +110,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'safari-pinned-tab.svg'],
       manifest: {
-        name: 'Vitesse',
-        short_name: 'Vitesse',
-        theme_color: '#ffffff',
+        name: 'Aife - Portfolio',
+        short_name: 'Aife - Portfolio',
+        theme_color: '#005b96',
         icons: [
           {
             src: '/pwa-192x192.png',

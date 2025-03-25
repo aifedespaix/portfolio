@@ -33,10 +33,10 @@ const canFullscreen = route.meta.canFullscreen
 </script>
 
 <template>
-  <LayoutHeader id="header" bg="primary" class="z-1" />
-  <LayoutNav id="nav" bg="secondary" />
+  <LayoutHeader id="header" bg="light-100" dark="bg-dark-900" class="z-1" />
+  <LayoutNav id="nav" bg="light-100" dark="bg-dark-900" />
 
-  <main id="main" bg="tertiary" class="relative">
+  <main id="main" class="relative">
     <div id="content" ref="content">
       <RouterView />
     </div>
@@ -52,10 +52,10 @@ const canFullscreen = route.meta.canFullscreen
     />
   </main>
 
-  <LayoutAppBar id="app-bar" bg="primary" />
+  <LayoutAppBar id="app-bar" bg="light-100 dark:dark-900" />
 </template>
 
-<style scoped>
+<style>
 /* Variables CSS pour les breakpoints */
 /* todo valeurs copiées de unocss config (si y'a moyen de les récupérer dynamiquement, c'est mieux) */
 #header {
@@ -87,9 +87,11 @@ const canFullscreen = route.meta.canFullscreen
 }
 
 #main {
+  --distance-top: v-bind(0);
+  --distance-bottom: v-bind(appBarHeight);
   min-height: 100dvh;
   padding-bottom: v-bind(appBarHeight);
-  height: calc(100dvh - var(--app-bar-height));
+  height: calc(100dvh - v-bind(appBarHeight));
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -123,7 +125,8 @@ const canFullscreen = route.meta.canFullscreen
   }
 
   #main {
-    --header-height: v-bind(headerHeight);
+    --distance-top: v-bind(headerHeight);
+    --distance-bottom: v-bind(0);
     padding-left: v-bind(navWidth);
     padding-top: v-bind(headerHeight);
     min-height: 100dvh;

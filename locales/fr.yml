@@ -1,3 +1,7 @@
+button:
+  back: Retour
+companies:
+  title: Mes Éxpériences Professionnelles
 games:
   crossword-grid:
     description: Jeu de grille de mots croisés
@@ -8,18 +12,23 @@ games:
     name: Puzzle
   title: Jeux
 home:
+  about: À propos
   description: >-
     Découvrez mes projets et mes réalisations à travers mes différentes
     expériences.
+  technologies:
+    description: Outils, langages et frameworks que j\'utilise
+    title: Technologies
   title: Accueil
+  work: Mon travail
 layout:
   footer:
     copyright: Tous droits réservés
   fullscreen: Passer en plein écran
   header:
     menu:
-      extend: Étendre
-      reduce: Réduire
+      extend: Étendre le menu
+      reduce: Réduire le menu
     profile: Profil
     title: Portfolio Joan T. - Développeur Web
   nav:
@@ -27,23 +36,60 @@ layout:
       settings: Paramètres
     category:
       games: Jeux
+      projects: Projets
     top:
+      companies:
+        description: Les entreprises qui m'ont fait confiance
+        title: Entreprises
       home: Accueil
       profile: Profil
-      studies: Études
+      studies:
+        description: Mon parcours universitaire
+        title: Études
+      technologies:
+        description: Logiciels, languages et frameworks
+        title: Technologies
 not-found: Page non trouvée
+portfolio:
+  projects:
+    title: Mes Projets
 profile:
   myProfile: Mon profil
   settings: Paramètres
   title: Profil
+projects:
+  bot_chat:
+    name: ChatBot de gestion
+  game_enigma:
+    name: Énigmes Interactives
+  game_picross:
+    name: Jeu de Plateau
+  game_saolei:
+    name: Jeu Démineur
+  interface_administration:
+    name: Interface Administration
+  map_game:
+    description: Carte Interractive
+    name: Carte Interactive
+  map_interactive:
+    name: Carte éducative
+  play: En savoir plus
+  simulation_game:
+    name: Simulation de vie
+  video_learning:
+    name: Vidéos Automatisées
+  video_overlay:
+    name: Interfaces Vidéo
 settings:
   language:
     label: Changer de langue
     title: Langue
   theme:
-    description: Change le thème de l'application
+    description: Changer le thème de l'application
     label: Changer de thème
     title: Thème
   title: Paramètres
 studies:
   title: Mon parcours universitaire
+technologies:
+  title: Technologies

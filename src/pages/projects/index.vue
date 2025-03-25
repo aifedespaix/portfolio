@@ -1,3 +1,10 @@
+<script setup lang="ts">
+const { t } = useI18n()
+const projectsStore = useProjectsStore()
+const imagePath = (id: string, image: string) => `/assets/projects/${id}/${image}.webp`
+const projectUrl = (id: string) => `/projects/${id}`
+</script>
+
 <template>
   <Pager>
     <TitleMain>
@@ -7,15 +14,16 @@
     <div
       class="grid grid-cols-1 gap-4"
       xs="grid-cols-2"
-      md="grid-cols-2 p-4"
+      md="grid-cols-2 p-4 "
       lg="grid-cols-3"
       xl="grid-cols-4"
-      xxl="grid-cols-6"
+      xxl="grid-cols-5"
     >
       <router-link
         v-for="project in projectsStore.projectList"
         :key="project.name"
-        :to="project.to"
+        :to="projectUrl(project.id)"
+        xs="aspect-square"
       >
         <Card is-hoverable :footer="t('projects.play')" class="h-full">
           <h2 class="flex items-center gap-2 text-lg font-bold">
@@ -23,12 +31,16 @@
             {{ project.name }}
           </h2>
 
-          <p class="flex-1 text-sub">
-            {{ project.description }}
+          <p class="sizing text-sub overflow-hidden text-ellipsis">
+            {{ project.shortDescription }}
           </p>
 
-          <template #footer>
-                <div>{{ t('projects.play') }}</div>
+          <div class="overflow-hidden rounded-t-lg -m-x4 -m-b4">
+            <img :src="imagePath(project.id, project.image)" :alt="project.name" class="h-full w-full object-cover">
+          </div>
+
+          <template #button>
+            <div>{{ t('projects.play') }}</div>
           </template>
         </Card>
       </router-link>
@@ -36,11 +48,16 @@
   </Pager>
 </template>
 
-<script setup lang="ts">
-const { t } = useI18n()
-const projectsStore = useProjectsStore()
-</script>
-
-
-
-
+<style scoped>
+.sizing {
+  --line-height: 1.5rem;
+  --lines: 2;
+  line-height: var(--line-height);
+  height: calc(var(--line-height) * var(--lines));
+  min-height: calc(var(--line-height) * var(--lines));
+  line-clamp: var(--lines);
+  box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+}
+</style>

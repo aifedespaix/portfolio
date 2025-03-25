@@ -22,7 +22,7 @@ function toggleTheme() {
 </script>
 
 <template>
-  <Pager>
+  <Pager size="small">
     <TitleMain>{{ t('settings.title') }}</TitleMain>
 
     <Card>
@@ -42,6 +42,9 @@ function toggleTheme() {
           {{ loc.label }}
         </option>
       </select>
+      <div class="text-justify text-sm italic" text="red-700 dark:orange-400">
+        Le contenu rédactionnel de l'application n'est pas encore traduit en anglais. N'ayant pas la volonté, actuellement, de travailler avec des professionnels étrangers, je n'ai pas pris le temps de travailler cette traduction. Elle sert simplement d'aperçu de la faisabilité d'une telle traduction.
+      </div>
     </Card>
   </Pager>
 </template>

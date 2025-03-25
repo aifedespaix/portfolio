@@ -27,7 +27,7 @@ function validateStringLength<T extends string>(
 }
 
 export function useSeo(props: SeoProps) {
-  const siteName = 'Zebra Pois Bleu'
+  const siteName = 'Aife : Developpeur Freelance'
 
   // Validation des propriétés
   const pageTitle = validateStringLength<Title>(props.pageTitle, 10 - siteName.length, 70 - siteName.length)

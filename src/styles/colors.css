@@ -1,24 +1,7 @@
-/* Génération automatique des variations */
-:root {
-  --primary: hsl(220, 80%, 80%);
-  --accent: hsl(220, 90%, 75%);
-  --secondary: hsl(215, 15%, 88%);
-  --tertiary: hsl(215, 15%, 90%);
-  --main: hsl(0, 0%, 10%);
-  --sub: hsl(0, 0%, 30%);
-  --sup: hsl(0, 0%, 90%);
-  --gold: hsl(44, 100.00%, 36.10%);
-  --blue: hsl(189, 100.00%, 50.00%);
+Génération automatique des variations :root {
+  --loadBar: oklch(100% 0 0);
 }
 
 :root.dark {
-  --primary: hsl(220, 90%, 33%);
-  --accent: hsl(220, 90%, 25%);
-  --secondary: hsl(215, 15%, 12%);
-  --tertiary: hsl(215, 15%, 10%);
-  --main: hsl(0, 0%, 90%);
-  --sub: hsl(0, 0%, 70%);
-  --sup: hsl(0, 0%, 10%);
-  --gold: hsl(44, 100.00%, 36.10%);
-  --blue: hsl(224, 100.00%, 50.00%);
+  --loadBar: oklch(0% 0 0);
 }

@@ -20,14 +20,17 @@ declare module 'vue-router/auto-routes' {
   export interface RouteNamedMap {
     '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
     '/[...all]': RouteRecordInfo<'/[...all]', '/:all(.*)', { all: ParamValue<true> }, { all: ParamValue<false> }>,
-    '/games': RouteRecordInfo<'/games', '/games', Record<never, never>, Record<never, never>>,
+    '/companies': RouteRecordInfo<'/companies', '/companies', Record<never, never>, Record<never, never>>,
     '/legal': RouteRecordInfo<'/legal', '/legal', Record<never, never>, Record<never, never>>,
     '/profile': RouteRecordInfo<'/profile', '/profile', Record<never, never>, Record<never, never>>,
     '/projects/': RouteRecordInfo<'/projects/', '/projects', Record<never, never>, Record<never, never>>,
-    '/projects/a': RouteRecordInfo<'/projects/a', '/projects/a', Record<never, never>, Record<never, never>>,
+    '/projects/[id]': RouteRecordInfo<'/projects/[id]', '/projects/:id', { id: ParamValue<true> }, { id: ParamValue<false> }>,
+    '/projects/admin-interface': RouteRecordInfo<'/projects/admin-interface', '/projects/admin-interface', Record<never, never>, Record<never, never>>,
     '/projects/game-map': RouteRecordInfo<'/projects/game-map', '/projects/game-map', Record<never, never>, Record<never, never>>,
+    '/projects/map-game': RouteRecordInfo<'/projects/map-game', '/projects/map-game', Record<never, never>, Record<never, never>>,
     '/README': RouteRecordInfo<'/README', '/README', Record<never, never>, Record<never, never>>,
     '/settings': RouteRecordInfo<'/settings', '/settings', Record<never, never>, Record<never, never>>,
     '/studies': RouteRecordInfo<'/studies', '/studies', Record<never, never>, Record<never, never>>,
+    '/technologies': RouteRecordInfo<'/technologies', '/technologies', Record<never, never>, Record<never, never>>,
   }
 }

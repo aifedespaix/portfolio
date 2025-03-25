@@ -6,20 +6,21 @@ const toggleDark = useToggle(isDark)
 
 <template>
   <button
-    class="relative h-8 w-14 inline-flex items-center rounded-full bg-sup shadow-md"
+    class="relative h-8 w-14 inline-flex items-center rounded-full shadow-md"
+    bg="light-100 dark:dark-200"
     role="switch"
     :aria-checked="isDark"
     :title="t('settings.theme.label')"
     @click="toggleDark()"
   >
     <span
-      class="inline-block h-6 w-6 rounded-full bg-sup shadow-lg ease-in-out"
-      :class="isDark ? 'translate-x-7' : 'translate-x-1'"
+      class="bg-sup inline-block h-6 w-6 rounded-full shadow-lg ease-in-out"
+      :class="[isDark ? 'translate-x-7' : 'translate-x-1']"
       transition="transform duration-900 ease-in-out"
     >
       <div
         class="h-full w-full flex items-center justify-center"
-        text="yellow-500 dark:yellow-200"
+        text="yellow-500 dark:blue-400"
       >
         <div i="carbon-sun dark:carbon-moon" />
       </div>

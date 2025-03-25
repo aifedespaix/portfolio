@@ -1,3 +1,7 @@
+button:
+  back: Back
+companies:
+  title: My Professional Experiences
 games:
   crossword-grid:
     description: Classic crossword grid game
@@ -10,6 +14,7 @@ games:
 home:
   description: Educational games
   title: Home
+  work: My work
 layout:
   footer:
     copyright: All rights reserved
@@ -19,21 +24,46 @@ layout:
       extend: Extend
       reduce: Reduce
     profile: Profile
-    title: Zebra Pois Bleu
+    title: Aife - Web Developer
   nav:
     bottom:
       settings: Settings
     category:
       games: Games
+      projects: Projects
     top:
+      companies: Companies
       home: Home
       profile: Profile
       studies: Studies
+      technologies: Technologies
 not-found: Not found
 profile:
   myProfile: My Profile
   settings: Settings
   title: Profile
+projects:
+  bot_chat:
+    name: Management chatbot
+  game_enigma:
+    name: Interactive Enigmas
+  game_picross:
+    name: Board Game
+  game_saolei:
+    name: Minesweeper Game
+  interface_administration:
+    name: Administration interface
+  map_game:
+    description: Interactive map
+    name: Interactive map
+  map_interactive:
+    name: Educational map
+  simulation_game:
+    name: Life Simulation
+  video_learning:
+    name: Automated videos
+  video_overlay:
+    name: Video interfaces
 settings:
   language:
     label: Change language
@@ -45,3 +75,5 @@ settings:
   title: Settings
 studies:
   title: My university journey
+technologies:
+  title: Technologies

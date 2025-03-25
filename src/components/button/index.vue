@@ -13,20 +13,7 @@ function navigate() {
 </script>
 
 <template>
-  <button v-if="!to" class="button">
-    <slot />
-  </button>
-  <button v-else class="button" @click="navigate">
+  <button class="rounded-lg p-2" bg="light-700 dark:dark-900" hover:bg="light-800 dark:dark-950" @click="navigate">
     <slot />
   </button>
 </template>
-
-<style scoped>
-.button {
-  @apply rounded-lg bg-sup p-2;
-}
-
-.button:hover {
-  @apply bg-accent;
-}
-</style>
