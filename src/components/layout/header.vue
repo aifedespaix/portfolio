@@ -4,7 +4,7 @@ import { useLayoutStore } from '~/stores/layout'
 const { t } = useI18n()
 
 const layoutStore = useLayoutStore()
-const navButtonTitle = computed(() => layoutStore.isNavExtended ? t('layout.header.menu.reduce') : t('layout.header.menu.extend'))
+const navButtonTitle = computed(() => layoutStore.isNavExtended ? t('menu.reduce') : t('menu.extend'))
 </script>
 
 <template>
@@ -18,7 +18,7 @@ const navButtonTitle = computed(() => layoutStore.isNavExtended ? t('layout.head
       @click="layoutStore.toggleNav"
     />
 
-    <div>{{ t('layout.header.title') }}</div>
+    <div>{{ t('title') }}</div>
 
     <div class="flex items-center gap-2">
       <ButtonToggleTheme />
@@ -28,3 +28,16 @@ const navButtonTitle = computed(() => layoutStore.isNavExtended ? t('layout.head
     </div>
   </header>
 </template>
+
+<i18n lang="yaml">
+  fr:
+    menu:
+      reduce: "Réduire le menu"
+      extend: "Étendre le menu"
+    title: "Portfolio de Joan Tassel - Développeur Web"
+  en:
+    menu:
+      reduce: "Collapse menu"
+      extend: "Expand menu"
+    title: "Joan Tassel's Portfolio - Web Developer"
+</i18n>

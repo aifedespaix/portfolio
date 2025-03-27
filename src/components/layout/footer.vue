@@ -37,7 +37,7 @@ const links: Link[] = [
 
 <template>
   <footer class="flex flex-col items-center justify-center p-4 pb-[var(--distance-bottom)] italic">
-    <div>{{ t('layout.footer.copyright') }} </div>
+    <div>{{ t('copyright') }} </div>
     <div>&copy; Aife | 2020 - {{ new Date().getFullYear() }}</div>
     <div class="flex justify-center gap-2 p-2">
       <a
@@ -53,3 +53,11 @@ const links: Link[] = [
     </div>
   </footer>
 </template>
+
+<i18n lang="yaml">
+  fr:
+    copyright: "Tous droits réservés"
+
+  en:
+    copyright: "All rights reserved"
+</i18n>
