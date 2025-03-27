@@ -263,7 +263,7 @@ declare global {
   const useStepper: typeof import('@vueuse/core')['useStepper']
   const useStorage: typeof import('@vueuse/core')['useStorage']
   const useStorageAsync: typeof import('@vueuse/core')['useStorageAsync']
-  const useStudyStore: typeof import('./stores/study')['useStudyStore']
+  const useStudyStore: typeof import('./stores/study/study')['useStudyStore']
   const useStyleTag: typeof import('@vueuse/core')['useStyleTag']
   const useSupported: typeof import('@vueuse/core')['useSupported']
   const useSwipe: typeof import('@vueuse/core')['useSwipe']
@@ -329,9 +329,6 @@ declare global {
   // @ts-ignore
   export type { ProjectKey } from './stores/projects'
   import('./stores/projects')
-  // @ts-ignore
-  export type { Study } from './stores/study'
-  import('./stores/study')
 }
 
 // for vue template auto import
@@ -589,7 +586,6 @@ declare module 'vue' {
     readonly useStepper: UnwrapRef<typeof import('@vueuse/core')['useStepper']>
     readonly useStorage: UnwrapRef<typeof import('@vueuse/core')['useStorage']>
     readonly useStorageAsync: UnwrapRef<typeof import('@vueuse/core')['useStorageAsync']>
-    readonly useStudyStore: UnwrapRef<typeof import('./stores/study')['useStudyStore']>
     readonly useStyleTag: UnwrapRef<typeof import('@vueuse/core')['useStyleTag']>
     readonly useSupported: UnwrapRef<typeof import('@vueuse/core')['useSupported']>
     readonly useSwipe: UnwrapRef<typeof import('@vueuse/core')['useSwipe']>

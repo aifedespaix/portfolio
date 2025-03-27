@@ -1,17 +1,17 @@
 import type { Project } from '~/types/project'
 import { acceptHMRUpdate, defineStore } from 'pinia'
-import { mapEducationData } from '~/composables/projects/map-education.data'
-import { interfaceAdministrationData } from '~/composables/projects/interface-administration.data'
-import { videoLearningData } from '~/composables/projects/video-learning'
 import { chatBotData } from '~/composables/projects/chat-bot.data'
-import { miniGamesData } from '~/composables/projects/mini-games.data'
 import { game666Data } from '~/composables/projects/game-666.data'
+import { interfaceAdministrationData } from '~/composables/projects/interface-administration.data'
+import { mapEducationData } from '~/composables/projects/map-education.data'
 import { mapGameData } from '~/composables/projects/map-game.data'
+import { miniGamesData } from '~/composables/projects/mini-games.data'
+import { videoLearningData } from '~/composables/projects/video-learning'
 
 export type ProjectKey = 'map-game' | 'map-education' | 'interface-administration' | 'video-learning' |
-  'bot-chat'  | 'mini-games' | 'game-666'
+  'bot-chat' | 'mini-games' | 'game-666'
 
-export const useProjectsStore = defineStore('projects', () => {  
+export const useProjectsStore = defineStore('projects', () => {
   const projectList = ref<Record<ProjectKey, Project>>({
     'map-game': mapGameData,
     'video-learning': videoLearningData,

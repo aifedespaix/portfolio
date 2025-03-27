@@ -8,19 +8,66 @@ interface NavItem {
 }
 
 export const useNavStore = defineStore('nav', () => {
-  const { t } = useI18n()
+  const { t } = useI18n({
+    messages: {
+      fr: {
+        top: {
+          technologies: {
+            title: 'Technologies',
+            description: 'Technologies que j\'utilise',
+          },
+          companies: {
+            title: 'Entreprises',
+            description: 'Les entreprises qui m\'ont fait confiance.',
+          },
+          studies: {
+            title: 'Études',
+            description: 'Mon parcours universitaire.',
+          },
+        },
+        category: {
+          projects: {
+            title: 'Projets',
+            description: 'Mes projets personnels.',
+          },
+        },
+      },
+      en: {
+        top: {
+          technologies: {
+            title: 'Technologies',
+            description: 'Technologies I use',
+          },
+          companies: {
+            title: 'Companies',
+            description: 'Companies that trusted me.',
+          },
+          studies: {
+            title: 'Studies',
+            description: 'My academic background.',
+          },
+        },
+        category: {
+          projects: {
+            title: 'Projects',
+            description: 'My personal projects.',
+          },
+        },
+      },
+    },
+  })
 
   const main = ref<NavItem[]>([
-    { name: computed(() => t('layout.nav.top.technologies.title')), to: '/technologies', icon: 'i-mdi:tools', description: computed(() => t('layout.nav.top.technologies.description')) },
-    { name: computed(() => t('layout.nav.top.companies.title')), to: '/companies', icon: 'i-mdi:company', description: computed(() => t('layout.nav.top.companies.description')) },
-    { name: computed(() => t('layout.nav.top.studies.title')), to: '/studies', icon: 'i-mdi:school', description: computed(() => t('layout.nav.top.studies.description')) },
+    { name: computed(() => t('top.technologies.title')), to: '/technologies', icon: 'i-mdi:tools', description: computed(() => t('top.technologies.description')) },
+    { name: computed(() => t('top.companies.title')), to: '/companies', icon: 'i-mdi:company', description: computed(() => t('top.companies.description')) },
+    { name: computed(() => t('top.studies.title')), to: '/studies', icon: 'i-mdi:school', description: computed(() => t('top.studies.description')) },
   ])
 
   const projects = ref<NavItem>({
-    name: computed(() => t('layout.nav.category.projects.title')),
+    name: computed(() => t('top.projects.title')),
     to: '/projects',
     icon: 'i-icon-park-outline:code-computer',
-    description: computed(() => t('layout.nav.category.projects.description')),
+    description: computed(() => t('top.projects.description')),
   })
 
   return {

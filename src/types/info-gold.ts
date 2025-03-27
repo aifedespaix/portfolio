@@ -1,8 +1,8 @@
 export interface GoldAward {
   value?: {
     qte: number
-    prefix?: string
-    suffix?: string
+    prefix?: string | ComputedRef<string>
+    suffix?: string | ComputedRef<string>
   }
-  name: string
+  name: string | ComputedRef<string>
 }

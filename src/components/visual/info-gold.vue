@@ -21,9 +21,9 @@ const props = defineProps<{
       bg="yellow-300 dark:yellow-500"
       text="yellow-900 dark:yellow-100"
     >
-      <div class="i-mdi:diploma" />
-      <div md="whitespace-nowrap">
-        {{ props.info.name }}
+      <div class="i-mdi:diploma min-w-6" />
+      <div md="whitespace-nowrap overflow-hidden text-ellipsis" :title="info.name">
+        {{ info.name }}
       </div>
     </div>
   </div>

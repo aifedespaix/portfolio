@@ -73,6 +73,10 @@ const colors = [
       </Card>
     </div>
 
+    <TitleH2>
+      {{ t('home.journey') }}
+    </TitleH2>
+
     <Card class="gap-4 text-justify">
       <div class="card-grid">
         <Image
@@ -153,7 +157,8 @@ const colors = [
     home:
       title: "Accueil"
       about: "À propos"
-      work: "Mon parcours"
+      work: "Mon Travail"
+      journey: "Mon parcours"
     profile:
       role: "Développeur web freelance et créateur de contenu"
       name: "Joan Tassel"
@@ -183,7 +188,8 @@ const colors = [
       home:
         title: "Home"
         about: "About"
-        work: "My Journey"
+        work: "My Work"
+        journey: "My Journey"
       profile:
         role: "Freelance Web Developer and Content Creator"
         name: "Joan Tassel"

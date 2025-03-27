@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { vIntersectionObserver } from '@vueuse/components'
 import { useHeadTag } from '~/composables/head-tag'
-import { useStudyStore } from '~/stores/study'
+import { useStudyStore } from '~/stores/study/study'
 
 const { t } = useI18n()
 

@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import type { Study } from '~/stores/study'
+import type { Study } from '~/stores/study/study'
 
 defineProps<{
   data: Study
 }>()
+
+const { t } = useI18n()
 </script>
 
 <template>
@@ -61,9 +63,18 @@ defineProps<{
       <a :href="data.url" target="_blank" class="flex items-center gap-2 rounded-md p-1 text-blue-600 dark:text-blue-400" transition="bg duration-300 ease-in-out" hover="bg-black/20">
         <div class="i-mdi:web" />
         <div>
-          Site de l'école
+          {{ t('school.link-title') }}
         </div>
       </a>
     </div>
   </Card>
 </template>
+
+<i18n lang="yml">
+  en:
+    school:
+      link-title: 'School website'
+  fr:
+    school:
+      link-title: 'Site de l\'école'
+</i18n>
