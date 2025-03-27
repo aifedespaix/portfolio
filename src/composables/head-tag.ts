@@ -27,7 +27,7 @@ export function useHeadTag(input: UseHeadTagInput) {
     seoInput.ogImage = `${domain}/assets${path}/${input.imagePath}`
   }
   else {
-    seoInput.ogImage = `${domain}/assets/meta.webp`
+    seoInput.ogImage = `${domain}/aife-banniere-portfolio.webp`
   }
   seoInput.ogUrl = pageUrl
   seoInput.ogLocale = 'fr_FR'

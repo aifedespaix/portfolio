@@ -9,7 +9,7 @@ defineOptions({
 const { t } = useI18n()
 useHeadTag({
   title: 'Accueil',
-  description: 'Découvrez mon parcours et mes projets',
+  description: 'Découvrez mon parcours et mes projets.',
   type: 'website',
 })
 
