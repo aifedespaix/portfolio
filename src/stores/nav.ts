@@ -17,10 +17,10 @@ export const useNavStore = defineStore('nav', () => {
   ])
 
   const projects = ref<NavItem>({
-    name: computed(() => t('layout.nav.category.projects')),
+    name: computed(() => t('layout.nav.category.projects.title')),
     to: '/projects',
     icon: 'i-icon-park-outline:code-computer',
-    description: computed(() => t('layout.nav.category.projects')),
+    description: computed(() => t('layout.nav.category.projects.description')),
   })
 
   return {

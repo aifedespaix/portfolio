@@ -35,7 +35,7 @@ const projectUrl = (id: string) => `/projects/${id}`
             {{ project.shortDescription }}
           </p>
 
-          <div class="overflow-hidden rounded-t-lg -m-x4 -m-b4">
+          <div class="overflow-hidden rounded-t-lg -m-x4 -m-b4 flex-1">
             <img :src="imagePath(project.id, project.image)" :alt="project.name" class="h-full w-full object-cover">
           </div>
 

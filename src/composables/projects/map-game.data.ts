@@ -5,8 +5,15 @@ export const mapGameData: Project = {
   name: 'Carte Interactive',
   shortDescription: `Une Carte Interactive servant de support à un jeu vidéo d'exploration.`,
   description: `Une Carte Interactive servant de support à un jeu vidéo d'exploration. Les enjeux sont de donner des informations rapidement au joueur pour qu'il puisse progresser efficacement. Le format d'une carte était le plus pertinent. Comme c'est un jeu console, l'interface doit être simple et ergonomique sur mobile, avec tout de même une interface adaptée pour les écrans plus larges.`,
-  image: 'map-game-sample',
+  image: 'map-game',
   icon: 'i-mdi:map',
+  links: [
+    {
+      name: 'Carte Interactive',
+      url: 'https://aife.io/map/totk',
+      icon: 'i-mdi:map',
+    },
+  ],
   technologies: [
     {
       name: 'Vue3',
@@ -42,7 +49,7 @@ export const mapGameData: Project = {
     {
       image: 'map-game-filter',
       title: 'Fonctionnalité de filtrage',
-      description: `Par soucis de lisibilité et de performances, il faut limiter le nombre d'éléments affichés sur la carte. Pour cela, j'utilise un filtre qui permet de nefficher que les points d'intérêt correspondant à la recherche du joueur.`,
+      description: `Par soucis de lisibilité et de performances, il faut limiter le nombre d'éléments affichés sur la carte. Pour cela, j'utilise un filtre qui permet de n'afficher que les points d'intérêt correspondant à la recherche du joueur.`,
     },
   ],
   difficulties: [

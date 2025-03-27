@@ -1,10 +1,17 @@
 <script setup lang="ts">
 import { vIntersectionObserver } from '@vueuse/components'
+import { useHeadTag } from '~/composables/head-tag'
 import { useStudyStore } from '~/stores/study'
 
 const { t } = useI18n()
-const studyStore = useStudyStore()
 
+useHeadTag({
+  title: 'Mes études',
+  description: `Mon parcours universitaire, mes diplômes et mes formations.`,
+  type: 'website',
+})
+
+const studyStore = useStudyStore()
 const activeTargetId = ref<string | null>(null)
 
 const router = useRouter()

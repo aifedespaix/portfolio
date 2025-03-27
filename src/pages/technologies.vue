@@ -1,5 +1,13 @@
 <script setup lang="ts">
+import { useHeadTag } from '~/composables/head-tag'
+
 const { t } = useI18n()
+
+useHeadTag({
+  title: 'Technologies & Logiciels',
+  description: `Les technologies, langages, frameworks, bibliothèques, logiciels et outils que j'utilise.`,
+  type: 'website',
+})
 
 interface Technology {
   name: string
@@ -25,7 +33,7 @@ interface Library {
 
 interface Creation {
   name: string | ComputedRef<string>
-  to: string
+  id: string
 }
 const projectsStore = useProjectsStore()
 const technologies: Record<string, Technology> = {
@@ -46,10 +54,11 @@ const technologies: Record<string, Technology> = {
         utilisation: `J'ai utilisé Vue.js pour la création de sites, interfaces de gestion, et overlays interactifs.`,
         apports: `Vue est le framework qui m'a le plus attiré, de pars son approche orientée HTML de la logique. C'est avec l'arrivée de Vue 3 que je l'ai intégré à une majorité de mes projets.`,
         creations: [
-          projectsStore.projectList.mapInteractive,
-          projectsStore.projectList.mapInteractive,
-          projectsStore.projectList.gamePicross,
-          projectsStore.projectList.interfaceAdministration,
+          projectsStore.projectList['map-game'],
+          projectsStore.projectList['map-education'],
+          projectsStore.projectList['interface-administration'],
+          projectsStore.projectList['game-666'],
+          projectsStore.projectList['mini-games'],
         ],
       },
       {
@@ -61,21 +70,7 @@ const technologies: Record<string, Technology> = {
         utilisation: `J'utilise principalement React pour la réalisation de vidéos automatisées grâce à la librairie Remotion. J'en connais les bases, mais ne le reserve que pour cette utilisation.`,
         apports: ``,
         creations: [
-          projectsStore.projectList.videoLearning,
-          projectsStore.projectList.videoOverlay,
-        ],
-      },
-      {
-        name: 'Leaflet',
-        description: 'Leaflet est une librairie JavaScript pour la création de cartes interactives.',
-        url: 'https://leafletjs.com/',
-        experience: new Date().getFullYear() - 2020,
-        icon: 'i-mdi:leaf',
-        utilisation: `J'utilise Leaflet pour la création de cartes interactives.`,
-        apports: `La simplicité d'utilisation de Leaflet m'a permis de gagner du temps lors de la création de cartes.`,
-        creations: [
-          projectsStore.projectList.mapInteractive,
-          projectsStore.projectList.mapEducative,
+          projectsStore.projectList['video-learning'],
         ],
       },
       {
@@ -87,6 +82,19 @@ const technologies: Record<string, Technology> = {
         utilisation: `Angular fut mon premier framework front end que j'ai découvert. Son approche orientée composants et son architecture imposant une découpe stricte du code m'ont ouvert à de nombreux concepts que j'utilise aujourd'hui.`,
       },
       {
+        name: 'Leaflet',
+        description: 'Leaflet est une librairie JavaScript pour la création de cartes interactives.',
+        url: 'https://leafletjs.com/',
+        experience: new Date().getFullYear() - 2020,
+        icon: 'i-mdi:leaf',
+        utilisation: `J'utilise Leaflet pour la création de cartes interactives.`,
+        apports: `La simplicité d'utilisation de Leaflet m'a permis de gagner du temps lors de la création de cartes.`,
+        creations: [
+          projectsStore.projectList['map-education'],
+          projectsStore.projectList['map-game'],
+        ],
+      },
+      {
         name: 'NestJS',
         description: 'NestJS est un framework pour la création d\'applications Node.js. Il impose un cadre pour la structure du code, mais offre une grande flexibilité permettant de répondre à des besoins variés.',
         url: 'https://nestjs.com/',
@@ -95,7 +103,7 @@ const technologies: Record<string, Technology> = {
         utilisation: `J'ai utilisé NestJS pour la création d'API REST et GraphQL, de services d'authentification, de stockage de fichiers.`,
         apports: `Ayant pas mal travaillé sur AngularJS, j'ai tout de suite accroché à la philosophie de NestJS. Aujourd'hui je l'utilise pour beaucoup de projets backend, de grande ou petite envergure.`,
         creations: [
-          projectsStore.projectList.botChat,
+          projectsStore.projectList['bot-chat'],
         ],
       },
       {
@@ -107,7 +115,7 @@ const technologies: Record<string, Technology> = {
         utilisation: `J'ai utilisé Firebase pour la sauvegarde de données, l'authentification, les données en temps réel dans des projets où j'avais besoin d'un service rapide à mettre en place.`,
         apports: `Firebase me fait gagner beaucoup de temps quand je dois concevoir stocker des données lors d'un projet où les résultats doivent être rapides.`,
         creations: [
-          projectsStore.projectList.interfaceAdministration,
+          projectsStore.projectList['interface-administration'],
         ],
       },
       {
@@ -118,6 +126,9 @@ const technologies: Record<string, Technology> = {
         icon: 'i-tabler:brand-threejs',
         utilisation: `J'utilise souvent cette technologie pour la création de projets où je souhaite intégrer des graphismes 3D sur des projets persos. Que ce soit des petits jeux sur navigateur ou des graphismes 3D pour des sites web.`,
         apports: `Three.js m'a ouvert au monde du développement en 3D et aux jeux vidéos. J'ai beaucoup progressé sur la programmation Orienté Object et les Design Patterns. J'ai également pu travailler avec des moteurs Physiques, notamment Rapier, pour intégrer un système de gestion des collisions.`,
+        creations: [
+          projectsStore.projectList['mini-games'],
+        ],
       },
 
     ],
@@ -147,7 +158,7 @@ const technologies: Record<string, Technology> = {
         icon: 'i-mdi:wordpress',
         utilisation: `J'ai utilisé WordPress pour la création de sites web à destination d'autoentrepreneurs et d'associations. L'intérêt principal de WordPress est de pouvoir laisser le client gérer son contenu sans avoir besoin de connaissances en programmation. Mon travail consiste principalement à concevoir des thèmes WordPress adaptés à leurs besoins.`,
         creations: [
-          projectsStore.projectList.mapEducative,
+          projectsStore.projectList['map-education'],
         ],
         apports: `J'ai appris travailler le référencement naturel, les bonnes pratiques de sécurité, et d'accessibilité.`,
       },
@@ -305,11 +316,11 @@ const logiciels: Record<string, Logiciel> = {
 
       <div v-if="technologie.libraries?.length" class="mt-6">
         <TitleH3>Bibliothèques et Frameworks associés</TitleH3>
-        <div class="grid mt-4 gap-4" sm="grid-cols-2">
+        <div class="grid gap-4" sm="grid-cols-2">
           <div
             v-for="lib in technologie.libraries"
             :key="lib.name"
-            class="rounded-lg p-4"
+            class="flex flex-col rounded-lg p-4"
           >
             <div class="mb-2 flex items-center gap-2">
               <div :class="lib.icon" class="text-2xl" text="blue-600 dark:blue-400" />
@@ -318,31 +329,33 @@ const logiciels: Record<string, Logiciel> = {
               </div>
             </div>
 
-            <p class="mb-2 text-sm italic">
-              {{ lib.description }}
-            </p>
-            <p class="mb-2 text-sm">
-              {{ lib.utilisation }}
-            </p>
-            <p v-if="lib.apports" class="mb-2 text-sm">
-              {{ lib.apports }}
-            </p>
-            <a
-              :href="lib.url"
-              target="_blank"
-              class="mt-2 flex items-center gap-2 text-sm text-blue-600 dark:text-blue-400"
-              hover="underline"
-            >
-              <div class="i-mdi:web text-sm" />
-              <div>Documentation</div>
-            </a>
+            <div class="flex-1 text-justify">
+              <p class="mb-2 text-sm italic">
+                {{ lib.description }}
+              </p>
+              <p class="mb-2 text-sm">
+                {{ lib.utilisation }}
+              </p>
+              <p v-if="lib.apports" class="mb-2 text-sm">
+                {{ lib.apports }}
+              </p>
+              <a
+                :href="lib.url"
+                target="_blank"
+                class="mt-2 flex items-center gap-2 text-sm text-blue-600 dark:text-blue-400"
+                hover="underline"
+              >
+                <div class="i-mdi:web text-sm" />
+                <div>Documentation</div>
+              </a>
+            </div>
 
             <div v-if="lib.creations?.length" class="mt-2">
               <div class="mb-1 text-sm font-bold">
                 Réalisations :
               </div>
               <div class="flex flex-wrap gap-2">
-                <LinkMini v-for="creation in lib.creations" :key="creation.to" :to="creation.to">
+                <LinkMini v-for="creation in lib.creations" :key="creation.id" :to="`/projects/${creation.id}`">
                   {{ creation.name }}
                 </LinkMini>
               </div>

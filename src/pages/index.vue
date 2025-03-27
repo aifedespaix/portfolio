@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useSeo } from '~/composables/seo'
+import { useHeadTag } from '~/composables/head-tag'
 import { useNavStore } from '~/stores/nav'
 
 defineOptions({
@@ -7,10 +7,10 @@ defineOptions({
 })
 
 const { t } = useI18n()
-useSeo({
-  pageTitle: t('home.title'),
-  description: t('home.description'),
-  image: 'https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000',
+useHeadTag({
+  title: 'Accueil',
+  description: 'Découvrez mon parcours et mes projets',
+  type: 'website',
 })
 
 const navStore = useNavStore()
@@ -34,12 +34,18 @@ const colors = [
     </TitleH2>
 
     <Card>
-      <div class="flex items-center justify-between">
-        <div class="font-bold">
+      <div class="flex items-center justify-between gap-4">
+        <div class="text-nowrap font-bold">
           Joan Tassel
         </div>
-        <div>Développeur web</div>
-        <div class="h-12 w-12 rounded-full bg-gray-200 dark:bg-gray-800" />
+        <div class="text-center">
+          Développeur web freelance et créateur de contenu
+        </div>
+        <Image
+          class="aspect-square rounded-full"
+          src="/assets/home/aife.webp" alt="Photo de Profil Joan Tassel"
+          :width="64" :height="64"
+        />
       </div>
     </Card>
 
@@ -47,7 +53,7 @@ const colors = [
       {{ t('home.work') }}
     </TitleH2>
 
-    <div class="grid grid-cols-1 gap-2" sm="grid-cols-2" md="grid-cols-2" lg="grid-cols-4" xl="grid-cols-5">
+    <div class="grid grid-cols-1 gap-2" sm="grid-cols-2" md="grid-cols-2" lg="grid-cols-4">
       <Card
         v-for="(card, index) in cards" :key="card.name" :to="card.to"
         :class="colors[index % colors.length]"
@@ -110,6 +116,6 @@ const colors = [
 
 <style scoped>
 .card-grid img {
-  @apply w-40 p-2;
+  @apply w-40 p-2 filter-saturate-50;
 }
 </style>

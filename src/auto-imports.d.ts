@@ -9,6 +9,7 @@ declare global {
   const EffectScope: typeof import('vue')['EffectScope']
   const asyncComputed: typeof import('@vueuse/core')['asyncComputed']
   const autoResetRef: typeof import('@vueuse/core')['autoResetRef']
+  const chatBotData: typeof import('./composables/projects/chat-bot.data')['chatBotData']
   const computed: typeof import('vue')['computed']
   const computedAsync: typeof import('@vueuse/core')['computedAsync']
   const computedEager: typeof import('@vueuse/core')['computedEager']
@@ -43,6 +44,7 @@ declare global {
   const ignorableWatch: typeof import('@vueuse/core')['ignorableWatch']
   const inject: typeof import('vue')['inject']
   const injectLocal: typeof import('@vueuse/core')['injectLocal']
+  const interfaceAdministrationData: typeof import('./composables/projects/interface-administration.data')['interfaceAdministrationData']
   const isDark: typeof import('./composables/dark')['isDark']
   const isDefined: typeof import('@vueuse/core')['isDefined']
   const isProxy: typeof import('vue')['isProxy']
@@ -50,7 +52,8 @@ declare global {
   const isReadonly: typeof import('vue')['isReadonly']
   const isRef: typeof import('vue')['isRef']
   const makeDestructurable: typeof import('@vueuse/core')['makeDestructurable']
-  const mapGameData: typeof import('./composables/map-game.data')['mapGameData']
+  const mapEducationData: typeof import('./composables/projects/map-education.data')['mapEducationData']
+  const mapGameData: typeof import('./composables/projects/map-game.data')['mapGameData']
   const markRaw: typeof import('vue')['markRaw']
   const nextTick: typeof import('vue')['nextTick']
   const onActivated: typeof import('vue')['onActivated']
@@ -189,6 +192,7 @@ declare global {
   const useGamesStore: typeof import('./stores/games')['useGamesStore']
   const useGeolocation: typeof import('@vueuse/core')['useGeolocation']
   const useHead: typeof import('@vueuse/head')['useHead']
+  const useHeadTag: typeof import('./composables/head-tag')['useHeadTag']
   const useI18n: typeof import('vue-i18n')['useI18n']
   const useId: typeof import('vue')['useId']
   const useIdle: typeof import('@vueuse/core')['useIdle']
@@ -296,6 +300,7 @@ declare global {
   const useWindowFocus: typeof import('@vueuse/core')['useWindowFocus']
   const useWindowScroll: typeof import('@vueuse/core')['useWindowScroll']
   const useWindowSize: typeof import('@vueuse/core')['useWindowSize']
+  const videoLearningData: typeof import('./composables/projects/video-learning')['videoLearningData']
   const watch: typeof import('vue')['watch']
   const watchArray: typeof import('@vueuse/core')['watchArray']
   const watchAtMost: typeof import('@vueuse/core')['watchAtMost']
@@ -321,6 +326,9 @@ declare global {
   // @ts-ignore
   export type { Company } from './stores/company'
   import('./stores/company')
+  // @ts-ignore
+  export type { ProjectKey } from './stores/projects'
+  import('./stores/projects')
   // @ts-ignore
   export type { Study } from './stores/study'
   import('./stores/study')
@@ -372,7 +380,6 @@ declare module 'vue' {
     readonly isReadonly: UnwrapRef<typeof import('vue')['isReadonly']>
     readonly isRef: UnwrapRef<typeof import('vue')['isRef']>
     readonly makeDestructurable: UnwrapRef<typeof import('@vueuse/core')['makeDestructurable']>
-    readonly mapGameData: UnwrapRef<typeof import('./composables/map-game.data')['mapGameData']>
     readonly markRaw: UnwrapRef<typeof import('vue')['markRaw']>
     readonly nextTick: UnwrapRef<typeof import('vue')['nextTick']>
     readonly onActivated: UnwrapRef<typeof import('vue')['onActivated']>
@@ -511,6 +518,7 @@ declare module 'vue' {
     readonly useGamesStore: UnwrapRef<typeof import('./stores/games')['useGamesStore']>
     readonly useGeolocation: UnwrapRef<typeof import('@vueuse/core')['useGeolocation']>
     readonly useHead: UnwrapRef<typeof import('@vueuse/head')['useHead']>
+    readonly useHeadTag: UnwrapRef<typeof import('./composables/head-tag')['useHeadTag']>
     readonly useI18n: UnwrapRef<typeof import('vue-i18n')['useI18n']>
     readonly useId: UnwrapRef<typeof import('vue')['useId']>
     readonly useIdle: UnwrapRef<typeof import('@vueuse/core')['useIdle']>

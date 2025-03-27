@@ -1,5 +1,7 @@
+import { ProjectKey } from "~/stores/projects"
+
 export interface Project {
-  id: string
+  id: ProjectKey
   name: string
   description: string
   shortDescription: string
@@ -8,6 +10,13 @@ export interface Project {
   explains: Explain[]
   difficulties: string[]
   icon: string
+  links?: {
+    name: string
+    more?: string
+    url: string
+    icon: string
+    type?: 'youtube' | 'tiktok'
+  }[]
 }
 
 interface Technology {

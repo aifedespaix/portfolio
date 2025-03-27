@@ -35,7 +35,11 @@ const links = ref<Links>({
     {
       ...navStore.projects,
       links: [
-        ...Object.values(projectStore.projectList).map(project => ({ name: project.name, to: project.to, icon: project.icon })),
+        ...Object.values(projectStore.projectList).map(project => ({
+          name: project.name,
+          to: `/projects/${project.id}`,
+          icon: project.icon,
+        })),
       ],
     },
 

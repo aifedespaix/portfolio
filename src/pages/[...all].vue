@@ -1,6 +1,14 @@
 <script setup lang="ts">
+import { useHeadTag } from '~/composables/head-tag'
+
 const { t } = useI18n()
 const router = useRouter()
+
+useHeadTag({
+  title: '404 Page non trouvée',
+  description: `Désolé, cette page n'existe pas.`,
+  type: 'website',
+})
 </script>
 
 <template>

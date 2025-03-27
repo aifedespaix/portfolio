@@ -1,7 +1,14 @@
 <script setup lang="ts">
+import { useHeadTag } from '~/composables/head-tag'
 import { loadLanguageAsync } from '~/modules/i18n'
 
 const { locale, t } = useI18n()
+
+useHeadTag({
+  title: 'Paramètres',
+  description: `Paramètres du site : Couleurs, langue, etc.`,
+  type: 'website',
+})
 
 async function changeLocale(event: Event) {
   const target = event.target as HTMLSelectElement

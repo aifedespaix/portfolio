@@ -1,8 +1,15 @@
 <script setup lang="ts">
 import { vIntersectionObserver } from '@vueuse/components'
+import { useHeadTag } from '~/composables/head-tag'
 import { useCompanyStore } from '~/stores/company'
 
 const { t } = useI18n()
+
+useHeadTag({
+  title: 'Entreprises',
+  description: `Les entreprises qui m'ont fait confiance.`,
+  type: 'website',
+})
 
 const companyStore = useCompanyStore()
 

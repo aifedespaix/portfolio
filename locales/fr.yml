@@ -12,7 +12,7 @@ games:
     name: Puzzle
   title: Jeux
 home:
-  about: À propos
+  about: Bienvenue sur mon Portfolio
   description: >-
     Découvrez mes projets et mes réalisations à travers mes différentes
     expériences.
@@ -36,7 +36,9 @@ layout:
       settings: Paramètres
     category:
       games: Jeux
-      projects: Projets
+      projects: 
+        title: Projets
+        description: Quelques projets que j'ai réalisés
     top:
       companies:
         description: Les entreprises qui m'ont fait confiance
@@ -73,7 +75,7 @@ projects:
     name: Carte Interactive
   map_interactive:
     name: Carte éducative
-  play: En savoir plus
+  play: Découvrir le projet
   simulation_game:
     name: Simulation de vie
   video_learning:
