@@ -4,12 +4,14 @@ import type { Company } from '~/stores/company'
 defineProps<{
   company: Company
 }>()
+
+const { t } = useI18n()
 </script>
 
 <template>
   <Card>
     <div class="flex items-center gap-2">
-      <img :src="company.logo.src" :alt="company.name" class="h-14 w-14 rounded-full" :class="company.logo.classes ">
+      <img :src="company.logo.src" :alt="company.name" class="h-14 w-14 rounded-full" :class="company.logo.classes ?? ''">
       <div>
         <TitleH2 class="mb-0! pb-0!">
           {{ company.name }}
@@ -37,11 +39,11 @@ defineProps<{
 
     <div class="max-w-120 self-center rounded-md p-2">
       <TitleH3>
-        Compétences Principales
+        {{ t('company.competencies.title') }}
       </TitleH3>
       <div class="flex flex-wrap justify-center gap-2">
         <div
-          v-for="competency in company.competencies" :key="competency.name"
+          v-for="competency in company.competencies" :key="competency.icon"
           class="grid grid-rows-2 aspect-square max-w-40 min-w-30 flex-1 rounded-md px-2 py-1 text-sm font-bold"
           hover="shadow-md animate-rubber-band"
           transition="shadow duration-300 ease-in-out"
@@ -59,7 +61,7 @@ defineProps<{
       <div class="flex flex-wrap justify-center gap-2">
         <a
           v-for="url in company.urls"
-          :key="url.name"
+          :key="url.url"
           :href="url.url"
           target="_blank"
           class="flex items-center gap-2 rounded-md p-1 text-blue-600 dark:text-blue-400"
@@ -76,6 +78,13 @@ defineProps<{
   </Card>
 </template>
 
-<style scoped>
-
-</style>
+<i18n lang="yaml">
+  en:
+    company:
+      competencies:
+        title: Main competencies
+  fr:
+    company:
+      competencies:
+        title: Compétences principales
+</i18n>

@@ -29,10 +29,25 @@ useHeadTag({
   <Pager>
     <ProjectDetails v-if="data" :data="data" />
     <div v-else>
-      <h1>Ce Projet n'est pas détaillé pour le moment</h1>
-      <Button @click="router.back()">
-        {{ t('button.back') }}
-      </Button>
+      <TitleMain>
+        {{ t('error.title') }}
+      </TitleMain>
+      <div class="flex justify-center">
+        <Button @click="router.back()">
+          {{ t('error.back') }}
+        </Button>
+      </div>
     </div>
   </Pager>
 </template>
+
+<i18n lang="yaml">
+fr:
+  error:
+    title: Ce Projet n'est pas détaillé pour le moment
+    back: Retour
+en:
+  error:
+    title: This project is not detailed for the moment
+    back: Back
+</i18n>

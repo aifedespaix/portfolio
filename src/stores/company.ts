@@ -3,14 +3,14 @@ import { acceptHMRUpdate, defineStore } from 'pinia'
 
 export interface Company {
   id: string
-  name: string
-  location: string
-  description: string
-  work: string
-  workDescription: string
+  name: ComputedRef<string> | string
+  location: ComputedRef<string> | string
+  description: ComputedRef<string> | string
+  work: ComputedRef<string> | string
+  workDescription: ComputedRef<string> | string
   icon: string
   competencies: {
-    name: string
+    name: ComputedRef<string> | string
     icon: string
   }[]
   date: {
@@ -19,7 +19,7 @@ export interface Company {
   }
   urls:
   {
-    name: string
+    name: ComputedRef<string> | string
     url: string
     icon?: string
   }[]
@@ -33,13 +33,16 @@ export interface Company {
 }
 
 export const useCompanyStore = defineStore('company', () => {
+  const { t } = useI18n({
+  })
+
   const teliae = {
-    name: 'Teliae',
-    location: 'Taluyers, France (69)',
-    description: 'Teliae est une entreprise proposant des solutions logistiques pour les transporteurs (Transport Management System).',
+    name: computed(() => t('teliae.name')),
+    location: computed(() => t('teliae.location')),
+    description: computed(() => t('teliae.description')),
     urls: [
       {
-        name: 'Site de l\'entreprise',
+        name: computed(() => t('teliae.url.name')),
         url: 'https://www.teliae.fr',
       },
     ],
@@ -50,9 +53,9 @@ export const useCompanyStore = defineStore('company', () => {
   }
 
   const aife = {
-    name: 'Aife',
-    location: 'Alençon, France (61)',
-    description: 'Aife est le nom que j\'ai choisi pour mon entreprise en tant que freelance. J\'y regroupe mon travail en tant que développeur web mais également mes activités en tant que créateur de contenu.',
+    name: computed(() => t('aife.name')),
+    location: computed(() => t('aife.location')),
+    description: computed(() => t('aife.description')),
     logo: {
       src: '/assets/companies/aife-logo.webp',
     },
@@ -61,194 +64,124 @@ export const useCompanyStore = defineStore('company', () => {
   const list: Company[] = [
     {
       id: 'az-network',
-      name: 'AZ Network',
-      location: 'Alençon, France (61)',
-      description: 'AZ Network est une entreprise travaillant sur la mise en place et la maintenance de solutions CRM et ERP.',
-      work: 'Stage Développeur Web',
+      name: computed(() => t('az-network.name')),
+      location: computed(() => t('az-network.location')),
+      description: computed(() => t('az-network.description')),
+      work: computed(() => t('az-network.work')),
+      workDescription: computed(() => t('az-network.workDescription')),
       icon: 'i-mdi:web',
-      workDescription: 'J\'ai travaillé sur la mise a jour de l\'ERP Génerix chez différents client. J\'ai dû faire de la recherche de données via requêtes SQL, mise à jour de fichiers pour adapter les mises à jours spécifiques via des expressions régulières.',
       competencies: [
-        {
-          name: 'Développement Web',
-          icon: 'i-mdi:web',
-        },
-        {
-          name: 'Base de données',
-          icon: 'i-mdi:database',
-        },
-        {
-          name: 'Expressions Régulières',
-          icon: 'i-mdi:regex',
-        },
+        { name: computed(() => t('az-network.competencies.web')), icon: 'i-mdi:web' },
+        { name: computed(() => t('az-network.competencies.database')), icon: 'i-mdi:database' },
+        { name: computed(() => t('az-network.competencies.regex')), icon: 'i-mdi:regex' },
       ],
-      date: {
-        start: '2015',
-      },
+      date: { start: '2015' },
       urls: [
-        {
-          name: 'Site de l\'entreprise',
-          url: 'https://www.aznetwork.eu',
-        },
+        { name: computed(() => t('website.name')), url: 'https://www.aznetwork.eu' },
       ],
-      logo: {
-        src: '/assets/companies/az_network-logo.webp',
-        classes: ['bg-light-500 dark:bg-light-800'],
-      },
+      logo: { src: '/assets/companies/az_network-logo.webp', classes: ['bg-light-500 dark:bg-light-800'] },
       infoGold: {
         value: {
           qte: 4,
-          suffix: 'Mois',
+          suffix: computed(() => t('az-network.infoGold.suffix')),
         },
-        name: 'Stage Développeur Web',
+        name: computed(() => t('az-network.infoGold.name')),
       },
     },
     {
       id: 'teliae',
       ...teliae,
-      work: 'Stage Développeur Web',
-      workDescription: 'Je commencé dans cette entreprise par un stage. Mon rôle consistait à maintenir et ajouter des fonctionnalités sur une application de gestion de parcours de livraisons.',
+      urls: [
+        { name: computed(() => t('website.name')), url: 'https://www.teliae.fr' },
+      ],
+      logo: { src: '/assets/companies/teliae-logo.webp', classes: ['bg-light-500 dark:bg-light-800'] },
+      work: computed(() => t('teliae-1.work')),
+      workDescription: computed(() => t('teliae-1.workDescription')),
       icon: 'i-mdi:bug',
       competencies: [
-        {
-          name: 'Développement Web',
-          icon: 'i-mdi:web',
-        },
-        {
-          name: 'Programmation Back End',
-          icon: 'i-mdi:language-php',
-        },
-        {
-          name: 'Suivi client',
-          icon: 'i-mdi:account-group',
-        },
+        { name: computed(() => t('teliae-1.competencies.web')), icon: 'i-mdi:web' },
+        { name: computed(() => t('teliae-1.competencies.language_php')), icon: 'i-mdi:language-php' },
+        { name: computed(() => t('teliae-1.competencies.account_group')), icon: 'i-mdi:account-group' },
       ],
-      date: {
-        start: '2016',
-      },
+      date: { start: '2016' },
       infoGold: {
         value: {
           qte: 3,
-          suffix: 'Mois',
+          suffix: computed(() => t('teliae-1.infoGold.suffix')),
         },
-        name: 'Stage Développeur Web',
+        name: computed(() => t('teliae-1.infoGold.name')),
       },
     },
     {
       id: 'teliae-2',
       ...teliae,
-      work: 'Alternant Développeur Web',
-      workDescription: 'J\'ai eu la chance d\'être affecté à de multiples missions à ambitions variables. Parmi mes plus grosses missions, j\'ai du repenser l\'interface visuelle d\'une application ancienne. J\'ai dû mettre en place une solution pour adapter l\'interface aux nouveaux standards d\'accessibilité, tout en conservant une interface simple et intuitive. Le tout en accompagnants les utilisateurs dans l\'évolution de leur outil.',
+      urls: [
+        { name: computed(() => t('website.name')), url: 'https://www.teliae.fr' },
+      ],
+      logo: { src: '/assets/companies/teliae-logo.webp', classes: ['bg-light-500 dark:bg-light-800'] },
+      work: computed(() => t('teliae-2.work')),
+      workDescription: computed(() => t('teliae-2.workDescription')),
       icon: 'i-mdi:design',
       competencies: [
-        {
-          name: 'Développement Web',
-          icon: 'i-mdi:web',
-        },
-        {
-          name: 'Design UX',
-          icon: 'i-mdi:palette',
-        },
-        {
-          name: 'Suivi client',
-          icon: 'i-mdi:account-group',
-        },
+        { name: computed(() => t('teliae-2.competencies.web')), icon: 'i-mdi:web' },
+        { name: computed(() => t('teliae-2.competencies.palette')), icon: 'i-mdi:palette' },
+        { name: computed(() => t('teliae-2.competencies.account_group')), icon: 'i-mdi:account-group' },
       ],
-      date: {
-        start: '2016',
-        end: '2019',
-      },
+      date: { start: '2016', end: '2019' },
       infoGold: {
         value: {
           qte: 3,
-          suffix: 'ans',
+          suffix: computed(() => t('teliae-2.infoGold.suffix')),
         },
-        name: 'Alternant Développeur Web Full Stack',
+        name: computed(() => t('teliae-2.infoGold.name')),
       },
     },
     {
       id: 'aife',
       ...aife,
-      work: 'Créateur de contenu',
-      workDescription: 'J\'ai commencé à créer des vidéos à destination de Youtube. Le concept se base sur l\'explication et la vulgarisation de sujets techniques complexes dans les jeux vidéos. Principalement les Glitchs et le Speedrun. Les vidéos ont une volonté première de faire comprendre des mécaniques complexes dans un langage accessible pour tous. J\'ai pu atteindre plus de 100 000 abonnées ainsi que des millions de vues. Je me suis diversifié sur la réalisation de vidéos en direct et de streamings.',
+      work: computed(() => t('aife-1.work')),
+      workDescription: computed(() => t('aife-1.workDescription')),
       icon: 'i-mdi:video-check',
       competencies: [
-        {
-          name: 'Montage Vidéo',
-          icon: 'i-mdi:video',
-        },
-        {
-          name: 'Animation de stream',
-          icon: 'i-mdi:speak',
-        },
-        {
-          name: 'Vulgarisation',
-          icon: 'i-mdi:teach-poll',
-        },
+        { name: computed(() => t('aife-1.competencies.video')), icon: 'i-mdi:video' },
+        { name: computed(() => t('aife-1.competencies.speak')), icon: 'i-mdi:speak' },
+        { name: computed(() => t('aife-1.competencies.teach_poll')), icon: 'i-mdi:teach-poll' },
       ],
-      date: {
-        start: '2019',
-        end: 'Aujourd\'hui',
-      },
+      date: { start: '2019', end: 'Aujourd\'hui' },
       infoGold: {
         value: {
           qte: new Date().getFullYear() - 2019,
-          suffix: 'ans',
+          suffix: computed(() => t('aife-1.infoGold.suffix')),
         },
-        name: 'Créateur de contenu',
+        name: computed(() => t('aife-1.infoGold.name')),
       },
       urls: [
-        {
-          name: 'Site de l\'entreprise',
-          url: 'https://aife.io',
-        },
-        {
-          name: 'Youtube',
-          url: 'https://www.youtube.com/@aife',
-          icon: 'i-mdi:youtube',
-        },
-        {
-          name: 'Twitch',
-          url: 'https://www.twitch.tv/aife',
-          icon: 'i-mdi:twitch',
-        },
+        { name: computed(() => t('website.name')), url: 'https://aife.io' },
+        { name: 'Youtube', url: 'https://www.youtube.com/@aife', icon: 'i-mdi:youtube' },
+        { name: 'Twitch', url: 'https://www.twitch.tv/aife', icon: 'i-mdi:twitch' },
       ],
     },
     {
       id: 'aife-2',
       ...aife,
-      work: 'Développeur Web',
+      work: computed(() => t('aife-2.work')),
+      workDescription: computed(() => t('aife-2.workDescription')),
       icon: 'i-mdi:important-devices',
-      workDescription: 'Mes activités sont diverses, que ce soit de la création de sites vitrines, de la maintenance de sites existants, de l\'intégration de contenu. Mes compétences en développement, en design, et en création de contenu me permettent de répondre à un large panel de demandes. Je profite de mes compétences pour développer des outils variés pour faciliter mon travail de créateur de contenu.',
       competencies: [
-        {
-          name: 'Développement Web',
-          icon: 'i-mdi:web',
-        },
-        {
-          name: 'Design UX',
-          icon: 'i-mdi:palette',
-        },
-        {
-          name: 'Intégration de contenu',
-          icon: 'i-mdi:content-copy',
-        },
+        { name: computed(() => t('aife-2.competencies.web')), icon: 'i-mdi:web' },
+        { name: computed(() => t('aife-2.competencies.palette')), icon: 'i-mdi:palette' },
+        { name: computed(() => t('aife-2.competencies.content_copy')), icon: 'i-mdi:content-copy' },
       ],
-      date: {
-        start: '2019',
-        end: 'Aujourd\'hui',
-      },
+      date: { start: '2019', end: 'Aujourd\'hui' },
       infoGold: {
         value: {
           qte: new Date().getFullYear() - 2019,
-          suffix: 'ans',
+          suffix: computed(() => t('aife-2.infoGold.suffix')),
         },
-        name: 'Développeur Web Full Stack',
+        name: computed(() => t('aife-2.infoGold.name')),
       },
       urls: [
-        {
-          name: 'Site de l\'entreprise',
-          url: '/',
-        },
+        { name: computed(() => t('website.name')), url: '/' },
       ],
     },
   ].reverse()

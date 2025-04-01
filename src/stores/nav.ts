@@ -11,10 +11,12 @@ export const useNavStore = defineStore('nav', () => {
   const { t } = useI18n({
     messages: {
       fr: {
+        home: 'Accueil',
+        settings: 'Paramètres',
         top: {
           technologies: {
             title: 'Technologies',
-            description: 'Technologies que j\'utilise',
+            description: 'Les Technologies que j\'utilise',
           },
           companies: {
             title: 'Entreprises',
@@ -23,6 +25,10 @@ export const useNavStore = defineStore('nav', () => {
           studies: {
             title: 'Études',
             description: 'Mon parcours universitaire.',
+          },
+          projects: {
+            title: 'Projets',
+            description: 'Mes projets personnels.',
           },
         },
         category: {
@@ -33,6 +39,8 @@ export const useNavStore = defineStore('nav', () => {
         },
       },
       en: {
+        home: 'Home',
+        settings: 'Settings',
         top: {
           technologies: {
             title: 'Technologies',
@@ -46,6 +54,10 @@ export const useNavStore = defineStore('nav', () => {
             title: 'Studies',
             description: 'My academic background.',
           },
+          projects: {
+            title: 'Projects',
+            description: 'My personal projects.',
+          },
         },
         category: {
           projects: {
@@ -56,6 +68,9 @@ export const useNavStore = defineStore('nav', () => {
       },
     },
   })
+
+  const home = computed(() => t('home'))
+  const settings = computed(() => t('settings'))
 
   const main = ref<NavItem[]>([
     { name: computed(() => t('top.technologies.title')), to: '/technologies', icon: 'i-mdi:tools', description: computed(() => t('top.technologies.description')) },
@@ -73,6 +88,8 @@ export const useNavStore = defineStore('nav', () => {
   return {
     main,
     projects,
+    home,
+    settings,
   }
 })
 

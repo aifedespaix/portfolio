@@ -6,9 +6,10 @@ export const interfaceAdministrationData: Project = {
   shortDescription: `Application web à destination d'un streamer et de ses modérateurs.`,
   description: `Une application web qui regroupe une multitude de fonctionnalités pour la gestion d'un stream et des vidéos. Génération des overlay dynamiques reliés à une base de données Firebase. Génération des commandes, sondages, messages automatiques, modération des messages, gestion de la musique, génération de planning.`,
   image: 'interface-administration',
-  icon: 'i-mdi:administrator',  links: [
+  icon: 'i-mdi:administrator',
+  links: [
     {
-      name: 'Lien du projet ',
+      name: `Interface d'Administration`,
       more: '(Fonctionnalités accessibles aux modérateurs uniquement)',
       url: 'https://aife.io/',
       icon: 'i-mdi:calendar',

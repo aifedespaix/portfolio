@@ -5,6 +5,7 @@ const props = defineProps<{
   data: Project
 }>()
 
+const { t } = useI18n()
 const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}.webp`
 </script>
 
@@ -26,7 +27,7 @@ const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}
     </header>
 
     <section v-if="data.links" class="mb-12">
-      <TitleH2>Lien{{ data.links.length > 1 ? 's' : '' }} du projet</TitleH2>
+      <TitleH2>{{ t('project.link', { count: data.links.length }) }}</TitleH2>
       <div class="grid grid-cols-1 gap-4" xs="grid-cols-2" xl="grid-cols-4">
         <a
           v-for="link in data.links"
@@ -34,11 +35,11 @@ const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}
           :href="link.url"
           target="_blank"
           rel="noopener noreferrer"
-          class="flex items-center gap-3 p-4 rounded-lg transition-colors duration-300"
+          class="flex items-center gap-3 rounded-lg p-4 transition-colors duration-300"
           :class="{
             'bg-red-500 hover:bg-red-600': link.type === 'youtube',
             'bg-dark-500 hover:bg-dark-600': link.type === 'tiktok',
-            'bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700': !['youtube', 'tiktok'].includes(link.type ?? '')
+            'bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700': !['youtube', 'tiktok'].includes(link.type ?? ''),
           }"
         >
           <div class="text-2xl">
@@ -47,13 +48,16 @@ const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}
             />
           </div>
           <div class="flex flex-col gap-1">
-            <span class="font-medium" :class="{
-            'text-white': ['youtube', 'tiktok'].includes(link.type ?? ''),
-            'text-gray-900 dark:text-white': !['youtube', 'tiktok'].includes(link.type ?? '')
-          }">
-            {{ link.name }}
-          </span>
-          <span v-if="link.more" class="text-xs" text="gray-500 dark:gray-400">{{ link.more }}</span>
+            <span
+              class="font-medium"
+              :class="{
+                'text-white': ['youtube', 'tiktok'].includes(link.type ?? ''),
+                'text-gray-900 dark:text-white': !['youtube', 'tiktok'].includes(link.type ?? ''),
+              }"
+            >
+              {{ link.name }}
+            </span>
+            <span v-if="link.more" class="text-xs" text="gray-500 dark:gray-400">{{ link.more }}</span>
           </div>
         </a>
       </div>
@@ -62,7 +66,7 @@ const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}
     <!-- Jalons / Explications -->
     <section class="mb-12">
       <TitleH2>
-        Points clés du projet
+        {{ t('project.keyPoints') }}
       </TitleH2>
       <div class="grid gap-8 md:grid-cols-2">
         <div
@@ -91,7 +95,7 @@ const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}
     <!-- Difficultés -->
     <section class="mb-12">
       <TitleH2>
-        Défis rencontrés
+        {{ t('project.difficulties') }}
       </TitleH2>
       <ul class="space-y-4">
         <li
@@ -111,7 +115,7 @@ const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}
     <!-- Technologies utilisées -->
     <section>
       <TitleH2>
-        Technologies Utilisées
+        {{ t('project.technologies') }}
       </TitleH2>
       <div class="flex flex-wrap gap-3">
         <a
@@ -143,3 +147,20 @@ const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}
   opacity: 0;
 }
 </style>
+
+<i18n lang="yaml">
+  en:
+    project:
+      title: Project details
+      link: Project Link | Project Links
+      technologies: Tools and technologies
+      difficulties: Challenges
+      keyPoints: Key points
+  fr:
+    project:
+      title: Détails du projet
+      link: Lien du projet | Liens du projet
+      technologies: Technologies utilisées
+      difficulties: Défis rencontrés
+      keyPoints: Points clés du projet
+</i18n>

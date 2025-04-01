@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useMatomo } from '~/composables/matomo'
+
 defineComponent({
   name: 'DefaultLayout',
 })
@@ -7,9 +9,9 @@ const { t } = useI18n()
 const headerHeight = ref('60px')
 const largeNavWidth = '240px'
 const smallNavWidth = '56px'
-// const navWidthLarge = ref('256px')
 const appBarHeight = ref('3rem')
 
+useMatomo()
 const layoutStore = useLayoutStore()
 
 const navWidth = computed(() => layoutStore.isNavExtended ? largeNavWidth : smallNavWidth)

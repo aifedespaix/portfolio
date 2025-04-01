@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { useHeadTag } from '~/composables/head-tag';
+import { useHeadTag } from '~/composables/head-tag'
 
 const { t } = useI18n()
 
 useHeadTag({
-  title: 'Mon profil',
-  description: `Paramètres et informations personnelles.`,
+  title: t('title'),
+  description: t('description'),
   type: 'website',
 })
 </script>
@@ -23,3 +23,18 @@ useHeadTag({
     </Card>
   </Pager>
 </template>
+
+<i18n lang="yaml">
+  en:
+    title: My profile
+    description: Settings and personal information.
+    profile:
+      myProfile: My profile
+      settings: Settings
+  fr:
+    title: Mon profil
+    description: Paramètres et informations personnelles.
+    profile:
+      myProfile: Mon profil
+      settings: Paramètres
+</i18n>

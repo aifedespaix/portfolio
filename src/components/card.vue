@@ -53,7 +53,7 @@ const classes = computed(() => {
 
     <div
       v-if="$slots.button"
-      class="mt-2 rounded-b-lg text-center -m-4 p-2"
+      class="mt-2 rounded-b-lg p-2 text-center -m-4"
       bg="blue-300/50 dark:blue-800/50"
     >
       <slot name="button" />

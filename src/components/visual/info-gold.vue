@@ -10,7 +10,7 @@ const props = defineProps<{
   <div class="flex gap-2" :class="{ 'award-container': props.info.value }">
     <div
       v-if="props.info.value"
-      class="award-value aspect-square flex items-center justify-center gap-2 rounded-full p-2 text-sm"
+      class="award-value aspect-square w-15 flex items-center justify-center gap-2 overflow-hidden text-ellipsis rounded-full p-2 text-nowrap text-sm"
       border="4 yellow-300 dark:yellow-500"
       text="yellow-900 dark:yellow-100"
     >

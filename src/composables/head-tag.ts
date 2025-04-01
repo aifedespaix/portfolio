@@ -1,8 +1,8 @@
 import type { UseSeoMetaInput } from '@unhead/vue'
 
 interface UseHeadTagInput {
-  title: string
-  description: string
+  title: ComputedRef<string> | string
+  description: ComputedRef<string> | string
   type: 'website' | 'article'
   imagePath?: string
 }
@@ -21,6 +21,7 @@ export function useHeadTag(input: UseHeadTagInput) {
   seoInput.title = input.title
   seoInput.description = input.description
   seoInput.ogTitle = input.title
+  seoInput.ogSiteName = siteTitle
   seoInput.ogDescription = input.description
   seoInput.ogType = input.type
   if (input.imagePath) {

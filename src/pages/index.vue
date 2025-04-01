@@ -8,8 +8,8 @@ defineOptions({
 
 const { t } = useI18n()
 useHeadTag({
-  title: 'Accueil',
-  description: 'Découvrez mon parcours et mes projets.',
+  title: t('page.title'),
+  description: t('page.description'),
   type: 'website',
 })
 
@@ -17,17 +17,17 @@ const navStore = useNavStore()
 const cards = computed(() => [navStore.projects].concat(navStore.main))
 
 const colors = [
-  'text-red-500 dark:text-red-400',
-  'text-blue-500 dark:text-blue-400',
-  'text-green-500 dark:text-green-400',
-  'text-yellow-500 dark:text-yellow-400',
-  'text-purple-500 dark:text-purple-400',
+  'text-red-600 dark:text-red-400',
+  'text-blue-600 dark:text-blue-400',
+  'text-green-600 dark:text-green-400',
+  'text-yellow-600 dark:text-yellow-400',
+  'text-purple-600 dark:text-purple-400',
 ]
 </script>
 
 <template>
   <Pager>
-    <TitleMain>{{ t('home.title') }}</TitleMain>
+    <TitleMain>{{ t('page.title') }}</TitleMain>
 
     <TitleH2 class="px-2">
       {{ t('home.about') }}
@@ -43,9 +43,9 @@ const colors = [
         </div>
         <Image
           class="aspect-square rounded-full"
-          src="/assets/home/aife.webp"
+          src="/assets/home/aife_profile.webp"
           :alt="t('images.profile_alt')"
-          :width="64" :height="64"
+          :width="128" :height="128"
         />
       </div>
     </Card>
@@ -59,7 +59,7 @@ const colors = [
         v-for="(card, index) in cards" :key="card.name" :to="card.to"
         :class="colors[index % colors.length]"
         class="flex items-center justify-center"
-        md="aspect-square"
+        lg="aspect-square"
       >
         <TitleH3 class="h-10">
           {{ card.name }}
@@ -77,7 +77,7 @@ const colors = [
       {{ t('home.journey') }}
     </TitleH2>
 
-    <Card class="gap-4 text-justify">
+    <Card class="gap-4" md="text-justify">
       <div class="card-grid">
         <Image
           src="/assets/home/work-begin.webp"
@@ -90,9 +90,9 @@ const colors = [
           {{ t('journey.discovery.part1') }}<br>
           <i18n-t keypath="journey.discovery.part2" tag="span">
             <template #link>
-              <Link to="https://openclassrooms.com/fr/" external>
+              <LinkExtern to="https://openclassrooms.com/fr/">
                 OpenClassrooms
-              </Link>
+              </LinkExtern>
             </template>
           </i18n-t><br>
           {{ t('journey.discovery.part3') }}<br>
@@ -111,14 +111,14 @@ const colors = [
         <p class="align-middle">
           <i18n-t keypath="journey.professional.content" tag="span">
             <template #link1>
-              <RouterLink to="/studies">
-                parcours universitaire
-              </RouterLink>
+              <LinkIntern to="/studies">
+                {{ t('journey.professional.university_link') }}
+              </LinkIntern>
             </template>
             <template #link2>
-              <Link to="/companies">
-                en entreprise
-              </Link>
+              <LinkIntern to="/companies">
+                {{ t('journey.professional.company_link') }}
+              </LinkIntern>
             </template>
           </i18n-t>
         </p>
@@ -135,9 +135,9 @@ const colors = [
         <p>
           <i18n-t keypath="journey.freelance.content" tag="span">
             <template #link1>
-              <Link to="/projects" :title="t('journey.freelance.projects_link')">
+              <LinkIntern to="/projects" :title="t('journey.freelance.projects_link')">
                 {{ t('journey.freelance.projects_link') }}
-              </Link>
+              </LinkIntern>
             </template>
           </i18n-t>
         </p>
@@ -154,8 +154,10 @@ const colors = [
 
 <i18n lang="yaml">
   fr:
-    home:
+    page:
       title: "Accueil"
+      description: "Bienvenue sur mon portfolio. Découvrez mon parcours et mes projets."
+    home:
       about: "À propos"
       work: "Mon Travail"
       journey: "Mon parcours"
@@ -185,33 +187,35 @@ const colors = [
       freelance_alt: "Freelance"
 
   en:
-      home:
-        title: "Home"
-        about: "About"
-        work: "My Work"
-        journey: "My Journey"
-      profile:
-        role: "Freelance Web Developer and Content Creator"
-        name: "Joan Tassel"
-      journey:
-        discovery:
-          title: "Discovery of Computer Science"
-          part1: "I became passionate about computer science at the age of 12 when I gained access to an internet connection on the family computer."
-          part2: "I quickly became interested in the structure of websites and learned the basics of HTML and CSS thanks to Site du Zéro (now {link})."
-          part3: "I soon started developing my own websites and learning programming languages. I improved my skills in PHP and SQL, which allowed me to deeply understand the structure of the applications I wanted to create."
-          part4: "I then developed various websites, whether for freelancers, associations, or personal sites offering help with video games."
-        professional:
-          title: "My Professionalization"
-          content: "After high school, I decided to pursue computer science as a career. I spent six years in a {link1} focused on computer science and project management. During this time, I became convinced that I wanted to work in web development. I also had the opportunity to take my first steps {link2} through various internships and three years of work-study."
-          university_link: "university path"
-          company_link: "in a company"
-        freelance:
-          title: "My Freelance Journey"
-          content: "At the end of my studies, I decided to start my own business. I carried out various projects as a freelance web developer and also turned to content creation in video format on YouTube and Twitch. Today, I work for various clients while continuing to develop my {link1}."
-          projects_link: "own projects"
-      images:
-        profile_alt: "Profile Picture of Joan Tassel"
-        discovery_alt: "Discovering Coding"
-        university_alt: "University"
-        freelance_alt: "Freelance"
+    page:
+      title: "Home"
+      description: "Welcome to my portfolio. Discover my journey and projects."
+    home:
+      about: "About"
+      work: "My Work"
+      journey: "My Journey"
+    profile:
+      role: "Freelance Web Developer and Content Creator"
+      name: "Joan Tassel"
+    journey:
+      discovery:
+        title: "Discovery of Computer Science"
+        part1: "I became passionate about computer science at the age of 12 when I gained access to an internet connection on the family computer."
+        part2: "I quickly became interested in the structure of websites and learned the basics of HTML and CSS thanks to Site du Zéro (now {link})."
+        part3: "I soon started developing my own websites and learning programming languages. I improved my skills in PHP and SQL, which allowed me to deeply understand the structure of the applications I wanted to create."
+        part4: "I then developed various websites, whether for freelancers, associations, or personal sites offering help with video games."
+      professional:
+        title: "My Professionalization"
+        content: "After high school, I decided to pursue computer science as a career. I spent six years in a {link1} focused on computer science and project management. During this time, I became convinced that I wanted to work in web development. I also had the opportunity to take my first steps {link2} through various internships and three years of work-study."
+        university_link: "university path"
+        company_link: "in company"
+      freelance:
+        title: "My Freelance Journey"
+        content: "At the end of my studies, I decided to start my own business. I carried out various projects as a freelance web developer and also turned to content creation in video format on YouTube and Twitch. Today, I work for various clients while continuing to develop my {link1}."
+        projects_link: "projects"
+    images:
+      profile_alt: "Profile Picture of Joan Tassel"
+      discovery_alt: "Discovering Coding"
+      university_alt: "University"
+      freelance_alt: "Freelance"
 </i18n>

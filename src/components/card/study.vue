@@ -1,11 +1,16 @@
 <script setup lang="ts">
-import type { Study } from '~/stores/study/study'
+import type { Study } from '~/stores/study'
 
 defineProps<{
   data: Study
 }>()
 
 const { t } = useI18n()
+useHeadTag({
+  title: t('title'),
+  description: t('description'),
+  type: 'website',
+})
 </script>
 
 <template>
@@ -33,11 +38,11 @@ const { t } = useI18n()
 
     <div class="max-w-120 self-center rounded-md p-2">
       <TitleH3>
-        Compétences notables
+        {{ t('school.competencies.title') }}
       </TitleH3>
       <div class="flex flex-wrap justify-center gap-2">
         <div
-          v-for="competency in data.competencies" :key="competency.name"
+          v-for="competency in data.competencies" :key="competency.id"
           class="grid grid-rows-2 aspect-square max-w-40 min-w-30 flex-1 rounded-md px-2 py-1 text-sm font-bold"
           hover="shadow-md animate-rubber-band"
           transition="shadow duration-300 ease-in-out"
@@ -60,21 +65,35 @@ const { t } = useI18n()
           name: data.diploma,
         }"
       />
-      <a :href="data.url" target="_blank" class="flex items-center gap-2 rounded-md p-1 text-blue-600 dark:text-blue-400" transition="bg duration-300 ease-in-out" hover="bg-black/20">
+      <a
+        :href="data.url"
+        target="_blank"
+        class="flex items-center gap-2 rounded-md p-1 text-blue-600 dark:text-blue-400"
+        transition="bg duration-300 ease-in-out"
+        hover="bg-black/20"
+      >
         <div class="i-mdi:web" />
         <div>
-          {{ t('school.link-title') }}
+          {{ t('school.link_title') }}
         </div>
       </a>
     </div>
   </Card>
 </template>
 
-<i18n lang="yml">
+<i18n lang="yaml">
   en:
+    title: My Studies
+    description: My academic background, diplomas and training.
     school:
-      link-title: 'School website'
+      link_title: School website
+      competencies:
+        title: Significant skills
   fr:
+    title: Mes Études
+    description: Mon parcours universitaire, mes diplômes et mes formations.
     school:
-      link-title: 'Site de l\'école'
+      link_title: Site de l'école
+      competencies:
+        title: Compétences notables
 </i18n>

@@ -47,17 +47,28 @@ const links: Link[] = [
         target="_blank"
         class="text-xl" :class="[link.hover]"
         transition="text duration-300 ease-in-out"
+        :title="link.name"
       >
         <div :class="link.icon" />
       </a>
     </div>
+    <RouterLink to="/rgpd/privacy-policy">
+      {{ t('privacy') }}
+    </RouterLink>
+    <RouterLink to="/rgpd/legal">
+      {{ t('legal') }}
+    </RouterLink>
   </footer>
 </template>
 
 <i18n lang="yaml">
   fr:
     copyright: "Tous droits réservés"
+    privacy: "Politique de confidentialité"
+    legal: "Mentions légales"
 
   en:
     copyright: "All rights reserved"
+    privacy: "Privacy Policy"
+    legal: "Legal Notice"
 </i18n>

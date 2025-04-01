@@ -4,16 +4,17 @@ import { chatBotData } from '~/composables/projects/chat-bot.data'
 import { game666Data } from '~/composables/projects/game-666.data'
 import { interfaceAdministrationData } from '~/composables/projects/interface-administration.data'
 import { mapEducationData } from '~/composables/projects/map-education.data'
-import { mapGameData } from '~/composables/projects/map-game.data'
 import { miniGamesData } from '~/composables/projects/mini-games.data'
 import { videoLearningData } from '~/composables/projects/video-learning'
+import { useMapGameStore } from './projects/map-game'
 
 export type ProjectKey = 'map-game' | 'map-education' | 'interface-administration' | 'video-learning' |
   'bot-chat' | 'mini-games' | 'game-666'
 
 export const useProjectsStore = defineStore('projects', () => {
+  const mapGameStore = useMapGameStore()
   const projectList = ref<Record<ProjectKey, Project>>({
-    'map-game': mapGameData,
+    'map-game': mapGameStore.project,
     'video-learning': videoLearningData,
     'bot-chat': chatBotData,
     'mini-games': miniGamesData,

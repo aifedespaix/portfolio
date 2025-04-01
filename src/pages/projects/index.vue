@@ -3,17 +3,22 @@ const { t } = useI18n()
 const projectsStore = useProjectsStore()
 const imagePath = (id: string, image: string) => `/assets/projects/${id}/${image}.webp`
 const projectUrl = (id: string) => `/projects/${id}`
+
+useHeadTag({
+  title: computed(() => t('page.title')),
+  description: computed(() => t('page.description')),
+  type: 'website',
+})
 </script>
 
 <template>
   <Pager>
     <TitleMain>
-      {{ t('portfolio.projects.title') }}
+      {{ t('page.title') }}
     </TitleMain>
 
     <div
       class="grid grid-cols-1 gap-4"
-      xs="grid-cols-2"
       md="grid-cols-2 p-4 "
       lg="grid-cols-3"
       xl="grid-cols-4"
@@ -23,24 +28,26 @@ const projectUrl = (id: string) => `/projects/${id}`
         v-for="project in projectsStore.projectList"
         :key="project.name"
         :to="projectUrl(project.id)"
-        xs="aspect-square"
+        class="aspect-square"
+        xs="aspect-a"
+        md="aspect-square"
       >
-        <Card is-hoverable :footer="t('projects.play')" class="h-full">
+        <Card is-hoverable :footer="t('play')" class="h-full">
           <h2 class="flex items-center gap-2 text-lg font-bold">
             <div :class="project.icon" class="min-w-4" />
             {{ project.name }}
           </h2>
 
-          <p class="sizing text-sub overflow-hidden text-ellipsis">
+          <p class="sizing text-sub h-8 overflow-hidden text-ellipsis">
             {{ project.shortDescription }}
           </p>
 
-          <div class="overflow-hidden rounded-t-lg -m-x4 -m-b4 flex-1">
+          <div class="max-h-80 flex-1 overflow-hidden rounded-t-lg -m-x4 -m-b4">
             <img :src="imagePath(project.id, project.image)" :alt="project.name" class="h-full w-full object-cover">
           </div>
 
           <template #button>
-            <div>{{ t('projects.play') }}</div>
+            <div>{{ t('play') }}</div>
           </template>
         </Card>
       </router-link>
@@ -58,6 +65,20 @@ const projectUrl = (id: string) => `/projects/${id}`
   line-clamp: var(--lines);
   box-orient: vertical;
   display: -webkit-box;
+  text-overflow: ellipsis;
   overflow: hidden;
 }
 </style>
+
+<i18n lang="yaml">
+fr:
+  page:
+    title: Mes projets
+    description: Découvrez une partie de mes projets et réalisations web.
+  play: Découvrir le projet
+en:
+  page:
+    title: My projects
+    description: Discover some of my web projects and achievements.
+  play: Discover
+</i18n>

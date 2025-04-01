@@ -22,8 +22,9 @@ const navButtonTitle = computed(() => layoutStore.isNavExtended ? t('menu.reduce
 
     <div class="flex items-center gap-2">
       <ButtonToggleTheme />
+      <ButtonIcon icon="i-carbon-language" :title="t('header.language')" @click="layoutStore.toggleLanguage" />
       <router-link to="/profile">
-        <ButtonIcon icon="i-carbon-user" :title="t('layout.header.profile')" />
+        <ButtonIcon icon="i-carbon-user" :title="t('profile')" />
       </router-link>
     </div>
   </header>
@@ -31,13 +32,19 @@ const navButtonTitle = computed(() => layoutStore.isNavExtended ? t('menu.reduce
 
 <i18n lang="yaml">
   fr:
+    profile: "Profil"
     menu:
       reduce: "Réduire le menu"
       extend: "Étendre le menu"
     title: "Portfolio de Joan Tassel - Développeur Web"
+    header:
+      language: "Passer le site en anglais"
   en:
+    profile: "Profile"
     menu:
       reduce: "Collapse menu"
       extend: "Expand menu"
     title: "Joan Tassel's Portfolio - Web Developer"
+    header:
+      language: "Translate the site to French"
 </i18n>

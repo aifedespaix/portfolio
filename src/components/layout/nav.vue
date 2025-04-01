@@ -20,14 +20,13 @@ interface Links {
   bottom: Link[]
 }
 
-const { t } = useI18n()
 const projectStore = useProjectsStore()
 const layoutStore = useLayoutStore()
 const navStore = useNavStore()
 
 const links = ref<Links>({
   top: [
-    { name: computed(() => t('layout.nav.top.home')), to: '/', icon: 'i-carbon-home' },
+    { name: navStore.home, to: '/', icon: 'i-carbon-home' },
     ...navStore.main,
   ],
 
@@ -45,7 +44,7 @@ const links = ref<Links>({
 
   ],
   bottom: [
-    { name: computed(() => t('layout.nav.bottom.settings')), to: '/settings', icon: 'i-carbon-settings' },
+    { name: navStore.settings, to: '/settings', icon: 'i-carbon-settings' },
   ],
 
 })

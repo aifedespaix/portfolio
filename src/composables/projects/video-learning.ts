@@ -9,29 +9,29 @@ export const videoLearningData: Project = {
   icon: 'i-mdi:video',
   links: [
     {
-        name: 'Apprendre l\'Anglais',
-        url: 'https://www.youtube.com/@Apprends_Anglais_facile',
-        icon: 'i-mdi:youtube',
-        type: 'youtube',
-      },
-      {
-        name: `Apprendre l'Anglais`,
-        url: 'https://www.tiktok.com/@apprends_anglais_facile',
-        icon: 'i-icon-park-outline:tiktok',
-        type: 'tiktok',
-      },
-      {
-        name: 'Apprendre le Français',
-          url: 'https://www.youtube.com/@Learn_French_Easy',
-          icon: 'i-mdi:youtube',
-          type: 'youtube',
-        },
-      {
-        name: 'Apprendre le Français',
-        url: 'https://www.tiktok.com/@french_learning_easy',
-        icon: 'i-icon-park-outline:tiktok',
-        type: 'tiktok',
-      },
+      name: `Apprendre l'Anglais`,
+      url: 'https://www.tiktok.com/@apprends_anglais_facile',
+      icon: 'i-icon-park-outline:tiktok',
+      type: 'tiktok',
+    },
+    {
+      name: 'Apprendre l\'Anglais',
+      url: 'https://www.youtube.com/@Apprends_Anglais_facile',
+      icon: 'i-mdi:youtube',
+      type: 'youtube',
+    },
+    {
+      name: 'Apprendre le Français',
+      url: 'https://www.tiktok.com/@french_learning_easy',
+      icon: 'i-icon-park-outline:tiktok',
+      type: 'tiktok',
+    },
+    {
+      name: 'Apprendre le Français',
+      url: 'https://www.youtube.com/@Learn_French_Easy',
+      icon: 'i-mdi:youtube',
+      type: 'youtube',
+    },
   ],
   technologies: [
     {
@@ -72,7 +72,7 @@ export const videoLearningData: Project = {
     {
       image: 'video-learning-nest',
       title: 'Difficulté des mots',
-      description: `Je transfère les résultats de l'IA vers une base de données gérée par NestJS. Chaque mot est associé à un niveau de difficulté manuellement via une interface dédiée.`,
+      description: `Je transfère les résultats de l'IA vers une base de données gérée par NestJS. Chaque mot est associé manuellement à un niveau de difficulté via une interface dédiée.`,
     },
     {
       image: 'video-learning-coqui',
@@ -89,7 +89,7 @@ export const videoLearningData: Project = {
       title: 'Upload des vidéos',
       description: `Youtube et Tiktok proposent des API pour uploader des vidéos, cependant il y a des restrictions de droits d'accès, j'ai donc développé un script en NodeJS pour uploader les vidéos grâce à Puppeteer, c'est un outil qui sert à réaliser des tâches automatisées sur des sites web. Tout le processus de connexion, upload, remplissage des informations et programmation de la vidéo est automatisé.`,
     },
-    
+
   ],
   difficulties: [
     `Les voix générées sont parfois ratées, je dois vérifier manuellement chaque résultat et relancer l'IA avec une nouvelle graine dans le cas où la voix est mauvaise ou buguée.`,

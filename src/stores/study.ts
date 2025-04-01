@@ -1,5 +1,4 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
-import { studyTranslationMessages } from '../../translations/study.translation'
 
 export interface Study {
   id: string
@@ -10,6 +9,7 @@ export interface Study {
   lvl?: number
   description: ComputedRef<string> | string
   competencies: {
+    id: string
     name: ComputedRef<string> | string
     icon: string
   }[]
@@ -25,9 +25,7 @@ export interface Study {
 }
 
 export const useStudyStore = defineStore('study', () => {
-  const { t } = useI18n({
-    messages: studyTranslationMessages,
-  })
+  const { t } = useI18n({})
 
   const list: Study[] = [
     {
@@ -39,9 +37,9 @@ export const useStudyStore = defineStore('study', () => {
       diploma: computed(() => t('iut-caen.diploma')),
       description: computed(() => t('iut-caen.description')),
       competencies: [
-        { name: computed(() => t('iut-caen.competencies.web')), icon: 'i-mdi:web' },
-        { name: computed(() => t('iut-caen.competencies.database')), icon: 'i-mdi:database' },
-        { name: computed(() => t('iut-caen.competencies.server')), icon: 'i-mdi:server' },
+        { id: 'iut-caen.competencies.web', name: computed(() => t('iut-caen.competencies.web')), icon: 'i-mdi:web' },
+        { id: 'iut-caen.competencies.database', name: computed(() => t('iut-caen.competencies.database')), icon: 'i-mdi:database' },
+        { id: 'iut-caen.competencies.server', name: computed(() => t('iut-caen.competencies.server')), icon: 'i-mdi:server' },
       ],
       date: {
         start: computed(() => '2013'),
@@ -59,9 +57,9 @@ export const useStudyStore = defineStore('study', () => {
       diploma: computed(() => t('fac-lyon.diploma')),
       description: computed(() => t('fac-lyon.description')),
       competencies: [
-        { name: computed(() => t('fac-lyon.competencies.web')), icon: 'i-mdi:web' },
-        { name: computed(() => t('fac-lyon.competencies.palette')), icon: 'i-mdi:palette' },
-        { name: computed(() => t('fac-lyon.competencies.ab_testing')), icon: 'i-mdi:ab-testing' },
+        { id: 'fac-lyon.competencies.web', name: computed(() => t('fac-lyon.competencies.web')), icon: 'i-mdi:web' },
+        { id: 'fac-lyon.competencies.palette', name: computed(() => t('fac-lyon.competencies.palette')), icon: 'i-mdi:palette' },
+        { id: 'fac-lyon.competencies.ab_testing', name: computed(() => t('fac-lyon.competencies.ab_testing')), icon: 'i-mdi:ab-testing' },
       ],
       date: {
         start: computed(() => '2015'),
@@ -79,9 +77,9 @@ export const useStudyStore = defineStore('study', () => {
       diploma: computed(() => t('institut-g4.diploma')),
       description: computed(() => t('institut-g4.description')),
       competencies: [
-        { name: computed(() => t('institut-g4.competencies.web')), icon: 'i-mdi:web' },
-        { name: computed(() => t('institut-g4.competencies.work')), icon: 'i-mdi:work' },
-        { name: computed(() => t('institut-g4.competencies.school')), icon: 'i-mdi:school' },
+        { id: 'institut-g4.competencies.web', name: computed(() => t('institut-g4.competencies.web')), icon: 'i-mdi:web' },
+        { id: 'institut-g4.competencies.work', name: computed(() => t('institut-g4.competencies.work')), icon: 'i-mdi:work' },
+        { id: 'institut-g4.competencies.school', name: computed(() => t('institut-g4.competencies.school')), icon: 'i-mdi:school' },
       ],
       date: {
         start: computed(() => '2016'),
