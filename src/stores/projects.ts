@@ -5,7 +5,7 @@ import { game666Data } from '~/composables/projects/game-666.data'
 import { interfaceAdministrationData } from '~/composables/projects/interface-administration.data'
 import { mapEducationData } from '~/composables/projects/map-education.data'
 import { miniGamesData } from '~/composables/projects/mini-games.data'
-import { videoLearningData } from '~/composables/projects/video-learning'
+import { videoLearningData } from '~/composables/projects/video-learning.data'
 import { useMapGameStore } from './projects/map-game'
 
 export type ProjectKey = 'map-game' | 'map-education' | 'interface-administration' | 'video-learning' |

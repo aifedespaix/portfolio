@@ -2,7 +2,6 @@
 import type { ProjectKey } from '~/stores/projects'
 import { useHeadTag } from '~/composables/head-tag'
 
-const { t } = useI18n()
 const route = useRoute('/projects/[id]')
 const router = useRouter()
 
@@ -20,7 +19,7 @@ const data = computed(() => {
 useHeadTag({
   title: data.value?.name ?? '',
   description: data.value?.shortDescription ?? '',
-  type: 'website',
+  type: 'article',
   imagePath: data.value?.image ? `${data.value.image}.webp` : undefined,
 })
 </script>

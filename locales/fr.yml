@@ -1,97 +1,20 @@
-button:
-  back: Retour
-companies:
-  title: Mes Éxpériences Professionnelles
-games:
-  crossword-grid:
-    description: Jeu de grille de mots croisés
-    name: Grille de mots croisés
-  play: Jouer maintenant
-  puzzle:
-    description: Jeu de puzzle classique
-    name: Puzzle
-  title: Jeux
-home:
-  about: Bienvenue sur mon Portfolio
-  description: >-
-    Découvrez mes projets et mes réalisations à travers mes différentes
-    expériences.
-  technologies:
-    description: Outils, langages et frameworks que j\'utilise
-    title: Technologies
-  title: Accueil
-  work: Mon travail
-layout:
-  footer:
-    copyright: Tous droits réservés
-  fullscreen: Passer en plein écran
-  header:
-    menu:
-      extend: Étendre le menu
-      reduce: Réduire le menu
-    profile: Profil
-    title: Portfolio Joan T. - Développeur Web
-  nav:
-    bottom:
-      settings: Paramètres
-    category:
-      games: Jeux
-      projects: 
-        title: Projets
-        description: Quelques projets que j'ai réalisés
-    top:
-      companies:
-        description: Les entreprises qui m'ont fait confiance
-        title: Entreprises
-      home: Accueil
-      profile: Profil
-      studies:
-        description: Mon parcours universitaire
-        title: Études
-      technologies:
-        description: Logiciels, languages et frameworks
-        title: Technologies
-not-found: Page non trouvée
-portfolio:
-  projects:
-    title: Mes Projets
-profile:
-  myProfile: Mon profil
-  settings: Paramètres
-  title: Profil
-projects:
-  bot_chat:
-    name: ChatBot de gestion
-  game_enigma:
-    name: Énigmes Interactives
-  game_picross:
-    name: Jeu de Plateau
-  game_saolei:
-    name: Jeu Démineur
-  interface_administration:
-    name: Interface Administration
-  map_game:
-    description: Carte Interractive
+fr:
+  test: test
+
+  map-game:
     name: Carte Interactive
-  map_interactive:
-    name: Carte éducative
-  play: Découvrir le projet
-  simulation_game:
-    name: Simulation de vie
-  video_learning:
-    name: Vidéos Automatisées
-  video_overlay:
-    name: Interfaces Vidéo
-settings:
-  language:
-    label: Changer de langue
-    title: Langue
-  theme:
-    description: Changer le thème de l'application
-    label: Changer de thème
-    title: Thème
-  title: Paramètres
-studies:
-  title: Mon parcours universitaire
-technologies:
-  title: Technologies
+    shortDescription: Une Carte Interactive servant de support à un jeu vidéo d'exploration.
+    description: Une Carte Interactive servant de support à un jeu vidéo d'exploration. Les enjeux sont de donner des informations rapidement au joueur pour qu'il puisse progresser efficacement. Le format d'une carte était le plus pertinent. Comme c'est un jeu console, l'interface doit être simple et ergonomique sur mobile, avec tout de même une interface adaptée pour les écrans plus larges.
+    links:
+      1: Carte Interactive
+    explains:
+      1:
+        title: Fonctionnalité de recherche
+        description: Une des principales fonctionnalité est la recherche de point d'intérêt via une saisie de texte. Pour cela, j'utilise Fuse.js qui est un moteur de recherche très performant et rapide, il gère par exemple les mots partiels.
+      2:
+        title: Fonctionnalité de filtrage
+        description: Par soucis de lisibilité et de performances, il faut limiter le nombre d'éléments affichés sur la carte. Pour cela, j'utilise un filtre qui permet de n'afficher que les points d'intérêt correspondant à la recherche du joueur.
+    difficulties:
+      1: Il y a énormément de données à afficher sur la carte, il faut donc gérer les performances.
+      2: La gestion des écrans de différentes tailles, l'ergonomie et l'UX est compliquée car une carte n'est pas un élément visuel habituel à gérer pour moi.
+      3: La création de la base de la carte de base à dû demander une découpe, à chaque niveau de zoom d'une image gigantesque. Il m'a fallu développer un algorithme pour gérer cette découpe et optimiser le temps de chargement.

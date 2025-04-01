@@ -57,9 +57,10 @@ const canFullscreen = route.meta.canFullscreen
   <LayoutAppBar id="app-bar" bg="light-100 dark:dark-900" />
 </template>
 
+<i18n src="~/translations/projects/map-game.json" />
+
 <style>
 /* Variables CSS pour les breakpoints */
-/* todo valeurs copiées de unocss config (si y'a moyen de les récupérer dynamiquement, c'est mieux) */
 #header {
   height: v-bind(headerHeight);
   position: fixed;

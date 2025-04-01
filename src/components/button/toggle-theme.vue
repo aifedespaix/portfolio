@@ -10,7 +10,7 @@ const toggleDark = useToggle(isDark)
     bg="light-100 dark:dark-200"
     role="switch"
     :aria-checked="isDark"
-    :title="t('settings.theme.label')"
+    :title="t('theme.label')"
     @click="toggleDark()"
   >
     <span
@@ -27,3 +27,12 @@ const toggleDark = useToggle(isDark)
     </span>
   </button>
 </template>
+
+<i18n lang="yaml">
+  en:
+    theme:
+      label: Toggle theme
+  fr:
+    theme:
+      label: Basculer le thème
+</i18n>

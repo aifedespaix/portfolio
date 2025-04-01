@@ -28,7 +28,6 @@
     "@vueuse/core": "^12.8.2",
     "@vueuse/head": "^2.0.0",
     "beasties": "^0.2.0",
-    "gridstack": "^11.4.0",
     "nprogress": "^0.2.0",
     "pinia": "^3.0.1",
     "vue": "^3.5.13",
