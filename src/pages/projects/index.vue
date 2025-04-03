@@ -31,6 +31,8 @@ useHeadTag({
         class="aspect-square"
         xs="aspect-a"
         md="aspect-square"
+        hover="scale-102"
+        transition="transition-transform duration-300"
       >
         <Card is-hoverable :footer="t('play')" class="h-full">
           <h2 class="flex items-center gap-2 text-lg font-bold">
@@ -69,16 +71,3 @@ useHeadTag({
   overflow: hidden;
 }
 </style>
-
-<i18n lang="yaml">
-fr:
-  page:
-    title: Mes projets
-    description: Découvrez une partie de mes projets et réalisations web.
-  play: Découvrir le projet
-en:
-  page:
-    title: My projects
-    description: Discover some of my web projects and achievements.
-  play: Discover
-</i18n>

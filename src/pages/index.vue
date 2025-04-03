@@ -60,6 +60,8 @@ const colors = [
         :class="colors[index % colors.length]"
         class="flex items-center justify-center"
         lg="aspect-square"
+        hover="scale-102"
+        transition="transition-transform duration-300"
       >
         <TitleH3 class="h-10">
           {{ card.name }}

@@ -22,7 +22,7 @@ const navButtonTitle = computed(() => layoutStore.isNavExtended ? t('menu.reduce
 
     <div class="flex items-center gap-2">
       <ButtonToggleTheme />
-      <ButtonIcon icon="i-carbon-language" :title="t('header.language')" @click="layoutStore.toggleLanguage" />
+      <!-- <ButtonIcon icon="i-carbon-language" :title="t('header.language')" @click="layoutStore.toggleLanguage" /> -->
       <router-link to="/profile">
         <ButtonIcon icon="i-carbon-user" :title="t('profile')" />
       </router-link>

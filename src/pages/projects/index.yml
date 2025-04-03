@@ -3,3 +3,9 @@ fr:
     title: Mes projets
     description: Découvrez une partie de mes projets et réalisations web.
   play: Découvrir le projet
+en:
+  page:
+    title: My projects
+    description: Discover some of my web projects and achievements.
+  play: Discover
+  test: lol

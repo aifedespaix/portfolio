@@ -1,2 +1,5 @@
 en:
-  test: test
+  page:
+    title: My projects
+    description: Discover some of my web projects and achievements.
+  play: Discover

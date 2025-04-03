@@ -3,7 +3,7 @@ export const mapGameTranslationMessages = {
     'map-game': {
       name: 'Carte Interactive',
       shortDescription: `Une Carte Interactive servant de support à un jeu vidéo d'exploration.`,
-      description: `Une Carte Interactive servant de support à un jeu vidéo d'exploration. Les enjeux sont de donner des informations rapidement au joueur pour qu'il puisse progresser efficacement. Le format d'une carte était le plus pertinent. Comme c'est un jeu console, l'interface doit être simple et ergonomique sur mobile, avec tout de même une interface adMatéeppour les écrans plus larges.`,
+      description: `Une Carte Interactive servant de support à un jeu vidéo d'exploration. Les enjeux sont de donner des informations rapidement au joueur pour qu'il puisse progresser efficacement. Le format d'une carte était le plus pertinent. Comme c'est un jeu console, l'interface doit être simple et ergonomique sur mobile, avec une interface adaptée aux les écrans plus larges.`,
 
       links: {
         1: 'Carte Interactive',
