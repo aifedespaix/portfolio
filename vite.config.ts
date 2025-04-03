@@ -85,7 +85,7 @@ export default defineConfig({
     // https://github.com/unplugin/unplugin-vue-markdown
     // Don't need this? Try vitesse-lite: https://github.com/antfu/vitesse-lite
     Markdown({
-      wrapperClasses: 'prose prose-sm m-auto text-left',
+      wrapperClasses: 'prose prose-sm m-auto text-left w-full max-w-640 p-2',
       headEnabled: true,
       async markdownItSetup(md) {
         md.use(LinkAttributes, {

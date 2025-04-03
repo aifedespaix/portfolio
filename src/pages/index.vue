@@ -29,18 +29,14 @@ const colors = [
   <Pager>
     <TitleMain>{{ t('pages.index.meta.title') }}</TitleMain>
 
-    <TitleH2 class="px-2">
-      {{ t('pages.index.about') }}
-    </TitleH2>
-
     <Card>
       <div class="flex-reverse flex flex-col items-center justify-between gap-4" sm="flex-row">
         <div class="text-nowrap font-bold">
           Joan Tassel
         </div>
-        <div class="text-center">
+        <h2 class="text-center">
           {{ t('pages.index.profile.role') }}
-        </div>
+        </h2>
         <Image
           class="aspect-square rounded-full"
           src="/assets/home/aife_profile.webp"
@@ -64,13 +60,13 @@ const colors = [
         transition="transition-transform duration-300"
       >
         <TitleH3 class="h-10">
-          {{ card.name }}
+          {{ t(card.name) }}
         </TitleH3>
         <div class="min-h-30 flex items-center justify-center" md="min-h-15" xl="min-h-30">
           <div :class="card.icon" class="text-8xl" md="text-6xl" xl="text-8xl" />
         </div>
         <div class="h-16 text-center">
-          {{ card.description }}
+          {{ t(card.description) }}
         </div>
       </Card>
     </div>

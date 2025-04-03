@@ -26,6 +26,7 @@ const content = ref<HTMLElement | null>(null)
     <div id="content" ref="content">
       <RouterView />
     </div>
+    <LayoutFooter />
   </main>
 
   <LayoutAppBar id="app-bar" bg="light-100 dark:dark-900" />
