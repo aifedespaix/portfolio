@@ -50,7 +50,7 @@ const colors = [
       {{ t('pages.index.work') }}
     </TitleH2>
 
-    <div class="grid grid-cols-1 gap-2" sm="grid-cols-2" md="grid-cols-2" lg="grid-cols-4">
+    <div class="grid grid-cols-1 gap-2 overflow-hidden" sm="grid-cols-2" md="grid-cols-2 overflow-initial" lg="grid-cols-4">
       <Card
         v-for="(card, index) in cards" :key="card.name" :to="card.to"
         :class="colors[index % colors.length]"

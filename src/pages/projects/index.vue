@@ -5,8 +5,8 @@ const imagePath = (id: string, image: string) => `/assets/projects/${id}/${image
 const projectUrl = (id: string) => `/projects/${id}`
 
 useHeadTag({
-  title: computed(() => t('page.title')),
-  description: computed(() => t('page.description')),
+  title: computed(() => t('pages.projects.meta.title')),
+  description: computed(() => t('pages.projects.meta.description')),
   type: 'website',
 })
 </script>
@@ -18,8 +18,8 @@ useHeadTag({
     </TitleMain>
 
     <div
-      class="grid grid-cols-1 gap-4"
-      md="grid-cols-2 p-4 "
+      class="grid grid-cols-1 gap-4 overflow-hidden"
+      md="grid-cols-2 p-4 overflow-initial"
       lg="grid-cols-3"
       xl="grid-cols-4"
       xxl="grid-cols-5"
@@ -34,7 +34,7 @@ useHeadTag({
         hover="scale-102"
         transition="transition-transform duration-300"
       >
-        <Card is-hoverable :footer="t('play')" class="h-full">
+        <Card is-hoverable :footer="t('pages.projects.discover')" class="h-full">
           <h2 class="flex items-center gap-2 text-lg font-bold">
             <div :class="project.icon" class="min-w-4" />
             {{ t(project.name) }}
