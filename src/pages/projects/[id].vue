@@ -17,16 +17,15 @@ const data = computed(() => {
   }
   return null
 })
-onMounted(() => {
-  if (data.value) {
-    useHeadTag({
-      title: t('pages.projects.title', { name: t(data.value.name) }),
-      description: t(data.value.shortDescription),
-      type: 'article',
-      imagePath: data.value?.image ? `${data.value.image}.webp` : undefined,
-    })
-  }
-})
+
+if (data.value) {
+  useHeadTag({
+    title: t('pages.projects.title', { name: t(data.value.name) }),
+    description: t(data.value.shortDescription),
+    type: 'article',
+    imagePath: data.value?.image ? `${data.value.image}.webp` : undefined,
+  })
+}
 </script>
 
 <template>

@@ -72,11 +72,12 @@ jobs:
 
       - run: bun install
 
+      - name: Cypress Bun Patch
+        run: cp bun.lockb package-lock.json
+
       - name: Cypress
         uses: cypress-io/github-action@v6
         with:
           install-command: echo
           build: bun run build
           start: bun run preview
-          package-manager: bun
-          working-directory: .
