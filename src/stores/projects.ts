@@ -1,12 +1,12 @@
 import type { Project } from '~/types/project'
 import { acceptHMRUpdate, defineStore } from 'pinia'
 import { useChatBotStore } from './projects/chat-bot'
+import { useGame666Store } from './projects/game-666'
+import { useInterfaceAdministrationStore } from './projects/interface-administration'
+import { useMapEducationStore } from './projects/map-education'
 import { useMapGameStore } from './projects/map-game'
 import { useMiniGamesStore } from './projects/mini-games'
 import { useVideoLearningStore } from './projects/video-learning'
-import { useInterfaceAdministrationStore } from './projects/interface-administration'
-import { useMapEducationStore } from './projects/map-education'
-import { useGame666Store } from './projects/game-666'
 
 export type ProjectKey = 'map-game' | 'map-education' | 'interface-administration' | 'video-learning' |
   'bot-chat' | 'mini-games' | 'game-666'

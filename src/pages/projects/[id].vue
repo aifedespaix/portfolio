@@ -18,7 +18,7 @@ const data = computed(() => {
   return null
 })
 onMounted(() => {
-  if(data.value) {
+  if (data.value) {
     useHeadTag({
       title: t('pages.projects.title', { name: t(data.value.name) }),
       description: t(data.value.shortDescription),

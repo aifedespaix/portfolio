@@ -48,4 +48,4 @@ export const useGame666Store = defineStore('project-game-666', () => {
 })
 
 if (import.meta.hot)
-    import.meta.hot.accept(acceptHMRUpdate(useGame666Store as any, import.meta.hot))
+  import.meta.hot.accept(acceptHMRUpdate(useGame666Store as any, import.meta.hot))

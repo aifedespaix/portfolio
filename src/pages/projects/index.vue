@@ -45,10 +45,11 @@ useHeadTag({
           </p>
 
           <div class="max-h-80 flex-1 overflow-hidden rounded-t-lg -m-x4 -m-b4">
-            <img 
-            :src="imagePath(project.id, project.image)"
-             :alt="t(project.name)"
-              class="h-full w-full object-cover">
+            <img
+              :src="imagePath(project.id, project.image)"
+              :alt="t(project.name)"
+              class="h-full w-full object-cover"
+            >
           </div>
 
           <template #button>

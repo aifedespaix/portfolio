@@ -9,7 +9,7 @@ interface NavItem {
 }
 
 export const useNavStore = defineStore('nav', () => {
-    const home = 'stores.nav.home'
+  const home = 'stores.nav.home'
   const settings = 'stores.nav.settings'
 
   const main = ref<NavItem[]>([

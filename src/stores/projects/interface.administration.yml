@@ -43,5 +43,5 @@ en:
             title: FFMPEG Command Generator
             description: A system for generating FFMPEG commands to cut videos before their broadcast.
         difficulties:
-          '1': "Strong integration with the Twitch API; however, it is not the easiest to use, and its documentation is quite poor. Fortunately, there are libraries like Twurple that simplify its usage."
+          '1': 'Strong integration with the Twitch API; however, it is not the easiest to use, and its documentation is quite poor. Fortunately, there are libraries like Twurple that simplify its usage.'
           '2': To get real-time information about the stream, I had to implement solutions to optimize responses without overloading the servers with requests.

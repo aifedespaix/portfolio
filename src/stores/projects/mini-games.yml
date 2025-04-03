@@ -38,7 +38,7 @@ en:
             description: The goal of this mini-game is to provide a letter grid to fill in. Each row is associated with a description that helps players discover the corresponding word. There are audio and visual interactions to enhance the experience.
           '2':
             title: Matching Game
-            description: "The concept is simple: a grid of duplicated images is placed face down. The player must flip two images, and only one pair will be identical. Each attempt costs one point, and the goal is to find all pairs in the fewest moves possible."
+            description: 'The concept is simple: a grid of duplicated images is placed face down. The player must flip two images, and only one pair will be identical. Each attempt costs one point, and the goal is to find all pairs in the fewest moves possible.'
           '3':
             title: The Chest Puzzle
             description: A mysterious chest with a three-digit code to find. Each button reveals an image where a hidden clue is located.
@@ -46,5 +46,5 @@ en:
             title: Sliding Puzzle Game
             description: The sliding puzzle is a classic game. The player must move tiles to reconstruct the original image. The program takes an image, cuts it into X tiles, removes one tile, and then shuffles them in the same way the player needs to reassemble the image. This shuffling is done quickly, and the player can then solve the puzzle. I added three difficulty levels with different tile splits.
         difficulties:
-          '1': "Since these are mainly mini-games and most users are on mobile, I had to manage the touch system to improve the experience. Fortunately, JavaScript provides a very simple API for this: Touch Events, made even easier with the VueUse library."
-          '2': "To enhance the gaming experience, I implemented a lot of audio elements—music and sound effects. I created a small engine to manage them efficiently: Enable/Disable, Pause, Adjust Volume, Block interactions while a sound is playing, and Load assets."
+          '1': 'Since these are mainly mini-games and most users are on mobile, I had to manage the touch system to improve the experience. Fortunately, JavaScript provides a very simple API for this: Touch Events, made even easier with the VueUse library.'
+          '2': 'To enhance the gaming experience, I implemented a lot of audio elements—music and sound effects. I created a small engine to manage them efficiently: Enable/Disable, Pause, Adjust Volume, Block interactions while a sound is playing, and Load assets.'

@@ -22,7 +22,7 @@ export const useMapEducationStore = defineStore('project-map-education', () => {
         name: 'Wordpress',
         url: 'https://wordpress.org/',
       },
-    ],  
+    ],
     explains: [
       {
         image: 'map-education',
@@ -40,7 +40,7 @@ export const useMapEducationStore = defineStore('project-map-education', () => {
       'stores.projects.map-education.difficulties.2',
       'stores.projects.map-education.difficulties.3',
     ],
-  } 
+  }
 
   return {
     project,
