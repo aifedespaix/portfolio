@@ -5,8 +5,8 @@ import { loadLanguageAsync } from '~/modules/i18n'
 const { locale, t } = useI18n()
 
 useHeadTag({
-  title: t('pages.settings.meta.title'),
-  description: t('pages.settings.meta.description'),
+  title: computed(() => t('pages.settings.meta.title')),
+  description: computed(() => t('pages.settings.meta.description')),
   type: 'website',
 })
 

@@ -5,8 +5,8 @@ import { useStudyStore } from '~/stores/study'
 const { t } = useI18n()
 
 useHeadTag({
-  title: t('pages.studies.meta.title'),
-  description: t('pages.studies.meta.description'),
+  title: computed(() => t('pages.studies.meta.title')),
+  description: computed(() => t('pages.studies.meta.description')),
   type: 'website',
 })
 

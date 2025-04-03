@@ -20,10 +20,10 @@ const data = computed(() => {
 
 if (data.value) {
   useHeadTag({
-    title: t('pages.projects.id.meta.title', { name: t(data.value.name) }),
-    description: t(data.value.shortDescription),
+    title: computed(() => t('pages.projects.id.meta.title', { name: t(data.value!.name) })),
+    description: computed(() => t(data.value!.shortDescription)),
     type: 'article',
-    imagePath: data.value?.image ? `${data.value.image}.webp` : undefined,
+    imagePath: data.value!.image ? `${data.value!.image}.webp` : undefined,
   })
 }
 </script>

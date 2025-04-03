@@ -5,8 +5,8 @@ const { t } = useI18n()
 const router = useRouter()
 
 useHeadTag({
-  title: '404 Page non trouvée',
-  description: `Désolé, cette page n'existe pas.`,
+  title: computed(() => t('pages.not-found.meta.title')),
+  description: computed(() => t('pages.not-found.meta.description')),
   type: 'website',
 })
 </script>

@@ -5,8 +5,8 @@ import { useHeadTag } from '~/composables/head-tag'
 const { t } = useI18n()
 
 useHeadTag({
-  title: t('pages.technologies.meta.title'),
-  description: t('pages.technologies.meta.description'),
+  title: computed(() => t('pages.technologies.meta.title')),
+  description: computed(() => t('pages.technologies.meta.description')),
   type: 'website',
 })
 

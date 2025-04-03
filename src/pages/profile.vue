@@ -4,8 +4,8 @@ import { useHeadTag } from '~/composables/head-tag'
 const { t } = useI18n()
 
 useHeadTag({
-  title: t('pages.profile.meta.title'),
-  description: t('pages.profile.meta.description'),
+  title: computed(() => t('pages.profile.meta.title')),
+  description: computed(() => t('pages.profile.meta.description')),
   type: 'website',
 })
 </script>

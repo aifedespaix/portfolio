@@ -8,8 +8,8 @@ defineOptions({
 
 const { t } = useI18n()
 useHeadTag({
-  title: t('pages.index.meta.title'),
-  description: t('pages.index.meta.description'),
+  title: computed(() => t('pages.index.meta.title')),
+  description: computed(() => t('pages.index.meta.description')),
   type: 'website',
 })
 
