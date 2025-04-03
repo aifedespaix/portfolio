@@ -4,11 +4,11 @@ fr:
       meta:
         title: Mes projets
         description: Découvrez une partie de mes projets et réalisations web.
-      play: Découvrir le projet
+      discover: Découvrir le projet
 en:
   pages:
     projects:
       meta:
         title: My projects
         description: Discover some of my web projects and achievements.
-      play: Discover
+      discover: Discover the project

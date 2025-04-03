@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { I18nKey } from '~/types/i18n'
 import { computed } from 'vue'
 import { useHeadTag } from '~/composables/head-tag'
 
@@ -12,48 +13,48 @@ useHeadTag({
 
 interface Technology {
   name: string
-  description: ComputedRef<string>
+  description: I18nKey
   url: string
   experience: number
   icon: string
-  utilisation: ComputedRef<string>
-  apports?: string
+  utilisation: I18nKey
+  apports?: I18nKey
   libraries: Library[]
 }
 
 interface Library {
   name: string
-  description: ComputedRef<string>
+  description: I18nKey
   url: string
   experience: number
   icon: string
-  utilisation: ComputedRef<string>
-  apports?: ComputedRef<string>
+  utilisation: I18nKey
+  apports?: I18nKey
   creations?: Creation[]
 }
 
 interface Creation {
-  name: string | ComputedRef<string>
+  name: string | I18nKey
   id: string
 }
 const projectsStore = useProjectsStore()
 const technologies: Record<string, Technology> = {
   javascript: {
     name: 'JavaScript & TypeScript',
-    description: computed(() => t('pages.technologies.languages.javascript.description')),
+    description: 'pages.technologies.languages.javascript.description',
     url: 'https://developer.mozilla.org/fr/docs/Web/JavaScript',
     experience: new Date().getFullYear() - 2015,
     icon: 'i-mdi:language-javascript',
-    utilisation: computed(() => t('pages.technologies.languages.javascript.utilisation')),
+    utilisation: 'pages.technologies.languages.javascript.utilisation',
     libraries: [
       {
         name: 'Vue.js',
-        description: computed(() => t('pages.technologies.languages.javascript.libraries.vue.description')),
+        description: 'pages.technologies.languages.javascript.libraries.vue.description',
         url: 'https://vuejs.org/',
         experience: new Date().getFullYear() - 2017,
         icon: 'i-mdi:vuejs',
-        utilisation: computed(() => t('pages.technologies.languages.javascript.libraries.vue.utilisation')),
-        apports: computed(() => t('pages.technologies.languages.javascript.libraries.vue.apports')),
+        utilisation: 'pages.technologies.languages.javascript.libraries.vue.utilisation',
+        apports: 'pages.technologies.languages.javascript.libraries.vue.apports',
         creations: [
           projectsStore.projectList['map-game'],
           projectsStore.projectList['map-education'],
@@ -64,32 +65,32 @@ const technologies: Record<string, Technology> = {
       },
       {
         name: 'React',
-        description: computed(() => t('pages.technologies.languages.javascript.libraries.react.description')),
+        description: 'pages.technologies.languages.javascript.libraries.react.description',
         url: 'https://reactjs.org/',
         experience: new Date().getFullYear() - 2022,
         icon: 'i-mdi:react',
-        utilisation: computed(() => t('pages.technologies.languages.javascript.libraries.react.utilisation')),
-        apports: computed(() => t('pages.technologies.languages.javascript.libraries.react.apports')),
+        utilisation: 'pages.technologies.languages.javascript.libraries.react.utilisation',
+        apports: 'pages.technologies.languages.javascript.libraries.react.apports',
         creations: [
           projectsStore.projectList['video-learning'],
         ],
       },
       {
         name: 'Angular',
-        description: computed(() => t('pages.technologies.languages.javascript.libraries.angular.description')),
+        description: 'pages.technologies.languages.javascript.libraries.angular.description',
         url: 'https://angular.dev/',
         experience: new Date().getFullYear() - 2020,
         icon: 'i-mdi:angular',
-        utilisation: computed(() => t('pages.technologies.languages.javascript.libraries.angular.utilisation')),
+        utilisation: 'pages.technologies.languages.javascript.libraries.angular.utilisation',
       },
       {
         name: 'Leaflet',
-        description: computed(() => t('pages.technologies.languages.javascript.libraries.leaflet.description')),
+        description: 'pages.technologies.languages.javascript.libraries.leaflet.description',
         url: 'https://leafletjs.com/',
         experience: new Date().getFullYear() - 2020,
         icon: 'i-mdi:leaf',
-        utilisation: computed(() => t('pages.technologies.languages.javascript.libraries.leaflet.utilisation')),
-        apports: computed(() => t('pages.technologies.languages.javascript.libraries.leaflet.apports')),
+        utilisation: 'pages.technologies.languages.javascript.libraries.leaflet.utilisation',
+        apports: 'pages.technologies.languages.javascript.libraries.leaflet.apports',
         creations: [
           projectsStore.projectList['map-education'],
           projectsStore.projectList['map-game'],
@@ -97,36 +98,36 @@ const technologies: Record<string, Technology> = {
       },
       {
         name: 'NestJS',
-        description: computed(() => t('pages.technologies.languages.javascript.libraries.nestjs.description')),
+        description: 'pages.technologies.languages.javascript.libraries.nestjs.description',
         url: 'https://nestjs.com/',
         experience: new Date().getFullYear() - 2022,
         icon: 'i-simple-icons:nestjs',
-        utilisation: computed(() => t('pages.technologies.languages.javascript.libraries.nestjs.utilisation')),
-        apports: computed(() => t('pages.technologies.languages.javascript.libraries.nestjs.apports')),
+        utilisation: 'pages.technologies.languages.javascript.libraries.nestjs.utilisation',
+        apports: 'pages.technologies.languages.javascript.libraries.nestjs.apports',
         creations: [
           projectsStore.projectList['bot-chat'],
         ],
       },
       {
         name: 'Firebase',
-        description: computed(() => t('pages.technologies.languages.javascript.libraries.firebase.description')),
+        description: 'pages.technologies.languages.javascript.libraries.firebase.description',
         url: 'https://firebase.google.com/',
         experience: new Date().getFullYear() - 2020,
         icon: 'i-mdi:firebase',
-        utilisation: computed(() => t('pages.technologies.languages.javascript.libraries.firebase.utilisation')),
-        apports: computed(() => t('pages.technologies.languages.javascript.libraries.firebase.apports')),
+        utilisation: 'pages.technologies.languages.javascript.libraries.firebase.utilisation',
+        apports: 'pages.technologies.languages.javascript.libraries.firebase.apports',
         creations: [
           projectsStore.projectList['interface-administration'],
         ],
       },
       {
         name: 'Three.js',
-        description: computed(() => t('pages.technologies.languages.javascript.libraries.threejs.description')),
+        description: 'pages.technologies.languages.javascript.libraries.threejs.description',
         url: 'https://threejs.org/',
         experience: new Date().getFullYear() - 2020,
         icon: 'i-tabler:brand-threejs',
-        utilisation: computed(() => t('pages.technologies.languages.javascript.libraries.threejs.utilisation')),
-        apports: computed(() => t('pages.technologies.languages.javascript.libraries.threejs.apports')),
+        utilisation: 'pages.technologies.languages.javascript.libraries.threejs.utilisation',
+        apports: 'pages.technologies.languages.javascript.libraries.threejs.apports',
         creations: [
           projectsStore.projectList['video-learning'],
           projectsStore.projectList['mini-games'],
@@ -137,32 +138,32 @@ const technologies: Record<string, Technology> = {
   },
   php: {
     name: 'PHP',
-    description: computed(() => t('pages.technologies.languages.php.description')),
-    utilisation: computed(() => t('pages.technologies.languages.php.utilisation')),
+    description: 'pages.technologies.languages.php.description',
+    utilisation: 'pages.technologies.languages.php.utilisation',
     experience: new Date().getFullYear() - 2018,
     icon: 'i-mdi:language-php',
     url: 'https://www.php.net/',
     libraries: [
       {
         name: 'Symfony',
-        description: computed(() => t('pages.technologies.languages.php.libraries.symfony.description')),
+        description: 'pages.technologies.languages.php.libraries.symfony.description',
         url: 'https://symfony.com/',
         experience: new Date().getFullYear() - 2022,
         icon: 'i-mdi:symfony',
-        utilisation: computed(() => t('pages.technologies.languages.php.libraries.symfony.utilisation')),
-        apports: computed(() => t('pages.technologies.languages.php.libraries.symfony.apports')),
+        utilisation: 'pages.technologies.languages.php.libraries.symfony.utilisation',
+        apports: 'pages.technologies.languages.php.libraries.symfony.apports',
       },
       {
         name: 'WordPress',
-        description: computed(() => t('pages.technologies.languages.php.libraries.wordpress.description')),
+        description: 'pages.technologies.languages.php.libraries.wordpress.description',
         url: 'https://wordpress.org/',
         experience: new Date().getFullYear() - 2020,
         icon: 'i-mdi:wordpress',
-        utilisation: computed(() => t('pages.technologies.languages.php.libraries.wordpress.utilisation')),
+        utilisation: 'pages.technologies.languages.php.libraries.wordpress.utilisation',
         creations: [
           projectsStore.projectList['map-education'],
         ],
-        apports: computed(() => t('pages.technologies.languages.php.libraries.wordpress.apports')),
+        apports: 'pages.technologies.languages.php.libraries.wordpress.apports',
       },
     ],
   },
@@ -170,22 +171,22 @@ const technologies: Record<string, Technology> = {
 
 interface Software {
   name: string
-  description: ComputedRef<string>
+  description: I18nKey
   url: string
   experience: number
   icon: {
     name: string
     classes?: string
   }
-  utilisation: ComputedRef<string>
+  utilisation: I18nKey
   class?: string
 }
 
 const softwares: Record<string, Software> = {
   photoshop: {
     name: 'Photoshop',
-    utilisation: computed(() => t('pages.technologies.softwares.photoshop.utilisation')),
-    description: computed(() => t('pages.technologies.softwares.photoshop.description')),
+    utilisation: 'pages.technologies.softwares.photoshop.utilisation',
+    description: 'pages.technologies.softwares.photoshop.description',
     url: 'https://www.adobe.com/fr/products/photoshop.html',
     experience: new Date().getFullYear() - 2013,
     icon: {
@@ -194,8 +195,8 @@ const softwares: Record<string, Software> = {
   },
   illustrator: {
     name: 'Illustrator',
-    description: computed(() => t('pages.technologies.softwares.illustrator.description')),
-    utilisation: computed(() => t('pages.technologies.softwares.illustrator.utilisation')),
+    description: 'pages.technologies.softwares.illustrator.description',
+    utilisation: 'pages.technologies.softwares.illustrator.utilisation',
     url: 'https://www.adobe.com/fr/products/premiere.html',
     experience: 4,
     icon: {
@@ -204,8 +205,8 @@ const softwares: Record<string, Software> = {
   },
   premierePro: {
     name: 'Premiere Pro',
-    description: computed(() => t('pages.technologies.softwares.premierePro.description')),
-    utilisation: computed(() => t('pages.technologies.softwares.premierePro.utilisation')),
+    description: 'pages.technologies.softwares.premierePro.description',
+    utilisation: 'pages.technologies.softwares.premierePro.utilisation',
     url: 'https://www.adobe.com/fr/products/premiere.html',
     experience: new Date().getFullYear() - 2010,
     icon: {
@@ -215,8 +216,8 @@ const softwares: Record<string, Software> = {
   },
   afterEffects: {
     name: 'After Effects',
-    description: computed(() => t('pages.technologies.softwares.afterEffects.description')),
-    utilisation: computed(() => t('pages.technologies.softwares.afterEffects.utilisation')),
+    description: 'pages.technologies.softwares.afterEffects.description',
+    utilisation: 'pages.technologies.softwares.afterEffects.utilisation',
     url: 'https://www.adobe.com/fr/products/aftereffects.html',
     experience: new Date().getFullYear() - 2019,
     icon: {
@@ -226,43 +227,43 @@ const softwares: Record<string, Software> = {
   },
   davinciResolve: {
     name: 'DaVinci Resolve',
-    description: computed(() => t('pages.technologies.softwares.davinciResolve.description')),
+    description: 'pages.technologies.softwares.davinciResolve.description',
     url: 'https://www.blackmagicdesign.com/fr/products/davinciresolve',
     experience: new Date().getFullYear() - 2022,
     icon: {
       name: 'i-simple-icons:davinciresolve',
 
     },
-    utilisation: computed(() => t('pages.technologies.softwares.davinciResolve.utilisation')),
+    utilisation: 'pages.technologies.softwares.davinciResolve.utilisation',
   },
   vscode: {
     name: 'VSCode',
-    description: computed(() => t('pages.technologies.softwares.vscode.description')),
+    description: 'pages.technologies.softwares.vscode.description',
     url: 'https://code.visualstudio.com/',
     experience: new Date().getFullYear() - 2017,
     icon: {
       name: 'i-logos:visual-studio-code',
 
     },
-    utilisation: computed(() => t('pages.technologies.softwares.vscode.utilisation')),
+    utilisation: 'pages.technologies.softwares.vscode.utilisation',
   },
   obsStudio: {
     name: 'OBS Studio',
-    description: computed(() => t('pages.technologies.softwares.obsStudio.description')),
+    description: 'pages.technologies.softwares.obsStudio.description',
     url: 'https://obsproject.com/',
     experience: new Date().getFullYear() - 2020,
     icon: {
       name: 'i-simple-icons:obsstudio',
 
     },
-    utilisation: computed(() => t('pages.technologies.softwares.obsStudio.utilisation')),
+    utilisation: 'pages.technologies.softwares.obsStudio.utilisation',
   },
 }
 </script>
 
 <template>
   <Pager>
-    <TitleMain>{{ t('page.title') }}</TitleMain>
+    <TitleMain>{{ t('pages.technologies.meta.title') }}</TitleMain>
     <Card>
       <p class="text-justify">
         {{ t('pages.technologies.description') }}
@@ -282,7 +283,7 @@ const softwares: Record<string, Software> = {
         />
         <div>
           <TitleH2 class="mb-0! pb-0!">
-            {{ technologie.name }}
+            {{ t(technologie.name) }}
           </TitleH2>
           <div class="flex items-center gap-2 text-gray-500">
             <div class="font-bold">
@@ -294,13 +295,13 @@ const softwares: Record<string, Software> = {
 
       <div class="mt-4 text-justify">
         <p class="italic">
-          {{ technologie.description }}
+          {{ t(technologie.description) }}
         </p>
         <p class="mt-2">
-          {{ technologie.utilisation }}
+          {{ t(technologie.utilisation) }}
         </p>
         <p v-if="technologie.apports" class="mt-2">
-          {{ technologie.apports }}
+          {{ t(technologie.apports) }}
         </p>
       </div>
 
@@ -328,19 +329,19 @@ const softwares: Record<string, Software> = {
             <div class="mb-2 flex items-center gap-2">
               <div :class="lib.icon" class="text-2xl" text="blue-600 dark:blue-400" />
               <div class="font-bold">
-                {{ lib.name }}
+                {{ t(lib.name) }}
               </div>
             </div>
 
             <div class="flex-1 text-justify">
               <p class="mb-2 text-sm italic">
-                {{ lib.description }}
+                {{ t(lib.description) }}
               </p>
               <p class="mb-2 text-sm">
-                {{ lib.utilisation }}
+                {{ t(lib.utilisation) }}
               </p>
               <p v-if="lib.apports" class="mb-2 text-sm">
-                {{ lib.apports }}
+                {{ t(lib.apports) }}
               </p>
               <a
                 :href="lib.url"
@@ -355,11 +356,11 @@ const softwares: Record<string, Software> = {
 
             <div v-if="lib.creations?.length" class="mt-2">
               <div class="mb-1 text-sm font-bold">
-                Réalisations :
+                {{ t('pages.technologies.titles.creations') }} :
               </div>
               <div class="flex flex-wrap gap-2">
                 <LinkMini v-for="creation in lib.creations" :key="creation.id" :to="`/projects/${creation.id}`">
-                  {{ creation.name }}
+                  {{ t(creation.name) }}
                 </LinkMini>
               </div>
             </div>
@@ -381,7 +382,7 @@ const softwares: Record<string, Software> = {
           />
           <div class="pl-2">
             <TitleH2 class="mb-0! mt-0! pb-0!">
-              {{ software.name }}
+              {{ t(software.name) }}
             </TitleH2>
             <div class="flex items-center gap-2 text-gray-500">
               <div class="font-bold">
@@ -393,10 +394,10 @@ const softwares: Record<string, Software> = {
 
         <div class="flex-1 text-justify">
           <p class="italic">
-            {{ software.description }}
+            {{ t(software.description) }}
           </p>
           <p class="mt-4">
-            {{ software.utilisation }}
+            {{ t(software.utilisation) }}
           </p>
         </div>
 

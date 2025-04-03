@@ -9,6 +9,7 @@ fr:
         languages: Langages de programmation
         softwares: Les logiciels que j'utilise régulièrement
         libraries: Bibliothèques et Frameworks associés
+        creations: Réalisations
       documentation: Documentation
       website:
         title: Site officiel
@@ -90,6 +91,7 @@ en:
         languages: Programming Languages
         softwares: Software I Regularly Use
         libraries: Associated Libraries and Frameworks
+        creations: Creations
       documentation: Documentation
       experience: '{count} year of experience | {count} years of experience'
       website:

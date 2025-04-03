@@ -98,7 +98,7 @@ pages:
     meta:
       title: My projects
       description: Discover some of my web projects and achievements.
-    play: Discover
+    discover: Discover the project
     id:
       meta:
         title: Projet {name}
@@ -135,6 +135,7 @@ pages:
       languages: Programming Languages
       softwares: Software I Regularly Use
       libraries: Associated Libraries and Frameworks
+      creations: Creations
     documentation: Documentation
     experience: '{count} year of experience | {count} years of experience'
     website:

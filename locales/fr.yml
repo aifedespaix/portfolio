@@ -102,7 +102,7 @@ pages:
     meta:
       title: Mes projets
       description: Découvrez une partie de mes projets et réalisations web.
-    play: Découvrir le projet
+    discover: Découvrir le projet
     id:
       meta:
         title: Projet {name}
@@ -140,6 +140,7 @@ pages:
       languages: Langages de programmation
       softwares: Les logiciels que j'utilise régulièrement
       libraries: Bibliothèques et Frameworks associés
+      creations: Réalisations
     documentation: Documentation
     website:
       title: Site officiel

@@ -14,7 +14,7 @@ useHeadTag({
 <template>
   <Pager>
     <TitleMain>
-      {{ t('page.title') }}
+      {{ t('pages.projects.meta.title') }}
     </TitleMain>
 
     <div
@@ -53,7 +53,7 @@ useHeadTag({
           </div>
 
           <template #button>
-            <div>{{ t('play') }}</div>
+            <div>{{ t('pages.projects.discover') }}</div>
           </template>
         </Card>
       </router-link>
