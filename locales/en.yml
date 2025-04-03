@@ -95,10 +95,11 @@ pages:
       myProfile: My profile
       settings: Settings
   projects:
+    meta:
+      title: Projet {name}
     error:
       title: This project is not detailed for the moment
       back: Back
-    title: Project {name}
   settings:
     meta:
       title: Settings
