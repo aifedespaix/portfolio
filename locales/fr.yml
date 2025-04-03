@@ -315,6 +315,10 @@ pages:
           concevoir des émissions en direct sur de longues périodes. Que ce soit
           des streams quotidiens ou des émissions durant plusieurs jours avec
           gérée par une équipe à distance.
+  not-found:
+    title: Page non trouvée
+    buttons:
+      back: Retour
 page:
   title: Mes projets
   description: Découvrez une partie de mes projets et réalisations web.

@@ -1,0 +1,13 @@
+fr:
+  pages:
+    not-found:
+      title: Page non trouvée
+      buttons:
+        back: Retour
+
+en:
+  pages:
+    not-found:
+      title: Page not found
+      buttons:
+        back: Back

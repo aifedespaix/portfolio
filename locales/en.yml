@@ -290,6 +290,10 @@ pages:
           stable and complete software. It allowed me to design live broadcasts
           over long periods. Whether it's daily streams or broadcasts lasting
           several days managed by a remote team.
+  not-found:
+    title: Page not found
+    buttons:
+      back: Back
 page:
   title: My projects
   description: Discover some of my web projects and achievements.

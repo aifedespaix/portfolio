@@ -1,3 +1,4 @@
+import type { ViteSSGOptions } from 'vite-ssg'
 import path from 'node:path'
 import VueI18n from '@intlify/unplugin-vue-i18n/vite'
 import Shiki from '@shikijs/markdown-it'
@@ -156,15 +157,36 @@ export default defineConfig({
   ssgOptions: {
     script: 'async',
     formatting: 'minify',
-    beastiesOptions: {
-      reduceInlineStyles: false,
+    includedRoutes: async (routes) => {
+      // Exclure les routes dynamiques et la route catch-all
+      const staticRoutes = routes.filter(route =>
+        route !== '/projects/:id'
+        && route !== '/:all(.*)',
+      )
+
+      const projectKeys: Array<'map-game' | 'map-education' | 'interface-administration' | 'video-learning' | 'bot-chat' | 'mini-games' | 'game-666'> = [
+        'map-game',
+        'map-education',
+        'interface-administration',
+        'video-learning',
+        'bot-chat',
+        'mini-games',
+        'game-666',
+      ]
+
+      const projectRoutes = projectKeys.map(key => `/projects/${key}`)
+
+      return [
+        ...staticRoutes,
+        ...projectRoutes,
+      ]
     },
     onFinished() {
       generateSitemap({
-        hostname: 'https://aife.io',
+        hostname: 'https://portfolio.aife.io',
       })
     },
-  },
+  } as ViteSSGOptions,
 
   ssr: {
     // TODO: workaround until they support native ESM

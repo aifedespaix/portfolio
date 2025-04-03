@@ -17,10 +17,10 @@ useHeadTag({
       404
     </div>
     <div class="text-4xl">
-      {{ t('not-found') }}
+      {{ t('pages.not-found.title') }}
     </div>
     <Button @click="router.back()">
-      {{ t('button.back') }}
+      {{ t('pages.not-found.buttons.back') }}
     </Button>
   </Pager>
 </template>
