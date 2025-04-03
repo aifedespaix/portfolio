@@ -102,7 +102,7 @@ pages:
     error:
       title: Ce Projet n'est pas détaillé pour le moment
       back: Retour
-    title: Project {name}
+    title: Projet {name}
   settings:
     meta:
       title: Paramètres
