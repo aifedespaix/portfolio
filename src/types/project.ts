@@ -1,18 +1,19 @@
+import type { I18nKey } from './i18n'
 import type { ProjectKey } from '~/stores/projects'
 
 export interface Project {
   id: ProjectKey
-  name: ComputedRef<string> | string
-  description: ComputedRef<string> | string
-  shortDescription: ComputedRef<string> | string
+  name: I18nKey
+  description: I18nKey
+  shortDescription: I18nKey
   image: string
   technologies: Technology[]
   explains: Explain[]
-  difficulties: ComputedRef<string[]> | string[]
+  difficulties: I18nKey[]
   icon: string
   links?: {
-    name: ComputedRef<string> | string
-    more?: string
+    name: I18nKey
+    more?: I18nKey
     url: string
     icon: string
     type?: 'youtube' | 'tiktok'
@@ -26,6 +27,6 @@ interface Technology {
 
 interface Explain {
   image: string
-  title: ComputedRef<string> | string
-  description: ComputedRef<string> | string
+  title: I18nKey
+  description: I18nKey
 }

@@ -1,0 +1,20 @@
+en:
+  components:
+    card:
+      study:
+        title: My Studies
+        description: My academic background, diplomas and training.
+        school:
+          link_title: School website
+          competencies:
+            title: Significant skills
+fr:
+  components:
+    card:
+      study:
+        title: Mes Études
+        description: Mon parcours universitaire, mes diplômes et mes formations.
+        school:
+          link_title: Site de l'école
+          competencies:
+            title: Compétences notables

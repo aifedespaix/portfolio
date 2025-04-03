@@ -1,0 +1,47 @@
+fr:
+  stores:
+    projects:
+      interface-administration:
+        name: Interface d'Administration
+        short-description: Application web à destination d'un streamer et de ses modérateurs.
+        description: Une application web qui regroupe une multitude de fonctionnalités pour la gestion d'un stream et des vidéos. Génération des overlay dynamiques reliés à une base de données Firebase. Génération des commandes, sondages, messages automatiques, modération des messages, gestion de la musique, génération de planning.
+        links:
+          '1':
+            name: Interface d'Administration
+        explains:
+          '1':
+            title: Gestionnaire de Stream
+            description: Écran simple et épuré pour gérer les différents paramètres du stream le tout relié à une base de données pour proposer des informations pertinentes aux spectateurs comme les infos du stream, la musique en cours, les commandes etc.
+          '2':
+            title: Validation des sondages
+            description: Un système, lié à un site dédié aux spectateurs permet de proposer des sondages. Ces derniers sont regroupé sur une page dédiée et sont validés ou rejetés par les modérateurs.
+          '3':
+            title: Générateur de commandes FFMPEG
+            description: Un système de génération de commandes FFMPEG pour le découpage des vidéos avant leur diffusion.
+        difficulties:
+          '1': "Lien fort avec l'API Twitch, cependant cette dernière n'est pas la plus simple à utiliser, et la documentation est assez pauvre, heureusement il existe des librairies qui permettent de faciliter l'utilisation de l'API : Twurple."
+          '2': Pour avoir des informations en temps réel sur le stream, j'ai dû mettre en place des solutions pour optimiser les retours sans pour autant surcharger les serveurs de requêtes.
+
+en:
+  stores:
+    projects:
+      interface-administration:
+        name: Administration Interface
+        short-description: Web application for a streamer and their moderators.
+        description: A web application that brings together multiple features for managing a stream and videos. It includes generating dynamic overlays connected to a Firebase database, creating commands, polls, automated messages, message moderation, music management, and schedule generation.
+        links:
+          '1':
+            name: Administration Interface
+        explains:
+          '1':
+            title: Stream Manager
+            description: A simple and clean interface to manage various stream settings, all connected to a database to provide relevant information to viewers, such as stream details, current music, commands, etc.
+          '2':
+            title: Poll Validation
+            description: A system linked to a dedicated spectator site allows users to submit polls. These polls are gathered on a dedicated page and are approved or rejected by moderators.
+          '3':
+            title: FFMPEG Command Generator
+            description: A system for generating FFMPEG commands to cut videos before their broadcast.
+        difficulties:
+          '1': "Strong integration with the Twitch API; however, it is not the easiest to use, and its documentation is quite poor. Fortunately, there are libraries like Twurple that simplify its usage."
+          '2': To get real-time information about the stream, I had to implement solutions to optimize responses without overloading the servers with requests.

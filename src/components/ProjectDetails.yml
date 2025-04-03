@@ -1,0 +1,16 @@
+en:
+  components:
+    project-details:
+      title: Project details
+      link: Project Link | Project Links
+      technologies: Tools and technologies
+      difficulties: Challenges
+      keyPoints: Key points
+fr:
+  components:
+    project-details:
+      title: Détails du projet
+      link: Lien du projet | Liens du projet
+      technologies: Technologies utilisées
+      difficulties: Défis rencontrés
+      keyPoints: Points clés du projet

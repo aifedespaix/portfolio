@@ -1,0 +1,24 @@
+en:
+  pages:
+    settings:
+      meta:
+        title: Settings
+        description: Settings and personal information.
+      theme:
+        title: Theme
+        label: Theme
+        description: Switch the app theme
+      language:
+        title: Language
+fr:
+  pages:
+    settings:
+      meta:
+        title: Paramètres
+        description: 'Paramètres du site : Couleurs, langue, etc.'
+      theme:
+        title: Thème
+        label: Thème
+        description: Changer le thème de l'application
+      language:
+        title: Langue

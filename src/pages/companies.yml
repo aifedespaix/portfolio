@@ -1,0 +1,12 @@
+fr:
+  pages:
+    companies:
+      meta:
+        title: Mes expériences Professionnelles
+        description: Les entreprises qui m'ont fait confiance.
+en:
+  pages:
+    companies:
+      meta:
+        title: My Professional Experiences
+        description: The companies that have trusted me.

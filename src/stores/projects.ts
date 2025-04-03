@@ -1,26 +1,33 @@
 import type { Project } from '~/types/project'
 import { acceptHMRUpdate, defineStore } from 'pinia'
-import { chatBotData } from '~/composables/projects/chat-bot.data'
-import { game666Data } from '~/composables/projects/game-666.data'
-import { interfaceAdministrationData } from '~/composables/projects/interface-administration.data'
-import { mapEducationData } from '~/composables/projects/map-education.data'
-import { miniGamesData } from '~/composables/projects/mini-games.data'
-import { videoLearningData } from '~/composables/projects/video-learning.data'
+import { useChatBotStore } from './projects/chat-bot'
 import { useMapGameStore } from './projects/map-game'
+import { useMiniGamesStore } from './projects/mini-games'
+import { useVideoLearningStore } from './projects/video-learning'
+import { useInterfaceAdministrationStore } from './projects/interface-administration'
+import { useMapEducationStore } from './projects/map-education'
+import { useGame666Store } from './projects/game-666'
 
 export type ProjectKey = 'map-game' | 'map-education' | 'interface-administration' | 'video-learning' |
   'bot-chat' | 'mini-games' | 'game-666'
 
 export const useProjectsStore = defineStore('projects', () => {
   const mapGameStore = useMapGameStore()
+  const videoLearningStore = useVideoLearningStore()
+  const chatBotStore = useChatBotStore()
+  const miniGamesStore = useMiniGamesStore()
+  const interfaceAdministrationStore = useInterfaceAdministrationStore()
+  const mapEducationStore = useMapEducationStore()
+  const game666Store = useGame666Store()
+
   const projectList = ref<Record<ProjectKey, Project>>({
     'map-game': mapGameStore.project,
-    'video-learning': videoLearningData,
-    'bot-chat': chatBotData,
-    'mini-games': miniGamesData,
-    'interface-administration': interfaceAdministrationData,
-    'map-education': mapEducationData,
-    'game-666': game666Data,
+    'video-learning': videoLearningStore.project,
+    'bot-chat': chatBotStore.project,
+    'mini-games': miniGamesStore.project,
+    'interface-administration': interfaceAdministrationStore.project,
+    'map-education': mapEducationStore.project,
+    'game-666': game666Store.project,
   })
 
   return {

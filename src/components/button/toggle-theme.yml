@@ -1,0 +1,10 @@
+en:
+  components:
+    button:
+      toggleTheme:
+        label: Toggle theme
+fr:
+  components:
+    button:
+      toggleTheme:
+        label: Changer de thème

@@ -2,14 +2,11 @@
 import { vIntersectionObserver } from '@vueuse/components'
 import { useHeadTag } from '~/composables/head-tag'
 import { useCompanyStore } from '~/stores/company'
-import { companyTranslationMessages } from '~/translations/company.translation'
 
-const { t } = useI18n({
-  messages: companyTranslationMessages,
-})
+const { t } = useI18n()
 useHeadTag({
-  title: computed(() => t('page.title')),
-  description: computed(() => t('page.description')),
+  title: computed(() => t('pages.companies.meta.title')),
+  description: computed(() => t('pages.companies.meta.description')),
   type: 'website',
 })
 const companyStore = useCompanyStore()
@@ -35,7 +32,7 @@ function onIntersectionObserver([entry, entry2]: IntersectionObserverEntry[]) {
 <template>
   <Pager>
     <TitleMain>
-      {{ t('page.title') }}
+      {{ t('pages.companies.meta.title') }}
     </TitleMain>
 
     <div class="fixed bottom-[var(--distance-bottom)] right-0 top-[var(--distance-top)] flex flex-col items-center justify-center gap-2 px-1 pr-2">
@@ -64,14 +61,3 @@ function onIntersectionObserver([entry, entry2]: IntersectionObserverEntry[]) {
     </div>
   </Pager>
 </template>
-
-<i18n lang="yaml">
-fr:
-  page:
-    title: Mes expériences Professionnelles
-    description: Les entreprises qui m'ont fait confiance.
-en:
-  page:
-    title: My Professional Experiences
-    description: The companies that have trusted me.
-</i18n>

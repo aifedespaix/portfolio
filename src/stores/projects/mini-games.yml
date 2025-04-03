@@ -1,0 +1,50 @@
+fr:
+  stores:
+    projects:
+      mini-games:
+        name: Mini-Jeux
+        short-description: Calendrier de l'Avant sous forme de Mini-Jeux.
+        description: Calendrier de l'Avant sous forme de Mini-Jeux.
+        links:
+          '1': Calendrier de l'Avant
+        explains:
+          '1':
+            title: Mots Croisés Simplifiés
+            description: Le principe de ce mini jeu est de proposer une grille de lettres à remplir. Chaque ligne est associée à une description permettant de découvrir le mot correspondant. Il y a des interactions audio et visuelles pour améliorer l'expérience.
+          '2':
+            title: Jeu des paires
+            description: Le principe est simple, il y a une grille d'images dédoublées posées face cachée. Le joueur doit retourner deux images parmi lesquelles une seule est identique. Chaque essai coûte un point, le but est de trouver toutes les paires en un minimum de coups.
+          '3':
+            title: L'énigme du Coffre
+            description: Un Coffre mystérieux, un code à 3 chiffres à trouver. Chaque bouton donne accès à une image où un indice est caché.
+          '4':
+            title: Jeu du Taquin
+            description: Le Taquin est un jeu de puzzle classique. Le joueur doit déplacer les tuiles pour reconstituer l'image originale. Le programme commence par prendre une image et la découpe en X tuiles, il retire une des tuiles et ensuite mélange de la même façon que le joueur doit reconstituer l'image. Il le fait très vite, le joueur peut alors le résoudre. J'ai mis 3 niveaux de difficultés avec 3 niveaux de découpage des images.
+        difficulties:
+          '1': "Comme ce sont principalement des mini-jeux et que la plus-part des utilisateurs sont sur téléphone, j'ai dû gérer le système tactile pour faciliter l'expérience. Heureusement, javascript propose une API très simple pour cela : les Touch Events. Encore plus facilité par la librairie VueUse."
+          '2': "Pour améliorer l'expérience de jeu, j'ai mis en place beaucoup d'éléments audio. Musiques et effets sonores. J'ai réalisé un petit moteur qui permet de les gérer efficacement : Activer/Désactiver, Mettre en pause, Ajuster le volume, Bloquer l'interaction tant qu'un son est joué, Chargement des assets."
+en:
+  stores:
+    projects:
+      mini-games:
+        name: Mini-Games
+        short-description: Advent Calendar in the form of Mini-Games.
+        description: Advent Calendar in the form of Mini-Games.
+        links:
+          '1': Advent Calendar
+        explains:
+          '1':
+            title: Simplified Crosswords
+            description: The goal of this mini-game is to provide a letter grid to fill in. Each row is associated with a description that helps players discover the corresponding word. There are audio and visual interactions to enhance the experience.
+          '2':
+            title: Matching Game
+            description: "The concept is simple: a grid of duplicated images is placed face down. The player must flip two images, and only one pair will be identical. Each attempt costs one point, and the goal is to find all pairs in the fewest moves possible."
+          '3':
+            title: The Chest Puzzle
+            description: A mysterious chest with a three-digit code to find. Each button reveals an image where a hidden clue is located.
+          '4':
+            title: Sliding Puzzle Game
+            description: The sliding puzzle is a classic game. The player must move tiles to reconstruct the original image. The program takes an image, cuts it into X tiles, removes one tile, and then shuffles them in the same way the player needs to reassemble the image. This shuffling is done quickly, and the player can then solve the puzzle. I added three difficulty levels with different tile splits.
+        difficulties:
+          '1': "Since these are mainly mini-games and most users are on mobile, I had to manage the touch system to improve the experience. Fortunately, JavaScript provides a very simple API for this: Touch Events, made even easier with the VueUse library."
+          '2': "To enhance the gaming experience, I implemented a lot of audio elements—music and sound effects. I created a small engine to manage them efficiently: Enable/Disable, Pause, Adjust Volume, Block interactions while a sound is playing, and Load assets."

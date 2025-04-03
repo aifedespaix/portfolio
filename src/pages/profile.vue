@@ -4,37 +4,22 @@ import { useHeadTag } from '~/composables/head-tag'
 const { t } = useI18n()
 
 useHeadTag({
-  title: t('title'),
-  description: t('description'),
+  title: t('pages.profile.meta.title'),
+  description: t('pages.profile.meta.description'),
   type: 'website',
 })
 </script>
 
 <template>
   <Pager size="small">
-    <TitleMain>{{ t('profile.myProfile') }}</TitleMain>
+    <TitleMain>{{ t('pages.profile.profile.myProfile') }}</TitleMain>
 
     <Card>
       <div class="grid grid-cols-1" md="grid-cols-2">
         <Button to="/settings">
-          {{ t('profile.settings') }}
+          {{ t('pages.profile.profile.settings') }}
         </Button>
       </div>
     </Card>
   </Pager>
 </template>
-
-<i18n lang="yaml">
-  en:
-    title: My profile
-    description: Settings and personal information.
-    profile:
-      myProfile: My profile
-      settings: Settings
-  fr:
-    title: Mon profil
-    description: Paramètres et informations personnelles.
-    profile:
-      myProfile: Mon profil
-      settings: Paramètres
-</i18n>

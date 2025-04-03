@@ -1,0 +1,177 @@
+fr:
+  stores:
+    company:
+      website:
+        name: Site de l'entreprise
+        youtube: Youtube
+        twitch: Twitch
+      az-network:
+        name: AZ Network
+        location: Alençon, France (61)
+        description: AZ Network est une entreprise travaillant sur la mise en place et
+          la maintenance de solutions CRM et ERP.
+        work: Stage Développeur Web
+        workDescription: J'ai travaillé sur la mise a jour de l'ERP Génerix chez différents
+          client. J'ai dû faire de la recherche de données via requêtes SQL, mise à jour
+          de fichiers pour adapter les mises à jours spécifiques via des expressions régulières.
+        competencies:
+          web: Développement Web
+          database: Base de données
+          regex: Expressions Régulières
+        info-gold:
+          name: Stage Développeur Web
+          suffix: Mois
+      teliae:
+        name: Teliae
+        location: Taluyers, France (69)
+        description: Teliae est une entreprise proposant des solutions logistiques pour
+          les transporteurs (Transport Management System).
+      teliae-1:
+        work: Stage Développeur Web
+        workDescription: Je commencé dans cette entreprise par un stage. Mon rôle consistait
+          à maintenir et ajouter des fonctionnalités sur une application de gestion de
+          parcours de livraisons.
+        competencies:
+          web: Développement Web
+          language_php: Programmation Back End
+          account_group: Suivi client
+        info-gold:
+          name: Stage Développeur Web
+          suffix: Mois
+      teliae-2:
+        work: Alternant Développeur Web
+        workDescription: J'ai eu la chance d'être affecté à de multiples missions à ambitions
+          variables. Parmi mes plus grosses missions, j'ai du repenser l'interface visuelle
+          d'une application ancienne. J'ai dû mettre en place une solution pour adapter
+          l'interface aux nouveaux standards d'accessibilité, tout en conservant une interface
+          simple et intuitive. Le tout en accompagnants les utilisateurs dans l'évolution
+          de leur outil.
+        competencies:
+          web: Développement Web
+          palette: Design UX
+          account_group: Suivi client
+        info-gold:
+          name: Alternant Développeur Web Full Stack
+          suffix: ans
+      aife:
+        name: Aife
+        location: Alençon, France (61)
+        description: Aife est le nom que j'ai choisi pour mon entreprise en tant que freelance.
+          J'y regroupe mon travail en tant que développeur web mais également mes activités
+          en tant que créateur de contenu.
+      aife-1:
+        work: Créateur de contenu
+        workDescription: J'ai commencé à créer des vidéos à destination de Youtube. Le
+          concept se base sur l'explication et la vulgarisation de sujets techniques complexes
+          dans les jeux vidéos. Principalement les Glitchs et le Speedrun. Les vidéos
+          ont une volonté première de faire comprendre des mécaniques complexes dans un
+          langage accessible pour tous. J'ai pu atteindre plus de 100 000 abonnées ainsi
+          que des millions de vues. Je me suis diversifié sur la réalisation de vidéos
+          en direct et de streamings.
+        competencies:
+          video: Montage Vidéo
+          speak: Animation de stream
+          teach_poll: Vulgarisation
+        info-gold:
+          name: Créateur de contenu
+          suffix: ans
+      aife-2:
+        work: Développeur Web
+        workDescription: Mes activités sont diverses, que ce soit de la création de sites
+          vitrines, de la maintenance de sites existants, de l'intégration de contenu.
+          Mes compétences en développement, en design, et en création de contenu me permettent
+          de répondre à un large panel de demandes. Je profite de mes compétences pour
+          développer des outils variés pour faciliter mon travail de créateur de contenu.
+        competencies:
+          web: Développement Web
+          palette: Design UX
+          content_copy: Intégration de contenu
+        info-gold:
+          name: Développeur Web Full Stack
+          suffix: ans
+en:
+  stores:
+    company:
+      website:
+        name: Company Website
+        youtube: Youtube
+        twitch: Twitch
+      az-network:
+        name: AZ Network
+        location: Alençon, France (61)
+        description: AZ Network is a company working on the implementation and maintenance
+          of CRM and ERP solutions.
+        work: Web Developer Internship
+        workDescription: I worked on updating the Génerix ERP at various clients. I had
+          to perform data searches via SQL queries, update files to adapt specific updates
+          via regular expressions.
+        competencies:
+          web: Web Development
+          database: Database
+          regex: Regular Expressions
+        info-gold:
+          name: Web Developer Internship
+          suffix: Months
+      teliae:
+        name: Teliae
+        location: Taluyers, France (69)
+        description: Teliae is a company offering logistics solutions for transport companies
+          (Transport Management System).
+      teliae-1:
+        work: Internship in Web Development
+        workDescription: I started in this company with an internship. My role was to
+          maintain and add features to a delivery route management application.
+        competencies:
+          web: Web Development
+          language_php: Back End Programming
+          account_group: Client Support
+        info-gold:
+          name: Internship in Web Development
+          suffix: Months
+      teliae-2:
+        work: Web Developer Apprentice
+        workDescription: I had the opportunity to be assigned to multiple missions with
+          varying ambitions. Among my biggest missions, I had to redesign the visual interface
+          of an old application. I had to implement a solution to adapt the interface
+          to new accessibility standards, while maintaining a simple and intuitive interface.
+          All while accompanying users in the evolution of their tool.
+        competencies:
+          web: Web Development
+          palette: UX Design
+          account_group: Client Support
+        info-gold:
+          name: Full Stack Web Developer Apprentice
+          suffix: years
+      aife:
+        name: Aife
+        location: Alençon, France (61)
+        description: Aife is the name I chose for my company as a freelance. It includes
+          my work as a web developer and my activities as a content creator.
+      aife-1:
+        work: Créateur de contenu
+        workDescription: I started creating videos for YouTube. The concept is based on
+          explaining and popularizing complex technical subjects in video games. Mainly
+          Glitches and Speedruns. The videos have a primary desire to make complex mechanics
+          understandable in a language accessible to all. I was able to reach over 100,000
+          subscribers and millions of views. I diversified into the production of live
+          videos and streams.
+        competencies:
+          video: Video Editing
+          speak: Stream Hosting
+          teach_poll: Popularization
+        info-gold:
+          name: Content Creator
+          suffix: years
+      aife-2:
+        work: Web Developer
+        workDescription: My activities are diverse, from creating showcase sites, maintaining
+          existing sites, to content integration. My skills in development, design, and
+          content creation allow me to respond to a wide range of requests. I use my skills
+          to develop various tools to facilitate my work as a content creator.
+        competencies:
+          web: Web Development
+          palette: UX Design
+          content_copy: Content Integration
+        info-gold:
+          name: Full Stack Web Developer
+          suffix: years

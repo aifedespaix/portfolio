@@ -4,7 +4,10 @@ import { useLayoutStore } from '~/stores/layout'
 const { t } = useI18n()
 
 const layoutStore = useLayoutStore()
-const navButtonTitle = computed(() => layoutStore.isNavExtended ? t('menu.reduce') : t('menu.extend'))
+const navButtonTitle = computed(() =>
+  layoutStore.isNavExtended
+    ? t('components.layout.header.menu.reduce')
+    : t('components.layout.header.menu.extend'))
 </script>
 
 <template>
@@ -18,33 +21,18 @@ const navButtonTitle = computed(() => layoutStore.isNavExtended ? t('menu.reduce
       @click="layoutStore.toggleNav"
     />
 
-    <div>{{ t('title') }}</div>
+    <div>{{ t('components.layout.header.title') }}</div>
 
     <div class="flex items-center gap-2">
       <ButtonToggleTheme />
-      <!-- <ButtonIcon icon="i-carbon-language" :title="t('header.language')" @click="layoutStore.toggleLanguage" /> -->
+      <ButtonIcon
+        icon="i-carbon-language"
+        :title="t('components.layout.header.language')"
+        @click="layoutStore.toggleLanguage"
+      />
       <router-link to="/profile">
-        <ButtonIcon icon="i-carbon-user" :title="t('profile')" />
+        <ButtonIcon icon="i-carbon-user" :title="t('components.layout.header.profile')" />
       </router-link>
     </div>
   </header>
 </template>
-
-<i18n lang="yaml">
-  fr:
-    profile: "Profil"
-    menu:
-      reduce: "Réduire le menu"
-      extend: "Étendre le menu"
-    title: "Portfolio de Joan Tassel - Développeur Web"
-    header:
-      language: "Passer le site en anglais"
-  en:
-    profile: "Profile"
-    menu:
-      reduce: "Collapse menu"
-      extend: "Expand menu"
-    title: "Joan Tassel's Portfolio - Web Developer"
-    header:
-      language: "Translate the site to French"
-</i18n>

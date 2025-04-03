@@ -1,15 +1,12 @@
 <script setup lang="ts">
 import { vIntersectionObserver } from '@vueuse/components'
 import { useStudyStore } from '~/stores/study'
-import { studyTranslationMessages } from '~/translations/study.translation'
 
-const { t } = useI18n({
-  messages: studyTranslationMessages,
-})
+const { t } = useI18n()
 
 useHeadTag({
-  title: t('title'),
-  description: t('description'),
+  title: t('pages.studies.meta.title'),
+  description: t('pages.studies.meta.description'),
   type: 'website',
 })
 
@@ -34,7 +31,7 @@ function onIntersectionObserver([entry, entry2]: IntersectionObserverEntry[]) {
 
 <template>
   <Pager>
-    <TitleMain>{{ t('title') }}</TitleMain>
+    <TitleMain>{{ t('pages.studies.meta.title') }}</TitleMain>
 
     <div class="fixed bottom-[var(--distance-bottom)] right-0 top-[var(--distance-top)] flex flex-col items-center justify-center gap-2 px-1 pr-2">
       <ButtonIcon
@@ -61,12 +58,3 @@ function onIntersectionObserver([entry, entry2]: IntersectionObserverEntry[]) {
     </div>
   </Pager>
 </template>
-
-<i18n lang="yaml">
-  en:
-    title: Studies
-    description: My studies and diplomas.
-  fr:
-    title: Mes Études
-    description: Mon parcours, diplômes et formations.
-</i18n>

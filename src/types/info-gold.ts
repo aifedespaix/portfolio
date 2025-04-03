@@ -1,8 +1,10 @@
+import type { I18nKey } from './i18n'
+
 export interface GoldAward {
   value?: {
     qte: number
-    prefix?: string | ComputedRef<string>
-    suffix?: string | ComputedRef<string>
+    prefix?: I18nKey
+    suffix?: I18nKey
   }
-  name: string | ComputedRef<string>
+  name: I18nKey
 }

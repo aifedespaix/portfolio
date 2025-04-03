@@ -37,15 +37,18 @@ useHeadTag({
         <Card is-hoverable :footer="t('play')" class="h-full">
           <h2 class="flex items-center gap-2 text-lg font-bold">
             <div :class="project.icon" class="min-w-4" />
-            {{ project.name }}
+            {{ t(project.name) }}
           </h2>
 
           <p class="sizing text-sub h-8 overflow-hidden text-ellipsis">
-            {{ project.shortDescription }}
+            {{ t(project.shortDescription) }}
           </p>
 
           <div class="max-h-80 flex-1 overflow-hidden rounded-t-lg -m-x4 -m-b4">
-            <img :src="imagePath(project.id, project.image)" :alt="project.name" class="h-full w-full object-cover">
+            <img 
+            :src="imagePath(project.id, project.image)"
+             :alt="t(project.name)"
+              class="h-full w-full object-cover">
           </div>
 
           <template #button>

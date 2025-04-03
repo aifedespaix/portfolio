@@ -1,0 +1,31 @@
+fr:
+  stores:
+    projects:
+      game-666:
+        name: Énigme d'Halloween
+        short-description: Une enquête collaborative pour Halloween.
+        description: J'ai développé une application web pour animer une soirée d'Halloween. L'idée est de proposer aux membres de ma communauté de travailler ensemble pour résoudre un mystère horrifique. Une fois le projet terminé, j'ai décidé de le mettre à disposition, l'énigme se lance tous les jours à partir de 20h. Il se découpe en 4 mystères à résoudre sur 4 heures, si tous les indices sont trouvés, on peut débloquer l'énigme finale disponible de 00h à 02h.
+        links:
+          '1': Énigme d'Halloween
+        explains:
+          '1':
+            title: CryptoJS
+            description: L'énigme est à destination d'un groupe de personnes sur internet. Je savais qu'ils s'amuseraient à regarder dans le code pour cracker les énigmes. Je n'avais pas envie d'ajouter une couche serveur pour sécuriser les données, j'ai préféré me focus sur le contenu plutôt que la sécurité. J'ai donc utilisé CryptoJS pour crypter les informations. Évidement, avec les informations fournies par le front, il y a toutes les clés pour décrypter, mais le processus à suffit pour dissuader les utilisateurs de vouloir cracker les énigmes.
+        difficulties:
+          '1': "J'ai réalisé des liens avec l'API Twitch, notamment le chat, ça m'a permis de créer de réelles interactions avec les utilisateurs sans mettre en place de serveur. J'ai joué avec des données aléatoires mélangées avec des messages du chat et des informations sur l'énigme pour accentuer la difficulté."
+
+en:
+  stores:
+    projects:
+      game-666:
+        name: Halloween Puzzle
+        short-description: A collaborative investigation for Halloween.
+        description: I developed a web application to spice up a Halloween night. The idea was to invite my community members to work together to solve a horrific mystery. Once the project was completed, I decided to make it publicly available. The puzzle starts every day at 8 PM and unfolds over four mysteries to solve within four hours. If all clues are found, players can unlock the final puzzle, available from midnight to 2 AM.
+        links:
+          '1': Halloween Puzzle
+        explains:
+          '1':
+            title: CryptoJS
+            description: The puzzle was designed for an online group. I knew they would try to inspect the code to crack the puzzles. I didn’t want to add a server layer to secure the data—I preferred to focus on content rather than security. So, I used CryptoJS to encrypt the information. Of course, with the data available on the frontend, all the decryption keys were accessible, but the process was enough to discourage players from trying to crack the puzzles.
+        difficulties:
+          '1': "I integrated Twitch's API, especially the chat feature, allowing real interactions with users without setting up a server. I used random data mixed with chat messages and puzzle-related information to increase the challenge."

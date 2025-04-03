@@ -11,10 +11,10 @@ const { t } = useI18n()
 <template>
   <Card>
     <div class="flex items-center gap-2">
-      <img :src="company.logo.src" :alt="company.name" class="h-14 w-14 rounded-full" :class="company.logo.classes ?? ''">
+      <img :src="company.logo.src" :alt="t(company.name)" class="h-14 w-14 rounded-full" :class="company.logo.classes ?? ''">
       <div>
         <TitleH2 class="mb-0! pb-0!">
-          {{ company.name }}
+          {{ t(company.name) }}
         </TitleH2>
         <div class="flex items-center gap-2 text-gray-500">
           <div class="font-bold">
@@ -23,23 +23,23 @@ const { t } = useI18n()
             </template>
           </div>
           <div>
-            {{ company.location }}
+            {{ t(company.location) }}
           </div>
         </div>
       </div>
     </div>
 
     <div class="text-justify italic">
-      <p>{{ company.description }}</p>
+      <p>{{ t(company.description) }}</p>
     </div>
 
     <div class="my-2 text-justify">
-      <p>{{ company.workDescription }}</p>
+      <p>{{ t(company.workDescription) }}</p>
     </div>
 
     <div class="max-w-120 self-center rounded-md p-2">
       <TitleH3>
-        {{ t('company.competencies.title') }}
+        {{ t('components.card.company.competencies.title') }}
       </TitleH3>
       <div class="flex flex-wrap justify-center gap-2">
         <div
@@ -50,7 +50,7 @@ const { t } = useI18n()
         >
           <div :class="competency.icon" class="self-center justify-self-center text-3rem" text="blue-600 dark:blue-400" />
           <div class="self-center text-center">
-            {{ competency.name }}
+            {{ t(competency.name) }}
           </div>
         </div>
       </div>
@@ -70,21 +70,10 @@ const { t } = useI18n()
         >
           <div :class="url.icon ? url.icon : 'i-mdi:web'" class="self-center justify-self-center text-1rem" />
           <div>
-            {{ url.name }}
+            {{ t(url.name) }}
           </div>
         </a>
       </div>
     </div>
   </Card>
 </template>
-
-<i18n lang="yaml">
-  en:
-    company:
-      competencies:
-        title: Main competencies
-  fr:
-    company:
-      competencies:
-        title: Compétences principales
-</i18n>

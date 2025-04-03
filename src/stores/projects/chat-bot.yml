@@ -1,0 +1,34 @@
+fr:
+  stores:
+    projects:
+      chat-bot:
+        name: Chat Bot de Gestion
+        short-description: Un chat bot pour Discord et Twitch
+        description: Un chat bot pour Discord et Twitch. Il permet de gérer des serveurs Discord et des chat Twitch. Il peut récupérer des informations diverses sur les utilisateurs et les stocker dans une base de données. Il peut également interagir avec les utilisateurs.
+        explains:
+          1:
+            title: Récupération de données
+            description: Une des tâches de ce bot est de récupérer des informations sur les utilisateurs. Pour cela, j'utilise la librairie Twurple pour créer une connexion à l'API Twitch ainsi que la librairie Discord.js pour créer une connexion à l'API Discord. Je récupère les informations comme la durée de visionnage, les messages, les commandes, les horaires de présence. Ces informations servent à alimenter un système de succès et de récompenses. Ainsi les utilisateurs sont incités à participer activement à la communauté.
+          2:
+            title: Discussion via LLM
+            description: J'ai ajouté une fonctionnalité de discussion via un LLM. Cela permet de discuter avec le bot via des messages. Le bot répond à des questions générales, mais peut également être utilisé pour des questions plus spécifiques. Il est nourri par les données de la base de données PostgreSQL et Firebase. Le bot était configuré avec un modèle Ollama, mais aujourd'hui j'utilise un modèle DeepSeek, plus performant, rapide et moins coûteux en ressources.
+        difficulties:
+          1: Je me suis initié à la mise en place de LLM avec Ollama, j'avais des problèmes de performance avec des temps de réponses assez long du fait que le modèle tourne en local mais aujourd'hui j'utilise un modèle DeepSeek qui est plus performant.
+          2: Beaucoup de données à gérer et d'automatisations liées à des Webhooks ou des tâches répétitives (cron). Il fallait une structure du code adaptée à ces différentes tâches pour gagner du temps autant en développement de nouvelles tâches qu'en maintenance et en sécurité.
+en:
+  stores:
+    projects:
+      chat-bot:
+        name: Management Chat Bot
+        short-description: A chat bot for Discord and Twitch
+        description: A chat bot for Discord and Twitch. It allows managing Discord servers and Twitch chats. It can retrieve various user information and store it in a database. It can also interact with users.
+        explains:
+          1:
+            title: Data Retrieval
+            description: One of the bot’s tasks is to retrieve information about users. To achieve this, I use the Twurple library to create a connection to the Twitch API, as well as the Discord.js library to connect to the Discord API. I collect data such as watch time, messages, commands, and presence times. This information is used to power a system of achievements and rewards, encouraging users to actively participate in the community.
+          2:
+            title: Chat via LLM
+            description: I added a chat feature using an LLM. This allows users to chat with the bot via messages. The bot can answer general questions but can also be used for more specific inquiries. It is powered by data from the PostgreSQL and Firebase databases. Initially, the bot was configured with an Ollama model, but I now use a DeepSeek model, which is more efficient, faster, and less resource-intensive.
+        difficulties:
+          1: I started learning how to set up LLMs with Ollama, but I had performance issues with long response times since the model ran locally. Today, I use a DeepSeek model, which is more efficient.
+          2: There was a large amount of data to manage and many automations linked to webhooks or recurring tasks (cron). The code structure needed to be well-adapted to these different tasks to save time in both developing new features and ensuring maintenance and security.

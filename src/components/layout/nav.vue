@@ -1,14 +1,15 @@
 <script setup lang="ts">
+import type { I18nKey } from '~/types/i18n'
 import { useNavStore } from '~/stores/nav'
 
 interface Link {
-  name: ComputedRef<string> | string
+  name: I18nKey
   to: string
   icon: string
 }
 
 interface Category {
-  name: ComputedRef<string> | string
+  name: I18nKey
   links: Link[]
   to?: string
   icon: string
@@ -23,6 +24,8 @@ interface Links {
 const projectStore = useProjectsStore()
 const layoutStore = useLayoutStore()
 const navStore = useNavStore()
+
+const { t } = useI18n()
 
 const links = ref<Links>({
   top: [
@@ -58,7 +61,12 @@ function isActive(to: string) {
 <template>
   <nav class="tiny-scrollbar overflow-hidden p-2" hover="overflow-y-auto">
     <div class="flex flex-col justify-between gap-1px">
-      <NavLink v-for="link in links.top" :key="link.name" :link="link" :active="isActive(link.to)" />
+      <NavLink
+        v-for="link in links.top"
+        :key="link.name"
+        :link="link"
+        :active="isActive(link.to)"
+      />
     </div>
 
     <Spacer />
@@ -74,17 +82,28 @@ function isActive(to: string) {
 
       <template v-else>
         <div class="p-2 font-bold">
-          {{ category.name }}
+          {{ t(category.name) }}
         </div>
       </template>
 
-      <NavLink v-for="link in category.links" v-show="layoutStore.isNavExtended" :key="link.name" :link="link" :active="isActive(link.to)" />
+      <NavLink
+        v-for="link in category.links"
+        v-show="layoutStore.isNavExtended"
+        :key="link.name"
+        :link="link"
+        :active="isActive(link.to)"
+      />
     </div>
 
     <Spacer />
 
     <div class="flex flex-col justify-between gap-1px">
-      <NavLink v-for="link in links.bottom" :key="link.name" :link="link" :active="isActive(link.to)" />
+      <NavLink
+        v-for="link in links.bottom"
+        :key="link.name"
+        :link="link"
+        :active="isActive(link.to)"
+      />
     </div>
   </nav>
 </template>

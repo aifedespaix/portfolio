@@ -1,0 +1,15 @@
+fr:
+  components:
+    layout:
+      footer:
+        copyright: Tous droits réservés
+        privacy: Politique de confidentialité
+        legal: Mentions légales
+
+en:
+  components:
+    layout:
+      footer:
+        copyright: All rights reserved
+        privacy: Privacy Policy
+        legal: Legal Notice

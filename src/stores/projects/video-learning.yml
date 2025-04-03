@@ -1,0 +1,60 @@
+fr:
+  stores:
+    projects:
+      video-learning:
+        name: Vidéos Automatisées
+        short-description: Génération de vidéos à but éducatif et automatisées.
+        description: Génération de vidéos à but éducatif et automatisées.
+        links:
+          en: Apprendre l'Anglais
+          fr: Apprendre le Français
+        explains:
+          1:
+            title: Génération des mots
+            description: Les mots sont générés depuis des thèmes que je définis. Une IA génères une liste de mots et leur traduction selon le thème.
+          2:
+            title: Difficulté des mots
+            description: Je transfère les résultats de l'IA vers une base de données gérée par NestJS. Chaque mot est associé manuellement à un niveau de difficulté via une interface dédiée.
+          3:
+            title: Génération des voix
+            description: Chaque mot est prononcé par une voix par IA qui tourne en local. La voix est générée avec Coqui TTS. Je lui fourni un fichier audio de référence pour la voix et un fichier texte, il génère ainsi une voix qui prononce le texte.
+          4:
+            title: Génération des vidéos
+            description: Les vidéos sont générées avec Remotion. J'y applique une phrase d'introduction et un thème, quelques mots à deviner à difficulté croissante, jusqu'à la fin de la vidéo. Le tout accompagné d'un personnage en 3D qui réagit à la question et la réponse. Remotion est capable de générer une vidéo en quelques minutes, il se nourrit des infos stockées dans la base de données via des requêtes au serveur NestJS.
+          5:
+            title: Upload des vidéos
+            description: Youtube et Tiktok proposent des API pour uploader des vidéos, cependant il y a des restrictions de droits d'accès, j'ai donc développé un script en NodeJS pour uploader les vidéos grâce à Puppeteer, c'est un outil qui sert à réaliser des tâches automatisées sur des sites web. Tout le processus de connexion, upload, remplissage des informations et programmation de la vidéo est automatisé.
+        difficulties:
+          1: Les voix générées sont parfois ratées, je dois vérifier manuellement chaque résultat et relancer l'IA avec une nouvelle graine dans le cas où la voix est mauvaise ou buguée.
+          2: Le système d'envoie des vidéos étant automatisé par un script utilisant un navigateur virtuel, chaque évolution de l'interface de Youtube et Tiktok est susceptible de faire bugger le script.
+          3: Je pensais que le contenu puisse attirer un certain publique de par la qualité des vidéos comparé à d'autres chaînes concurrentes. Cependant, le manque de diffusion m'a fait arrêté la publication de nouvelles vidéos.
+en:
+  stores:
+    projects:
+      video-learning:
+        name: Automated Videos
+        short-description: Generation of educational and automated videos.
+        description: Generation of educational and automated videos.
+        links:
+          en: Learn English
+          fr: Learn French
+        explains:
+          1:
+            title: Word Generation
+            description: Words are generated from themes that I define. An AI generates a list of words and their translations based on the theme.
+          2:
+            title: Word Difficulty
+            description: I transfer the AI results to a database managed by NestJS. Each word is manually assigned a difficulty level via a dedicated interface.
+          3:
+            title: Voice Generation
+            description: Each word is pronounced by an AI-generated voice running locally. The voice is created using Coqui TTS. I provide a reference audio file for the voice and a text file, and it generates a voice that pronounces the text.
+          4:
+            title: Video Generation
+            description: Videos are generated using Remotion. I apply an introduction sentence and a theme, followed by a series of words to guess with increasing difficulty until the end of the video. The whole process is accompanied by a 3D character that reacts to the question and answer. Remotion can generate a video in a few minutes, retrieving information stored in the database through requests to the NestJS server.
+          5:
+            title: Video Upload
+            description: YouTube and TikTok offer APIs for uploading videos, but they have access restrictions. So, I developed a NodeJS script to upload videos using Puppeteer, a tool for automating tasks on websites. The entire process—login, upload, filling in details, and scheduling the video—is automated.
+        difficulties:
+          1: The generated voices sometimes fail, requiring manual verification of each result. If the voice is bad or buggy, I have to rerun the AI with a new seed.
+          2: Since the video upload system is automated through a script using a virtual browser, any update to the YouTube or TikTok interface can potentially break the script.
+          3: I initially thought the content would attract a certain audience due to the quality of the videos compared to competing channels. However, the lack of exposure led me to stop publishing new videos.

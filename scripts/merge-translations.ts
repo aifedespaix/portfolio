@@ -26,10 +26,17 @@ function deepMerge(target: Record<string, any>, source: Record<string, any>, pat
     const newPath = [...path, key]
     if (key in target) {
       if (typeof target[key] === 'object' && typeof source[key] === 'object') {
-        deepMerge(target[key], source[key], newPath)
+        for (const subKey in source[key]) {
+          if (subKey in target[key]) {
+            deepMerge(target[key], source[key], newPath)
+          }
+          else {
+            target[key][subKey] = source[key][subKey]
+          }
+        }
       }
-      else {
-        console.warn(`Conflit détecté à ${newPath.join('.')}:`)
+      else if (typeof target[key] !== 'object' && typeof source[key] !== 'object') {
+        console.warn(`Conflit de valeur terminale détecté à ${newPath.join('.')}:`)
         console.warn(`  Valeur existante: ${JSON.stringify(target[key])}`)
         console.warn(`  Nouvelle valeur: ${JSON.stringify(source[key])}`)
       }
@@ -93,6 +100,7 @@ async function main() {
         process.exit(1)
       }
 
+      // Fusionner les traductions
       deepMerge(translations.fr, data.fr)
       deepMerge(translations.en, data.en)
     }
@@ -108,8 +116,8 @@ async function main() {
   }
 
   // Sauvegarder les fichiers
-  await writeFile('./locales/fr.yml', yaml.dump({ fr: translations.fr }))
-  await writeFile('./locales/en.yml', yaml.dump({ en: translations.en }))
+  await writeFile('./locales/fr.yml', yaml.dump(translations.fr))
+  await writeFile('./locales/en.yml', yaml.dump(translations.en))
 
   console.log('Fusion des traductions terminée avec succès')
 }

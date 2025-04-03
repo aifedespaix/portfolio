@@ -1,0 +1,20 @@
+fr:
+  components:
+    layout:
+      header:
+        profile: Profil
+        menu:
+          reduce: Réduire le menu
+          extend: Étendre le menu
+        title: Portfolio de Joan Tassel - Développeur Web
+        language: Passer le site en anglais
+en:
+  components:
+    layout:
+      header:
+        profile: Profile
+        menu:
+          reduce: Collapse menu
+          extend: Expand menu
+        title: "Joan Tassel's Portfolio - Web Developer"
+        language: Translate the site to French

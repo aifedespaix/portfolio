@@ -1,0 +1,14 @@
+fr:
+  pages:
+    projects:
+      error:
+        title: Ce Projet n'est pas détaillé pour le moment
+        back: Retour
+      title: Project {name}
+en:
+  pages:
+    projects:
+      error:
+        title: This project is not detailed for the moment
+        back: Back
+      title: Project {name}

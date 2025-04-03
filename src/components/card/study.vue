@@ -6,11 +6,6 @@ defineProps<{
 }>()
 
 const { t } = useI18n()
-useHeadTag({
-  title: t('title'),
-  description: t('description'),
-  type: 'website',
-})
 </script>
 
 <template>
@@ -19,26 +14,26 @@ useHeadTag({
       <img :src="data.logo.src" :alt="data.school" class="h-14 w-14 rounded-full" :class="data.logo.classes ">
       <div>
         <TitleH2 class="mb-0! pb-0!">
-          {{ data.school }}
+          {{ t(data.school) }}
         </TitleH2>
         <div class="flex items-center gap-2 text-gray-500">
           <div class="font-bold">
             {{ data.date.start }} - {{ data.date.end }}
           </div>
           <div>
-            {{ data.location }}
+            {{ t(data.location) }}
           </div>
         </div>
       </div>
     </div>
 
     <div class="text-justify">
-      <p>{{ data.description }}</p>
+      <p>{{ t(data.description) }}</p>
     </div>
 
     <div class="max-w-120 self-center rounded-md p-2">
       <TitleH3>
-        {{ t('school.competencies.title') }}
+        {{ t('components.card.study.school.competencies.title') }}
       </TitleH3>
       <div class="flex flex-wrap justify-center gap-2">
         <div
@@ -49,7 +44,7 @@ useHeadTag({
         >
           <div :class="competency.icon" class="self-center justify-self-center text-3rem" text="blue-600 dark:blue-400" />
           <div class="self-center text-center">
-            {{ competency.name }}
+            {{ t(competency.name) }}
           </div>
         </div>
       </div>
@@ -74,26 +69,9 @@ useHeadTag({
       >
         <div class="i-mdi:web" />
         <div>
-          {{ t('school.link_title') }}
+          {{ t('components.card.study.school.link_title') }}
         </div>
       </a>
     </div>
   </Card>
 </template>
-
-<i18n lang="yaml">
-  en:
-    title: My Studies
-    description: My academic background, diplomas and training.
-    school:
-      link_title: School website
-      competencies:
-        title: Significant skills
-  fr:
-    title: Mes Études
-    description: Mon parcours universitaire, mes diplômes et mes formations.
-    school:
-      link_title: Site de l'école
-      competencies:
-        title: Compétences notables
-</i18n>

@@ -1,12 +1,16 @@
 <script setup lang="ts">
+import type { I18nKey } from '~/types/i18n'
+
 const props = defineProps<{
   link: {
-    name: string
+    name: I18nKey
     to: string
     icon?: string
   }
   active?: boolean
 }>()
+
+const { t } = useI18n()
 
 const layoutStore = useLayoutStore()
 
@@ -44,12 +48,12 @@ const iconClasses = computed(() => {
   <RouterLink
     :to="link.to"
     :class="classes"
-    :title="link.name"
+    :title="t(link.name)"
   >
     <div v-if="link.icon" :class="iconClasses" />
 
     <div v-if="layoutStore.isNavExtended">
-      {{ link.name }}
+      {{ t(link.name) }}
     </div>
   </RouterLink>
 </template>

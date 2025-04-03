@@ -37,7 +37,7 @@ const links: Link[] = [
 
 <template>
   <footer class="flex flex-col items-center justify-center p-4 pb-[var(--distance-bottom)] italic">
-    <div>{{ t('copyright') }} </div>
+    <div>{{ t('components.layout.footer.copyright') }} </div>
     <div>&copy; Aife | 2020 - {{ new Date().getFullYear() }}</div>
     <div class="flex justify-center gap-2 p-2">
       <a
@@ -53,22 +53,10 @@ const links: Link[] = [
       </a>
     </div>
     <RouterLink to="/rgpd/privacy-policy">
-      {{ t('privacy') }}
+      {{ t('components.layout.footer.privacy') }}
     </RouterLink>
     <RouterLink to="/rgpd/legal">
-      {{ t('legal') }}
+      {{ t('components.layout.footer.legal') }}
     </RouterLink>
   </footer>
 </template>
-
-<i18n lang="yaml">
-  fr:
-    copyright: "Tous droits réservés"
-    privacy: "Politique de confidentialité"
-    legal: "Mentions légales"
-
-  en:
-    copyright: "All rights reserved"
-    privacy: "Privacy Policy"
-    legal: "Legal Notice"
-</i18n>

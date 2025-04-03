@@ -1,0 +1,44 @@
+fr:
+  stores:
+    nav:
+      home: Accueil
+      settings: Paramètres
+      top:
+        technologies:
+          title: Technologies
+          description: Les Technologies que j'utilise
+        companies:
+          title: Entreprises
+          description: Les entreprises qui m'ont fait confiance.
+        studies:
+          title: Études
+          description: Mon parcours universitaire.
+        projects:
+          title: Projets
+          description: Mes projets personnels.
+      category:
+        projects:
+          title: Projets
+          description: Mes projets personnels.
+en:
+  stores:
+    nav:
+      home: Home
+      settings: Settings
+      top:
+        technologies:
+          title: Technologies
+          description: Technologies I use
+        companies:
+          title: Companies
+          description: Companies that trusted me.
+        studies:
+          title: Studies
+          description: My academic background.
+        projects:
+          title: Projects
+          description: My personal projects.
+      category:
+        projects:
+          title: Projects
+          description: My personal projects.

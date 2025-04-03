@@ -4,6 +4,8 @@ import type { GoldAward } from '~/types/info-gold'
 const props = defineProps<{
   info: GoldAward
 }>()
+
+const { t } = useI18n()
 </script>
 
 <template>
@@ -14,7 +16,7 @@ const props = defineProps<{
       border="4 yellow-300 dark:yellow-500"
       text="yellow-900 dark:yellow-100"
     >
-      {{ props.info.value.prefix }} {{ props.info.value.qte }} {{ props.info.value.suffix }}
+      {{ props.info.value.prefix ? props.info.value.prefix : '' }} {{ props.info.value.qte }} {{ props.info.value.suffix ? t(props.info.value.suffix) : '' }}
     </div>
     <div
       class="award-name max-w-100 flex flex-1 items-center gap-2 rounded-md p-2 text-xl"
@@ -23,7 +25,7 @@ const props = defineProps<{
     >
       <div class="i-mdi:diploma min-w-6" />
       <div md="whitespace-nowrap overflow-hidden text-ellipsis" :title="info.name">
-        {{ info.name }}
+        {{ t(props.info.name) }}
       </div>
     </div>
   </div>

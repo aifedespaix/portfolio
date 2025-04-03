@@ -1,0 +1,12 @@
+en:
+  components:
+    card:
+      company:
+        competencies:
+          title: Main competencies
+fr:
+  components:
+    card:
+      company:
+        competencies:
+          title: Compétences principales

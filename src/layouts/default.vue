@@ -5,7 +5,6 @@ defineComponent({
   name: 'DefaultLayout',
 })
 
-const { t } = useI18n()
 const headerHeight = ref('60px')
 const largeNavWidth = '240px'
 const smallNavWidth = '56px'
@@ -17,21 +16,6 @@ const layoutStore = useLayoutStore()
 const navWidth = computed(() => layoutStore.isNavExtended ? largeNavWidth : smallNavWidth)
 
 const content = ref<HTMLElement | null>(null)
-
-function toggleFullscreen() {
-  if (content.value) {
-    if (document.fullscreenElement) {
-      document.exitFullscreen()
-    }
-    else {
-      content.value.requestFullscreen()
-    }
-  }
-}
-
-const route = useRoute()
-const isGame = route.meta.isGame
-const canFullscreen = route.meta.canFullscreen
 </script>
 
 <template>
@@ -42,22 +26,10 @@ const canFullscreen = route.meta.canFullscreen
     <div id="content" ref="content">
       <RouterView />
     </div>
-
-    <LayoutFooter v-if="!isGame" />
-    <ButtonIcon
-      v-if="canFullscreen || isGame"
-      id="fullscreen-button"
-      class="fixed bottom-4 right-4 bg-black/25"
-      icon="i-carbon-fit-to-screen"
-      :title="t('layout.fullscreen')"
-      @click="toggleFullscreen()"
-    />
   </main>
 
   <LayoutAppBar id="app-bar" bg="light-100 dark:dark-900" />
 </template>
-
-<i18n src="~/translations/projects/map-game.json" />
 
 <style>
 /* Variables CSS pour les breakpoints */

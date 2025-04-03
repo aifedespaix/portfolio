@@ -5,6 +5,8 @@ import { useHeadTag } from '~/composables/head-tag'
 const route = useRoute('/projects/[id]')
 const router = useRouter()
 
+const { t } = useI18n()
+
 const projectsStore = useProjectsStore()
 
 const data = computed(() => {
@@ -15,12 +17,15 @@ const data = computed(() => {
   }
   return null
 })
-
-useHeadTag({
-  title: data.value?.name ?? '',
-  description: data.value?.shortDescription ?? '',
-  type: 'article',
-  imagePath: data.value?.image ? `${data.value.image}.webp` : undefined,
+onMounted(() => {
+  if(data.value) {
+    useHeadTag({
+      title: t('pages.projects.title', { name: t(data.value.name) }),
+      description: t(data.value.shortDescription),
+      type: 'article',
+      imagePath: data.value?.image ? `${data.value.image}.webp` : undefined,
+    })
+  }
 })
 </script>
 
@@ -29,24 +34,13 @@ useHeadTag({
     <ProjectDetails v-if="data" :data="data" />
     <div v-else>
       <TitleMain>
-        {{ t('error.title') }}
+        {{ t('pages.projects.error.title') }}
       </TitleMain>
       <div class="flex justify-center">
         <Button @click="router.back()">
-          {{ t('error.back') }}
+          {{ t('pages.projects.error.back') }}
         </Button>
       </div>
     </div>
   </Pager>
 </template>
-
-<i18n lang="yaml">
-fr:
-  error:
-    title: Ce Projet n'est pas détaillé pour le moment
-    back: Retour
-en:
-  error:
-    title: This project is not detailed for the moment
-    back: Back
-</i18n>

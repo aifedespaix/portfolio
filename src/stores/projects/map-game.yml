@@ -1,0 +1,68 @@
+fr:
+  stores:
+    projects:
+      map-game:
+        name: Carte Interactive
+        short-description: Une Carte Interactive servant de support à un jeu vidéo d'exploration.
+        description: Une Carte Interactive servant de support à un jeu vidéo d'exploration.
+          Les enjeux sont de donner des informations rapidement au joueur pour qu'il puisse
+          progresser efficacement. Le format d'une carte était le plus pertinent. Comme
+          c'est un jeu console, l'interface doit être simple et ergonomique sur mobile,
+          avec une interface adaptée aux les écrans plus larges.
+        links:
+          '1': Carte Interactive
+        explains:
+          '1':
+            title: Fonctionnalité de recherche
+            description: Une des principales fonctionnalité est la recherche de point
+              d'intérêt via une saisie de texte. Pour cela, j'utilise Fuse.js qui est
+              un moteur de recherche très performant et rapide, il gère par exemple les
+              mots partiels.
+          '2':
+            title: Fonctionnalité de filtrage
+            description: Par soucis de lisibilité et de performances, il faut limiter
+              le nombre d'éléments affichés sur la carte. Pour cela, j'utilise un filtre
+              qui permet de n'afficher que les points d'intérêt correspondant à la recherche
+              du joueur.
+        difficulties:
+          '1': Il y a énormément de données à afficher sur la carte, il faut donc gérer
+            les performances.
+          '2': La gestion des écrans de différentes tailles, l'ergonomie et l'UX est compliquée
+            car une carte n'est pas un élément visuel habituel à gérer pour moi.
+          '3': La création de la base de la carte de base à dû demander une découpe, à
+            chaque niveau de zoom d'une image gigantesque. Il m'a fallu développer un
+            algorithme pour gérer cette découpe et optimiser le temps de chargement.
+en:
+  stores:
+    projects:
+      map-game:
+        name: Interactive Map
+        short-description: An interactive map serving as a support for an exploration video
+          game.
+        description: An interactive map serving as a support for an exploration video
+          game. The challenge is to provide information quickly to the player so they
+          can progress efficiently. The map format was the most relevant. As it's a console
+          game, the interface must be simple and ergonomic on mobile, while still having
+          an adapted interface for larger screens.
+        links:
+          '1': Interactive Map
+        explains:
+          '1':
+            title: Search Functionality
+            description: One of the main features is searching for points of interest
+              via text input. For this, I use Fuse.js, a very powerful and fast search
+              engine that handles partial words, for example.
+          '2':
+            title: Filtering Functionality
+            description: For readability and performance reasons, it's necessary to limit
+              the number of elements displayed on the map. To do this, I use a filter
+              that only displays the points of interest corresponding to the player's
+              search.
+        difficulties:
+          '1': There is a huge amount of data to display on the map, so performance needs
+            to be managed.
+          '2': Managing screens of different sizes, ergonomics, and UX is complicated
+            because a map is not a common visual element for me to handle.
+          '3': Creating the base map required cutting a gigantic image at each zoom level.
+            I had to develop an algorithm to manage this cutting and optimize loading
+            time.

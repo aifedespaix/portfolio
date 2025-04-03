@@ -14,20 +14,20 @@ const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}
     <!-- En-tête du projet -->
     <header class="mb-12">
       <TitleMain>
-        {{ data.name }}
+        {{ t(data.name) }}
       </TitleMain>
       <img
         :src="imagePath(data.image)"
-        :alt="data.name"
+        :alt="t(data.name)"
         class="mb-6 h-64 w-full rounded-lg object-cover shadow-lg"
       >
       <p class="text-justify text-lg">
-        {{ data.description }}
+        {{ t(data.description) }}
       </p>
     </header>
 
     <section v-if="data.links" class="mb-12">
-      <TitleH2>{{ t('project.link', { count: data.links.length }) }}</TitleH2>
+      <TitleH2>{{ t('components.project-details.link', { count: data.links.length }) }}</TitleH2>
       <div class="grid grid-cols-1 gap-4" xs="grid-cols-2" xl="grid-cols-4">
         <a
           v-for="link in data.links"
@@ -55,9 +55,9 @@ const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}
                 'text-gray-900 dark:text-white': !['youtube', 'tiktok'].includes(link.type ?? ''),
               }"
             >
-              {{ link.name }}
+              {{ t(link.name) }}
             </span>
-            <span v-if="link.more" class="text-xs" text="gray-500 dark:gray-400">{{ link.more }}</span>
+            <span v-if="link.more" class="text-xs" text="gray-500 dark:gray-400">{{ t(link.more) }}</span>
           </div>
         </a>
       </div>
@@ -66,7 +66,7 @@ const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}
     <!-- Jalons / Explications -->
     <section class="mb-12">
       <TitleH2>
-        {{ t('project.keyPoints') }}
+        {{ t('components.project-details.keyPoints') }}
       </TitleH2>
       <div class="grid gap-8 md:grid-cols-2">
         <div
@@ -77,15 +77,15 @@ const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}
         >
           <img
             :src="imagePath(explain.image)"
-            :alt="explain.title"
+            :alt="t(explain.title)"
             class="h-48 w-full object-cover"
           >
           <div class="p-4">
             <h3 class="mb-2 text-xl font-semibold">
-              {{ explain.title }}
+              {{ t(explain.title) }}
             </h3>
             <p class="text-justify">
-              {{ explain.description }}
+              {{ t(explain.description) }}
             </p>
           </div>
         </div>
@@ -95,7 +95,7 @@ const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}
     <!-- Difficultés -->
     <section class="mb-12">
       <TitleH2>
-        {{ t('project.difficulties') }}
+        {{ t('components.project-details.difficulties') }}
       </TitleH2>
       <ul class="space-y-4">
         <li
@@ -107,7 +107,7 @@ const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}
           <div>
             <div class="i-mdi:alert-circle-outline text-2xl text-red-500" />
           </div>
-          <p>{{ difficulty }}</p>
+          <p>{{ t(difficulty) }}</p>
         </li>
       </ul>
     </section>
@@ -115,7 +115,7 @@ const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}
     <!-- Technologies utilisées -->
     <section>
       <TitleH2>
-        {{ t('project.technologies') }}
+        {{ t('components.project-details.technologies') }}
       </TitleH2>
       <div class="flex flex-wrap gap-3">
         <a
@@ -147,20 +147,3 @@ const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}
   opacity: 0;
 }
 </style>
-
-<i18n lang="yaml">
-  en:
-    project:
-      title: Project details
-      link: Project Link | Project Links
-      technologies: Tools and technologies
-      difficulties: Challenges
-      keyPoints: Key points
-  fr:
-    project:
-      title: Détails du projet
-      link: Lien du projet | Liens du projet
-      technologies: Technologies utilisées
-      difficulties: Défis rencontrés
-      keyPoints: Points clés du projet
-</i18n>

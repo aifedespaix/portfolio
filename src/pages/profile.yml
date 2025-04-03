@@ -1,0 +1,18 @@
+en:
+  pages:
+    profile:
+      meta:
+        title: My profile
+        description: Settings and personal information.
+      profile:
+        myProfile: My profile
+        settings: Settings
+fr:
+  pages:
+    profile:
+      meta:
+        title: Mon profil
+        description: Paramètres et informations personnelles.
+      profile:
+        myProfile: Mon profil
+        settings: Paramètres

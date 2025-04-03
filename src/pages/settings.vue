@@ -5,8 +5,8 @@ import { loadLanguageAsync } from '~/modules/i18n'
 const { locale, t } = useI18n()
 
 useHeadTag({
-  title: t('title'),
-  description: t('description'),
+  title: t('pages.settings.meta.title'),
+  description: t('pages.settings.meta.description'),
   type: 'website',
 })
 
@@ -30,20 +30,20 @@ function toggleTheme() {
 
 <template>
   <Pager size="small">
-    <TitleMain>{{ t('title') }}</TitleMain>
+    <TitleMain>{{ t('pages.settings.meta.title') }}</TitleMain>
 
     <Card>
-      <title-h2>{{ t('theme.title') }}</title-h2>
+      <title-h2>{{ t('pages.settings.theme.title') }}</title-h2>
       <div class="flex items-center gap-2">
-        <ButtonToggleTheme :label="t('theme.label')" />
+        <ButtonToggleTheme :label="t('pages.settings.theme.label')" />
         <Button @click="toggleTheme">
-          {{ t('theme.description') }}
+          {{ t('pages.settings.theme.description') }}
         </Button>
       </div>
     </Card>
 
     <Card>
-      <title-h2>{{ t('language.title') }}</title-h2>
+      <title-h2>{{ t('pages.settings.language.title') }}</title-h2>
       <select class="p-2" :value="locale" @change="changeLocale">
         <option v-for="loc in locales" :key="loc.value" :value="loc.value">
           {{ loc.label }}
@@ -52,24 +52,3 @@ function toggleTheme() {
     </Card>
   </Pager>
 </template>
-
-<i18n lang="yaml">
-  en:
-    title: Settings
-    description: Settings and personal information.
-    theme:
-      title: Theme
-      label: Theme
-      description: Switch the app theme
-    language:
-      title: Language
-  fr:
-    title: Paramètres
-    description: "Paramètres du site : Couleurs, langue, etc."
-    theme:
-      title: Thème
-      label: Thème
-      description: Changer le thème de l'application
-    language:
-      title: Langue
-</i18n>

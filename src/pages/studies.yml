@@ -1,0 +1,12 @@
+en:
+  pages:
+    studies:
+      meta:
+        title: Studies
+        description: My studies and diplomas.
+fr:
+  pages:
+    studies:
+      meta:
+        title: Mes Études
+        description: Mon parcours, mes diplômes et formations.

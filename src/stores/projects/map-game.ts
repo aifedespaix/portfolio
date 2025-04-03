@@ -1,24 +1,17 @@
 import type { Project } from '~/types/project'
 import { acceptHMRUpdate, defineStore } from 'pinia'
-import { mapGameTranslationMessages } from '../../translations/map-game.translation'
 
-export const useMapGameStore = defineStore('map-game', () => {
-  const { messages, t } = useI18n()
-  Object.entries(mapGameTranslationMessages).forEach(([lang, newMessages]) => {
-    const existingMessages = messages.value[lang] || {}
-    messages.value[lang] = { ...existingMessages, ...newMessages }
-  })
-
+export const useMapGameStore = defineStore('project-map-game', () => {
   const project: Project = {
     id: 'map-game',
-    name: computed(() => t('map-game.name')),
-    shortDescription: computed(() => t('map-game.shortDescription')),
-    description: computed(() => t('map-game.description')),
+    name: 'stores.projects.map-game.name',
+    shortDescription: 'stores.projects.map-game.short-description',
+    description: 'stores.projects.map-game.description',
     image: 'map-game',
     icon: 'i-mdi:map',
     links: [
       {
-        name: computed(() => t('map-game.links.1')),
+        name: 'stores.projects.map-game.links.1',
         url: 'https://aife.io/map/totk',
         icon: 'i-mdi:map',
       },
@@ -52,20 +45,20 @@ export const useMapGameStore = defineStore('map-game', () => {
     explains: [
       {
         image: 'map-game-search',
-        title: computed(() => t('map-game.explains.1.title')),
-        description: computed(() => t('map-game.explains.1.description')),
+        title: 'stores.projects.map-game.explains.1.title',
+        description: 'stores.projects.map-game.explains.1.description',
       },
       {
         image: 'map-game-filter',
-        title: computed(() => t('map-game.explains.2.title')),
-        description: computed(() => t('map-game.explains.2.description')),
+        title: 'stores.projects.map-game.explains.2.title',
+        description: 'stores.projects.map-game.explains.2.description',
       },
     ],
-    difficulties: computed(() => [
-      t('map-game.difficulties.1'),
-      t('map-game.difficulties.2'),
-      t('map-game.difficulties.3'),
-    ]),
+    difficulties: [
+      'stores.projects.map-game.difficulties.1',
+      'stores.projects.map-game.difficulties.2',
+      'stores.projects.map-game.difficulties.3',
+    ],
   }
 
   return {

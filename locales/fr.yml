@@ -1,5 +1,785 @@
-fr:
-  page:
-    title: Mes projets
-    description: Découvrez une partie de mes projets et réalisations web.
-  play: Découvrir le projet
+components:
+  button:
+    toggleTheme:
+      label: Changer de thème
+  card:
+    company:
+      competencies:
+        title: Compétences principales
+    study:
+      title: Mes Études
+      description: Mon parcours universitaire, mes diplômes et mes formations.
+      school:
+        link_title: Site de l'école
+        competencies:
+          title: Compétences notables
+  layout:
+    footer:
+      copyright: Tous droits réservés
+      privacy: Politique de confidentialité
+      legal: Mentions légales
+    header:
+      profile: Profil
+      menu:
+        reduce: Réduire le menu
+        extend: Étendre le menu
+      title: Portfolio de Joan Tassel - Développeur Web
+      language: Passer le site en anglais
+  project-details:
+    title: Détails du projet
+    link: Lien du projet | Liens du projet
+    technologies: Technologies utilisées
+    difficulties: Défis rencontrés
+    keyPoints: Points clés du projet
+pages:
+  companies:
+    meta:
+      title: Mes expériences Professionnelles
+      description: Les entreprises qui m'ont fait confiance.
+  index:
+    meta:
+      title: Accueil
+      description: Bienvenue sur mon portfolio. Découvrez mon parcours et mes projets.
+    about: À propos
+    work: Mon Travail
+    profile:
+      role: Développeur web freelance et créateur de contenu
+      name: Joan Tassel
+    journey:
+      title: Mon parcours
+      discovery:
+        title: Découverte de l'informatique
+        part1: >-
+          Je me suis passionné d'informatique à mes 12 ans, lorsque j'ai eu
+          accès à une connexion internet sur l'ordinateur familial.
+        part2: >-
+          Je me suis très vite intéressé à la structure des sites web, et j'ai
+          pu me former aux bases du HTML et CSS grâce au Site du Zéro
+          (aujourd'hui {link}).
+        part3: >-
+          J'ai rapidement commencé à développer mes propres sites web, et à me
+          former aux langages de programmation. J'ai progressé en PHP et en SQL
+          ce qui m'a permis de penser en profondeur sur la structure des
+          applications que je souhaitais concevoir.
+        part4: >-
+          J'ai ensuite développé différents sites internets, que ce soit pour
+          des auto-entrepreneurs, des associations, ou des sites personnels
+          proposant de l'aide sur des jeux vidéo.
+      professional:
+        title: Ma professionnalisation
+        content: >-
+          C'est en sortant du lycée que j'ai décidé de me tourner vers
+          l'informatique en tant que profession. J'ai passé 6 années dans un
+          {link1} basé sur les sciences de l'informatique et à la gestion de
+          projet. C'est durant cette période que je me suis convaincu que je
+          voulais travailler dans le domaine du développement web. J'ai
+          également eu la chance de faire mes premiers pas {link2} via
+          différents stages et 3 années d'alternance.
+        university_link: parcours universitaire
+        company_link: en entreprise
+      freelance:
+        title: Mon projet en tant que freelance
+        content: >-
+          À la fin de mes études, j'ai décidé de me lancer à mon compte. J'ai
+          réalisé diverses missions en tant que développeur web freelance, je me
+          suis également tourné vers la création de contenu au format vidéo sur
+          la plateforme YouTube ainsi que Twitch. Aujourd'hui je travaille pour
+          divers clients tout en continuant à développer mes {link1}.
+        projects_link: propres projets
+    images:
+      profile_alt: Photo de Profil Joan Tassel
+      discovery_alt: Découverte du code
+      university_alt: Université
+      freelance_alt: Freelance
+  profile:
+    meta:
+      title: Mon profil
+      description: Paramètres et informations personnelles.
+    profile:
+      myProfile: Mon profil
+      settings: Paramètres
+  projects:
+    error:
+      title: Ce Projet n'est pas détaillé pour le moment
+      back: Retour
+    title: Project {name}
+  settings:
+    meta:
+      title: Paramètres
+      description: 'Paramètres du site : Couleurs, langue, etc.'
+    theme:
+      title: Thème
+      label: Thème
+      description: Changer le thème de l'application
+    language:
+      title: Langue
+  studies:
+    meta:
+      title: Mes Études
+      description: Mon parcours, mes diplômes et formations.
+  technologies:
+    meta:
+      title: Technologies & Logiciels
+      description: >-
+        Les technologies, langages, frameworks, bibliothèques, logiciels et
+        outils que j'utilise.
+    description: >-
+      Mon expérience en tant que développeur web m'a fait découvrir plusieurs
+      langages de programmation, ainsi que de multiples frameworks,
+      bibliothèques et outils. J'ai également appris à utiliser différents
+      logiciel pour mon travail en tant que créateur de contenu. Cet espace
+      permet de centraliser les technologies que j'ai adoptées dans mon
+      processus de travail.
+    titles:
+      languages: Langages de programmation
+      softwares: Les logiciels que j'utilise régulièrement
+      libraries: Bibliothèques et Frameworks associés
+    documentation: Documentation
+    website:
+      title: Site officiel
+    experience: '{count} an d''expérience | {count} ans d''expérience'
+    languages:
+      javascript:
+        description: >-
+          JavaScript est un langage de programmation côté client utilisé pour
+          créer des pages web interactives. Il est initialement conçu pour
+          ajouter des fonctionnalités dynamiques aux pages web, aujourd'hui il
+          est utilisé pour créer des applications web complexes.
+        utilisation: >-
+          J'ai utilisé JavaScript pour la création de sites web interactifs. Je
+          me suis rapidement tourné vers le TypeScript pour gagner en qualité de
+          code et en facilité de développement.
+        libraries:
+          vue:
+            description: >-
+              Vue.js est un framework JavaScript pour la création de pages web
+              interactives. Il est conçu pour faciliter la création
+              d'applications et de sites webs de toute taille.
+            utilisation: >-
+              J'ai utilisé Vue.js pour la création de sites, interfaces de
+              gestion, et overlays interactifs.
+            apports: >-
+              Vue est le framework qui m'a le plus attiré, de pars son approche
+              orientée HTML de la logique. C'est avec l'arrivée de Vue 3 que je
+              l'ai intégré à une majorité de mes projets.
+          react:
+            description: >-
+              React est une librairie JavaScript pour la création de pages web
+              interactives. Elle est la librairie la plus utilisée et populaire
+              pour la création d'applications web.
+            utilisation: >-
+              J'utilise principalement React pour la réalisation de vidéos
+              automatisées grâce à la librairie Remotion. J'en connais les
+              bases, mais ne le reserve que pour cette utilisation.
+            apports: ''
+          angular:
+            description: >-
+              Angular est un framework dédié à la création d'applications web
+              ambitieuses.
+            utilisation: >-
+              Angular fut mon premier framework front end que j'ai découvert.
+              Son approche orientée composants et son architecture imposant une
+              découpe stricte du code m'ont ouvert à de nombreux concepts que
+              j'utilise aujourd'hui.
+          leaflet:
+            description: >-
+              Leaflet est une librairie JavaScript pour la création de cartes
+              interactives.
+            utilisation: J'utilise Leaflet pour la création de cartes interactives.
+            apports: >-
+              La simplicité d'utilisation de Leaflet m'a permis de gagner du
+              temps lors de la création de cartes.
+          nestjs:
+            description: >-
+              NestJS est un framework pour la création d'applications Node.js.
+              Il impose un cadre pour la structure du code, mais offre une
+              grande flexibilité permettant de répondre à des besoins variés.
+            utilisation: >-
+              J'ai utilisé NestJS pour la création d'API REST et GraphQL, de
+              services d'authentification, de stockage de fichiers.
+            apports: >-
+              Ayant pas mal travaillé sur AngularJS, j'ai tout de suite accroché
+              à la philosophie de NestJS. Aujourd'hui je l'utilise pour beaucoup
+              de projets backend, de grande ou petite envergure.
+          firebase:
+            description: >-
+              Firebase est un service de base de données NoSQL pour le
+              développement web.
+            utilisation: >-
+              J'ai utilisé Firebase pour la sauvegarde de données,
+              l'authentification, les données en temps réel dans des projets où
+              j'avais besoin d'un service rapide à mettre en place.
+            apports: >-
+              Firebase me fait gagner beaucoup de temps quand je dois concevoir
+              stocker des données lors d'un projet où les résultats doivent être
+              rapides.
+          threejs:
+            description: Three.js est une librairie JavaScript pour la création de 3D.
+            utilisation: >-
+              J'utilise souvent cette technologie pour la création de projets où
+              je souhaite intégrer des graphismes 3D sur des projets persos. Que
+              ce soit des petits jeux sur navigateur ou des graphismes 3D pour
+              des sites web.
+            apports: >-
+              Three.js m'a ouvert au monde du développement en 3D et aux jeux
+              vidéos. J'ai beaucoup progressé sur la programmation Orienté Objet
+              et les Design Patterns. J'ai également pu travailler avec des
+              moteurs Physiques, notamment Rapier, pour intégrer un système de
+              gestion des collisions.
+      php:
+        description: >-
+          PHP est un langage de programmation principalement utilisé pour le
+          développement web côté serveur. Il est très populaire pour son
+          utilisation dans le développement web dynamique et son intégration
+          avec HTML.
+        utilisation: >-
+          J'ai débuté la programmation grâce à ce langage, j'ai appris à
+          l'utiliser pour factoriser la création de mes pages web. Jusqu'à
+          concevoir des applications robustes grâce à son approche objet.
+          Jusqu'à m'intéresser à des frameworks pour viser une structure plus
+          propre et plus maintenable.
+        libraries:
+          symfony:
+            description: >-
+              Symfony est un framework PHP pour le développement web. Il est
+              conçu pour faciliter la création d'applications web robustes et
+              scalables.
+            utilisation: >-
+              J'ai travaillé avec Symfony durant de nombreux projets scolaires.
+              L'objectif était de travailler efficacement en groupe, le cadre
+              d'un tel framework d'organiser efficacement les différents jalons
+              de production.
+            apports: >-
+              J'ai appris à mettre en place des bonnes pratiques de
+              développement, comme un découpage strict et une gestion des
+              erreurs efficace.
+          wordpress:
+            description: >-
+              WordPress est un système de gestion de contenu (CMS) open source
+              conçu pour faciliter la création de sites web. Il est largement
+              utilisé pour la création de blogs et de sites vitrines.
+            utilisation: >-
+              J'ai utilisé WordPress pour la création de sites web à destination
+              d'autoentrepreneurs et d'associations. L'intérêt principal de
+              WordPress est de pouvoir laisser le client gérer son contenu sans
+              avoir besoin de connaissances en programmation. Mon travail
+              consiste principalement à concevoir des thèmes WordPress adaptés à
+              leurs besoins.
+            apports: >-
+              J'ai appris travailler le référencement naturel, les bonnes
+              pratiques de sécurité, et d'accessibilité.
+    softwares:
+      photoshop:
+        description: Photoshop est un logiciel de retouche d'images.
+        utilisation: >-
+          J'utilise Photoshop pour la retouche d'images, la création de visuels
+          pour mes projets, ou pour travailler des supports visuels rapidement.
+      illustrator:
+        description: Illustrator est un logiciel de création de visuels vectoriels.
+        utilisation: >-
+          J'utilise Illustrator pour la création et modification de logos ou
+          illustrations.
+      premierePro:
+        description: Premiere Pro est un logiciel de montage de vidéos.
+        utilisation: >-
+          J'utilise Premiere Pro pour réaliser une grande partie de les vidéos.
+          Ma maîtrise du logiciel lié à une bonne organisation me permet de
+          travailler très efficacement pour réaliser des montages dynamiques et
+          impactants.
+      afterEffects:
+        description: >-
+          After Effects est un logiciel d'animations graphiques, il est utilisé
+          pour du motion design et des effets spéciaux.
+        utilisation: >-
+          J'utilise ce logiciel pour gagner fluidifier mon montage vidéo. Je
+          n'ai pas une maîtrise d'un niveau expert, mais je m'en sers pour
+          compléter l'utilisation de Premiere Pro.
+      davinciResolve:
+        description: DaVinci Resolve est un logiciel de montage de vidéos.
+        utilisation: >-
+          Je me suis formé à Da Vinci Resolve car c'est un logiciel très complet
+          et gratuit. Il m'a permis de progresser en colorimétrie et réfléchir à
+          de nouvelles façons de monter mes vidéos.
+      vscode:
+        description: VSCode est un éditeur de code multi-plateforme gratuit et open source.
+        utilisation: >-
+          J'utilise VSCode pour la plus part de mes projets et scripts. Ancient
+          abonné à la suite JetBrains durant mes études, je ne souhaitais pas
+          payer pour un IDE. J'ai adopté VSCode et son écosystème. J'apprécie
+          avoir un contrôle sur mon environnement de travail.
+      obsStudio:
+        description: OBS Studio est un logiciel de capture et de streaming de vidéos.
+        utilisation: >-
+          J'utilise OBS Studio pour la gestion de les steams et l'enregistrement
+          de scènes. C'est un logiciel stable et complet. Il m'a permis de
+          concevoir des émissions en direct sur de longues périodes. Que ce soit
+          des streams quotidiens ou des émissions durant plusieurs jours avec
+          gérée par une équipe à distance.
+page:
+  title: Mes projets
+  description: Découvrez une partie de mes projets et réalisations web.
+play: Découvrir le projet
+stores:
+  company:
+    website:
+      name: Site de l'entreprise
+      youtube: Youtube
+      twitch: Twitch
+    az-network:
+      name: AZ Network
+      location: Alençon, France (61)
+      description: >-
+        AZ Network est une entreprise travaillant sur la mise en place et la
+        maintenance de solutions CRM et ERP.
+      work: Stage Développeur Web
+      workDescription: >-
+        J'ai travaillé sur la mise a jour de l'ERP Génerix chez différents
+        client. J'ai dû faire de la recherche de données via requêtes SQL, mise
+        à jour de fichiers pour adapter les mises à jours spécifiques via des
+        expressions régulières.
+      competencies:
+        web: Développement Web
+        database: Base de données
+        regex: Expressions Régulières
+      info-gold:
+        name: Stage Développeur Web
+        suffix: Mois
+    teliae:
+      name: Teliae
+      location: Taluyers, France (69)
+      description: >-
+        Teliae est une entreprise proposant des solutions logistiques pour les
+        transporteurs (Transport Management System).
+    teliae-1:
+      work: Stage Développeur Web
+      workDescription: >-
+        Je commencé dans cette entreprise par un stage. Mon rôle consistait à
+        maintenir et ajouter des fonctionnalités sur une application de gestion
+        de parcours de livraisons.
+      competencies:
+        web: Développement Web
+        language_php: Programmation Back End
+        account_group: Suivi client
+      info-gold:
+        name: Stage Développeur Web
+        suffix: Mois
+    teliae-2:
+      work: Alternant Développeur Web
+      workDescription: >-
+        J'ai eu la chance d'être affecté à de multiples missions à ambitions
+        variables. Parmi mes plus grosses missions, j'ai du repenser l'interface
+        visuelle d'une application ancienne. J'ai dû mettre en place une
+        solution pour adapter l'interface aux nouveaux standards
+        d'accessibilité, tout en conservant une interface simple et intuitive.
+        Le tout en accompagnants les utilisateurs dans l'évolution de leur
+        outil.
+      competencies:
+        web: Développement Web
+        palette: Design UX
+        account_group: Suivi client
+      info-gold:
+        name: Alternant Développeur Web Full Stack
+        suffix: ans
+    aife:
+      name: Aife
+      location: Alençon, France (61)
+      description: >-
+        Aife est le nom que j'ai choisi pour mon entreprise en tant que
+        freelance. J'y regroupe mon travail en tant que développeur web mais
+        également mes activités en tant que créateur de contenu.
+    aife-1:
+      work: Créateur de contenu
+      workDescription: >-
+        J'ai commencé à créer des vidéos à destination de Youtube. Le concept se
+        base sur l'explication et la vulgarisation de sujets techniques
+        complexes dans les jeux vidéos. Principalement les Glitchs et le
+        Speedrun. Les vidéos ont une volonté première de faire comprendre des
+        mécaniques complexes dans un langage accessible pour tous. J'ai pu
+        atteindre plus de 100 000 abonnées ainsi que des millions de vues. Je me
+        suis diversifié sur la réalisation de vidéos en direct et de streamings.
+      competencies:
+        video: Montage Vidéo
+        speak: Animation de stream
+        teach_poll: Vulgarisation
+      info-gold:
+        name: Créateur de contenu
+        suffix: ans
+    aife-2:
+      work: Développeur Web
+      workDescription: >-
+        Mes activités sont diverses, que ce soit de la création de sites
+        vitrines, de la maintenance de sites existants, de l'intégration de
+        contenu. Mes compétences en développement, en design, et en création de
+        contenu me permettent de répondre à un large panel de demandes. Je
+        profite de mes compétences pour développer des outils variés pour
+        faciliter mon travail de créateur de contenu.
+      competencies:
+        web: Développement Web
+        palette: Design UX
+        content_copy: Intégration de contenu
+      info-gold:
+        name: Développeur Web Full Stack
+        suffix: ans
+  nav:
+    home: Accueil
+    settings: Paramètres
+    top:
+      technologies:
+        title: Technologies
+        description: Les Technologies que j'utilise
+      companies:
+        title: Entreprises
+        description: Les entreprises qui m'ont fait confiance.
+      studies:
+        title: Études
+        description: Mon parcours universitaire.
+      projects:
+        title: Projets
+        description: Mes projets personnels.
+    category:
+      projects:
+        title: Projets
+        description: Mes projets personnels.
+  projects:
+    chat-bot:
+      name: Chat Bot de Gestion
+      short-description: Un chat bot pour Discord et Twitch
+      description: >-
+        Un chat bot pour Discord et Twitch. Il permet de gérer des serveurs
+        Discord et des chat Twitch. Il peut récupérer des informations diverses
+        sur les utilisateurs et les stocker dans une base de données. Il peut
+        également interagir avec les utilisateurs.
+      explains:
+        '1':
+          title: Récupération de données
+          description: >-
+            Une des tâches de ce bot est de récupérer des informations sur les
+            utilisateurs. Pour cela, j'utilise la librairie Twurple pour créer
+            une connexion à l'API Twitch ainsi que la librairie Discord.js pour
+            créer une connexion à l'API Discord. Je récupère les informations
+            comme la durée de visionnage, les messages, les commandes, les
+            horaires de présence. Ces informations servent à alimenter un
+            système de succès et de récompenses. Ainsi les utilisateurs sont
+            incités à participer activement à la communauté.
+        '2':
+          title: Discussion via LLM
+          description: >-
+            J'ai ajouté une fonctionnalité de discussion via un LLM. Cela permet
+            de discuter avec le bot via des messages. Le bot répond à des
+            questions générales, mais peut également être utilisé pour des
+            questions plus spécifiques. Il est nourri par les données de la base
+            de données PostgreSQL et Firebase. Le bot était configuré avec un
+            modèle Ollama, mais aujourd'hui j'utilise un modèle DeepSeek, plus
+            performant, rapide et moins coûteux en ressources.
+      difficulties:
+        '1': >-
+          Je me suis initié à la mise en place de LLM avec Ollama, j'avais des
+          problèmes de performance avec des temps de réponses assez long du fait
+          que le modèle tourne en local mais aujourd'hui j'utilise un modèle
+          DeepSeek qui est plus performant.
+        '2': >-
+          Beaucoup de données à gérer et d'automatisations liées à des Webhooks
+          ou des tâches répétitives (cron). Il fallait une structure du code
+          adaptée à ces différentes tâches pour gagner du temps autant en
+          développement de nouvelles tâches qu'en maintenance et en sécurité.
+    game-666:
+      name: Énigme d'Halloween
+      short-description: Une enquête collaborative pour Halloween.
+      description: >-
+        J'ai développé une application web pour animer une soirée d'Halloween.
+        L'idée est de proposer aux membres de ma communauté de travailler
+        ensemble pour résoudre un mystère horrifique. Une fois le projet
+        terminé, j'ai décidé de le mettre à disposition, l'énigme se lance tous
+        les jours à partir de 20h. Il se découpe en 4 mystères à résoudre sur 4
+        heures, si tous les indices sont trouvés, on peut débloquer l'énigme
+        finale disponible de 00h à 02h.
+      links:
+        '1': Énigme d'Halloween
+      explains:
+        '1':
+          title: CryptoJS
+          description: >-
+            L'énigme est à destination d'un groupe de personnes sur internet. Je
+            savais qu'ils s'amuseraient à regarder dans le code pour cracker les
+            énigmes. Je n'avais pas envie d'ajouter une couche serveur pour
+            sécuriser les données, j'ai préféré me focus sur le contenu plutôt
+            que la sécurité. J'ai donc utilisé CryptoJS pour crypter les
+            informations. Évidement, avec les informations fournies par le
+            front, il y a toutes les clés pour décrypter, mais le processus à
+            suffit pour dissuader les utilisateurs de vouloir cracker les
+            énigmes.
+      difficulties:
+        '1': >-
+          J'ai réalisé des liens avec l'API Twitch, notamment le chat, ça m'a
+          permis de créer de réelles interactions avec les utilisateurs sans
+          mettre en place de serveur. J'ai joué avec des données aléatoires
+          mélangées avec des messages du chat et des informations sur l'énigme
+          pour accentuer la difficulté.
+    interface-administration:
+      name: Interface d'Administration
+      short-description: Application web à destination d'un streamer et de ses modérateurs.
+      description: >-
+        Une application web qui regroupe une multitude de fonctionnalités pour
+        la gestion d'un stream et des vidéos. Génération des overlay dynamiques
+        reliés à une base de données Firebase. Génération des commandes,
+        sondages, messages automatiques, modération des messages, gestion de la
+        musique, génération de planning.
+      links:
+        '1':
+          name: Interface d'Administration
+      explains:
+        '1':
+          title: Gestionnaire de Stream
+          description: >-
+            Écran simple et épuré pour gérer les différents paramètres du stream
+            le tout relié à une base de données pour proposer des informations
+            pertinentes aux spectateurs comme les infos du stream, la musique en
+            cours, les commandes etc.
+        '2':
+          title: Validation des sondages
+          description: >-
+            Un système, lié à un site dédié aux spectateurs permet de proposer
+            des sondages. Ces derniers sont regroupé sur une page dédiée et sont
+            validés ou rejetés par les modérateurs.
+        '3':
+          title: Générateur de commandes FFMPEG
+          description: >-
+            Un système de génération de commandes FFMPEG pour le découpage des
+            vidéos avant leur diffusion.
+      difficulties:
+        '1': >-
+          Lien fort avec l'API Twitch, cependant cette dernière n'est pas la
+          plus simple à utiliser, et la documentation est assez pauvre,
+          heureusement il existe des librairies qui permettent de faciliter
+          l'utilisation de l'API : Twurple.
+        '2': >-
+          Pour avoir des informations en temps réel sur le stream, j'ai dû
+          mettre en place des solutions pour optimiser les retours sans pour
+          autant surcharger les serveurs de requêtes.
+    map-education:
+      name: Carte Éducative
+      short-description: Une Carte Interactive d'un établissement associatif.
+      description: >-
+        Une Carte Interactive présentant des informations imagées sur
+        l'organisation d'un établissement. La carte est accessible via un site
+        WordPress, elle est à destination des visiteurs, principalement des plus
+        jeunes. L'interface doit être simple et ergonomique sur mobile, il faut
+        également intégrer une seconde carte pour détailler un zoom sur le lieu.
+      explains:
+        '1':
+          title: Carte Générale
+          description: >-
+            La carte générale est une carte classique, elle permet de visualiser
+            l'ensemble des points d'intérêt autour de l'établissement. Elle met
+            en avant des lieux avec une description textuelle.
+        '2':
+          title: Carte de Zoom
+          description: >-
+            La carte de zoom est une carte qui permet de visualiser un point
+            d'intérêt en détail. Elle est accessible via un bouton sur la carte
+            générale.
+      difficulties:
+        '1': >-
+          L'interface était difficile à penser à cause des deux cartes qui se
+          chevauchent sur le même espace.
+        '2': >-
+          La gestion sur mobile ainsi qu'écran large demande une adaptation
+          particulière compte tenu de la quantité d'informations textuelles à
+          afficher.
+        '3': >-
+          L'import via WordPress m'a demandé de maîtriser le système de plugins
+          ainsi que la gestion des assets (javascript, css, images, etc.) pour
+          conserver une vitesse de chargement optimale.
+    map-game:
+      name: Carte Interactive
+      short-description: Une Carte Interactive servant de support à un jeu vidéo d'exploration.
+      description: >-
+        Une Carte Interactive servant de support à un jeu vidéo d'exploration.
+        Les enjeux sont de donner des informations rapidement au joueur pour
+        qu'il puisse progresser efficacement. Le format d'une carte était le
+        plus pertinent. Comme c'est un jeu console, l'interface doit être simple
+        et ergonomique sur mobile, avec une interface adaptée aux les écrans
+        plus larges.
+      links:
+        '1': Carte Interactive
+      explains:
+        '1':
+          title: Fonctionnalité de recherche
+          description: >-
+            Une des principales fonctionnalité est la recherche de point
+            d'intérêt via une saisie de texte. Pour cela, j'utilise Fuse.js qui
+            est un moteur de recherche très performant et rapide, il gère par
+            exemple les mots partiels.
+        '2':
+          title: Fonctionnalité de filtrage
+          description: >-
+            Par soucis de lisibilité et de performances, il faut limiter le
+            nombre d'éléments affichés sur la carte. Pour cela, j'utilise un
+            filtre qui permet de n'afficher que les points d'intérêt
+            correspondant à la recherche du joueur.
+      difficulties:
+        '1': >-
+          Il y a énormément de données à afficher sur la carte, il faut donc
+          gérer les performances.
+        '2': >-
+          La gestion des écrans de différentes tailles, l'ergonomie et l'UX est
+          compliquée car une carte n'est pas un élément visuel habituel à gérer
+          pour moi.
+        '3': >-
+          La création de la base de la carte de base à dû demander une découpe,
+          à chaque niveau de zoom d'une image gigantesque. Il m'a fallu
+          développer un algorithme pour gérer cette découpe et optimiser le
+          temps de chargement.
+    mini-games:
+      name: Mini-Jeux
+      short-description: Calendrier de l'Avant sous forme de Mini-Jeux.
+      description: Calendrier de l'Avant sous forme de Mini-Jeux.
+      links:
+        '1': Calendrier de l'Avant
+      explains:
+        '1':
+          title: Mots Croisés Simplifiés
+          description: >-
+            Le principe de ce mini jeu est de proposer une grille de lettres à
+            remplir. Chaque ligne est associée à une description permettant de
+            découvrir le mot correspondant. Il y a des interactions audio et
+            visuelles pour améliorer l'expérience.
+        '2':
+          title: Jeu des paires
+          description: >-
+            Le principe est simple, il y a une grille d'images dédoublées posées
+            face cachée. Le joueur doit retourner deux images parmi lesquelles
+            une seule est identique. Chaque essai coûte un point, le but est de
+            trouver toutes les paires en un minimum de coups.
+        '3':
+          title: L'énigme du Coffre
+          description: >-
+            Un Coffre mystérieux, un code à 3 chiffres à trouver. Chaque bouton
+            donne accès à une image où un indice est caché.
+        '4':
+          title: Jeu du Taquin
+          description: >-
+            Le Taquin est un jeu de puzzle classique. Le joueur doit déplacer
+            les tuiles pour reconstituer l'image originale. Le programme
+            commence par prendre une image et la découpe en X tuiles, il retire
+            une des tuiles et ensuite mélange de la même façon que le joueur
+            doit reconstituer l'image. Il le fait très vite, le joueur peut
+            alors le résoudre. J'ai mis 3 niveaux de difficultés avec 3 niveaux
+            de découpage des images.
+      difficulties:
+        '1': >-
+          Comme ce sont principalement des mini-jeux et que la plus-part des
+          utilisateurs sont sur téléphone, j'ai dû gérer le système tactile pour
+          faciliter l'expérience. Heureusement, javascript propose une API très
+          simple pour cela : les Touch Events. Encore plus facilité par la
+          librairie VueUse.
+        '2': >-
+          Pour améliorer l'expérience de jeu, j'ai mis en place beaucoup
+          d'éléments audio. Musiques et effets sonores. J'ai réalisé un petit
+          moteur qui permet de les gérer efficacement : Activer/Désactiver,
+          Mettre en pause, Ajuster le volume, Bloquer l'interaction tant qu'un
+          son est joué, Chargement des assets.
+    video-learning:
+      name: Vidéos Automatisées
+      short-description: Génération de vidéos à but éducatif et automatisées.
+      description: Génération de vidéos à but éducatif et automatisées.
+      links:
+        en: Apprendre l'Anglais
+        fr: Apprendre le Français
+      explains:
+        '1':
+          title: Génération des mots
+          description: >-
+            Les mots sont générés depuis des thèmes que je définis. Une IA
+            génères une liste de mots et leur traduction selon le thème.
+        '2':
+          title: Difficulté des mots
+          description: >-
+            Je transfère les résultats de l'IA vers une base de données gérée
+            par NestJS. Chaque mot est associé manuellement à un niveau de
+            difficulté via une interface dédiée.
+        '3':
+          title: Génération des voix
+          description: >-
+            Chaque mot est prononcé par une voix par IA qui tourne en local. La
+            voix est générée avec Coqui TTS. Je lui fourni un fichier audio de
+            référence pour la voix et un fichier texte, il génère ainsi une voix
+            qui prononce le texte.
+        '4':
+          title: Génération des vidéos
+          description: >-
+            Les vidéos sont générées avec Remotion. J'y applique une phrase
+            d'introduction et un thème, quelques mots à deviner à difficulté
+            croissante, jusqu'à la fin de la vidéo. Le tout accompagné d'un
+            personnage en 3D qui réagit à la question et la réponse. Remotion
+            est capable de générer une vidéo en quelques minutes, il se nourrit
+            des infos stockées dans la base de données via des requêtes au
+            serveur NestJS.
+        '5':
+          title: Upload des vidéos
+          description: >-
+            Youtube et Tiktok proposent des API pour uploader des vidéos,
+            cependant il y a des restrictions de droits d'accès, j'ai donc
+            développé un script en NodeJS pour uploader les vidéos grâce à
+            Puppeteer, c'est un outil qui sert à réaliser des tâches
+            automatisées sur des sites web. Tout le processus de connexion,
+            upload, remplissage des informations et programmation de la vidéo
+            est automatisé.
+      difficulties:
+        '1': >-
+          Les voix générées sont parfois ratées, je dois vérifier manuellement
+          chaque résultat et relancer l'IA avec une nouvelle graine dans le cas
+          où la voix est mauvaise ou buguée.
+        '2': >-
+          Le système d'envoie des vidéos étant automatisé par un script
+          utilisant un navigateur virtuel, chaque évolution de l'interface de
+          Youtube et Tiktok est susceptible de faire bugger le script.
+        '3': >-
+          Je pensais que le contenu puisse attirer un certain publique de par la
+          qualité des vidéos comparé à d'autres chaînes concurrentes. Cependant,
+          le manque de diffusion m'a fait arrêté la publication de nouvelles
+          vidéos.
+  study:
+    iut-caen:
+      school: Université de Caen
+      location: Caen, France
+      diploma: DUT Informatique
+      description: >-
+        Formation en informatique générale, j'ai pu découvrir les bases de
+        l'informatique et de la programmation. Cette formation m'a permis de
+        valider mon intérêt pour le développement web tout en m'apportant un
+        bagage solide dans les sciences de l'informatique.
+      competencies:
+        web: Développement Web
+        database: Base de données
+        server: Administration système et réseaux
+    fac-lyon:
+      school: Université Claude Bernard Lyon 1
+      location: Lyon, France
+      diploma: Licence Informatique
+      description: >-
+        Cette année fut un tournant pour moi et la vision du métier que je
+        souhaitais exercer. J'ai été au bout de cette année sans la valider.
+        J'ai tout de même acquis de fortes connaissances en algorithmie et en UX
+        design.
+      competencies:
+        web: Développement Web
+        palette: Design UX
+        ab_testing: Algorithmie
+    institut-g4:
+      school: Institut G4
+      location: Lyon, France
+      diploma: Chef de projet Système d'Information
+      description: >-
+        Je me suis orienté dans le domaine de la gestion de projet
+        informatique.Ayant des connaissances variées et étant intéressé sur tous
+        les aspects de la réalisation de projets, il est naturel pour moi de
+        réfléchir et concevoir des solutions optimales que ce soit
+        organisationnel ou en accord avec les contraintes techniques. J'ai
+        également participé à la formation d'élèves sur mes domaines de
+        compétence. La transmission du savoir est une notion importante pour
+        moi.
+      competencies:
+        web: Développement Web
+        work: Gestion de projet
+        school: Formation
