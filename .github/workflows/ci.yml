@@ -78,3 +78,5 @@ jobs:
           install-command: echo
           build: bun run build
           start: bun run preview
+          package-manager: bun
+          working-directory: .
