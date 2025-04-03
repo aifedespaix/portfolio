@@ -96,10 +96,15 @@ pages:
       settings: Settings
   projects:
     meta:
-      title: Projet {name}
-    error:
-      title: This project is not detailed for the moment
-      back: Back
+      title: My projects
+      description: Discover some of my web projects and achievements.
+    play: Discover
+    id:
+      meta:
+        title: Projet {name}
+      error:
+        title: This project is not detailed for the moment
+        back: Back
   settings:
     meta:
       title: Settings
@@ -295,10 +300,6 @@ pages:
     title: Page not found
     buttons:
       back: Back
-page:
-  title: My projects
-  description: Discover some of my web projects and achievements.
-play: Discover
 stores:
   company:
     website:

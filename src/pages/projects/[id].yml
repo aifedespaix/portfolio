@@ -1,16 +1,18 @@
 fr:
   pages:
     projects:
-      meta:
-        title: Projet {name}
-      error:
-        title: Ce Projet n'est pas détaillé pour le moment
-        back: Retour
+      id:
+        meta:
+          title: Projet {name}
+        error:
+          title: Ce Projet n'est pas détaillé pour le moment
+          back: Retour
 en:
   pages:
     projects:
-      meta:
-        title: Projet {name}
-      error:
-        title: This project is not detailed for the moment
-        back: Back
+      id:
+        meta:
+          title: Projet {name}
+        error:
+          title: This project is not detailed for the moment
+          back: Back

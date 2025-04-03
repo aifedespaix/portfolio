@@ -20,7 +20,7 @@ const data = computed(() => {
 
 if (data.value) {
   useHeadTag({
-    title: t('pages.projects.meta.title', { name: t(data.value.name) }),
+    title: t('pages.projects.id.meta.title', { name: t(data.value.name) }),
     description: t(data.value.shortDescription),
     type: 'article',
     imagePath: data.value?.image ? `${data.value.image}.webp` : undefined,
@@ -33,11 +33,11 @@ if (data.value) {
     <ProjectDetails v-if="data" :data="data" />
     <div v-else>
       <TitleMain>
-        {{ t('pages.projects.error.title') }}
+        {{ t('pages.projects.id.error.title') }}
       </TitleMain>
       <div class="flex justify-center">
         <Button @click="router.back()">
-          {{ t('pages.projects.error.back') }}
+          {{ t('pages.projects.id.error.back') }}
         </Button>
       </div>
     </div>

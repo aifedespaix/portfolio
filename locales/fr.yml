@@ -100,10 +100,15 @@ pages:
       settings: Paramètres
   projects:
     meta:
-      title: Projet {name}
-    error:
-      title: Ce Projet n'est pas détaillé pour le moment
-      back: Retour
+      title: Mes projets
+      description: Découvrez une partie de mes projets et réalisations web.
+    play: Découvrir le projet
+    id:
+      meta:
+        title: Projet {name}
+      error:
+        title: Ce Projet n'est pas détaillé pour le moment
+        back: Retour
   settings:
     meta:
       title: Paramètres
@@ -320,10 +325,6 @@ pages:
     title: Page non trouvée
     buttons:
       back: Retour
-page:
-  title: Mes projets
-  description: Découvrez une partie de mes projets et réalisations web.
-play: Découvrir le projet
 stores:
   company:
     website:
