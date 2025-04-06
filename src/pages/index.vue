@@ -19,15 +19,15 @@ const cards = computed(() => [navStore.projects].concat(navStore.main))
 const colors = [
   'text-red-600 dark:text-red-400',
   'text-blue-600 dark:text-blue-400',
-  'text-green-600 dark:text-green-400',
-  'text-yellow-600 dark:text-yellow-400',
+  'text-green-700 dark:text-green-400',
+  'text-purple-800 dark:text-yellow-400',
   'text-purple-600 dark:text-purple-400',
 ]
 </script>
 
 <template>
   <Pager>
-    <TitleMain>{{ t('pages.index.meta.title') }}</TitleMain>
+    <TitleMain>{{ t('pages.index.title') }}</TitleMain>
 
     <Card>
       <div class="flex-reverse flex flex-col items-center justify-between gap-4" sm="flex-row">
@@ -38,8 +38,8 @@ const colors = [
           {{ t('pages.index.profile.role') }}
         </h2>
         <Image
-          class="aspect-square rounded-full"
-          src="/assets/home/aife_profile.webp"
+          class="aspect-square rounded-full overflow-hidden w-32 h-32"
+          path="/assets/home/aife_profile"
           :alt="t('pages.index.images.profile_alt')"
           :width="128" :height="128"
         />
@@ -77,13 +77,13 @@ const colors = [
 
     <Card class="gap-4" md="text-justify">
       <div class="card-grid">
+        <TitleH3>{{ t('pages.index.journey.discovery.title') }}</TitleH3>
         <Image
-          src="/assets/home/work-begin.webp"
+          path="/assets/home/work-begin"
           :alt="t('pages.index.images.discovery_alt')"
-          class="float-right"
+          class="float-right m-2 max-w-40"
           :width="160" :height="160"
         />
-        <TitleH3>{{ t('pages.index.journey.discovery.title') }}</TitleH3>
         <p>
           {{ t('pages.index.journey.discovery.part1') }}<br>
           <i18n-t keypath="pages.index.journey.discovery.part2" tag="span">
@@ -99,13 +99,13 @@ const colors = [
       </div>
 
       <div class="card-grid">
+        <TitleH3>{{ t('pages.index.journey.professional.title') }}</TitleH3>
         <Image
-          src="/assets/home/university.webp"
+          path="/assets/home/university"
           :alt="t('pages.index.images.university_alt')"
-          class="float-left"
+          class="float-left m-2  max-w-40"
           :width="160" :height="160"
         />
-        <TitleH3>{{ t('pages.index.journey.professional.title') }}</TitleH3>
         <p class="align-middle">
           <i18n-t keypath="pages.index.journey.professional.content" tag="span">
             <template #link1>
@@ -125,9 +125,9 @@ const colors = [
       <div class="card-grid">
         <TitleH3>{{ t('pages.index.journey.freelance.title') }}</TitleH3>
         <Image
-          src="/assets/home/freelance.webp"
+          path="/assets/home/freelance"
           :alt="t('pages.index.images.freelance_alt')"
-          class="float-right"
+          class="float-right m-2  max-w-40"
           :width="160" :height="160"
         />
         <p>

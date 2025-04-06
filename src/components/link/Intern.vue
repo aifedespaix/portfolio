@@ -10,9 +10,9 @@ defineProps<{
 <template>
   <RouterLink
     :to="to"
-    hover="blue-600 dark:blue-500"
+    hover="blue-700 dark:blue-500"
     transition="colors"
-    class="cursor-pointer text-blue-500 underline dark:text-blue-400"
+    class="cursor-pointer text-blue-600 underline dark:text-blue-400"
     :title="title"
   >
     <slot />

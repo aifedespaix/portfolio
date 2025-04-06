@@ -161,8 +161,10 @@ export default defineConfig({
       // Exclure les routes dynamiques et la route catch-all
       const staticRoutes = routes.filter(route =>
         route !== '/projects/:id'
-        && route !== '/:all(.*)',
+        && route !== '/:all(.*)'
+        && route !=='/rgpd'
       )
+      console.log(routes)
 
       const projectKeys: Array<'map-game' | 'map-education' | 'interface-administration' | 'video-learning' | 'bot-chat' | 'mini-games' | 'game-666'> = [
         'map-game',

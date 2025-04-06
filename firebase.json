@@ -4,6 +4,28 @@
     "site": "aife-portfolio",
     "cleanUrls": true,
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-    "rewrites": [{ "source": "**", "destination": "/index.html" }]
+    "headers": [
+      {
+        "source": "**/*.@(js|css|woff2|ttf|eot|otf|svg|jpg|jpeg|png|gif|webp|avif)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=31536000,immutable"
+          }
+        ]
+      },
+      {
+        "source": "/index.html",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache"
+          }
+        ]
+      }
+    ],
+    "rewrites": [
+      { "source": "**", "destination": "/index.html" }
+    ]
   }
 }

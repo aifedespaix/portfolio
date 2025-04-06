@@ -2,11 +2,13 @@ fr:
   pages:
     companies:
       meta:
-        title: Mes expériences Professionnelles
-        description: Les entreprises qui m'ont fait confiance.
+        title: Les Entreprises avec lesquelles j'ai travaillé et qui m'ont fait confiance
+        description: Découvrez les entreprises et agences qui m'ont confié leurs projets web. Retour sur mes collaborations passées en tant que développeur web freelance.
+      title: Mes expériences Professionnelles
 en:
   pages:
     companies:
       meta:
-        title: My Professional Experiences
-        description: The companies that have trusted me.
+        title: Companies I've Worked With and Trusted
+        description: Discover the companies and agencies that have entrusted me with their web projects. A look back at my freelance collaborations and professional experience.
+      title: My Professional Experiences

@@ -11,7 +11,7 @@ useHead({
     },
     {
       name: 'theme-color',
-      content: () => isDark.value ? '#083BA0' : '#A3BEF5',
+      content: () => isDark.value ? '#083BA0' : '#083BA0',
     },
   ],
   link: [
@@ -19,6 +19,15 @@ useHead({
       rel: 'icon',
       type: 'image/svg+xml',
       href: () => preferredDark.value ? '/favicon-dark.svg' : '/favicon.svg',
+    },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      href: () => preferredDark.value ? '/favicon-dark.png' : '/favicon.png',
+    },
+    {
+      rel: 'icon',
+      href: () => preferredDark.value ? '/favicon-dark.ico' : '/favicon.ico',
     },
   ],
 })

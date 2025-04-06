@@ -6,7 +6,7 @@ const props = defineProps<{
 }>()
 
 const { t } = useI18n()
-const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}.webp`
+const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}`
 </script>
 
 <template>
@@ -16,11 +16,14 @@ const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}
       <TitleMain>
         {{ t(data.name) }}
       </TitleMain>
-      <img
-        :src="imagePath(data.image)"
+      <Image
+        :path="imagePath(data.image)"
         :alt="t(data.name)"
         class="mb-6 h-64 w-full rounded-lg object-cover shadow-lg"
-      >
+        :width="512"
+        :height="288"
+        :transparent="false"
+      />
       <p class="text-justify text-lg">
         {{ t(data.description) }}
       </p>
@@ -68,18 +71,23 @@ const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}
       <TitleH2>
         {{ t('components.project-details.keyPoints') }}
       </TitleH2>
+
       <div class="grid gap-8 md:grid-cols-2">
         <div
           v-for="explain in data.explains"
           :key="explain.title"
           bg="white dark:dark-800"
           class="overflow-hidden rounded-lg shadow-md"
+          border="1 solid light-200 dark:dark-800"
         >
-          <img
-            :src="imagePath(explain.image)"
+          <Image
+            :path="imagePath(explain.image)"
             :alt="t(explain.title)"
             class="h-48 w-full object-cover"
-          >
+            :width="512"
+            :height="288"
+            :transparent="true"
+          />
           <div class="p-4">
             <h3 class="mb-2 text-xl font-semibold">
               {{ t(explain.title) }}

@@ -25,7 +25,8 @@ export interface Company {
   }[]
 
   logo: {
-    src: string
+    path: string
+    transparent: boolean
     classes?: string[]
   }
   infoGold?: GoldAward
@@ -44,7 +45,8 @@ export const useCompanyStore = defineStore('company', () => {
       },
     ],
     logo: {
-      src: '/assets/companies/teliae-logo.webp',
+      path: '/assets/companies/teliae-logo',
+      transparent: true,
       classes: ['bg-light-500 dark:bg-light-800'],
     },
   }
@@ -54,7 +56,8 @@ export const useCompanyStore = defineStore('company', () => {
     location: 'stores.company.aife.location',
     description: 'stores.company.aife.description',
     logo: {
-      src: '/assets/companies/aife-logo.webp',
+      path: '/assets/companies/aife-logo',
+      transparent: true,
     },
   }
 
@@ -76,7 +79,11 @@ export const useCompanyStore = defineStore('company', () => {
       urls: [
         { name: 'stores.company.website.name', url: 'https://www.aznetwork.eu' },
       ],
-      logo: { src: '/assets/companies/az_network-logo.webp', classes: ['bg-light-500 dark:bg-light-800'] },
+      logo: { 
+        path: '/assets/companies/az_network-logo', 
+        transparent: true,
+        classes: ['bg-light-500 dark:bg-light-800']
+      },
       infoGold: {
         value: {
           qte: 4,
@@ -91,7 +98,6 @@ export const useCompanyStore = defineStore('company', () => {
       urls: [
         { name: 'stores.company.website.name', url: 'https://www.teliae.fr' },
       ],
-      logo: { src: '/assets/companies/teliae-logo.webp', classes: ['bg-light-500 dark:bg-light-800'] },
       work: 'stores.company.teliae-1.work',
       workDescription: 'stores.company.teliae-1.workDescription',
       icon: 'i-mdi:bug',
@@ -115,7 +121,6 @@ export const useCompanyStore = defineStore('company', () => {
       urls: [
         { name: 'stores.company.website.name', url: 'https://www.teliae.fr' },
       ],
-      logo: { src: '/assets/companies/teliae-logo.webp', classes: ['bg-light-500 dark:bg-light-800'] },
       work: 'stores.company.teliae-2.work',
       workDescription: 'stores.company.teliae-2.workDescription',
       icon: 'i-mdi:design',

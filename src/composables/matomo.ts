@@ -4,6 +4,8 @@ export function useMatomo() {
   return useHead({
     script: [
       {
+        async: true,
+        defer: true,
         children: `
                     var _paq = window._paq = window._paq || [];
                     _paq.push(['trackPageView']);

@@ -20,7 +20,8 @@ export interface Study {
   }
   url: string
   logo: {
-    src: string
+    path: string
+    transparent: boolean
     classes?: string[]
   }
 }
@@ -45,7 +46,7 @@ export const useStudyStore = defineStore('study', () => {
         end: '2015',
       },
       url: 'https://www.unicaen.fr/',
-      logo: { src: '/assets/studies/logo-iut-caen.webp', classes: ['rounded-none'] },
+      logo: { path: '/assets/studies/logo-iut-caen', transparent: true, classes: ['rounded-none'] },
     },
     {
       id: 'fac-lyon',
@@ -65,7 +66,7 @@ export const useStudyStore = defineStore('study', () => {
         end: '2016',
       },
       url: 'https://www.univ-lyon1.fr',
-      logo: { src: '/assets/studies/logo-fac-lyon.webp', classes: ['bg-white'] },
+      logo: { path: '/assets/studies/logo-fac-lyon', transparent: true, classes: ['bg-white'] },
     },
     {
       id: 'institut-g4',
@@ -85,7 +86,7 @@ export const useStudyStore = defineStore('study', () => {
         end: '2020',
       },
       url: 'https://institut-g4.fr/',
-      logo: { src: '/assets/studies/logo-institut_g4.webp' },
+      logo: { path: '/assets/studies/logo-institut_g4', transparent: true },
     },
   ].reverse()
 

@@ -2,8 +2,9 @@ fr:
   pages:
     index:
       meta:
-        title: Accueil
-        description: Bienvenue sur mon portfolio. Découvrez mon parcours et mes projets.
+        title: Développeur Web Freelance – Création de sites et d'applications
+        description: Je suis développeur web en freelance. Découvrez mon portfolio, mes projets récents, et les technologies que j'utilise pour créer des sites modernes et performants.
+      title: Bienvenue sur mon portfolio
       about: À propos
       work: Mon Travail
       profile:
@@ -36,8 +37,9 @@ en:
   pages:
     index:
       meta:
-        title: Home
-        description: Welcome to my portfolio. Discover my journey and projects.
+        title: Freelance Web Developer – Building Modern Websites & Applications
+        description: I'm a freelance web developer. Explore my portfolio, recent projects, and the technologies I use to build modern, high-performance websites.
+      title: Welcome to my portfolio
       about: About
       work: My Work
       profile:

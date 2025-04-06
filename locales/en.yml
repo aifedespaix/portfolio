@@ -34,12 +34,19 @@ components:
 pages:
   companies:
     meta:
-      title: My Professional Experiences
-      description: The companies that have trusted me.
+      title: Companies I've Worked With and Trusted
+      description: >-
+        Discover the companies and agencies that have entrusted me with their
+        web projects. A look back at my freelance collaborations and
+        professional experience.
+    title: My Professional Experiences
   index:
     meta:
-      title: Home
-      description: Welcome to my portfolio. Discover my journey and projects.
+      title: Freelance Web Developer – Building Modern Websites & Applications
+      description: >-
+        I'm a freelance web developer. Explore my portfolio, recent projects,
+        and the technologies I use to build modern, high-performance websites.
+    title: Welcome to my portfolio
     about: About
     work: My Work
     profile:
@@ -96,8 +103,11 @@ pages:
       settings: Settings
   projects:
     meta:
-      title: My projects
-      description: Discover some of my web projects and achievements.
+      title: Recent Web Projects – Websites, Applications & Interactive Work
+      description: >-
+        Explore a curated selection of my web development projects, including
+        modern websites, interactive apps, and technical experiments.
+    title: My projects
     discover: Discover the project
     id:
       meta:
@@ -405,17 +415,13 @@ stores:
         description: Technologies I use
       companies:
         title: Companies
-        description: Companies that trusted me.
+        description: Companies that trusted me
       studies:
         title: Studies
-        description: My academic background.
+        description: My academic background
       projects:
         title: Projects
-        description: My personal projects.
-    category:
-      projects:
-        title: Projects
-        description: My personal projects.
+        description: My personal projects
   projects:
     chat-bot:
       name: Management Chat Bot

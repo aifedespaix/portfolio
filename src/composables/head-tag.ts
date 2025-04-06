@@ -16,7 +16,7 @@ export function useHeadTag(input: UseHeadTagInput) {
   const pageUrl = `${domain}${path}`
 
   const seoInput: UseSeoMetaInput = {}
-  seoInput.titleTemplate = `%s - ${siteTitle}`
+  seoInput.titleTemplate = `%s | ${siteTitle}`
   seoInput.author = author
   seoInput.title = input.title
   seoInput.description = input.description

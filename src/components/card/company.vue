@@ -11,7 +11,15 @@ const { t } = useI18n()
 <template>
   <Card>
     <div class="flex items-center gap-2">
-      <img :src="company.logo.src" :alt="t(company.name)" class="h-14 w-14 rounded-full" :class="company.logo.classes ?? ''">
+      <Image 
+      :path="company.logo.path" 
+      :alt="t(company.name)" 
+      class="h-14 w-14 rounded-full" 
+      :class="company.logo.classes ?? ''"
+      :width="56"
+      :height="56"
+      :transparent="company.logo.transparent"
+      />
       <div>
         <TitleH2 class="mb-0! pb-0!">
           {{ t(company.name) }}
@@ -66,7 +74,7 @@ const { t } = useI18n()
           target="_blank"
           class="flex items-center gap-2 rounded-md p-1 text-blue-600 dark:text-blue-400"
           transition="bg duration-300 ease-in-out"
-          hover="bg-black/20"
+          hover="bg-blue-600/20 dark:bg-blue-400/20"
         >
           <div :class="url.icon ? url.icon : 'i-mdi:web'" class="self-center justify-self-center text-1rem" />
           <div>

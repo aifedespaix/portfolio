@@ -34,12 +34,22 @@ components:
 pages:
   companies:
     meta:
-      title: Mes expériences Professionnelles
-      description: Les entreprises qui m'ont fait confiance.
+      title: >-
+        Les Entreprises avec lesquelles j'ai travaillé et qui m'ont fait
+        confiance
+      description: >-
+        Découvrez les entreprises et agences qui m'ont confié leurs projets web.
+        Retour sur mes collaborations passées en tant que développeur web
+        freelance.
+    title: Mes expériences Professionnelles
   index:
     meta:
-      title: Accueil
-      description: Bienvenue sur mon portfolio. Découvrez mon parcours et mes projets.
+      title: Développeur Web Freelance – Création de sites et d'applications
+      description: >-
+        Je suis développeur web en freelance. Découvrez mon portfolio, mes
+        projets récents, et les technologies que j'utilise pour créer des sites
+        modernes et performants.
+    title: Bienvenue sur mon portfolio
     about: À propos
     work: Mon Travail
     profile:
@@ -100,8 +110,11 @@ pages:
       settings: Paramètres
   projects:
     meta:
-      title: Mes projets
-      description: Découvrez une partie de mes projets et réalisations web.
+      title: Projets web récents – Sites, applications et réalisations modernes
+      description: >-
+        Parcourez une sélection de mes projets web, entre sites vitrines,
+        applications interactives et expérimentations techniques.
+    title: Mes projets
     discover: Découvrir le projet
     id:
       meta:
@@ -436,17 +449,13 @@ stores:
         description: Les Technologies que j'utilise
       companies:
         title: Entreprises
-        description: Les entreprises qui m'ont fait confiance.
+        description: Les entreprises qui m'ont fait confiance
       studies:
         title: Études
-        description: Mon parcours universitaire.
+        description: Mon parcours universitaire
       projects:
         title: Projets
-        description: Mes projets personnels.
-    category:
-      projects:
-        title: Projets
-        description: Mes projets personnels.
+        description: Mes projets personnels
   projects:
     chat-bot:
       name: Chat Bot de Gestion

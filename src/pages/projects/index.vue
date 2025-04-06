@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { t } = useI18n()
 const projectsStore = useProjectsStore()
-const imagePath = (id: string, image: string) => `/assets/projects/${id}/${image}.webp`
+const imagePath = (id: string, image: string) => `/assets/projects/${id}/${image}`
 const projectUrl = (id: string) => `/projects/${id}`
 
 useHeadTag({
@@ -14,7 +14,7 @@ useHeadTag({
 <template>
   <Pager>
     <TitleMain>
-      {{ t('pages.projects.meta.title') }}
+      {{ t('pages.projects.title') }}
     </TitleMain>
 
     <div
@@ -45,11 +45,14 @@ useHeadTag({
           </p>
 
           <div class="max-h-80 flex-1 overflow-hidden rounded-t-lg -m-x4 -m-b4">
-            <img
-              :src="imagePath(project.id, project.image)"
+            <Image
+              :path="imagePath(project.id, project.image)"
               :alt="t(project.name)"
-              class="h-full w-full object-cover"
-            >
+              class="h-full w-full object-cover object-center"
+              :width="512"
+              :height="288"
+              :transparent="false"
+            />
           </div>
 
           <template #button>

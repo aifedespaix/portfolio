@@ -38,7 +38,7 @@ export const useInterfaceAdministrationStore = defineStore('project-interface-ad
         description: 'stores.projects.interface-administration.explains.1.description',
       },
       {
-        image: 'interface-administration-sondages',
+        image: 'interface-administration-poll',
         title: 'stores.projects.interface-administration.explains.2.title',
         description: 'stores.projects.interface-administration.explains.2.description',
       },

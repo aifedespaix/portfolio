@@ -2,13 +2,15 @@ fr:
   pages:
     projects:
       meta:
-        title: Mes projets
-        description: Découvrez une partie de mes projets et réalisations web.
+        title: Projets web récents – Sites, applications et réalisations modernes
+        description: Parcourez une sélection de mes projets web, entre sites vitrines, applications interactives et expérimentations techniques.
+      title: Mes projets
       discover: Découvrir le projet
 en:
   pages:
     projects:
       meta:
-        title: My projects
-        description: Discover some of my web projects and achievements.
+        title: Recent Web Projects – Websites, Applications & Interactive Work
+        description: Explore a curated selection of my web development projects, including modern websites, interactive apps, and technical experiments.
+      title: My projects
       discover: Discover the project
