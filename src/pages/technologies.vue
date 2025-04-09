@@ -320,6 +320,7 @@ const softwares: Record<string, Software> = {
         >
           <div class="i-mdi:web" />
           <div>{{ t('pages.technologies.website.title') }}</div>
+          <div class="i-mdi:external-link ml-1 inline-block text-xs" />
         </a>
       </div>
 
@@ -356,6 +357,7 @@ const softwares: Record<string, Software> = {
               >
                 <div class="i-mdi:web text-sm" />
                 <div>{{ t('pages.technologies.documentation') }}</div>
+                <div class="i-mdi:external-link ml-1 inline-block text-xs" />
               </a>
             </div>
 
@@ -416,6 +418,7 @@ const softwares: Record<string, Software> = {
           >
             <div class="i-mdi:web" />
             <div>{{ t('pages.technologies.website.title') }}</div>
+            <div class="i-mdi:external-link ml-1 inline-block text-xs" />
           </a>
         </div>
       </Card>

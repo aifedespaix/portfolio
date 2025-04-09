@@ -38,7 +38,7 @@ const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}
           :href="link.url"
           target="_blank"
           rel="noopener noreferrer"
-          class="flex items-center gap-3 rounded-lg p-4 transition-colors duration-300"
+          class="relative flex items-center gap-3 rounded-lg p-4 transition-colors duration-300"
           :class="{
             'bg-red-500 hover:bg-red-600': link.type === 'youtube',
             'bg-dark-500 hover:bg-dark-600': link.type === 'tiktok',
@@ -61,6 +61,7 @@ const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}
               {{ t(link.name) }}
             </span>
             <span v-if="link.more" class="text-xs" text="gray-500 dark:gray-400">{{ t(link.more) }}</span>
+            <div class="i-mdi:external-link absolute right-2 top-2 text-xs" />
           </div>
         </a>
       </div>

@@ -845,10 +845,10 @@ stores:
       location: Caen, France
       diploma: DUT Informatique
       description: >-
-        Formation en informatique générale, j'ai pu découvrir les bases de
-        l'informatique et de la programmation. Cette formation m'a permis de
-        valider mon intérêt pour le développement web tout en m'apportant un
-        bagage solide dans les sciences de l'informatique.
+        Formation en informatique générale. J’ai découvert les bases de
+        l’informatique et de la programmation. Cette formation a confirmé mon
+        intérêt pour le développement web, tout en m’apportant un socle solide
+        en sciences informatiques.
       competencies:
         web: Développement Web
         database: Base de données
@@ -858,9 +858,9 @@ stores:
       location: Lyon, France
       diploma: Licence Informatique
       description: >-
-        Cette année fut un tournant pour moi et la vision du métier que je
-        souhaitais exercer. J'ai été au bout de cette année sans la valider.
-        J'ai tout de même acquis de fortes connaissances en algorithmie et en UX
+        Cette année a marqué un tournant dans ma vision du métier que je
+        souhaitais exercer. Bien que je n’aie pas validé cette année, elle m’a
+        permis d’acquérir de solides connaissances en algorithmie et en UX
         design.
       competencies:
         web: Développement Web
@@ -871,14 +871,13 @@ stores:
       location: Lyon, France
       diploma: Chef de projet Système d'Information
       description: >-
-        Je me suis orienté dans le domaine de la gestion de projet
-        informatique.Ayant des connaissances variées et étant intéressé sur tous
-        les aspects de la réalisation de projets, il est naturel pour moi de
-        réfléchir et concevoir des solutions optimales que ce soit
-        organisationnel ou en accord avec les contraintes techniques. J'ai
-        également participé à la formation d'élèves sur mes domaines de
-        compétence. La transmission du savoir est une notion importante pour
-        moi.
+        Je me suis orienté vers la gestion de projet informatique. Mes
+        connaissances variées et mon intérêt pour toutes les étapes de
+        réalisation de projets m’ont naturellement conduit à réfléchir à des
+        solutions optimales, tant sur le plan organisationnel que technique.
+        J’ai également eu l’opportunité de former des élèves dans mes domaines
+        de compétence, car la transmission du savoir est une valeur qui m’est
+        chère.
       competencies:
         web: Développement Web
         work: Gestion de projet

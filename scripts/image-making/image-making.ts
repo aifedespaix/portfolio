@@ -1,5 +1,6 @@
 import { existsSync, promises as fs, mkdirSync } from 'node:fs'
 import path from 'node:path'
+import process from 'node:process'
 import sharp from 'sharp'
 
 interface ImageOptions {
@@ -13,6 +14,8 @@ async function generateImages({ width, height, inputFile, transparent }: ImageOp
   const outputDir = path.join(__dirname)
   const inputPath = path.join(outputDir, inputFile)
   const baseFileName = path.basename(inputPath, path.extname(inputPath))
+
+  console.log(transparent)
 
   // Créer le dossier de sortie s'il n'existe pas
   await fs.mkdir(outputDir, { recursive: true })

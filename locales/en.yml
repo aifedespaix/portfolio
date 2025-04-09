@@ -776,10 +776,10 @@ stores:
       location: Caen, France
       diploma: University Diploma in Computer Science
       description: >-
-        General computer science training, I discovered the basics of computer
-        science and programming. This training allowed me to validate my
-        interest in web development while providing me with a solid background
-        in computer science.
+        A general training in computer science where I learned the fundamentals
+        of computing and programming. This program confirmed my passion for web
+        development and provided me with a strong foundation in computer
+        science.
       competencies:
         web: Web Development
         database: Database
@@ -789,9 +789,9 @@ stores:
       location: Lyon, France
       diploma: Bachelor's Degree in Computer Science
       description: >-
-        This year was a turning point for me and the vision of the profession I
-        wanted to pursue. I went through this year without validating it. I
-        still acquired strong knowledge in algorithms and UX design.
+        This year was a turning point in how I envisioned my future career.
+        Although I did not complete the year, I gained strong skills in
+        algorithms and UX design.
       competencies:
         web: Web Development
         palette: UX Design
@@ -801,12 +801,11 @@ stores:
       location: Lyon, France
       diploma: Information System Project Manager
       description: >-
-        I focused on the field of IT project management. Having varied knowledge
-        and being interested in all aspects of project implementation, it is
-        natural for me to think and design optimal solutions, whether
-        organizational or in accordance with technical constraints. I also
-        participated in training students in my areas of expertise. The
-        transmission of knowledge is an important concept for me.
+        I specialized in IT project management. My broad skill set and interest
+        in all stages of project development naturally led me to think about and
+        design optimal solutions, both organizational and technical. I also had
+        the opportunity to train students in my areas of expertise, as knowledge
+        sharing is something I deeply value.
       competencies:
         web: Web Development
         work: Project Management

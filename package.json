@@ -4,7 +4,7 @@
   "packageManager": "bun@1.1.45",
   "scripts": {
     "build": "vite-ssg build",
-    "bd": "vite-ssg build && firebase deploy",
+    "bd": "bun run translate && bun run build && bun run deploy",
     "dev": "vite",
     "lint": "eslint .",
     "img": "bun run scripts/image-making/image-making.ts",
@@ -17,7 +17,8 @@
     "typecheck": "vue-tsc --noEmit",
     "up": "taze major -I",
     "postinstall": "npx simple-git-hooks",
-    "sizecheck": "npx vite-bundle-visualizer"
+    "sizecheck": "npux vite-bundle-visualizer",
+    "deploy": "firebase deploy"
   },
   "dependencies": {
     "@iconify-json/devicon": "^1.2.21",
