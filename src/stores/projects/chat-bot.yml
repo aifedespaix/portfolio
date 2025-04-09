@@ -2,6 +2,9 @@ fr:
   stores:
     projects:
       chat-bot:
+        meta:
+          title: Création d’un Chat Bot pour Discord & Twitch – Données, LLM et Automatisations
+          description: "Développement complet d’un chat bot pour Discord et Twitch : récupération de données utilisateur, intégration d’un modèle LLM, gestion de serveurs et automatisations via APIs. Un projet orienté performances, scalabilité et expérience utilisateur."
         name: Chat Bot de Gestion
         short-description: Un chat bot pour Discord et Twitch
         description: Un chat bot pour Discord et Twitch. Il permet de gérer des serveurs Discord et des chat Twitch. Il peut récupérer des informations diverses sur les utilisateurs et les stocker dans une base de données. Il peut également interagir avec les utilisateurs.
@@ -19,6 +22,9 @@ en:
   stores:
     projects:
       chat-bot:
+        meta:
+          title: Development of a Discord & Twitch Chat Bot – Data, LLM & Automations
+          description: "Full development of a chat bot for Discord and Twitch: user data retrieval, LLM integration, server management, and automated workflows via APIs. A project focused on performance, scalability, and user experience."
         name: Management Chat Bot
         short-description: A chat bot for Discord and Twitch
         description: A chat bot for Discord and Twitch. It allows managing Discord servers and Twitch chats. It can retrieve various user information and store it in a database. It can also interact with users.

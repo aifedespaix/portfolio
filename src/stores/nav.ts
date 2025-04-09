@@ -1,9 +1,11 @@
+import type { ProjectKey } from './projects'
+import type { RouteKey } from '~/routes'
 import type { I18nKey } from '~/types/i18n'
 import { acceptHMRUpdate, defineStore } from 'pinia'
 
 interface NavItem {
   name: I18nKey
-  to: string
+  to: RouteKey | ProjectKey
   icon: string
   description: I18nKey
 }
@@ -13,14 +15,14 @@ export const useNavStore = defineStore('nav', () => {
   const settings = 'stores.nav.settings'
 
   const main = ref<NavItem[]>([
-    { name: 'stores.nav.top.technologies.title', to: '/technologies', icon: 'i-mdi:tools', description: 'stores.nav.top.technologies.description' },
-    { name: 'stores.nav.top.companies.title', to: '/companies', icon: 'i-mdi:company', description: 'stores.nav.top.companies.description' },
-    { name: 'stores.nav.top.studies.title', to: '/studies', icon: 'i-mdi:school', description: 'stores.nav.top.studies.description' },
+    { name: 'stores.nav.top.technologies.title', to: 'technologies', icon: 'i-mdi:tools', description: 'stores.nav.top.technologies.description' },
+    { name: 'stores.nav.top.companies.title', to: 'companies', icon: 'i-mdi:company', description: 'stores.nav.top.companies.description' },
+    { name: 'stores.nav.top.studies.title', to: 'studies', icon: 'i-mdi:school', description: 'stores.nav.top.studies.description' },
   ])
 
   const projects = ref<NavItem>({
     name: 'stores.nav.top.projects.title',
-    to: '/projects',
+    to: 'projects',
     icon: 'i-icon-park-outline:code-computer',
     description: 'stores.nav.top.projects.description',
   })

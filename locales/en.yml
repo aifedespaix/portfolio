@@ -14,6 +14,10 @@ components:
         competencies:
           title: Significant skills
   layout:
+    app-bar:
+      index: Home
+      projects: Projects
+      profile: Profile
     footer:
       copyright: All rights reserved
       privacy: Privacy Policy
@@ -55,7 +59,7 @@ pages:
     journey:
       title: My Journey
       discovery:
-        title: Discovery of Computer Science
+        title: Discovering Computer Science
         part1: >-
           I became passionate about computer science at the age of 12 when I
           gained access to an internet connection on the family computer.
@@ -64,8 +68,8 @@ pages:
           the basics of HTML and CSS thanks to Site du Zéro (now {link}).
         part3: >-
           I soon started developing my own websites and learning programming
-          languages. I improved my skills in PHP and SQL, which allowed me to
-          deeply understand the structure of the applications I wanted to
+          languages. I strengthened my skills in PHP and SQL, which allowed me
+          to deeply understand the structure of the applications I wanted to
           create.
         part4: >-
           I then developed various websites, whether for freelancers,
@@ -78,16 +82,15 @@ pages:
           management. During this time, I became convinced that I wanted to work
           in web development. I also had the opportunity to take my first steps
           {link2} through various internships and three years of work-study.
-        university_link: university path
+        university_link: academic background
         company_link: in company
       freelance:
         title: My Freelance Journey
         content: >-
-          At the end of my studies, I decided to start my own business. I
-          carried out various projects as a freelance web developer and also
-          turned to content creation in video format on YouTube and Twitch.
-          Today, I work for various clients while continuing to develop my
-          {link1}.
+          At the end of my studies, I decided to go freelance. I carried out
+          various projects as a freelance web developer and also turned to
+          content creation in video format on YouTube and Twitch. Today, I work
+          for various clients while continuing to develop my {link1}.
         projects_link: projects
     images:
       profile_alt: Profile Picture of Joan Tassel
@@ -110,12 +113,11 @@ pages:
     title: My projects
     discover: Discover the project
     id:
-      meta:
-        title: Projet {name}
       error:
         title: This project is not detailed for the moment
         back: Back
   settings:
+    title: Settings
     meta:
       title: Settings
       description: Settings and personal information.
@@ -182,7 +184,9 @@ pages:
               I mainly use React for the creation of automated videos thanks to
               the Remotion library. I know the basics, but only use it for this
               purpose.
-            apports: ''
+            apports: >-
+              I discovered a new paradigm with JSX and declarative rendering,
+              but I preferred the syntax of Vue for my web projects.
           angular:
             description: >-
               Angular is a framework dedicated to the creation of ambitious web
@@ -307,7 +311,28 @@ pages:
           stable and complete software. It allowed me to design live broadcasts
           over long periods. Whether it's daily streams or broadcasts lasting
           several days managed by a remote team.
+      docker:
+        description: >-
+          Docker is a platform that allows you to build, deploy, and run
+          applications in containers. These containers make projects more
+          portable, reproducible, and isolated from the host machine
+          environment.
+        utilisation: >-
+          I use Docker to create consistent development environments, manage
+          temporary databases or external services (like Matomo, PostgreSQL,
+          WordPress, etc.), and easily deploy my projects across different
+          servers or machines. It allowed me to automate project setups, whether
+          locally or in production.
+        apports: >-
+          Docker helped me improve reliability and productivity, especially when
+          working on multiple projects or with teams. It reduced
+          environment-related issues between developers. I also learned best
+          practices in configuration, security, and orchestration using Docker
+          Compose.
   not-found:
+    meta:
+      title: Page not found
+      description: Page not found
     title: Page not found
     buttons:
       back: Back
@@ -325,9 +350,9 @@ stores:
         CRM and ERP solutions.
       work: Web Developer Internship
       workDescription: >-
-        I worked on updating the Génerix ERP at various clients. I had to
-        perform data searches via SQL queries, update files to adapt specific
-        updates via regular expressions.
+        I worked on updating the Generix ERP at various clients. I performed
+        data retrieval using SQL queries, update files to adapt specific updates
+        via regular expressions.
       competencies:
         web: Web Development
         database: Database
@@ -344,8 +369,8 @@ stores:
     teliae-1:
       work: Internship in Web Development
       workDescription: >-
-        I started in this company with an internship. My role was to maintain
-        and add features to a delivery route management application.
+        I began my time at the company with an internship. My role was to
+        maintain and add features to a delivery route management application.
       competencies:
         web: Web Development
         language_php: Back End Programming
@@ -356,12 +381,12 @@ stores:
     teliae-2:
       work: Web Developer Apprentice
       workDescription: >-
-        I had the opportunity to be assigned to multiple missions with varying
-        ambitions. Among my biggest missions, I had to redesign the visual
-        interface of an old application. I had to implement a solution to adapt
-        the interface to new accessibility standards, while maintaining a simple
-        and intuitive interface. All while accompanying users in the evolution
-        of their tool.
+        I had the opportunity to be assigned to multiple projects of varying
+        scope. One of my most significant missions involved redesigning the
+        visual interface of an outdated application. I implemented a solution to
+        bring the interface up to modern accessibility standards while
+        maintaining a simple and intuitive user experience. I also supported
+        users throughout the transition process.
       competencies:
         web: Web Development
         palette: UX Design
@@ -424,6 +449,13 @@ stores:
         description: My personal projects
   projects:
     chat-bot:
+      meta:
+        title: Development of a Discord & Twitch Chat Bot – Data, LLM & Automations
+        description: >-
+          Full development of a chat bot for Discord and Twitch: user data
+          retrieval, LLM integration, server management, and automated workflows
+          via APIs. A project focused on performance, scalability, and user
+          experience.
       name: Management Chat Bot
       short-description: A chat bot for Discord and Twitch
       description: >-
@@ -461,6 +493,13 @@ stores:
           well-adapted to these different tasks to save time in both developing
           new features and ensuring maintenance and security.
     game-666:
+      meta:
+        title: Halloween Puzzle – Interactive & Encrypted Web Experience
+        description: >-
+          A Halloween-themed web puzzle app combining collaborative
+          investigation, real-time Twitch interactions, client-side encryption
+          with CryptoJS, and nightly timed events. A creative project focused on
+          immersive user experience and smart technical design.
       name: Halloween Puzzle
       short-description: A collaborative investigation for Halloween.
       description: >-
@@ -490,6 +529,12 @@ stores:
           data mixed with chat messages and puzzle-related information to
           increase the challenge.
     interface-administration:
+      meta:
+        title: Stream Management Interface – Overlays, Polls & Moderation Tools
+        description: >-
+          Web application developed for a streamer and their moderation team. It
+          centralizes stream management, video editing, polls, music, dynamic
+          overlays, and more, with strong Twitch API and Firebase integration.
       name: Administration Interface
       short-description: Web application for a streamer and their moderators.
       description: >-
@@ -528,6 +573,13 @@ stores:
           solutions to optimize responses without overloading the servers with
           requests.
     map-education:
+      meta:
+        title: Educational Interactive Map – Mobile UI & WordPress Integration
+        description: >-
+          Design of an interactive map for young audiences, integrated into a
+          WordPress website. The project includes dual map views (overview and
+          zoom), with a mobile-first responsive interface, focused on
+          performance, clarity, and accessibility.
       name: Educational Map
       short-description: An Interactive Map for an Associative Institution.
       description: >-
@@ -560,6 +612,13 @@ stores:
           and managing assets (JavaScript, CSS, images, etc.) to maintain
           optimal loading speed.
     map-game:
+      meta:
+        title: Interactive Map for Exploration Game – Search, UX & Optimization
+        description: >-
+          Development of an interactive map designed to support an exploration
+          video game. Features include Fuse.js search engine, smart filtering,
+          tiled image rendering, and responsive design. A performance-focused
+          and user-friendly in-game companion.
       name: Interactive Map
       short-description: An interactive map serving as a support for an exploration video game.
       description: >-
@@ -596,6 +655,13 @@ stores:
           level. I had to develop an algorithm to manage this cutting and
           optimize loading time.
     mini-games:
+      meta:
+        title: Interactive Mini-Games – Playful Mobile Advent Calendar
+        description: >-
+          Development of an Advent Calendar made of mobile-friendly mini-games:
+          crosswords, sliding puzzles, matching games, riddles. Each game
+          features optimized touch controls, dynamic audio/visual feedback, and
+          multiple difficulty levels for an engaging experience.
       name: Mini-Games
       short-description: Advent Calendar in the form of Mini-Games.
       description: Advent Calendar in the form of Mini-Games.
@@ -642,6 +708,13 @@ stores:
           them efficiently: Enable/Disable, Pause, Adjust Volume, Block
           interactions while a sound is playing, and Load assets.
     video-learning:
+      meta:
+        title: Automated Educational Video Generation – AI, Voice & Remotion
+        description: >-
+          Complete system for automated educational video creation: AI-generated
+          word lists, voice synthesis with Coqui TTS, 3D animation via Remotion,
+          and fully automated uploads to YouTube and TikTok. A project combining
+          educational content, tech innovation, and full workflow automation.
       name: Automated Videos
       short-description: Generation of educational and automated videos.
       description: Generation of educational and automated videos.

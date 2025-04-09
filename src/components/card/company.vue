@@ -11,14 +11,14 @@ const { t } = useI18n()
 <template>
   <Card>
     <div class="flex items-center gap-2">
-      <Image 
-      :path="company.logo.path" 
-      :alt="t(company.name)" 
-      class="h-14 w-14 rounded-full" 
-      :class="company.logo.classes ?? ''"
-      :width="56"
-      :height="56"
-      :transparent="company.logo.transparent"
+      <Image
+        :path="company.logo.path"
+        :alt="t(company.name)"
+        class="h-14 w-14 rounded-full"
+        :class="company.logo.classes ?? ''"
+        :width="56"
+        :height="56"
+        :transparent="company.logo.transparent"
       />
       <div>
         <TitleH2 class="mb-0! pb-0!">

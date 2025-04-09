@@ -14,6 +14,10 @@ components:
         competencies:
           title: Compétences notables
   layout:
+    app-bar:
+      index: Accueil
+      projects: Projets
+      profile: Profil
     footer:
       copyright: Tous droits réservés
       privacy: Politique de confidentialité
@@ -60,42 +64,41 @@ pages:
       discovery:
         title: Découverte de l'informatique
         part1: >-
-          Je me suis passionné d'informatique à mes 12 ans, lorsque j'ai eu
+          Je me suis passionné d'informatique à l'âge de 12 ans, lorsque j'ai eu
           accès à une connexion internet sur l'ordinateur familial.
         part2: >-
-          Je me suis très vite intéressé à la structure des sites web, et j'ai
-          pu me former aux bases du HTML et CSS grâce au Site du Zéro
-          (aujourd'hui {link}).
+          Très vite, je me suis intéressé à la structure des sites web. J’ai
+          appris les bases du HTML et du CSS grâce au Site du Zéro (aujourd'hui
+          {link}).
         part3: >-
-          J'ai rapidement commencé à développer mes propres sites web, et à me
-          former aux langages de programmation. J'ai progressé en PHP et en SQL
-          ce qui m'a permis de penser en profondeur sur la structure des
-          applications que je souhaitais concevoir.
+          J’ai ensuite commencé à développer mes propres sites, tout en
+          apprenant des langages comme le PHP et le SQL. Cela m’a permis de
+          mieux comprendre la structure des applications web.
         part4: >-
-          J'ai ensuite développé différents sites internets, que ce soit pour
-          des auto-entrepreneurs, des associations, ou des sites personnels
-          proposant de l'aide sur des jeux vidéo.
+          J’ai développé divers sites internet, pour des auto-entrepreneurs, des
+          associations, ou encore des projets personnels d’aide sur des jeux
+          vidéo.
       professional:
         title: Ma professionnalisation
         content: >-
           C'est en sortant du lycée que j'ai décidé de me tourner vers
           l'informatique en tant que profession. J'ai passé 6 années dans un
-          {link1} basé sur les sciences de l'informatique et à la gestion de
-          projet. C'est durant cette période que je me suis convaincu que je
-          voulais travailler dans le domaine du développement web. J'ai
-          également eu la chance de faire mes premiers pas {link2} via
-          différents stages et 3 années d'alternance.
-        university_link: parcours universitaire
-        company_link: en entreprise
+          {link1} axé sur les sciences informatiques et la gestion de projet.
+          C'est durant cette période que je me suis convaincu que je voulais
+          travailler dans le domaine du développement web. J’ai aussi eu la
+          chance de découvrir le {link2} grâce à différents stages et trois
+          années d’alternance.
+        university_link: cursus universitaire
+        company_link: monde professionnel
       freelance:
         title: Mon projet en tant que freelance
         content: >-
           À la fin de mes études, j'ai décidé de me lancer à mon compte. J'ai
-          réalisé diverses missions en tant que développeur web freelance, je me
-          suis également tourné vers la création de contenu au format vidéo sur
-          la plateforme YouTube ainsi que Twitch. Aujourd'hui je travaille pour
-          divers clients tout en continuant à développer mes {link1}.
-        projects_link: propres projets
+          réalisé diverses missions en tant que développeur web freelance. Je me
+          suis également lancé dans la création de contenu vidéo, notamment sur
+          YouTube et Twitch. Je travaille aujourd’hui pour divers clients tout
+          en continuant à développer {link1} qui me tiennent à cœur .
+        projects_link: mes projets personnels
     images:
       profile_alt: Photo de Profil Joan Tassel
       discovery_alt: Découverte du code
@@ -117,12 +120,11 @@ pages:
     title: Mes projets
     discover: Découvrir le projet
     id:
-      meta:
-        title: Projet {name}
       error:
         title: Ce Projet n'est pas détaillé pour le moment
         back: Retour
   settings:
+    title: Paramètres
     meta:
       title: Paramètres
       description: 'Paramètres du site : Couleurs, langue, etc.'
@@ -179,7 +181,7 @@ pages:
               J'ai utilisé Vue.js pour la création de sites, interfaces de
               gestion, et overlays interactifs.
             apports: >-
-              Vue est le framework qui m'a le plus attiré, de pars son approche
+              Vue est le framework qui m'a le plus attiré, de par son approche
               orientée HTML de la logique. C'est avec l'arrivée de Vue 3 que je
               l'ai intégré à une majorité de mes projets.
           react:
@@ -191,7 +193,10 @@ pages:
               J'utilise principalement React pour la réalisation de vidéos
               automatisées grâce à la librairie Remotion. J'en connais les
               bases, mais ne le reserve que pour cette utilisation.
-            apports: ''
+            apports: >-
+              J’ai découvert un nouveau paradigme avec JSX et le rendu
+              déclaratif, mais j’ai préféré la syntaxe de Vue pour mes projets
+              web.
           angular:
             description: >-
               Angular est un framework dédié à la création d'applications web
@@ -207,8 +212,8 @@ pages:
               interactives.
             utilisation: J'utilise Leaflet pour la création de cartes interactives.
             apports: >-
-              La simplicité d'utilisation de Leaflet m'a permis de gagner du
-              temps lors de la création de cartes.
+              Grâce à sa simplicité, Leaflet m'a fait gagner un temps précieux
+              lors de la création de cartes.
           nestjs:
             description: >-
               NestJS est un framework pour la création d'applications Node.js.
@@ -231,8 +236,8 @@ pages:
               j'avais besoin d'un service rapide à mettre en place.
             apports: >-
               Firebase me fait gagner beaucoup de temps quand je dois concevoir
-              stocker des données lors d'un projet où les résultats doivent être
-              rapides.
+              et stocker des données lors d'un projet où les résultats doivent
+              être rapides.
           threejs:
             description: Three.js est une librairie JavaScript pour la création de 3D.
             utilisation: >-
@@ -311,9 +316,9 @@ pages:
           After Effects est un logiciel d'animations graphiques, il est utilisé
           pour du motion design et des effets spéciaux.
         utilisation: >-
-          J'utilise ce logiciel pour gagner fluidifier mon montage vidéo. Je
-          n'ai pas une maîtrise d'un niveau expert, mais je m'en sers pour
-          compléter l'utilisation de Premiere Pro.
+          J'utilise ce logiciel pour gagner fluidifier mon montage vidéo.Je ne
+          maîtrise pas encore After Effects à un niveau expert, mais je m'en
+          sers pour compléter l'utilisation de Premiere Pro.
       davinciResolve:
         description: DaVinci Resolve est un logiciel de montage de vidéos.
         utilisation: >-
@@ -323,19 +328,41 @@ pages:
       vscode:
         description: VSCode est un éditeur de code multi-plateforme gratuit et open source.
         utilisation: >-
-          J'utilise VSCode pour la plus part de mes projets et scripts. Ancient
+          J'utilise VSCode pour la plupart de mes projets et scripts. Ancien
           abonné à la suite JetBrains durant mes études, je ne souhaitais pas
           payer pour un IDE. J'ai adopté VSCode et son écosystème. J'apprécie
           avoir un contrôle sur mon environnement de travail.
       obsStudio:
         description: OBS Studio est un logiciel de capture et de streaming de vidéos.
         utilisation: >-
-          J'utilise OBS Studio pour la gestion de les steams et l'enregistrement
-          de scènes. C'est un logiciel stable et complet. Il m'a permis de
-          concevoir des émissions en direct sur de longues périodes. Que ce soit
-          des streams quotidiens ou des émissions durant plusieurs jours avec
-          gérée par une équipe à distance.
+          J'utilise OBS Studio pour la gestion de les streams et
+          l'enregistrement de scènes. C'est un logiciel stable et complet. Il
+          m'a permis de concevoir des émissions en direct sur de longues
+          périodes. Que ce soit des streams quotidiens ou des émissions durant
+          plusieurs jours, gérées à distance par une équipe.
+      docker:
+        description: >-
+          Docker est une plateforme qui permet de créer, déployer et exécuter
+          des applications dans des conteneurs. Ces conteneurs rendent les
+          projets plus portables, reproductibles et isolés de l’environnement de
+          la machine hôte.
+        utilisation: >-
+          J'utilise Docker pour créer des environnements de développement
+          uniformes, gérer des bases de données temporaires ou des services
+          externes (comme Matomo, PostgreSQL, WordPress, etc.), et déployer
+          facilement mes projets sur différents serveurs ou machines. Il m'a
+          permis d'automatiser le setup de mes projets, que ce soit en local ou
+          en production.
+        apports: >-
+          Docker m'a permis de gagner en fiabilité et en productivité, surtout
+          lorsque je travaille sur plusieurs projets ou avec des équipes. Grâce
+          à lui, j'ai réduit les problèmes liés aux différences d'environnement
+          entre développeurs. J'ai aussi découvert des bonnes pratiques de
+          configuration, de sécurité et d'orchestration avec Docker Compose.
   not-found:
+    meta:
+      title: Page non trouvée
+      description: Page non trouvée
     title: Page non trouvée
     buttons:
       back: Retour
@@ -353,10 +380,10 @@ stores:
         maintenance de solutions CRM et ERP.
       work: Stage Développeur Web
       workDescription: >-
-        J'ai travaillé sur la mise a jour de l'ERP Génerix chez différents
-        client. J'ai dû faire de la recherche de données via requêtes SQL, mise
-        à jour de fichiers pour adapter les mises à jours spécifiques via des
-        expressions régulières.
+        J'ai travaillé sur la mise à jour de l'ERP Generix chez différents
+        clients. J'ai dû faire de la recherche de données via requêtes SQL,
+        modification de fichiers pour adapter les mises à jour spécifiques via
+        des expressions régulières.
       competencies:
         web: Développement Web
         database: Base de données
@@ -388,11 +415,10 @@ stores:
       workDescription: >-
         J'ai eu la chance d'être affecté à de multiples missions à ambitions
         variables. Parmi mes plus grosses missions, j'ai du repenser l'interface
-        visuelle d'une application ancienne. J'ai dû mettre en place une
-        solution pour adapter l'interface aux nouveaux standards
-        d'accessibilité, tout en conservant une interface simple et intuitive.
-        Le tout en accompagnants les utilisateurs dans l'évolution de leur
-        outil.
+        visuelle d'une application ancienne. J'ai repensé l'interface d'une
+        ancienne application pour la rendre plus accessible, tout en conservant
+        une ergonomie simple et intuitive. En accompagnant les utilisateurs dans
+        l'évolution de leur outil.
       competencies:
         web: Développement Web
         palette: Design UX
@@ -427,12 +453,11 @@ stores:
     aife-2:
       work: Développeur Web
       workDescription: >-
-        Mes activités sont diverses, que ce soit de la création de sites
-        vitrines, de la maintenance de sites existants, de l'intégration de
-        contenu. Mes compétences en développement, en design, et en création de
-        contenu me permettent de répondre à un large panel de demandes. Je
-        profite de mes compétences pour développer des outils variés pour
-        faciliter mon travail de créateur de contenu.
+        Mes activités sont diverses,  création de sites vitrines, maintenance,
+        intégration de contenu... Mes compétences en développement, en design,
+        et en création de contenu me permettent de répondre à un large panel de
+        demandes. Je développe aussi des outils sur mesure pour optimiser mon
+        quotidien de créateur de contenu.
       competencies:
         web: Développement Web
         palette: Design UX
@@ -458,6 +483,15 @@ stores:
         description: Mes projets personnels
   projects:
     chat-bot:
+      meta:
+        title: >-
+          Création d’un Chat Bot pour Discord & Twitch – Données, LLM et
+          Automatisations
+        description: >-
+          Développement complet d’un chat bot pour Discord et Twitch :
+          récupération de données utilisateur, intégration d’un modèle LLM,
+          gestion de serveurs et automatisations via APIs. Un projet orienté
+          performances, scalabilité et expérience utilisateur.
       name: Chat Bot de Gestion
       short-description: Un chat bot pour Discord et Twitch
       description: >-
@@ -499,6 +533,14 @@ stores:
           adaptée à ces différentes tâches pour gagner du temps autant en
           développement de nouvelles tâches qu'en maintenance et en sécurité.
     game-666:
+      meta:
+        title: Énigme d’Halloween – Application Web Interactive & Cryptée
+        description: >-
+          Développement d’une application web d’énigmes pour Halloween, mêlant
+          enquête collaborative, interactions Twitch en temps réel,
+          cryptographie avec CryptoJS et déclenchement automatique d’événements
+          nocturnes. Un projet immersif centré sur l’expérience utilisateur et
+          la créativité.
       name: Énigme d'Halloween
       short-description: Une enquête collaborative pour Halloween.
       description: >-
@@ -532,6 +574,13 @@ stores:
           mélangées avec des messages du chat et des informations sur l'énigme
           pour accentuer la difficulté.
     interface-administration:
+      meta:
+        title: Interface de Gestion pour Stream – Overlays, Sondages & Modération
+        description: >-
+          Développement d’une application web destinée à un streamer et son
+          équipe de modération. Elle centralise la gestion du stream, des
+          vidéos, des sondages, de la musique, des overlays dynamiques et bien
+          plus, avec intégration de l’API Twitch et Firebase.
       name: Interface d'Administration
       short-description: Application web à destination d'un streamer et de ses modérateurs.
       description: >-
@@ -573,6 +622,13 @@ stores:
           mettre en place des solutions pour optimiser les retours sans pour
           autant surcharger les serveurs de requêtes.
     map-education:
+      meta:
+        title: Carte Interactive Éducative – UI Mobile & Intégration WordPress
+        description: >-
+          Création d’une carte interactive destinée à un jeune public, intégrée
+          dans un site WordPress. Le projet inclut deux vues cartographiques
+          (globale et zoom) avec une interface ergonomique, responsive et
+          optimisée pour la performance et l’accessibilité mobile.
       name: Carte Éducative
       short-description: Une Carte Interactive d'un établissement associatif.
       description: >-
@@ -607,6 +663,15 @@ stores:
           ainsi que la gestion des assets (javascript, css, images, etc.) pour
           conserver une vitesse de chargement optimale.
     map-game:
+      meta:
+        title: >-
+          Carte Interactive pour Jeu d’Exploration – Recherche, UX et
+          Optimisation
+        description: >-
+          Développement d’une carte interactive pour accompagner un jeu
+          d’exploration. Intégration d’un moteur de recherche (Fuse.js), filtres
+          avancés, découpes d’image personnalisées et UI responsive. Un projet
+          orienté performance, lisibilité et ergonomie multi-écrans.
       name: Carte Interactive
       short-description: Une Carte Interactive servant de support à un jeu vidéo d'exploration.
       description: >-
@@ -647,6 +712,17 @@ stores:
           développer un algorithme pour gérer cette découpe et optimiser le
           temps de chargement.
     mini-games:
+      meta:
+        title: Mini-Jeux Interactifs – Calendrier de l’Avent Ludique et Mobile
+        description: >-
+          Création d’un calendrier de l’avant sous forme de mini-jeux.
+          Intégration d’un moteur audio, de filtres et d’un moteur de recherche.
+          Un projet centré sur l’ergonomie et l’expérience
+          utilisateur.Développement d’un Calendrier de l’Avent composé de
+          mini-jeux accessibles sur mobile. Mots croisés, taquin, paires,
+          énigmes… Chaque jeu intègre une interface tactile optimisée, des
+          effets sonores et visuels, et plusieurs niveaux de difficulté pour une
+          expérience immersive.
       name: Mini-Jeux
       short-description: Calendrier de l'Avant sous forme de Mini-Jeux.
       description: Calendrier de l'Avant sous forme de Mini-Jeux.
@@ -696,6 +772,14 @@ stores:
           Mettre en pause, Ajuster le volume, Bloquer l'interaction tant qu'un
           son est joué, Chargement des assets.
     video-learning:
+      meta:
+        title: Génération de Vidéos Éducatives Automatisées – IA, Voix & Remotion
+        description: >-
+          Création d’un système complet de vidéos éducatives automatisées :
+          génération des mots via IA, voix synthétiques avec Coqui TTS,
+          animation 3D via Remotion et publication automatique sur YouTube et
+          TikTok. Un projet alliant innovation, contenu pédagogique et
+          automatisation web.
       name: Vidéos Automatisées
       short-description: Génération de vidéos à but éducatif et automatisées.
       description: Génération de vidéos à but éducatif et automatisées.

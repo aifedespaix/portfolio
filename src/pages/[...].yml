@@ -1,6 +1,9 @@
 fr:
   pages:
     not-found:
+      meta:
+        title: Page non trouvée
+        description: Page non trouvée
       title: Page non trouvée
       buttons:
         back: Retour
@@ -8,6 +11,9 @@ fr:
 en:
   pages:
     not-found:
+      meta:
+        title: Page not found
+        description: Page not found
       title: Page not found
       buttons:
         back: Back

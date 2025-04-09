@@ -21,7 +21,7 @@ declare module 'vue' {
     LayoutNav: typeof import('./components/layout/nav.vue')['default']
     LinkExtern: typeof import('./components/Link/Extern.vue')['default']
     LinkIntern: typeof import('./components/Link/Intern.vue')['default']
-    LinkMini: typeof import('./components/Link/Mini.vue')['default']
+    LinkMini: typeof import('./components/Link/mini.vue')['default']
     NavLink: typeof import('./components/nav/link.vue')['default']
     Pager: typeof import('./components/pager.vue')['default']
     ProjectDetails: typeof import('./components/ProjectDetails.vue')['default']

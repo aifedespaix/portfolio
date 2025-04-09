@@ -1,9 +1,13 @@
 <script setup lang="ts">
+import type { RouteKey } from '~/types/route.type'
+
 const props = defineProps<{
   isHoverable?: boolean
   active?: boolean
-  to?: string
+  to?: RouteKey
 }>()
+
+const { getUrlLocale } = useTranslationsStore()
 
 const classes = computed(() => {
   const classes = [
@@ -37,7 +41,7 @@ const classes = computed(() => {
 <template>
   <component
     :is="to ? 'RouterLink' : 'div'"
-    :to="to"
+    :to="to ? getUrlLocale(to) : undefined"
     :class="classes"
     transition="background-color duration-300"
   >

@@ -1,35 +1,26 @@
-import type { Project } from '~/types/project'
+import type { Project } from '~/types/project.type'
 import { acceptHMRUpdate, defineStore } from 'pinia'
 
 export const useInterfaceAdministrationStore = defineStore('project-interface-administration', () => {
+  const technologiesStore = useTechnologiesStore()
+
   const project: Project = {
     id: 'interface-administration',
+    meta: {
+      title: 'stores.projects.interface-administration.meta.title',
+      description: 'stores.projects.interface-administration.meta.description',
+    },
     name: 'stores.projects.interface-administration.name',
     shortDescription: 'stores.projects.interface-administration.short-description',
     description: 'stores.projects.interface-administration.description',
     image: 'interface-administration',
     icon: 'i-mdi:administrator',
     technologies: [
-      {
-        name: 'Vue3',
-        url: 'https://vuejs.org/',
-      },
-      {
-        name: 'Twurple',
-        url: 'https://twurple.js.org/',
-      },
-      {
-        name: 'Firebase',
-        url: 'https://firebase.google.com/',
-      },
-      {
-        name: 'ElementUI',
-        url: 'https://element-plus.org/',
-      },
-      {
-        name: 'UnoCSS',
-        url: 'https://unocss.dev/',
-      },
+      technologiesStore.technologies.vue3,
+      technologiesStore.technologies.twurple,
+      technologiesStore.technologies.firebase,
+      technologiesStore.technologies.elementui,
+      technologiesStore.technologies.unocss,
     ],
     explains: [
       {

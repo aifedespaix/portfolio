@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { t } = useI18n()
+const { t, getUrlLocale } = useTranslationsStore()
 
 interface Link {
   name: string
@@ -7,6 +7,7 @@ interface Link {
   icon: string
   hover: string
 }
+
 const links: Link[] = [
   {
     name: 'GitHub',
@@ -52,10 +53,10 @@ const links: Link[] = [
         <div :class="link.icon" />
       </a>
     </div>
-    <RouterLink to="/rgpd/privacy-policy">
+    <RouterLink :to="getUrlLocale('privacy')">
       {{ t('components.layout.footer.privacy') }}
     </RouterLink>
-    <RouterLink to="/rgpd/legal">
+    <RouterLink :to="getUrlLocale('legal')">
       {{ t('components.layout.footer.legal') }}
     </RouterLink>
   </footer>

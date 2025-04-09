@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useLayoutStore } from '~/stores/layout'
 
-const { t } = useI18n()
+const { t, getUrlLocale } = useTranslationsStore()
 
 const layoutStore = useLayoutStore()
 const navButtonTitle = computed(() =>
@@ -30,7 +30,7 @@ const navButtonTitle = computed(() =>
         :title="t('components.layout.header.language')"
         @click="layoutStore.toggleLanguage"
       />
-      <router-link to="/profile">
+      <router-link :to="getUrlLocale('profile')">
         <ButtonIcon icon="i-carbon-user" :title="t('components.layout.header.profile')" />
       </router-link>
     </div>

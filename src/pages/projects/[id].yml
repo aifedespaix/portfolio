@@ -2,8 +2,6 @@ fr:
   pages:
     projects:
       id:
-        meta:
-          title: Projet {name}
         error:
           title: Ce Projet n'est pas détaillé pour le moment
           back: Retour
@@ -11,8 +9,6 @@ en:
   pages:
     projects:
       id:
-        meta:
-          title: Projet {name}
         error:
           title: This project is not detailed for the moment
           back: Back

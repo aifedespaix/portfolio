@@ -1,17 +1,18 @@
 <script setup lang="ts">
 import type { I18nKey } from '~/types/i18n'
 import { useNavStore } from '~/stores/nav'
+import { RouteKey } from '~/types/route.type'
 
 interface Link {
   name: I18nKey
-  to: string
+  to: RouteKey
   icon: string
 }
 
 interface Category {
   name: I18nKey
   links: Link[]
-  to?: string
+  to?: RouteKey
   icon: string
 }
 
@@ -25,11 +26,11 @@ const projectStore = useProjectsStore()
 const layoutStore = useLayoutStore()
 const navStore = useNavStore()
 
-const { t } = useI18n()
+const { t } = useTranslationsStore()
 
 const links = ref<Links>({
   top: [
-    { name: navStore.home, to: '/', icon: 'i-carbon-home' },
+    { name: navStore.home, to: 'index', icon: 'i-carbon-home' },
     ...navStore.main,
   ],
 
@@ -39,7 +40,7 @@ const links = ref<Links>({
       links: [
         ...Object.values(projectStore.projectList).map(project => ({
           name: project.name,
-          to: `/projects/${project.id}`,
+          to: project.id,
           icon: project.icon,
         })),
       ],
@@ -47,9 +48,8 @@ const links = ref<Links>({
 
   ],
   bottom: [
-    { name: navStore.settings, to: '/settings', icon: 'i-carbon-settings' },
+    { name: navStore.settings, to: 'settings', icon: 'i-carbon-settings' },
   ],
-
 })
 
 const route = useRoute()

@@ -8,7 +8,7 @@ import { createI18n } from 'vue-i18n'
 // Don't need this? Try vitesse-lite: https://github.com/antfu/vitesse-lite
 const i18n = createI18n({
   legacy: false,
-  locale: 'fr-FR',
+  locale: 'fr',
   messages: {},
 })
 
@@ -47,22 +47,40 @@ export async function loadLanguageAsync(lang: string): Promise<Locale> {
   return setI18nLanguage(lang)
 }
 
-export const install: UserModule = ({ app }) => {
+// Fonction pour précharger toutes les langues
+async function preloadAllLanguages() {
+  const languages = Object.keys(localesMap)
+  await Promise.all(languages.map(lang => loadLanguageAsync(lang)))
+}
+
+export const install: UserModule = async ({ app }) => {
   app.use(i18n)
 
-  let storedLang
-  if (typeof window !== 'undefined') {
-    storedLang = localStorage.getItem('lang')
+  // Précharger toutes les langues au moment du build SSG
+  if (import.meta.env.SSR) {
+    await preloadAllLanguages()
   }
   else {
-    storedLang = 'fr'
-  }
+    let storedLang
+    if (typeof window !== 'undefined') {
+      storedLang = localStorage.getItem('lang')
+    }
+    else {
+      storedLang = 'fr'
+    }
 
-  if (storedLang) {
-    loadLanguageAsync(storedLang)
-  }
-  else {
-    const userLang = navigator.language.split('-')[0]
-    loadLanguageAsync(userLang)
+    // Initialiser les messages pour la langue par défaut
+    const initLang = storedLang || 'fr'
+    await localesMap[initLang]().then((messages) => {
+      i18n.global.setLocaleMessage(initLang, messages.default)
+    })
+
+    if (storedLang) {
+      await loadLanguageAsync(storedLang)
+    }
+    else {
+      const userLang = navigator.language.split('-')[0]
+      await loadLanguageAsync(userLang)
+    }
   }
 }

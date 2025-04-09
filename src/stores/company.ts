@@ -1,4 +1,4 @@
-import type { GoldAward } from '~/types/info-gold'
+import type { GoldAward } from '~/types/info-gold.type'
 import { acceptHMRUpdate, defineStore } from 'pinia'
 
 export interface Company {
@@ -79,10 +79,10 @@ export const useCompanyStore = defineStore('company', () => {
       urls: [
         { name: 'stores.company.website.name', url: 'https://www.aznetwork.eu' },
       ],
-      logo: { 
-        path: '/assets/companies/az_network-logo', 
+      logo: {
+        path: '/assets/companies/az_network-logo',
         transparent: true,
-        classes: ['bg-light-500 dark:bg-light-800']
+        classes: ['bg-light-500 dark:bg-light-800'],
       },
       infoGold: {
         value: {

@@ -23,21 +23,21 @@ const props = withDefaults(defineProps<Props>(), {
 const srcParts = computed(() => {
   const parts = props.path.split('/')
 
-  if(parts.length < 2) {
+  if (parts.length < 2) {
     throw new Error('Path must contain at least 2 parts')
   }
 
   const name = parts.at(-1)
   const folder = parts.join('/')
-  
+
   return { folder, name }
 })
 
-if(props.width % 2 !== 0) {
+if (props.width % 2 !== 0) {
   throw new Error('Width must be even')
 }
 
-if(props.height % 2 !== 0) {
+if (props.height % 2 !== 0) {
   throw new Error('Height must be even')
 }
 
@@ -45,8 +45,9 @@ if(props.height % 2 !== 0) {
 const sizes = computed(() => [props.width / 2, props.width, props.width * 2])
 
 // Génération des chemins AVIF, WebP et original
-const generateSrcset = (ext: string) => 
-  sizes.value.map(size => `${srcParts.value.folder}/${srcParts.value.name}-${size}.${ext} ${size}w`).join(', ')
+function generateSrcset(ext: string) {
+  return sizes.value.map(size => `${srcParts.value.folder}/${srcParts.value.name}-${size}.${ext} ${size}w`).join(', ')
+}
 
 const avifSrcset = computed(() => generateSrcset('avif'))
 const webpSrcset = computed(() => generateSrcset('webp'))
@@ -64,13 +65,13 @@ const sizesAttr = computed(() => {
 <template>
   <picture class="picture">
     <!-- AVIF -->
-    <source :srcset="avifSrcset" type="image/avif" />
-    
+    <source :srcset="avifSrcset" type="image/avif">
+
     <!-- WebP -->
-    <source :srcset="webpSrcset" type="image/webp" />
-    
+    <source :srcset="webpSrcset" type="image/webp">
+
     <!-- Format d'origine (JPG/PNG) -->
-    <img 
+    <img
       :src="`${srcParts.folder}/${srcParts.name}-${width}.${ext}`"
       :srcset="classicSrcset"
       :sizes="sizesAttr"
@@ -81,10 +82,9 @@ const sizesAttr = computed(() => {
       :decoding="decoding"
       :fetchpriority="fetchPriority"
       class="img"
-    />
+    >
   </picture>
 </template>
-
 
 <style scoped>
 .img {

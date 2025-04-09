@@ -5,10 +5,7 @@ fr:
         school: Université de Caen
         location: Caen, France
         diploma: DUT Informatique
-        description: Formation en informatique générale, j'ai pu découvrir les bases de
-          l'informatique et de la programmation. Cette formation m'a permis de valider
-          mon intérêt pour le développement web tout en m'apportant un bagage solide dans
-          les sciences de l'informatique.
+        description: Formation en informatique générale. J’ai découvert les bases de l’informatique et de la programmation. Cette formation a confirmé mon intérêt pour le développement web, tout en m’apportant un socle solide en sciences informatiques.
         competencies:
           web: Développement Web
           database: Base de données
@@ -17,9 +14,8 @@ fr:
         school: Université Claude Bernard Lyon 1
         location: Lyon, France
         diploma: Licence Informatique
-        description: Cette année fut un tournant pour moi et la vision du métier que je
-          souhaitais exercer. J'ai été au bout de cette année sans la valider. J'ai tout
-          de même acquis de fortes connaissances en algorithmie et en UX design.
+        description: Cette année a marqué un tournant dans ma vision du métier que je souhaitais exercer. Bien que je n’aie pas validé cette année, elle m’a permis d’acquérir de solides connaissances en algorithmie et en UX design.
+
         competencies:
           web: Développement Web
           palette: Design UX
@@ -28,12 +24,8 @@ fr:
         school: Institut G4
         location: Lyon, France
         diploma: Chef de projet Système d'Information
-        description: Je me suis orienté dans le domaine de la gestion de projet informatique.Ayant
-          des connaissances variées et étant intéressé sur tous les aspects de la réalisation
-          de projets, il est naturel pour moi de réfléchir et concevoir des solutions
-          optimales que ce soit organisationnel ou en accord avec les contraintes techniques.
-          J'ai également participé à la formation d'élèves sur mes domaines de compétence.
-          La transmission du savoir est une notion importante pour moi.
+        description: Je me suis orienté vers la gestion de projet informatique. Mes connaissances variées et mon intérêt pour toutes les étapes de réalisation de projets m’ont naturellement conduit à réfléchir à des solutions optimales, tant sur le plan organisationnel que technique. J’ai également eu l’opportunité de former des élèves dans mes domaines de compétence, car la transmission du savoir est une valeur qui m’est chère.
+
         competencies:
           web: Développement Web
           work: Gestion de projet
@@ -45,9 +37,8 @@ en:
         school: University of Caen
         location: Caen, France
         diploma: University Diploma in Computer Science
-        description: General computer science training, I discovered the basics of computer
-          science and programming. This training allowed me to validate my interest in
-          web development while providing me with a solid background in computer science.
+        description: A general training in computer science where I learned the fundamentals of computing and programming. This program confirmed my passion for web development and provided me with a strong foundation in computer science.
+
         competencies:
           web: Web Development
           database: Database
@@ -56,9 +47,8 @@ en:
         school: Claude Bernard University Lyon 1
         location: Lyon, France
         diploma: Bachelor's Degree in Computer Science
-        description: This year was a turning point for me and the vision of the profession
-          I wanted to pursue. I went through this year without validating it. I still
-          acquired strong knowledge in algorithms and UX design.
+        description: This year was a turning point in how I envisioned my future career. Although I did not complete the year, I gained strong skills in algorithms and UX design.
+
         competencies:
           web: Web Development
           palette: UX Design
@@ -67,11 +57,8 @@ en:
         school: Institut G4
         location: Lyon, France
         diploma: Information System Project Manager
-        description: I focused on the field of IT project management. Having varied knowledge
-          and being interested in all aspects of project implementation, it is natural
-          for me to think and design optimal solutions, whether organizational or in accordance
-          with technical constraints. I also participated in training students in my areas
-          of expertise. The transmission of knowledge is an important concept for me.
+        description: I specialized in IT project management. My broad skill set and interest in all stages of project development naturally led me to think about and design optimal solutions, both organizational and technical. I also had the opportunity to train students in my areas of expertise, as knowledge sharing is something I deeply value.
+
         competencies:
           web: Web Development
           work: Project Management

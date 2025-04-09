@@ -1,13 +1,16 @@
 <script setup lang="ts">
-const props = defineProps<{
-  to?: string
-}>()
+import { RouteKey } from '~/types/route.type';
 
+const props = defineProps<{
+  to?: RouteKey
+}>()
 const router = useRouter()
+
+const { getUrlLocale } = useTranslationsStore()
 
 function navigate() {
   if (props.to) {
-    router.push(props.to)
+    router.push(getUrlLocale(props.to))
   }
 }
 </script>

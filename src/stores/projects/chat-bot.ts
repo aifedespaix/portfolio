@@ -1,39 +1,27 @@
-import type { Project } from '~/types/project'
+import type { Project } from '~/types/project.type'
 import { acceptHMRUpdate, defineStore } from 'pinia'
+import { useTechnologiesStore } from '../technologies'
 
 export const useChatBotStore = defineStore('project-chat-bot', () => {
+  const technologiesStore = useTechnologiesStore()
   const project: Project = {
     id: 'bot-chat',
+    meta: {
+      title: 'stores.projects.chat-bot.meta.title',
+      description: 'stores.projects.chat-bot.meta.description',
+    },
     name: 'stores.projects.chat-bot.name',
     shortDescription: 'stores.projects.chat-bot.short-description',
     description: 'stores.projects.chat-bot.description',
     image: 'bot-chat',
     icon: 'i-mdi:robot',
     technologies: [
-      {
-        name: 'NestJS',
-        url: 'https://nestjs.com/',
-      },
-      {
-        name: 'PostgreSQL',
-        url: 'https://www.postgresql.org/',
-      },
-      {
-        name: 'Firebase',
-        url: 'https://firebase.google.com/',
-      },
-      {
-        name: 'Discord.js',
-        url: 'https://discord.js.org/',
-      },
-      {
-        name: 'Twurple',
-        url: 'https://twurple.js.org/',
-      },
-      {
-        name: 'Ollama',
-        url: 'https://ollama.com/',
-      },
+      technologiesStore.technologies.nestjs,
+      technologiesStore.technologies.postgresql,
+      technologiesStore.technologies.firebase,
+      technologiesStore.technologies.discordjs,
+      technologiesStore.technologies.twurple,
+      technologiesStore.technologies.ollama,
     ],
     explains: [
       {

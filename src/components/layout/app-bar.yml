@@ -1,0 +1,16 @@
+fr:
+  components:
+    layout:
+      app-bar:
+        index: 'Accueil'
+        projects: 'Projets'
+        profile: 'Profil'
+
+en:
+  components:
+    layout:
+      app-bar:
+        index: 'Home'
+        projects: 'Projects'
+        profile: 'Profile'
+

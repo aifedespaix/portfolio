@@ -1,9 +1,15 @@
-import type { Project } from '~/types/project'
+import type { Project } from '~/types/project.type'
 import { acceptHMRUpdate, defineStore } from 'pinia'
 
 export const useVideoLearningStore = defineStore('project-video-learning', () => {
+  const technologiesStore = useTechnologiesStore()
+
   const project: Project = {
     id: 'video-learning',
+    meta: {
+      title: 'stores.projects.video-learning.meta.title',
+      description: 'stores.projects.video-learning.meta.description',
+    },
     name: 'stores.projects.video-learning.name',
     shortDescription: 'stores.projects.video-learning.short-description',
     description: 'stores.projects.video-learning.description',
@@ -36,34 +42,13 @@ export const useVideoLearningStore = defineStore('project-video-learning', () =>
       },
     ],
     technologies: [
-      {
-        name: 'ChatGPT',
-        url: 'https://chatgpt.com/',
-      },
-      {
-        name: 'NestJS',
-        url: 'https://nestjs.com/',
-      },
-      {
-        name: 'Coqui TTS',
-        url: 'https://github.com/coqui-ai/TTS',
-      },
-      {
-        name: 'React',
-        url: 'https://react.dev/',
-      },
-      {
-        name: 'ThreeJS',
-        url: 'https://threejs.org/',
-      },
-      {
-        name: 'Remotion',
-        url: 'https://remotion.dev/',
-      },
-      {
-        name: 'Puppeteer',
-        url: 'https://pptr.dev/',
-      },
+      technologiesStore.technologies.chatgpt,
+      technologiesStore.technologies.nestjs,
+      technologiesStore.technologies.coquiTTS,
+      technologiesStore.technologies.react,
+      technologiesStore.technologies.threejs,
+      technologiesStore.technologies.remotion,
+      technologiesStore.technologies.puppeteer,
     ],
     explains: [
       {

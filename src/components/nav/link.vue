@@ -1,16 +1,17 @@
 <script setup lang="ts">
 import type { I18nKey } from '~/types/i18n'
+import { RouteKey } from '~/types/route.type';
 
 const props = defineProps<{
   link: {
     name: I18nKey
-    to: string
+    to: RouteKey
     icon?: string
   }
   active?: boolean
 }>()
 
-const { t } = useI18n()
+const { t, getUrlLocale } = useTranslationsStore()
 
 const layoutStore = useLayoutStore()
 
@@ -46,9 +47,11 @@ const iconClasses = computed(() => {
 
 <template>
   <RouterLink
-    :to="link.to"
+    :to="getUrlLocale(link.to)"
     :class="classes"
+    transition="colors duration-200 ease-in-out"
     :title="t(link.name)"
+    active-class="bg-light-700 dark:bg-dark-700"
   >
     <div v-if="link.icon" :class="iconClasses" />
 
@@ -57,3 +60,4 @@ const iconClasses = computed(() => {
     </div>
   </RouterLink>
 </template>
+

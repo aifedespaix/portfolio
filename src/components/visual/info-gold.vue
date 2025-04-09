@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { GoldAward } from '~/types/info-gold'
+import type { GoldAward } from '~/types/info-gold.type'
 
 const props = defineProps<{
   info: GoldAward

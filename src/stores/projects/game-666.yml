@@ -2,6 +2,9 @@ fr:
   stores:
     projects:
       game-666:
+        meta:
+          title: Énigme d’Halloween – Application Web Interactive & Cryptée
+          description: Développement d’une application web d’énigmes pour Halloween, mêlant enquête collaborative, interactions Twitch en temps réel, cryptographie avec CryptoJS et déclenchement automatique d’événements nocturnes. Un projet immersif centré sur l’expérience utilisateur et la créativité.
         name: Énigme d'Halloween
         short-description: Une enquête collaborative pour Halloween.
         description: J'ai développé une application web pour animer une soirée d'Halloween. L'idée est de proposer aux membres de ma communauté de travailler ensemble pour résoudre un mystère horrifique. Une fois le projet terminé, j'ai décidé de le mettre à disposition, l'énigme se lance tous les jours à partir de 20h. Il se découpe en 4 mystères à résoudre sur 4 heures, si tous les indices sont trouvés, on peut débloquer l'énigme finale disponible de 00h à 02h.
@@ -18,6 +21,9 @@ en:
   stores:
     projects:
       game-666:
+        meta:
+          title: Halloween Puzzle – Interactive & Encrypted Web Experience
+          description: A Halloween-themed web puzzle app combining collaborative investigation, real-time Twitch interactions, client-side encryption with CryptoJS, and nightly timed events. A creative project focused on immersive user experience and smart technical design.
         name: Halloween Puzzle
         short-description: A collaborative investigation for Halloween.
         description: I developed a web application to spice up a Halloween night. The idea was to invite my community members to work together to solve a horrific mystery. Once the project was completed, I decided to make it publicly available. The puzzle starts every day at 8 PM and unfolds over four mysteries to solve within four hours. If all clues are found, players can unlock the final puzzle, available from midnight to 2 AM.

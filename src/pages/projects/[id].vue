@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import type { ProjectKey } from '~/stores/projects'
 import { useHeadTag } from '~/composables/head-tag'
+import { ProjectRouteKey } from '~/types/route.type'
 
 const route = useRoute('/projects/[id]')
 const router = useRouter()
 
-const { t } = useI18n()
+const { t } = useTranslationsStore()
 
 const projectsStore = useProjectsStore()
 
 const data = computed(() => {
-  const key = route.params.id as ProjectKey
+  const key = route.meta.key as ProjectRouteKey
   const project = projectsStore.projectList[key]
   if (project) {
     return project
@@ -20,8 +20,8 @@ const data = computed(() => {
 
 if (data.value) {
   useHeadTag({
-    title: computed(() => t('pages.projects.id.meta.title', { name: t(data.value!.name) })),
-    description: computed(() => t(data.value!.shortDescription)),
+    title: computed(() => t(data.value!.meta.title)),
+    description: computed(() => t(data.value!.meta.description)),
     type: 'article',
     imagePath: data.value!.image ? `${data.value!.image}.webp` : undefined,
   })

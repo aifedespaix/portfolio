@@ -1,8 +1,13 @@
 import type { I18nKey } from './i18n'
-import type { ProjectKey } from '~/stores/projects'
+import type { ProjectRouteKey } from './route.type'
+import type { Technology } from '~/stores/technologies'
 
 export interface Project {
-  id: ProjectKey
+  id: ProjectRouteKey
+  meta: {
+    title: I18nKey
+    description: I18nKey
+  }
   name: I18nKey
   description: I18nKey
   shortDescription: I18nKey
@@ -18,11 +23,6 @@ export interface Project {
     icon: string
     type?: 'youtube' | 'tiktok'
   }[]
-}
-
-interface Technology {
-  name: string
-  url: string
 }
 
 interface Explain {

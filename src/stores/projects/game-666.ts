@@ -1,9 +1,15 @@
-import type { Project } from '~/types/project'
+import type { Project } from '~/types/project.type'
 import { acceptHMRUpdate, defineStore } from 'pinia'
 
 export const useGame666Store = defineStore('project-game-666', () => {
+  const technologiesStore = useTechnologiesStore()
+    
   const project: Project = {
     id: 'game-666',
+    meta: {
+      title: 'stores.projects.game-666.meta.title',
+      description: 'stores.projects.game-666.meta.description',
+    },
     name: 'stores.projects.game-666.name',
     shortDescription: 'stores.projects.game-666.short-description',
     description: 'stores.projects.game-666.description',
@@ -17,18 +23,9 @@ export const useGame666Store = defineStore('project-game-666', () => {
       },
     ],
     technologies: [
-      {
-        name: 'Vue3',
-        url: 'https://vuejs.org/',
-      },
-      {
-        name: 'CryptoJS',
-        url: 'https://cryptojs.gitbook.io/docs/',
-      },
-      {
-        name: 'Twurple',
-        url: 'https://twurple.js.org/',
-      },
+      technologiesStore.technologies.vue3,
+      technologiesStore.technologies.cryptojs,
+      technologiesStore.technologies.twurple,
     ],
     explains: [
       {

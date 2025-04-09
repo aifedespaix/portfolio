@@ -1,9 +1,15 @@
-import type { Project } from '~/types/project'
+import type { Project } from '~/types/project.type'
 import { acceptHMRUpdate, defineStore } from 'pinia'
 
 export const useMapGameStore = defineStore('project-map-game', () => {
+  const technologiesStore = useTechnologiesStore()
+
   const project: Project = {
     id: 'map-game',
+    meta: {
+      title: 'stores.projects.map-game.meta.title',
+      description: 'stores.projects.map-game.meta.description',
+    },
     name: 'stores.projects.map-game.name',
     shortDescription: 'stores.projects.map-game.short-description',
     description: 'stores.projects.map-game.description',
@@ -17,30 +23,12 @@ export const useMapGameStore = defineStore('project-map-game', () => {
       },
     ],
     technologies: [
-      {
-        name: 'Vue3',
-        url: 'https://vuejs.org/',
-      },
-      {
-        name: 'ElementUI',
-        url: 'https://element-plus.org/',
-      },
-      {
-        name: 'UnoCSS',
-        url: 'https://unocss.dev/',
-      },
-      {
-        name: 'Leaflet',
-        url: 'https://leafletjs.com/',
-      },
-      {
-        name: 'Firebase',
-        url: 'https://firebase.google.com/',
-      },
-      {
-        name: 'Fuse.js',
-        url: 'https://fusejs.io/',
-      },
+      technologiesStore.technologies.vue3,
+      technologiesStore.technologies.elementui,
+      technologiesStore.technologies.unocss,
+      technologiesStore.technologies.leaflet,
+      technologiesStore.technologies.firebase,
+      technologiesStore.technologies.fusejs,
     ],
     explains: [
       {

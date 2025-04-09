@@ -16,7 +16,7 @@ useHeadTag({
 
     <Card>
       <div class="grid grid-cols-1" md="grid-cols-2">
-        <Button to="/settings">
+        <Button to="settings">
           {{ t('pages.profile.profile.settings') }}
         </Button>
       </div>

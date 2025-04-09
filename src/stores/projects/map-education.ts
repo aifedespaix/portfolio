@@ -1,27 +1,24 @@
-import type { Project } from '~/types/project'
+import type { Project } from '~/types/project.type'
 import { acceptHMRUpdate, defineStore } from 'pinia'
 
 export const useMapEducationStore = defineStore('project-map-education', () => {
+  const technologiesStore = useTechnologiesStore()
+
   const project: Project = {
     id: 'map-education',
+    meta: {
+      title: 'stores.projects.map-education.meta.title',
+      description: 'stores.projects.map-education.meta.description',
+    },
     name: 'stores.projects.map-education.name',
     shortDescription: 'stores.projects.map-education.short-description',
     description: 'stores.projects.map-education.description',
     image: 'map-education',
     icon: 'i-mdi:map-marker-multiple',
     technologies: [
-      {
-        name: 'Vue3',
-        url: 'https://vuejs.org/',
-      },
-      {
-        name: 'Leaflet',
-        url: 'https://leafletjs.com/',
-      },
-      {
-        name: 'Wordpress',
-        url: 'https://wordpress.org/',
-      },
+      technologiesStore.technologies.vue3,
+      technologiesStore.technologies.leaflet,
+      technologiesStore.technologies.wordpress,
     ],
     explains: [
       {

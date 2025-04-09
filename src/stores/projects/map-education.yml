@@ -2,6 +2,9 @@ fr:
   stores:
     projects:
       map-education:
+        meta:
+          title: Carte Interactive Éducative – UI Mobile & Intégration WordPress
+          description: Création d’une carte interactive destinée à un jeune public, intégrée dans un site WordPress. Le projet inclut deux vues cartographiques (globale et zoom) avec une interface ergonomique, responsive et optimisée pour la performance et l’accessibilité mobile.
         name: Carte Éducative
         short-description: Une Carte Interactive d'un établissement associatif.
         description: Une Carte Interactive présentant des informations imagées sur l'organisation d'un établissement. La carte est accessible via un site WordPress, elle est à destination des visiteurs, principalement des plus jeunes. L'interface doit être simple et ergonomique sur mobile, il faut également intégrer une seconde carte pour détailler un zoom sur le lieu.
@@ -21,6 +24,9 @@ en:
   stores:
     projects:
       map-education:
+        meta:
+          title: Educational Interactive Map – Mobile UI & WordPress Integration
+          description: Design of an interactive map for young audiences, integrated into a WordPress website. The project includes dual map views (overview and zoom), with a mobile-first responsive interface, focused on performance, clarity, and accessibility.
         name: Educational Map
         short-description: An Interactive Map for an Associative Institution.
         description: An Interactive Map presenting illustrated information about the organization of an institution. The map is accessible via a WordPress site and is intended for visitors, primarily younger audiences. The interface must be simple and ergonomic on mobile devices, and a second map needs to be integrated for a detailed zoom-in view of the location.

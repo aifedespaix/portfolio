@@ -30,7 +30,7 @@ function toggleTheme() {
 
 <template>
   <Pager size="small">
-    <TitleMain>{{ t('pages.settings.meta.title') }}</TitleMain>
+    <TitleMain>{{ t('pages.settings.title') }}</TitleMain>
 
     <Card>
       <title-h2>{{ t('pages.settings.theme.title') }}</title-h2>

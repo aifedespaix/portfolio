@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import type { I18nKey } from '~/types/i18n'
+import type { ProjectRouteKey } from '~/types/route.type'
 import { computed } from 'vue'
 import { useHeadTag } from '~/composables/head-tag'
 
-const { t } = useI18n()
+const { t } = useTranslationsStore()
 
 useHeadTag({
   title: computed(() => t('pages.technologies.meta.title')),
@@ -35,8 +36,10 @@ interface Library {
 
 interface Creation {
   name: string | I18nKey
-  id: string
+  id: ProjectRouteKey
 }
+
+const technologiesStore = useTechnologiesStore()
 const projectsStore = useProjectsStore()
 const technologies: Record<string, Technology> = {
   javascript: {
@@ -48,9 +51,9 @@ const technologies: Record<string, Technology> = {
     utilisation: 'pages.technologies.languages.javascript.utilisation',
     libraries: [
       {
-        name: 'Vue.js',
+        ...technologiesStore.technologies.vue3,
         description: 'pages.technologies.languages.javascript.libraries.vue.description',
-        url: 'https://vuejs.org/',
+
         experience: new Date().getFullYear() - 2017,
         icon: 'i-mdi:vuejs',
         utilisation: 'pages.technologies.languages.javascript.libraries.vue.utilisation',
@@ -64,9 +67,8 @@ const technologies: Record<string, Technology> = {
         ],
       },
       {
-        name: 'React',
+        ...technologiesStore.technologies.react,
         description: 'pages.technologies.languages.javascript.libraries.react.description',
-        url: 'https://reactjs.org/',
         experience: new Date().getFullYear() - 2022,
         icon: 'i-mdi:react',
         utilisation: 'pages.technologies.languages.javascript.libraries.react.utilisation',
@@ -76,17 +78,15 @@ const technologies: Record<string, Technology> = {
         ],
       },
       {
-        name: 'Angular',
+        ...technologiesStore.technologies.angular,
         description: 'pages.technologies.languages.javascript.libraries.angular.description',
-        url: 'https://angular.dev/',
         experience: new Date().getFullYear() - 2020,
         icon: 'i-mdi:angular',
         utilisation: 'pages.technologies.languages.javascript.libraries.angular.utilisation',
       },
       {
-        name: 'Leaflet',
+        ...technologiesStore.technologies.leaflet,
         description: 'pages.technologies.languages.javascript.libraries.leaflet.description',
-        url: 'https://leafletjs.com/',
         experience: new Date().getFullYear() - 2020,
         icon: 'i-mdi:leaf',
         utilisation: 'pages.technologies.languages.javascript.libraries.leaflet.utilisation',
@@ -97,9 +97,8 @@ const technologies: Record<string, Technology> = {
         ],
       },
       {
-        name: 'NestJS',
+        ...technologiesStore.technologies.nestjs,
         description: 'pages.technologies.languages.javascript.libraries.nestjs.description',
-        url: 'https://nestjs.com/',
         experience: new Date().getFullYear() - 2022,
         icon: 'i-simple-icons:nestjs',
         utilisation: 'pages.technologies.languages.javascript.libraries.nestjs.utilisation',
@@ -109,9 +108,8 @@ const technologies: Record<string, Technology> = {
         ],
       },
       {
-        name: 'Firebase',
+        ...technologiesStore.technologies.firebase,
         description: 'pages.technologies.languages.javascript.libraries.firebase.description',
-        url: 'https://firebase.google.com/',
         experience: new Date().getFullYear() - 2020,
         icon: 'i-mdi:firebase',
         utilisation: 'pages.technologies.languages.javascript.libraries.firebase.utilisation',
@@ -121,9 +119,8 @@ const technologies: Record<string, Technology> = {
         ],
       },
       {
-        name: 'Three.js',
+        ...technologiesStore.technologies.threejs,
         description: 'pages.technologies.languages.javascript.libraries.threejs.description',
-        url: 'https://threejs.org/',
         experience: new Date().getFullYear() - 2020,
         icon: 'i-tabler:brand-threejs',
         utilisation: 'pages.technologies.languages.javascript.libraries.threejs.utilisation',
@@ -145,18 +142,16 @@ const technologies: Record<string, Technology> = {
     url: 'https://www.php.net/',
     libraries: [
       {
-        name: 'Symfony',
+        ...technologiesStore.technologies.symfony,
         description: 'pages.technologies.languages.php.libraries.symfony.description',
-        url: 'https://symfony.com/',
         experience: new Date().getFullYear() - 2022,
         icon: 'i-mdi:symfony',
         utilisation: 'pages.technologies.languages.php.libraries.symfony.utilisation',
         apports: 'pages.technologies.languages.php.libraries.symfony.apports',
       },
       {
-        name: 'WordPress',
+        ...technologiesStore.technologies.wordpress,
         description: 'pages.technologies.languages.php.libraries.wordpress.description',
-        url: 'https://wordpress.org/',
         experience: new Date().getFullYear() - 2020,
         icon: 'i-mdi:wordpress',
         utilisation: 'pages.technologies.languages.php.libraries.wordpress.utilisation',
@@ -183,6 +178,16 @@ interface Software {
 }
 
 const softwares: Record<string, Software> = {
+  docker: {
+    name: 'Docker',
+    utilisation: 'pages.technologies.softwares.docker.utilisation',
+    description: 'pages.technologies.softwares.docker.description',
+    url: 'https://www.docker.com/',
+    experience: new Date().getFullYear() - 2018,
+    icon: {
+      name: 'i-logos:docker',
+    },
+  },
   photoshop: {
     name: 'Photoshop',
     utilisation: 'pages.technologies.softwares.photoshop.utilisation',
@@ -283,7 +288,7 @@ const softwares: Record<string, Software> = {
         />
         <div>
           <TitleH2 class="mb-0! pb-0!">
-            {{ t(technologie.name) }}
+            {{ technologie.name }}
           </TitleH2>
           <div class="flex items-center gap-2 text-gray-500">
             <div class="font-bold">
@@ -329,7 +334,7 @@ const softwares: Record<string, Software> = {
             <div class="mb-2 flex items-center gap-2">
               <div :class="lib.icon" class="text-2xl" text="blue-600 dark:blue-400" />
               <div class="font-bold">
-                {{ t(lib.name) }}
+                {{ lib.name }}
               </div>
             </div>
 
@@ -356,10 +361,10 @@ const softwares: Record<string, Software> = {
 
             <div v-if="lib.creations?.length" class="mt-2">
               <div class="mb-1 text-sm font-bold">
-                {{ t('pages.technologies.titles.creations') }} :
+                {{ t('pages.technologies.titles.creations') }}
               </div>
               <div class="flex flex-wrap gap-2">
-                <LinkMini v-for="creation in lib.creations" :key="creation.id" :to="`/projects/${creation.id}`">
+                <LinkMini v-for="creation in lib.creations" :key="creation.id" :to="creation.id">
                   {{ t(creation.name) }}
                 </LinkMini>
               </div>
@@ -382,7 +387,7 @@ const softwares: Record<string, Software> = {
           />
           <div class="pl-2">
             <TitleH2 class="mb-0! mt-0! pb-0!">
-              {{ t(software.name) }}
+              {{ software.name }}
             </TitleH2>
             <div class="flex items-center gap-2 text-gray-500">
               <div class="font-bold">

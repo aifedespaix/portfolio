@@ -1,8 +1,8 @@
 <script setup lang="ts">
-const { t } = useI18n()
+const { t, getUrlLocale } = useTranslationsStore()
 const projectsStore = useProjectsStore()
 const imagePath = (id: string, image: string) => `/assets/projects/${id}/${image}`
-const projectUrl = (id: string) => `/projects/${id}`
+const projectUrl = (id: ProjectKey) => `${getUrlLocale(id)}`
 
 useHeadTag({
   title: computed(() => t('pages.projects.meta.title')),

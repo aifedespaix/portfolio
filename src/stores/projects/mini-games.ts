@@ -1,9 +1,15 @@
-import type { Project } from '~/types/project'
+import type { Project } from '~/types/project.type'
 import { acceptHMRUpdate, defineStore } from 'pinia'
 
 export const useMiniGamesStore = defineStore('project-mini-games', () => {
+  const technologiesStore = useTechnologiesStore()
+
   const project: Project = {
     id: 'mini-games',
+    meta: {
+      title: 'stores.projects.mini-games.meta.title',
+      description: 'stores.projects.mini-games.meta.description',
+    },
     name: 'stores.projects.mini-games.name',
     shortDescription: 'stores.projects.mini-games.short-description',
     description: 'stores.projects.mini-games.description',
@@ -17,22 +23,10 @@ export const useMiniGamesStore = defineStore('project-mini-games', () => {
       },
     ],
     technologies: [
-      {
-        name: 'Vue3',
-        url: 'https://vuejs.org/',
-      },
-      {
-        name: 'UnoCSS',
-        url: 'https://unocss.dev/',
-      },
-      {
-        name: 'Three.js',
-        url: 'https://threejs.org/',
-      },
-      {
-        name: 'VueUse',
-        url: 'https://vueuse.org/',
-      },
+      technologiesStore.technologies.vue3,
+      technologiesStore.technologies.unocss,
+      technologiesStore.technologies.threejs,
+      technologiesStore.technologies.vueuse,
     ],
     explains: [
       {

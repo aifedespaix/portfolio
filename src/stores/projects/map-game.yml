@@ -2,6 +2,9 @@ fr:
   stores:
     projects:
       map-game:
+        meta:
+          title: Carte Interactive pour Jeu d’Exploration – Recherche, UX et Optimisation
+          description: Développement d’une carte interactive pour accompagner un jeu d’exploration. Intégration d’un moteur de recherche (Fuse.js), filtres avancés, découpes d’image personnalisées et UI responsive. Un projet orienté performance, lisibilité et ergonomie multi-écrans.
         name: Carte Interactive
         short-description: Une Carte Interactive servant de support à un jeu vidéo d'exploration.
         description: Une Carte Interactive servant de support à un jeu vidéo d'exploration.
@@ -36,6 +39,9 @@ en:
   stores:
     projects:
       map-game:
+        meta:
+          title: Interactive Map for Exploration Game – Search, UX & Optimization
+          description: Development of an interactive map designed to support an exploration video game. Features include Fuse.js search engine, smart filtering, tiled image rendering, and responsive design. A performance-focused and user-friendly in-game companion.
         name: Interactive Map
         short-description: An interactive map serving as a support for an exploration video
           game.

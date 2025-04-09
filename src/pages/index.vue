@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import { useHeadTag } from '~/composables/head-tag'
 import { useNavStore } from '~/stores/nav'
+import { useTranslationsStore } from '~/stores/translations'
 
 defineOptions({
   name: 'IndexPage',
 })
 
-const { t } = useI18n()
+const { t, getUrlLocale } = useTranslationsStore()
+
 useHeadTag({
   title: computed(() => t('pages.index.meta.title')),
   description: computed(() => t('pages.index.meta.description')),
@@ -38,7 +40,7 @@ const colors = [
           {{ t('pages.index.profile.role') }}
         </h2>
         <Image
-          class="aspect-square rounded-full overflow-hidden w-32 h-32"
+          class="aspect-square h-32 w-32 overflow-hidden rounded-full"
           path="/assets/home/aife_profile"
           :alt="t('pages.index.images.profile_alt')"
           :width="128" :height="128"
@@ -50,7 +52,12 @@ const colors = [
       {{ t('pages.index.work') }}
     </TitleH2>
 
-    <div class="grid grid-cols-1 gap-2 overflow-hidden" sm="grid-cols-2" md="grid-cols-2 overflow-initial" lg="grid-cols-4">
+    <div
+      class="grid grid-cols-1 gap-2 overflow-hidden"
+      sm="grid-cols-2"
+      md="grid-cols-2 overflow-initial"
+      lg="grid-cols-4"
+    >
       <Card
         v-for="(card, index) in cards" :key="card.name" :to="card.to"
         :class="colors[index % colors.length]"
@@ -86,7 +93,7 @@ const colors = [
         />
         <p>
           {{ t('pages.index.journey.discovery.part1') }}<br>
-          <i18n-t keypath="pages.index.journey.discovery.part2" tag="span">
+          <i18n-t keypath="pages.index.journey.discovery.part2" tag="span" scope="global">
             <template #link>
               <LinkExtern to="https://openclassrooms.com/fr/">
                 OpenClassrooms
@@ -103,18 +110,18 @@ const colors = [
         <Image
           path="/assets/home/university"
           :alt="t('pages.index.images.university_alt')"
-          class="float-left m-2  max-w-40"
+          class="float-left m-2 max-w-40"
           :width="160" :height="160"
         />
         <p class="align-middle">
-          <i18n-t keypath="pages.index.journey.professional.content" tag="span">
+          <i18n-t keypath="pages.index.journey.professional.content" tag="span" scope="global">
             <template #link1>
-              <LinkIntern to="/studies">
+              <LinkIntern :to="getUrlLocale('studies')">
                 {{ t('pages.index.journey.professional.university_link') }}
               </LinkIntern>
             </template>
             <template #link2>
-              <LinkIntern to="/companies">
+              <LinkIntern :to="getUrlLocale('companies')">
                 {{ t('pages.index.journey.professional.company_link') }}
               </LinkIntern>
             </template>
@@ -127,13 +134,13 @@ const colors = [
         <Image
           path="/assets/home/freelance"
           :alt="t('pages.index.images.freelance_alt')"
-          class="float-right m-2  max-w-40"
+          class="float-right m-2 max-w-40"
           :width="160" :height="160"
         />
         <p>
-          <i18n-t keypath="pages.index.journey.freelance.content" tag="span">
+          <i18n-t keypath="pages.index.journey.freelance.content" tag="span" scope="global">
             <template #link1>
-              <LinkIntern to="/projects" :title="t('pages.index.journey.freelance.projects_link')">
+              <LinkIntern :to="getUrlLocale('projects')" :title="t('pages.index.journey.freelance.projects_link')">
                 {{ t('pages.index.journey.freelance.projects_link') }}
               </LinkIntern>
             </template>

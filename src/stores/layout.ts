@@ -1,16 +1,26 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
-import { loadLanguageAsync } from '~/modules/i18n'
+import { routes } from '~/routes'
 
 export const useLayoutStore = defineStore('layout', () => {
   const isNavExtended = ref(true)
-  const language = ref('fr')
+  const { locale } = useI18n()
+  const router = useRouter()
+  const route = useRoute()
+
   function toggleNav() {
     isNavExtended.value = !isNavExtended.value
   }
 
   async function toggleLanguage() {
-    language.value = language.value === 'fr' ? 'en' : 'fr'
-    await loadLanguageAsync(language.value)
+    const path = route.path
+    const targetLocale = locale.value === 'fr' ? 'en' : 'fr'
+    const findRoute = routes.find(route => route.path === path)
+
+    if (findRoute && findRoute.meta?.otherPaths?.[targetLocale]) {
+      router.push(findRoute.meta.otherPaths[targetLocale])
+    } else {
+      router.push(`/${targetLocale}`)
+    }
   }
 
   return {

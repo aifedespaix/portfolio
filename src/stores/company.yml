@@ -11,9 +11,7 @@ fr:
         description: AZ Network est une entreprise travaillant sur la mise en place et
           la maintenance de solutions CRM et ERP.
         work: Stage Développeur Web
-        workDescription: J'ai travaillé sur la mise a jour de l'ERP Génerix chez différents
-          client. J'ai dû faire de la recherche de données via requêtes SQL, mise à jour
-          de fichiers pour adapter les mises à jours spécifiques via des expressions régulières.
+        workDescription: J'ai travaillé sur la mise à jour de l'ERP Generix chez différents clients. J'ai dû faire de la recherche de données via requêtes SQL, modification de fichiers pour adapter les mises à jour spécifiques via des expressions régulières.
         competencies:
           web: Développement Web
           database: Base de données
@@ -40,12 +38,7 @@ fr:
           suffix: Mois
       teliae-2:
         work: Alternant Développeur Web
-        workDescription: J'ai eu la chance d'être affecté à de multiples missions à ambitions
-          variables. Parmi mes plus grosses missions, j'ai du repenser l'interface visuelle
-          d'une application ancienne. J'ai dû mettre en place une solution pour adapter
-          l'interface aux nouveaux standards d'accessibilité, tout en conservant une interface
-          simple et intuitive. Le tout en accompagnants les utilisateurs dans l'évolution
-          de leur outil.
+        workDescription: J'ai eu la chance d'être affecté à de multiples missions à ambitions variables. Parmi mes plus grosses missions, j'ai du repenser l'interface visuelle d'une application ancienne. J'ai repensé l'interface d'une ancienne application pour la rendre plus accessible, tout en conservant une ergonomie simple et intuitive. En accompagnant les utilisateurs dans l'évolution de leur outil.
         competencies:
           web: Développement Web
           palette: Design UX
@@ -77,11 +70,7 @@ fr:
           suffix: ans
       aife-2:
         work: Développeur Web
-        workDescription: Mes activités sont diverses, que ce soit de la création de sites
-          vitrines, de la maintenance de sites existants, de l'intégration de contenu.
-          Mes compétences en développement, en design, et en création de contenu me permettent
-          de répondre à un large panel de demandes. Je profite de mes compétences pour
-          développer des outils variés pour faciliter mon travail de créateur de contenu.
+        workDescription: Mes activités sont diverses,  création de sites vitrines, maintenance, intégration de contenu... Mes compétences en développement, en design, et en création de contenu me permettent de répondre à un large panel de demandes. Je développe aussi des outils sur mesure pour optimiser mon quotidien de créateur de contenu.
         competencies:
           web: Développement Web
           palette: Design UX
@@ -102,9 +91,7 @@ en:
         description: AZ Network is a company working on the implementation and maintenance
           of CRM and ERP solutions.
         work: Web Developer Internship
-        workDescription: I worked on updating the Génerix ERP at various clients. I had
-          to perform data searches via SQL queries, update files to adapt specific updates
-          via regular expressions.
+        workDescription: I worked on updating the Generix ERP at various clients. I performed data retrieval using SQL queries, update files to adapt specific updates via regular expressions.
         competencies:
           web: Web Development
           database: Database
@@ -119,8 +106,7 @@ en:
           (Transport Management System).
       teliae-1:
         work: Internship in Web Development
-        workDescription: I started in this company with an internship. My role was to
-          maintain and add features to a delivery route management application.
+        workDescription: I began my time at the company with an internship. My role was to maintain and add features to a delivery route management application.
         competencies:
           web: Web Development
           language_php: Back End Programming
@@ -130,11 +116,7 @@ en:
           suffix: Months
       teliae-2:
         work: Web Developer Apprentice
-        workDescription: I had the opportunity to be assigned to multiple missions with
-          varying ambitions. Among my biggest missions, I had to redesign the visual interface
-          of an old application. I had to implement a solution to adapt the interface
-          to new accessibility standards, while maintaining a simple and intuitive interface.
-          All while accompanying users in the evolution of their tool.
+        workDescription: I had the opportunity to be assigned to multiple projects of varying scope. One of my most significant missions involved redesigning the visual interface of an outdated application. I implemented a solution to bring the interface up to modern accessibility standards while maintaining a simple and intuitive user experience. I also supported users throughout the transition process.
         competencies:
           web: Web Development
           palette: UX Design

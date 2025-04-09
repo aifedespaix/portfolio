@@ -43,6 +43,7 @@ export default defineConfig({
     VueRouter({
       extensions: ['.vue', '.md'],
       dts: 'src/typed-router.d.ts',
+
     }),
 
     // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
@@ -157,32 +158,32 @@ export default defineConfig({
   ssgOptions: {
     script: 'async',
     formatting: 'minify',
-    includedRoutes: async (routes) => {
-      // Exclure les routes dynamiques et la route catch-all
-      const staticRoutes = routes.filter(route =>
-        route !== '/projects/:id'
-        && route !== '/:all(.*)'
-        && route !=='/rgpd'
-      )
-      console.log(routes)
+    // includedRoutes: async (routes) => {
+    //   // Exclure les routes dynamiques et la route catch-all
+    //   const staticRoutes = routes.filter(route =>
+    //     route !== '/projects/:id'
+    //     && route !== '/:all(.*)'
+    //     && route !=='/rgpd'
+    //   )
+    //   console.log(routes)
 
-      const projectKeys: Array<'map-game' | 'map-education' | 'interface-administration' | 'video-learning' | 'bot-chat' | 'mini-games' | 'game-666'> = [
-        'map-game',
-        'map-education',
-        'interface-administration',
-        'video-learning',
-        'bot-chat',
-        'mini-games',
-        'game-666',
-      ]
+    //   const projectKeys: Array<'map-game' | 'map-education' | 'interface-administration' | 'video-learning' | 'bot-chat' | 'mini-games' | 'game-666'> = [
+    //     'map-game',
+    //     'map-education',
+    //     'interface-administration',
+    //     'video-learning',
+    //     'bot-chat',
+    //     'mini-games',
+    //     'game-666',
+    //   ]
 
-      const projectRoutes = projectKeys.map(key => `/projects/${key}`)
+    //   const projectRoutes = projectKeys.map(key => `/projects/${key}`)
 
-      return [
-        ...staticRoutes,
-        ...projectRoutes,
-      ]
-    },
+    //   return [
+    //     ...staticRoutes,
+    //     ...projectRoutes,
+    //   ]
+    // },
     onFinished() {
       generateSitemap({
         hostname: 'https://portfolio.aife.io',
