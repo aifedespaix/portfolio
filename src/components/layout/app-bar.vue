@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { RouteKey } from '~/types/route.type'
 import type { I18nKey } from '~/types/i18n'
+import type { RouteKey } from '~/types/route.type'
+
 defineComponent({
   name: 'AppBar',
 })
