@@ -10,7 +10,7 @@ const { t } = useI18n()
 
 <template>
   <Card>
-    <div class="flex items-center gap-2">
+    <div v-reveal class="flex items-center gap-2">
       <Image
         :path="company.logo.path"
         :alt="t(company.name)"
@@ -37,15 +37,15 @@ const { t } = useI18n()
       </div>
     </div>
 
-    <div class="text-justify italic">
+    <div v-reveal class="text-justify italic">
       <p>{{ t(company.description) }}</p>
     </div>
 
-    <div class="my-2 text-justify">
+    <div v-reveal class="my-2 text-justify">
       <p>{{ t(company.workDescription) }}</p>
     </div>
 
-    <div class="max-w-120 self-center rounded-md p-2">
+    <div v-reveal class="max-w-120 self-center rounded-md p-2">
       <TitleH3>
         {{ t('components.card.company.competencies.title') }}
       </TitleH3>
@@ -64,7 +64,7 @@ const { t } = useI18n()
       </div>
     </div>
 
-    <div class="mt-2 flex flex-wrap justify-between gap-x-2 gap-y-4">
+    <div v-reveal class="mt-2 flex flex-wrap justify-between gap-x-2 gap-y-4">
       <VisualInfoGold v-if="company.infoGold" class="flex-1" :info="company.infoGold" />
       <div class="flex flex-wrap justify-center gap-2">
         <a

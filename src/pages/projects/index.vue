@@ -13,7 +13,7 @@ useHeadTag({
 
 <template>
   <Pager>
-    <TitleMain>
+    <TitleMain v-reveal>
       {{ t('pages.projects.title') }}
     </TitleMain>
 
@@ -35,16 +35,16 @@ useHeadTag({
         transition="transition-transform duration-300"
       >
         <Card is-hoverable :footer="t('pages.projects.discover')" class="h-full">
-          <h2 class="flex items-center gap-2 text-lg font-bold">
+          <h2 v-reveal class="flex items-center gap-2 text-lg font-bold">
             <div :class="project.icon" class="min-w-4" />
             {{ t(project.name) }}
           </h2>
 
-          <p class="sizing text-sub h-8 overflow-hidden text-ellipsis">
+          <p v-reveal class="sizing text-sub h-8 overflow-hidden text-ellipsis">
             {{ t(project.shortDescription) }}
           </p>
 
-          <div class="max-h-80 flex-1 overflow-hidden rounded-t-lg -m-x4 -m-b4">
+          <div v-reveal class="max-h-80 flex-1 overflow-hidden rounded-t-lg -m-x4 -m-b4">
             <Image
               :path="imagePath(project.id, project.image)"
               :alt="t(project.name)"
@@ -56,7 +56,9 @@ useHeadTag({
           </div>
 
           <template #button>
-            <div>{{ t('pages.projects.discover') }}</div>
+            <div>
+              {{ t('pages.projects.discover') }}
+            </div>
           </template>
         </Card>
       </router-link>

@@ -268,19 +268,21 @@ const softwares: Record<string, Software> = {
 
 <template>
   <Pager>
-    <TitleMain>{{ t('pages.technologies.meta.title') }}</TitleMain>
+    <TitleMain v-reveal>
+      {{ t('pages.technologies.meta.title') }}
+    </TitleMain>
     <Card>
-      <p class="text-justify">
+      <p v-reveal class="text-justify">
         {{ t('pages.technologies.description') }}
       </p>
     </Card>
 
-    <TitleH2>
+    <TitleH2 v-reveal>
       {{ t('pages.technologies.titles.languages') }}
     </TitleH2>
 
     <Card v-for="technologie in technologies" :key="technologie.name">
-      <div class="flex items-center gap-2">
+      <div v-reveal class="flex items-center gap-2">
         <div
           :class="technologie.icon"
           class="h-14 w-14 flex items-center justify-center rounded-full text-4xl"
@@ -298,7 +300,7 @@ const softwares: Record<string, Software> = {
         </div>
       </div>
 
-      <div class="mt-4 text-justify">
+      <div v-reveal class="mt-4 text-justify">
         <p class="italic">
           {{ t(technologie.description) }}
         </p>
@@ -310,7 +312,7 @@ const softwares: Record<string, Software> = {
         </p>
       </div>
 
-      <div class="mt-4">
+      <div v-reveal class="mt-4">
         <a
           :href="technologie.url"
           target="_blank"
@@ -325,11 +327,14 @@ const softwares: Record<string, Software> = {
       </div>
 
       <div v-if="technologie.libraries?.length" class="mt-6">
-        <TitleH3>{{ t('pages.technologies.titles.libraries') }}</TitleH3>
+        <TitleH3 v-reveal>
+          {{ t('pages.technologies.titles.libraries') }}
+        </TitleH3>
         <div class="grid gap-4" sm="grid-cols-2">
           <div
             v-for="lib in technologie.libraries"
             :key="lib.name"
+            v-reveal
             class="flex flex-col rounded-lg p-4"
           >
             <div class="mb-2 flex items-center gap-2">
@@ -376,13 +381,13 @@ const softwares: Record<string, Software> = {
       </div>
     </Card>
 
-    <TitleH2 class="mt-6">
+    <TitleH2 v-reveal class="mt-6">
       {{ t('pages.technologies.titles.softwares') }}
     </TitleH2>
 
     <div class="grid grid-cols-1 gap-2" md="grid-cols-2">
       <Card v-for="software in softwares" :key="software.name">
-        <div class="flex items-center gap-2">
+        <div v-reveal class="flex items-center gap-2">
           <div
             :class="[software.icon.name]"
             class="h-14 w-14 flex items-center justify-center text-4xl" text="blue-600 dark:blue-400"
@@ -399,7 +404,7 @@ const softwares: Record<string, Software> = {
           </div>
         </div>
 
-        <div class="flex-1 text-justify">
+        <div v-reveal class="flex-1 text-justify">
           <p class="italic">
             {{ t(software.description) }}
           </p>
@@ -408,7 +413,7 @@ const softwares: Record<string, Software> = {
           </p>
         </div>
 
-        <div class="mt-4">
+        <div v-reveal class="mt-4">
           <a
             :href="software.url"
             target="_blank"

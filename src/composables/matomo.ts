@@ -4,6 +4,7 @@ export function useMatomo() {
   return useHead({
     script: [
       {
+        id: 'matomo',
         fetchpriority: 'low',
         async: true,
         defer: true,

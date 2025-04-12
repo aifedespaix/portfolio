@@ -10,7 +10,7 @@ const { t } = useI18n()
 
 <template>
   <Card>
-    <div class="flex items-center gap-2">
+    <div v-reveal class="flex items-center gap-2">
       <Image
         :path="data.logo.path"
         :alt="data.school"
@@ -35,11 +35,11 @@ const { t } = useI18n()
       </div>
     </div>
 
-    <div class="text-justify">
+    <div v-reveal class="text-justify">
       <p>{{ t(data.description) }}</p>
     </div>
 
-    <div class="max-w-120 self-center rounded-md p-2">
+    <div v-reveal class="max-w-120 self-center rounded-md p-2">
       <TitleH3>
         {{ t('components.card.study.school.competencies.title') }}
       </TitleH3>
@@ -58,7 +58,7 @@ const { t } = useI18n()
       </div>
     </div>
 
-    <div class="mt-2 flex flex-wrap justify-between gap-2">
+    <div v-reveal class="mt-2 flex flex-wrap justify-between gap-2">
       <VisualInfoGold
         :info="{
           value: data.lvl ? {

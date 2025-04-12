@@ -1,6 +1,6 @@
 <script setup lang="ts">
+import type { ProjectRouteKey } from '~/types/route.type'
 import { useHeadTag } from '~/composables/head-tag'
-import { ProjectRouteKey } from '~/types/route.type'
 
 const route = useRoute('/projects/[id]')
 const router = useRouter()
@@ -30,7 +30,9 @@ if (data.value) {
 
 <template>
   <Pager>
-    <ProjectDetails v-if="data" :data="data" />
+    <Card v-if="data">
+      <ProjectDetails :data="data" />
+    </Card>
     <div v-else>
       <TitleMain>
         {{ t('pages.projects.id.error.title') }}

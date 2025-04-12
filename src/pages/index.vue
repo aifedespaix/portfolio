@@ -29,10 +29,12 @@ const colors = [
 
 <template>
   <Pager>
-    <TitleMain>{{ t('pages.index.title') }}</TitleMain>
+    <TitleMain v-reveal>
+      {{ t('pages.index.title') }}
+    </TitleMain>
 
     <Card>
-      <div class="flex-reverse flex flex-col items-center justify-between gap-4" sm="flex-row">
+      <div v-reveal class="flex-reverse flex flex-col items-center justify-between gap-4" sm="flex-row">
         <div class="text-nowrap font-bold">
           Joan Tassel
         </div>
@@ -48,7 +50,7 @@ const colors = [
       </div>
     </Card>
 
-    <TitleH2 class="px-2">
+    <TitleH2 v-reveal class="px-2">
       {{ t('pages.index.work') }}
     </TitleH2>
 
@@ -59,12 +61,12 @@ const colors = [
       lg="grid-cols-4"
     >
       <Card
-        v-for="(card, index) in cards" :key="card.name" :to="card.to"
+        v-for="(card, index) in cards" :key="card.name" v-reveal
+        :to="card.to"
         :class="colors[index % colors.length]"
         class="flex items-center justify-center"
         lg="aspect-square"
-        hover="scale-102"
-        transition="transition-transform duration-300"
+        hover="scale-102" transition="transition-transform duration-300"
       >
         <TitleH3 class="h-10">
           {{ t(card.name) }}
@@ -78,12 +80,12 @@ const colors = [
       </Card>
     </div>
 
-    <TitleH2>
+    <TitleH2 v-reveal>
       {{ t('pages.index.journey.title') }}
     </TitleH2>
 
     <Card class="gap-4" md="text-justify">
-      <div class="card-grid">
+      <div v-reveal class="card-grid">
         <TitleH3>{{ t('pages.index.journey.discovery.title') }}</TitleH3>
         <Image
           path="/assets/home/work-begin"
@@ -105,7 +107,7 @@ const colors = [
         </p>
       </div>
 
-      <div class="card-grid">
+      <div v-reveal class="card-grid">
         <TitleH3>{{ t('pages.index.journey.professional.title') }}</TitleH3>
         <Image
           path="/assets/home/university"
@@ -129,7 +131,7 @@ const colors = [
         </p>
       </div>
 
-      <div class="card-grid">
+      <div v-reveal class="card-grid">
         <TitleH3>{{ t('pages.index.journey.freelance.title') }}</TitleH3>
         <Image
           path="/assets/home/freelance"

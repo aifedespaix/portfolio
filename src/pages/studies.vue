@@ -31,9 +31,14 @@ function onIntersectionObserver([entry, entry2]: IntersectionObserverEntry[]) {
 
 <template>
   <Pager>
-    <TitleMain>{{ t('pages.studies.meta.title') }}</TitleMain>
+    <TitleMain v-reveal>
+      {{ t('pages.studies.meta.title') }}
+    </TitleMain>
 
-    <div class="fixed bottom-[var(--distance-bottom)] right-0 top-[var(--distance-top)] flex flex-col items-center justify-center gap-2 px-1 pr-2">
+    <div
+      v-reveal
+      class="fixed bottom-[var(--distance-bottom)] right-0 top-[var(--distance-top)] flex flex-col items-center justify-center gap-2 px-1 pr-2"
+    >
       <ButtonIcon
         v-for="study in studyStore.list"
         :key="study.school"

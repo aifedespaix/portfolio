@@ -12,7 +12,7 @@ const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}
 <template>
   <article class="mx-auto max-w-4xl px-4 py-8">
     <!-- En-tête du projet -->
-    <header class="mb-12">
+    <header v-reveal class="mb-12">
       <TitleMain>
         {{ t(data.name) }}
       </TitleMain>
@@ -29,12 +29,15 @@ const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}
       </p>
     </header>
 
-    <section v-if="data.links" class="mb-12">
-      <TitleH2>{{ t('components.project-details.link', { count: data.links.length }) }}</TitleH2>
+    <section v-if="data.links" v-reveal class="mb-12">
+      <TitleH2>
+        {{ t('components.project-details.link', { count: data.links.length }) }}
+      </TitleH2>
       <div class="grid grid-cols-1 gap-4" xs="grid-cols-2" xl="grid-cols-4">
         <a
           v-for="link in data.links"
           :key="link.url"
+          v-reveal
           :href="link.url"
           target="_blank"
           rel="noopener noreferrer"
@@ -69,7 +72,7 @@ const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}
 
     <!-- Jalons / Explications -->
     <section class="mb-12">
-      <TitleH2>
+      <TitleH2 v-reveal>
         {{ t('components.project-details.keyPoints') }}
       </TitleH2>
 
@@ -77,6 +80,7 @@ const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}
         <div
           v-for="explain in data.explains"
           :key="explain.title"
+          v-reveal
           bg="white dark:dark-800"
           class="overflow-hidden rounded-lg shadow-md"
           border="1 solid light-200 dark:dark-800"
@@ -103,13 +107,14 @@ const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}
 
     <!-- Difficultés -->
     <section class="mb-12">
-      <TitleH2>
+      <TitleH2 v-reveal>
         {{ t('components.project-details.difficulties') }}
       </TitleH2>
       <ul class="space-y-4">
         <li
           v-for="(difficulty, index) in data.difficulties"
           :key="index"
+          v-reveal
           bg="red-50 dark:red-800/20"
           class="flex items-start gap-3 rounded-lg p-4 text-justify"
         >
@@ -123,13 +128,14 @@ const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}
 
     <!-- Technologies utilisées -->
     <section>
-      <TitleH2>
+      <TitleH2 v-reveal>
         {{ t('components.project-details.technologies') }}
       </TitleH2>
       <div class="flex flex-wrap gap-3">
         <a
           v-for="tech in data.technologies"
           :key="tech.name"
+          v-reveal
           :href="tech.url"
           target="_blank"
           rel="noopener noreferrer"

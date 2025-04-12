@@ -17,7 +17,7 @@ const links: Link[] = [
   },
   {
     name: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/joan-t-965230294/',
+    url: 'https://www.linkedin.com/in/joan-tassel-965230294/',
     icon: 'i-mdi:linkedin',
     hover: 'hover:text-blue-800 dark:hover:text-blue-400',
   },

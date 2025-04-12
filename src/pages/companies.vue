@@ -31,11 +31,11 @@ function onIntersectionObserver([entry, entry2]: IntersectionObserverEntry[]) {
 
 <template>
   <Pager>
-    <TitleMain>
+    <TitleMain v-reveal>
       {{ t('pages.companies.title') }}
     </TitleMain>
 
-    <div class="fixed bottom-[var(--distance-bottom)] right-0 top-[var(--distance-top)] flex flex-col items-center justify-center gap-2 px-1 pr-2">
+    <div v-reveal class="fixed bottom-[var(--distance-bottom)] right-0 top-[var(--distance-top)] flex flex-col items-center justify-center gap-2 px-1 pr-2">
       <ButtonIcon
         v-for="company in companyStore.list"
         :key="company.id"
