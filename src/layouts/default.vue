@@ -10,6 +10,13 @@ const largeNavWidth = '240px'
 const smallNavWidth = '56px'
 const appBarHeight = ref('3rem')
 
+const { t } = useTranslationsStore()
+useHeadTag({
+  title: computed(() => t('pages.index.meta.title')),
+  description: computed(() => t('pages.index.meta.description')),
+  type: 'website',
+})
+
 useMatomo()
 const layoutStore = useLayoutStore()
 

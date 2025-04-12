@@ -23,7 +23,7 @@ if (data.value) {
     title: computed(() => t(data.value!.meta.title)),
     description: computed(() => t(data.value!.meta.description)),
     type: 'article',
-    imagePath: data.value!.image ? `${data.value!.image}.webp` : undefined,
+    defaultImage: false,
   })
 }
 </script>

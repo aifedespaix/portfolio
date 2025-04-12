@@ -2,10 +2,10 @@
 import { computed } from 'vue'
 
 interface Props {
-  path: string // sample : 'assets/home/profile', contains  'assets/home/profile/profile-200.jpg' + different sizes et extensions
-  alt: string
+  path: string
   width: number
   height: number
+  alt: string
   transparent?: boolean
   loading?: 'lazy' | 'eager'
   decoding?: 'async' | 'sync' | 'auto'

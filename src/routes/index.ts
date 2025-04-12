@@ -1,13 +1,11 @@
 import type { RouteRecordRaw } from 'vue-router'
+import { allRoutes } from './404-routes'
 import { mainRoutes } from './main-routes'
 import { projectsRoutes } from './project-routes'
-import { allRoutes } from './404-routes'
-
 
 interface RouteMeta {
   key: string
-  lang?: string
-  noAlternate?: boolean
+  lang: string
   otherPaths?: {
     fr?: string
     en?: string
@@ -58,31 +56,33 @@ const routes: CustomRouteRecord[]
     ]
   })
 
-  routes.push({
-    path: '/',
-    redirect: () => {
-      const langCode = navigator.language.split('-')[0];
-      if(langCode === 'fr') {
-        return '/fr'
-      } else {
-        return '/en'
-      }
-    },
-    children: [],
-  })
+routes.push({
+  path: '/',
+  redirect: () => {
+    const langCode = navigator.language.split('-')[0]
+    if (langCode === 'fr') {
+      return '/fr'
+    }
+    else {
+      return '/en'
+    }
+  },
+  children: [],
+})
 
-  routes.push({
-    path: '/:all(.*)',
-    redirect: (route) => {
-      const path = route.fullPath
-      const langCode = navigator.language.split('-')[0];
-      if(langCode === 'fr') {
-        return `/fr${path}`
-      } else {
-        return `/en${path}`
-      }
-    },
-    children: [],
-  })
+routes.push({
+  path: '/:all(.*)',
+  redirect: (route) => {
+    const path = route.fullPath
+    const langCode = navigator.language.split('-')[0]
+    if (langCode === 'fr') {
+      return `/fr${path}`
+    }
+    else {
+      return `/en${path}`
+    }
+  },
+  children: [],
+})
 
-export {routes}
+export { routes }

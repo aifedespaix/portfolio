@@ -7,7 +7,6 @@ export const useTranslationsStore = defineStore('translations', () => {
 
   const getUrlLocale = (routeKey: RouteKey) => {
     const isValidLocale = (locale: string): locale is 'en' | 'fr' => locale === 'en' || locale === 'fr'
-
     if (!isValidLocale(locale.value)) {
       throw new Error(`Invalid locale: ${locale.value}`)
     }

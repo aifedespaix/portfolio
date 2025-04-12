@@ -1,12 +1,12 @@
 import type { Link, UseSeoMetaInput } from '@unhead/vue'
-import { CustomRouteRecord } from '~/routes'
-import { Lang, Route } from '~/types/route.type'
+import type { CustomRouteRecord } from '~/routes'
+import type { Lang } from '~/types/route.type'
 
 interface UseHeadTagInput {
   title: ComputedRef<string> | string
   description: ComputedRef<string> | string
   type: 'website' | 'article'
-  imagePath?: string
+  defaultImage?: boolean
 }
 
 const langsOg: Record<Lang, string> = {
@@ -18,10 +18,30 @@ const siteTitle = 'Portfolio Aife'
 const domain = 'https://portfolio.aife.io'
 const author = 'Joan Tassel'
 
+function getImagePath(enRoutePath: string, defaultImage: boolean) {
+  if (defaultImage) {
+    return `${domain}/aife-banniere-portfolio.webp`
+  }
+  const parts = enRoutePath.split('/')
+
+  if (parts.length < 2) {
+    throw new Error('Path must contain at least 2 parts')
+  }
+
+  const name = parts.at(-1)
+  const folder = parts.slice(2).join('/')
+  const size = 512
+
+  return `${domain}/assets/${folder}/${name}/${name}-${size}.png`
+}
+
 export function useHeadTag(input: UseHeadTagInput) {
-  const route = useRoute()
+  const route = useRoute() as any as CustomRouteRecord
+  const enPath = route.meta?.lang === 'en' ? route.path : route.meta?.otherPaths?.en as string
+  const imagePath = getImagePath(enPath, input.defaultImage ?? true)
+
   const pageUrl = `${domain}${route.path}`
-  const lang = route.meta.lang as Lang
+  const lang = route.meta?.lang as Lang
   const langCode = langsOg[lang]
   const langsAlternate = Object.keys(langsOg).filter(key => key !== lang)
 
@@ -34,32 +54,26 @@ export function useHeadTag(input: UseHeadTagInput) {
   seoInput.ogSiteName = siteTitle
   seoInput.ogDescription = input.description
   seoInput.ogType = input.type
-  if (input.imagePath) {
-    seoInput.ogImage = `${domain}/assets${route.path}/${input.imagePath}`
-  }
-  else {
-    seoInput.ogImage = `${domain}/aife-banniere-portfolio.webp`
-  }
+  seoInput.ogImage = imagePath
   seoInput.ogUrl = pageUrl
   seoInput.ogLocale = langCode
   seoInput.ogLocaleAlternate = langsAlternate.map(lang => langsOg[lang as Lang])
   seoInput.ogSiteName = siteTitle
   seoInput.twitterTitle = input.title
   seoInput.twitterDescription = input.description
+  seoInput.twitterImage = seoInput.ogImage
 
   useSeoMeta(seoInput)
 
-  if(!route.meta.noAlternate) {
-    addAlternateLinks(route as unknown as CustomRouteRecord, pageUrl)
-  }
+  addAlternateLinks(route as unknown as CustomRouteRecord, pageUrl)
 }
 
-const addAlternateLinks = (route: CustomRouteRecord, pageUrl: string) => {
-  if(!route.meta?.otherPaths) {
-    throw new Error('Route meta otherPaths is not defined') 
+function addAlternateLinks(route: CustomRouteRecord, pageUrl: string) {
+  if (!route.meta?.otherPaths) {
+    throw new Error('Route meta otherPaths is not defined')
   }
 
-  const otherPaths = route.meta.otherPaths as { fr: string; en: string }
+  const otherPaths = route.meta.otherPaths as { fr: string, en: string }
   const links: Link[] = [
     {
       rel: 'alternate',
@@ -76,5 +90,5 @@ const addAlternateLinks = (route: CustomRouteRecord, pageUrl: string) => {
       href: pageUrl,
     },
   ]
-  useHead({link: links})
+  useHead({ link: links })
 }
