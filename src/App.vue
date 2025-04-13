@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { loadLanguageAsync } from './modules/i18n'
-
 // https://github.com/vueuse/head
 // you can use this to manipulate the document head in any components,
 // they will be rendered correctly in the html results with vite-ssg
@@ -35,16 +33,6 @@ useHead({
 })
 
 const route = useRoute()
-const { locale } = useI18n()
-
-// Mettre à jour la locale en fonction de l'URL
-watch(() => route.path, async (path) => {
-  const newLocale = path.split('/')[1]
-  if (newLocale && ['fr', 'en'].includes(newLocale)) {
-    await loadLanguageAsync(newLocale)
-    locale.value = newLocale
-  }
-}, { immediate: true })
 </script>
 
 <template>

@@ -288,6 +288,7 @@ declare global {
   const useToggle: typeof import('@vueuse/core')['useToggle']
   const useTransition: typeof import('@vueuse/core')['useTransition']
   const useTranslationsStore: typeof import('./stores/translations')['useTranslationsStore']
+  const useTypedRouteMeta: typeof import('./composables/typed-route')['useTypedRouteMeta']
   const useUrlSearchParams: typeof import('@vueuse/core')['useUrlSearchParams']
   const useUserMedia: typeof import('@vueuse/core')['useUserMedia']
   const useUserStore: typeof import('./stores/user')['useUserStore']
@@ -615,6 +616,7 @@ declare module 'vue' {
     readonly useToggle: UnwrapRef<typeof import('@vueuse/core')['useToggle']>
     readonly useTransition: UnwrapRef<typeof import('@vueuse/core')['useTransition']>
     readonly useTranslationsStore: UnwrapRef<typeof import('./stores/translations')['useTranslationsStore']>
+    readonly useTypedRouteMeta: UnwrapRef<typeof import('./composables/typed-route')['useTypedRouteMeta']>
     readonly useUrlSearchParams: UnwrapRef<typeof import('@vueuse/core')['useUrlSearchParams']>
     readonly useUserMedia: UnwrapRef<typeof import('@vueuse/core')['useUserMedia']>
     readonly useUserStore: UnwrapRef<typeof import('./stores/user')['useUserStore']>

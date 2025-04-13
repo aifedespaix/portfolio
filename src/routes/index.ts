@@ -3,7 +3,7 @@ import { allRoutes } from './404-routes'
 import { mainRoutes } from './main-routes'
 import { projectsRoutes } from './project-routes'
 
-interface RouteMeta {
+export interface CustomRouteMeta {
   key: string
   lang: string
   otherPaths?: {
@@ -13,7 +13,7 @@ interface RouteMeta {
 }
 
 export type CustomRouteRecord = RouteRecordRaw & {
-  meta?: RouteMeta
+  meta?: CustomRouteMeta
   children?: CustomRouteRecord[]
 }
 

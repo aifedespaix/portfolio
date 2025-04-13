@@ -1,8 +1,10 @@
 <script setup lang="ts">
+import type { Lang } from '~/types/route.type'
 import { useHeadTag } from '~/composables/head-tag'
-import { loadLanguageAsync } from '~/modules/i18n'
 
 const { locale, t } = useI18n()
+const routeMeta = useTypedRouteMeta()
+const router = useRouter()
 
 useHeadTag({
   title: computed(() => t('pages.settings.meta.title')),
@@ -11,9 +13,12 @@ useHeadTag({
 })
 
 async function changeLocale(event: Event) {
-  const target = event.target as HTMLSelectElement
-  await loadLanguageAsync(target.value)
-  locale.value = target.value
+  const localeName = (event.target as HTMLSelectElement).value as Lang
+  const path = routeMeta.otherPaths?.[localeName]
+  if (!path) {
+    throw new Error(`Path for locale ${localeName} not found`)
+  }
+  router.push(path)
 }
 
 const locales = [
@@ -44,6 +49,7 @@ function toggleTheme() {
 
     <Card>
       <title-h2>{{ t('pages.settings.language.title') }}</title-h2>
+
       <select class="p-2" :value="locale" @change="changeLocale">
         <option v-for="loc in locales" :key="loc.value" :value="loc.value">
           {{ loc.label }}

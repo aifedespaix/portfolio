@@ -1,86 +1,67 @@
-import type { Locale } from 'vue-i18n'
 import type { UserModule } from '~/types'
 import { createI18n } from 'vue-i18n'
 
-// Import i18n resources
-// https://vitejs.dev/guide/features.html#glob-import
-//
-// Don't need this? Try vitesse-lite: https://github.com/antfu/vitesse-lite
-const i18n = createI18n({
-  legacy: false,
-  locale: 'fr',
-  messages: {},
-})
+type Locale = string
 
-const localesMap = Object.fromEntries(
-  Object.entries(import.meta.glob('../../locales/*.yml'))
-    .map(([path, loadLocale]) => [path.match(/([\w-]*)\.yml$/)?.[1], loadLocale]),
-) as Record<Locale, () => Promise<{ default: Record<string, string> }>>
+const localeLoaders = Object.fromEntries(
+  Object.entries(import.meta.glob('../../locales/*.yml')).map(([path, loader]) => [
+    path.match(/([\w-]*)\.yml$/)?.[1],
+    loader,
+  ]),
+) as Record<Locale, () => Promise<{ default: Record<string, any> }>>
 
-export const availableLocales = Object.keys(localesMap)
+export const install: UserModule = async ({ app, router, isClient, routePath }) => {
+  let detectedLocale = 'fr'
 
-const loadedLanguages: string[] = []
-
-function setI18nLanguage(lang: Locale) {
-  i18n.global.locale.value = lang as any
-  if (typeof document !== 'undefined')
-    document.querySelector('html')?.setAttribute('lang', lang)
-  return lang
-}
-
-export async function loadLanguageAsync(lang: string): Promise<Locale> {
-  // If the same language
-  if (i18n.global.locale.value === lang)
-    return setI18nLanguage(lang)
-
-  // If the language was already loaded
-  if (loadedLanguages.includes(lang))
-    return setI18nLanguage(lang)
-
-  // If the language hasn't been loaded yet
-  const messages = await localesMap[lang]()
-  i18n.global.setLocaleMessage(lang, messages.default)
-  loadedLanguages.push(lang)
-  if (typeof window !== 'undefined') {
-    localStorage.setItem('lang', lang)
+  if (isClient) {
+    const path = window.location.pathname
+    detectedLocale = path.split('/')[1] || 'fr'
   }
-  return setI18nLanguage(lang)
-}
+  else if (routePath) {
+    detectedLocale = routePath.split('/')[1] || 'fr'
+  }
 
-// Fonction pour précharger toutes les langues
-async function preloadAllLanguages() {
-  const languages = Object.keys(localesMap)
-  await Promise.all(languages.map(lang => loadLanguageAsync(lang)))
-}
+  const availableLocales = Object.keys(localeLoaders)
+  const currentLocale = availableLocales.includes(detectedLocale) ? detectedLocale : 'fr'
 
-export const install: UserModule = async ({ app }) => {
-  app.use(i18n)
+  const messages: Record<string, any> = {}
 
-  // Précharger toutes les langues au moment du build SSG
-  if (import.meta.env.SSR) {
-    await preloadAllLanguages()
+  if (isClient) {
+    messages[currentLocale] = (await localeLoaders[currentLocale]()).default
   }
   else {
-    let storedLang
-    if (typeof window !== 'undefined') {
-      storedLang = localStorage.getItem('lang')
-    }
-    else {
-      storedLang = 'fr'
-    }
+    await Promise.all(
+      Object.entries(localeLoaders).map(async ([locale, loader]) => {
+        messages[locale] = (await loader()).default
+      }),
+    )
+  }
 
-    // Initialiser les messages pour la langue par défaut
-    const initLang = storedLang || 'fr'
-    await localesMap[initLang]().then((messages) => {
-      i18n.global.setLocaleMessage(initLang, messages.default)
+  const i18n = createI18n({
+    legacy: false,
+    locale: currentLocale,
+    fallbackLocale: 'fr',
+    messages,
+    availableLocales,
+  })
+
+  app.use(i18n)
+
+  if (isClient && router) {
+    i18n.global.locale.value = currentLocale
+
+    router.beforeEach(async (to, _from, next) => {
+      const lang = to.path.split('/')[1]
+
+      if (availableLocales.includes(lang) && !i18n.global.availableLocales.includes(lang)) {
+        i18n.global.setLocaleMessage(lang, (await localeLoaders[lang]()).default)
+      }
+
+      if (availableLocales.includes(lang) && i18n.global.locale.value !== lang) {
+        i18n.global.locale.value = lang
+      }
+
+      next()
     })
-
-    if (storedLang) {
-      await loadLanguageAsync(storedLang)
-    }
-    else {
-      const userLang = navigator.language.split('-')[0]
-      await loadLanguageAsync(userLang)
-    }
   }
 }
