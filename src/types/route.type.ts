@@ -15,3 +15,4 @@ export interface Route {
   component: () => Promise<typeof import('*.vue')>
   redirect?: (to: any) => string
 }
+export type Routes<T extends MainRouteKey | ProjectRouteKey> = Record<T, Route>

@@ -1,77 +1,76 @@
-import { Route } from '~/types/route.type';
-import { MainRouteKey } from '~/types/route.type';
+import type { MainRouteKey, Routes } from '~/types/route.type'
 
-export const mainRoutes: Record<MainRouteKey, Route> = {
-    index: {
-      path: {
-        en: '/',
-        fr: '/',
-      },
-      name: 'Home',
-      component: () => import('~/pages/index.vue'),
+export const mainRoutes: Routes<MainRouteKey> = {
+  index: {
+    path: {
+      en: '/',
+      fr: '/',
     },
-    companies: {
-      path: {
-        en: '/companies',
-        fr: '/entreprises',
-      },
-      name: 'Companies',
-      component: () => import('~/pages/companies.vue'),
+    name: 'Home',
+    component: () => import('~/pages/index.vue'),
+  },
+  companies: {
+    path: {
+      en: '/companies',
+      fr: '/entreprises',
     },
-    studies: {
-      path: {
-        en: '/studies',
-        fr: '/etudes',
-      },
-      name: 'Studies',
-      component: () => import('~/pages/studies.vue'),
+    name: 'Companies',
+    component: () => import('~/pages/companies.vue'),
+  },
+  studies: {
+    path: {
+      en: '/studies',
+      fr: '/etudes',
     },
-    settings: {
-      path: {
-        en: '/settings',
-        fr: '/parametres',
-      },
-      name: 'Settings',
-      component: () => import('~/pages/settings.vue'),
+    name: 'Studies',
+    component: () => import('~/pages/studies.vue'),
+  },
+  settings: {
+    path: {
+      en: '/settings',
+      fr: '/parametres',
     },
-    profile: {
-      path: {
-        en: '/profile',
-        fr: '/profil',
-      },
-      name: 'Profile',
-      component: () => import('~/pages/profile.vue'),
+    name: 'Settings',
+    component: () => import('~/pages/settings.vue'),
+  },
+  profile: {
+    path: {
+      en: '/profile',
+      fr: '/profil',
     },
-    legal: {
-      path: {
-        en: '/legal',
-        fr: '/mentions-legales',
-      },
-      name: 'Legal',
-      component: () => import('~/pages/legal.md'),
+    name: 'Profile',
+    component: () => import('~/pages/profile.vue'),
+  },
+  legal: {
+    path: {
+      en: '/legal',
+      fr: '/mentions-legales',
     },
-    privacy: {
-      path: {
-        en: '/privacy-policy',
-        fr: '/politique-de-confidentialite',
-      },
-      name: 'Privacy',
-      component: () => import('~/pages/privacy-policy.md'),
+    name: 'Legal',
+    component: () => import('~/pages/legal.md'),
+  },
+  privacy: {
+    path: {
+      en: '/privacy-policy',
+      fr: '/politique-de-confidentialite',
     },
-    technologies: {
-      path: {
-        en: '/technologies',
-        fr: '/technologies',
-      },
-      name: 'Technologies',
-      component: () => import('~/pages/technologies.vue'),
+    name: 'Privacy',
+    component: () => import('~/pages/privacy-policy.md'),
+  },
+  technologies: {
+    path: {
+      en: '/technologies',
+      fr: '/technologies',
     },
-    projects: {
-      path: {
-        en: '/projects',
-        fr: '/projets',
-      },
-      name: 'Projects',
-      component: () => import('~/pages/projects/index.vue'),
+    name: 'Technologies',
+    component: () => import('~/pages/technologies.vue'),
+  },
+  projects: {
+    path: {
+      en: '/projects',
+      fr: '/projets',
     },
-  }
+    name: 'Projects',
+    component: () => import('~/pages/projects/index.vue'),
+  },
+}

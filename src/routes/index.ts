@@ -1,15 +1,12 @@
 import type { RouteRecordRaw } from 'vue-router'
-import { allRoutes } from './404-routes'
+import { routeAll } from './404-routes'
 import { mainRoutes } from './main-routes'
 import { projectsRoutes } from './project-routes'
 
 export interface CustomRouteMeta {
   key: string
   lang: string
-  otherPaths?: {
-    fr?: string
-    en?: string
-  }
+  otherPaths?: Record<string, string>
 }
 
 export type CustomRouteRecord = RouteRecordRaw & {
@@ -17,70 +14,58 @@ export type CustomRouteRecord = RouteRecordRaw & {
   children?: CustomRouteRecord[]
 }
 
-const routes: CustomRouteRecord[]
-= Object.entries(mainRoutes)
-  .concat(Object.entries(projectsRoutes))
-  .concat([[allRoutes.name, allRoutes]])
-  .flatMap(([key, route]) => {
-    const pathFr = `/fr${route.path.fr}`
-    const pathEn = `/en${route.path.en}`
-    return [
-      {
-        ...route,
-        path: pathEn,
-        name: `${route.name} (en)`,
-        meta: {
-          key,
-          lang: 'en',
-          otherPaths: {
-            fr: pathFr,
-            en: pathEn,
-          },
-        },
-        children: [],
-      },
-      {
-        ...route,
-        path: pathFr,
-        name: `${route.name} (fr)`,
-        meta: {
-          key,
-          lang: 'fr',
-          otherPaths: {
-            en: pathEn,
-            fr: pathFr,
-          },
-        },
-        children: [],
-      },
-    ]
-  })
+// Configuration des locales supportées
+const SUPPORTED_LOCALES = ['fr', 'en'] as const
+type SupportedLocale = typeof SUPPORTED_LOCALES[number]
 
+// Fonction utilitaire pour créer les routes localisées
+function createLocalizedRoutes(routeKey: string, route: CustomRouteRecord, locales: readonly string[]): CustomRouteRecord[] {
+  return locales.map((locale) => {
+    const localizedPath = `/${locale}${route.path[locale as keyof typeof route.path]}`
+    const otherPaths = locales.reduce((acc, otherLocale) => {
+      acc[otherLocale] = `/${otherLocale}${route.path[otherLocale as keyof typeof route.path]}`
+      return acc
+    }, {} as Record<string, string>)
+
+    return {
+      ...route,
+      path: localizedPath,
+      name: `${String(route.name)} (${locale})`,
+      meta: {
+        key: routeKey,
+        lang: locale,
+        otherPaths,
+      },
+      children: [],
+    }
+  })
+}
+
+// Création des routes
+const routes: CustomRouteRecord[] = Object.entries(mainRoutes)
+  .concat(Object.entries(projectsRoutes))
+  .concat([[routeAll.name, routeAll]])
+  .flatMap(([key, route]) => createLocalizedRoutes(key, route as unknown as CustomRouteRecord, SUPPORTED_LOCALES))
+
+// Route par défaut avec redirection basée sur la langue du navigateur
 routes.push({
   path: '/',
   redirect: () => {
     const langCode = navigator.language.split('-')[0]
-    if (langCode === 'fr') {
-      return '/fr'
-    }
-    else {
-      return '/en'
-    }
+    return SUPPORTED_LOCALES.includes(langCode as SupportedLocale) ? `/${langCode}` : '/en'
   },
   children: [],
 })
 
+// Route catch-all avec redirection localisée
 routes.push({
   path: '/:all(.*)',
   redirect: (route) => {
     const path = route.fullPath
     const langCode = navigator.language.split('-')[0]
-    if (langCode === 'fr') {
-      return `/fr${path}`
-    }
-    else {
-      return `/en${path}`
-    }
+    return SUPPORTED_LOCALES.includes(langCode as SupportedLocale)
+      ? `/${langCode}${path}`
+      : `/en${path}`
   },
   children: [],
 })
