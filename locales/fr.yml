@@ -349,10 +349,10 @@ pages:
         utilisation: >-
           J'utilise Docker pour créer des environnements de développement
           uniformes, gérer des bases de données temporaires ou des services
-          externes (comme Matomo, PostgreSQL, WordPress, etc.), et déployer
-          facilement mes projets sur différents serveurs ou machines. Il m'a
-          permis d'automatiser le setup de mes projets, que ce soit en local ou
-          en production.
+          externes (comme Plausible, Traefik, Strapi, PostgreSQL, WordPress,
+          etc.), et déployer facilement mes projets sur différents serveurs ou
+          machines. Il m'a permis d'automatiser le setup de mes projets, que ce
+          soit en local ou en production.
         apports: >-
           Docker m'a permis de gagner en fiabilité et en productivité, surtout
           lorsque je travaille sur plusieurs projets ou avec des équipes. Grâce

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useMatomo } from '~/composables/matomo'
+import { usePlausible } from '~/composables/plausible'
 
 defineComponent({
   name: 'DefaultLayout',
@@ -17,7 +17,7 @@ useHeadTag({
   type: 'website',
 })
 
-useMatomo()
+usePlausible()
 const layoutStore = useLayoutStore()
 
 const navWidth = computed(() => layoutStore.isNavExtended ? largeNavWidth : smallNavWidth)
