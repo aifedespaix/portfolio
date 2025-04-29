@@ -29,7 +29,7 @@ type Technologies = 'react'
   | 'angular'
   | 'symfony'
   | 'nuxt'
-  | 'rapier.js'
+  | 'rapier'
 
 export const useTechnologiesStore = defineStore('technologies', () => {
   const technologies: Record<Technologies, Technology> = {
@@ -124,6 +124,10 @@ export const useTechnologiesStore = defineStore('technologies', () => {
     symfony: {
       name: 'Symfony',
       url: 'https://symfony.com/',
+    },
+    rapier: {
+      name: 'Rapier',
+      url: 'https://rapier.rs/',
     },
   }
 

@@ -20,8 +20,9 @@ export const useGameEngineStore = defineStore('gameEngine', () => {
     technologies: [
       technologiesStore.technologies.vue3,
       technologiesStore.technologies.threejs,
-      technologiesStore.technologies.nuxt,
+      technologiesStore.technologies.rapier,
       technologiesStore.technologies.unocss,
+      technologiesStore.technologies.nuxt,
     ],
     explains: Array.from({ length: explains }, (_, i) => ({
       image: `game-engine-${i + 1}`,
