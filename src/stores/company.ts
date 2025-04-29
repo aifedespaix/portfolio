@@ -17,6 +17,7 @@ export interface Company {
     start: string
     end?: string
   }
+  missions: string[]
   urls:
   {
     name: string
@@ -91,6 +92,9 @@ export const useCompanyStore = defineStore('company', () => {
         },
         name: 'stores.company.az-network.info-gold.name',
       },
+      missions: [
+        'stores.company.az-network.missions.1',
+      ],
     },
     {
       id: 'teliae',
@@ -114,6 +118,10 @@ export const useCompanyStore = defineStore('company', () => {
         },
         name: 'stores.company.teliae-1.info-gold.name',
       },
+      missions: [
+        'stores.company.teliae-1.missions.1',
+        'stores.company.teliae-1.missions.2',
+      ],
     },
     {
       id: 'teliae-2',
@@ -137,6 +145,10 @@ export const useCompanyStore = defineStore('company', () => {
         },
         name: 'stores.company.teliae-2.info-gold.name',
       },
+      missions: [
+        'stores.company.teliae-2.missions.1',
+        'stores.company.teliae-2.missions.2',
+      ],
     },
     {
       id: 'aife',
@@ -162,6 +174,10 @@ export const useCompanyStore = defineStore('company', () => {
         { name: 'stores.company.website.youtube', url: 'https://www.youtube.com/@aife', icon: 'i-mdi:youtube' },
         { name: 'stores.company.website.twitch', url: 'https://www.twitch.tv/aife', icon: 'i-mdi:twitch' },
       ],
+      missions: [
+        'stores.company.aife-1.missions.1',
+        'stores.company.aife-1.missions.2',
+      ],
     },
     {
       id: 'aife-2',
@@ -184,6 +200,10 @@ export const useCompanyStore = defineStore('company', () => {
       },
       urls: [
         { name: 'stores.company.website.name', url: '/' },
+      ],
+      missions: [
+        'stores.company.aife-2.missions.1',
+        'stores.company.aife-2.missions.2',
       ],
     },
   ].reverse()

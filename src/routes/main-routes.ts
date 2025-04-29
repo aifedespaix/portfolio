@@ -73,4 +73,15 @@ export const mainRoutes: Routes<MainRouteKey> = {
     name: 'Projects',
     component: () => import('~/pages/projects/index.vue'),
   },
+  curriculumVitae: {
+    path: {
+      en: '/curriculum-vitae',
+      fr: '/curriculum-vitae',
+    },
+    name: 'Curriculum Vitae',
+    component: () => import('~/pages/curriculum-vitae.vue'),
+    meta: {
+      layout: 'print',
+    },
+  },
 }

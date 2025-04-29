@@ -47,7 +47,9 @@ export default defineConfig({
     }),
 
     // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
-    Layouts(),
+    Layouts({
+      layoutsDirs: ['src/layouts'],
+    }),
 
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
@@ -158,7 +160,7 @@ export default defineConfig({
   ssgOptions: {
     script: 'async',
     formatting: 'minify',
-    excludeRoutes: ['/fr/:all(.*)', '/en/:all(.*)', '/:lang/:all(.*)'],
+    excludeRoutes: ['/fr/:all(.*)', '/en/:all(.*)', '/:lang/:all(.*)', '/fr/curriculum-vitae', '/en/curriculum-vitae'],
     onFinished() {
       generateSitemap({
         hostname: 'https://portfolio.aife.io',

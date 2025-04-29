@@ -27,6 +27,8 @@ function createLocalizedRoutes(routeKey: string, route: CustomRouteRecord, local
       return acc
     }, {} as Record<string, string>)
 
+    const layout = route.meta?.layout || 'default'
+
     return {
       ...route,
       path: localizedPath,
@@ -35,6 +37,7 @@ function createLocalizedRoutes(routeKey: string, route: CustomRouteRecord, local
         key: routeKey,
         lang: locale,
         otherPaths,
+        layout,
       },
       children: [],
     }

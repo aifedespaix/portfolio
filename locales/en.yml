@@ -360,6 +360,8 @@ stores:
       info-gold:
         name: Web Developer Internship
         suffix: Months
+      missions:
+        '1': ERP Maintenance
     teliae:
       name: Teliae
       location: Taluyers, France (69)
@@ -378,6 +380,9 @@ stores:
       info-gold:
         name: Internship in Web Development
         suffix: Months
+      missions:
+        '1': Design and UX Conception
+        '2': Client and User Training to New Interfaces
     teliae-2:
       work: Web Developer Apprentice
       workDescription: >-
@@ -394,6 +399,9 @@ stores:
       info-gold:
         name: Full Stack Web Developer Apprentice
         suffix: years
+      missions:
+        '1': Design and UX Conception
+        '2': Client and User Training to New Interfaces
     aife:
       name: Aife
       location: Alençon, France (61)
@@ -416,6 +424,9 @@ stores:
       info-gold:
         name: Content Creator
         suffix: years
+      missions:
+        '1': Réalisation de tutoriels et formation en speedrun
+        '2': Réalisation de vidéos en direct
     aife-2:
       work: Web Developer
       workDescription: >-
@@ -431,6 +442,9 @@ stores:
       info-gold:
         name: Full Stack Web Developer
         suffix: years
+      missions:
+        '1': Réalisation de tutoriels et formation en speedrun
+        '2': Réalisation de vidéos en direct
   nav:
     home: Home
     settings: Settings

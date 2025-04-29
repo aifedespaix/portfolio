@@ -391,6 +391,8 @@ stores:
       info-gold:
         name: Stage Développeur Web
         suffix: Mois
+      missions:
+        '1': Maintenance d’ERP
     teliae:
       name: Teliae
       location: Taluyers, France (69)
@@ -410,6 +412,9 @@ stores:
       info-gold:
         name: Stage Développeur Web
         suffix: Mois
+      missions:
+        '1': Design and UX Conception
+        '2': Client and User Training to New Interfaces
     teliae-2:
       work: Alternant Développeur Web
       workDescription: >-
@@ -426,6 +431,9 @@ stores:
       info-gold:
         name: Alternant Développeur Web Full Stack
         suffix: ans
+      missions:
+        '1': Conception Design et UX
+        '2': Formation des clients et utilisateurs aux nouvelles interfaces
     aife:
       name: Aife
       location: Alençon, France (61)
@@ -450,6 +458,9 @@ stores:
       info-gold:
         name: Créateur de contenu
         suffix: ans
+      missions:
+        '1': Réalisation de tutoriels et formation en speedrun
+        '2': Réalisation de vidéos en direct
     aife-2:
       work: Développeur Web
       workDescription: >-
@@ -465,6 +476,9 @@ stores:
       info-gold:
         name: Développeur Web Full Stack
         suffix: ans
+      missions:
+        '1': Réalisation de tutoriels et formation en speedrun
+        '2': Réalisation de vidéos en direct
   nav:
     home: Accueil
     settings: Paramètres

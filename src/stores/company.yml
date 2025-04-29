@@ -8,10 +8,13 @@ fr:
       az-network:
         name: AZ Network
         location: Alençon, France (61)
-        description: AZ Network est une entreprise travaillant sur la mise en place et
-          la maintenance de solutions CRM et ERP.
+        description: AZ Network est une entreprise travaillant sur la mise en place
+          et la maintenance de solutions CRM et ERP.
         work: Stage Développeur Web
-        workDescription: J'ai travaillé sur la mise à jour de l'ERP Generix chez différents clients. J'ai dû faire de la recherche de données via requêtes SQL, modification de fichiers pour adapter les mises à jour spécifiques via des expressions régulières.
+        workDescription: J'ai travaillé sur la mise à jour de l'ERP Generix chez différents
+          clients. J'ai dû faire de la recherche de données via requêtes SQL, modification
+          de fichiers pour adapter les mises à jour spécifiques via des expressions
+          régulières.
         competencies:
           web: Développement Web
           database: Base de données
@@ -19,16 +22,18 @@ fr:
         info-gold:
           name: Stage Développeur Web
           suffix: Mois
+        missions:
+          1: Maintenance d’ERP
       teliae:
         name: Teliae
         location: Taluyers, France (69)
-        description: Teliae est une entreprise proposant des solutions logistiques pour
-          les transporteurs (Transport Management System).
+        description: Teliae est une entreprise proposant des solutions logistiques
+          pour les transporteurs (Transport Management System).
       teliae-1:
         work: Stage Développeur Web
-        workDescription: Je commencé dans cette entreprise par un stage. Mon rôle consistait
-          à maintenir et ajouter des fonctionnalités sur une application de gestion de
-          parcours de livraisons.
+        workDescription: Je commencé dans cette entreprise par un stage. Mon rôle
+          consistait à maintenir et ajouter des fonctionnalités sur une application
+          de gestion de parcours de livraisons.
         competencies:
           web: Développement Web
           language_php: Programmation Back End
@@ -36,9 +41,17 @@ fr:
         info-gold:
           name: Stage Développeur Web
           suffix: Mois
+        missions:
+          1: Design and UX Conception
+          2: Client and User Training to New Interfaces
       teliae-2:
         work: Alternant Développeur Web
-        workDescription: J'ai eu la chance d'être affecté à de multiples missions à ambitions variables. Parmi mes plus grosses missions, j'ai du repenser l'interface visuelle d'une application ancienne. J'ai repensé l'interface d'une ancienne application pour la rendre plus accessible, tout en conservant une ergonomie simple et intuitive. En accompagnant les utilisateurs dans l'évolution de leur outil.
+        workDescription: J'ai eu la chance d'être affecté à de multiples missions
+          à ambitions variables. Parmi mes plus grosses missions, j'ai du repenser
+          l'interface visuelle d'une application ancienne. J'ai repensé l'interface
+          d'une ancienne application pour la rendre plus accessible, tout en conservant
+          une ergonomie simple et intuitive. En accompagnant les utilisateurs dans
+          l'évolution de leur outil.
         competencies:
           web: Développement Web
           palette: Design UX
@@ -46,21 +59,24 @@ fr:
         info-gold:
           name: Alternant Développeur Web Full Stack
           suffix: ans
+        missions:
+          1: Conception Design et UX
+          2: Formation des clients et utilisateurs aux nouvelles interfaces
       aife:
         name: Aife
         location: Alençon, France (61)
-        description: Aife est le nom que j'ai choisi pour mon entreprise en tant que freelance.
-          J'y regroupe mon travail en tant que développeur web mais également mes activités
-          en tant que créateur de contenu.
+        description: Aife est le nom que j'ai choisi pour mon entreprise en tant que
+          freelance. J'y regroupe mon travail en tant que développeur web mais également
+          mes activités en tant que créateur de contenu.
       aife-1:
         work: Créateur de contenu
-        workDescription: J'ai commencé à créer des vidéos à destination de Youtube. Le
-          concept se base sur l'explication et la vulgarisation de sujets techniques complexes
-          dans les jeux vidéos. Principalement les Glitchs et le Speedrun. Les vidéos
-          ont une volonté première de faire comprendre des mécaniques complexes dans un
-          langage accessible pour tous. J'ai pu atteindre plus de 100 000 abonnées ainsi
-          que des millions de vues. Je me suis diversifié sur la réalisation de vidéos
-          en direct et de streamings.
+        workDescription: J'ai commencé à créer des vidéos à destination de Youtube.
+          Le concept se base sur l'explication et la vulgarisation de sujets techniques
+          complexes dans les jeux vidéos. Principalement les Glitchs et le Speedrun.
+          Les vidéos ont une volonté première de faire comprendre des mécaniques complexes
+          dans un langage accessible pour tous. J'ai pu atteindre plus de 100 000
+          abonnées ainsi que des millions de vues. Je me suis diversifié sur la réalisation
+          de vidéos en direct et de streamings.
         competencies:
           video: Montage Vidéo
           speak: Animation de stream
@@ -68,9 +84,16 @@ fr:
         info-gold:
           name: Créateur de contenu
           suffix: ans
+        missions:
+          1: Réalisation de tutoriels et formation en speedrun
+          2: Réalisation de vidéos en direct
       aife-2:
         work: Développeur Web
-        workDescription: Mes activités sont diverses,  création de sites vitrines, maintenance, intégration de contenu... Mes compétences en développement, en design, et en création de contenu me permettent de répondre à un large panel de demandes. Je développe aussi des outils sur mesure pour optimiser mon quotidien de créateur de contenu.
+        workDescription: Mes activités sont diverses,  création de sites vitrines,
+          maintenance, intégration de contenu... Mes compétences en développement,
+          en design, et en création de contenu me permettent de répondre à un large
+          panel de demandes. Je développe aussi des outils sur mesure pour optimiser
+          mon quotidien de créateur de contenu.
         competencies:
           web: Développement Web
           palette: Design UX
@@ -78,6 +101,9 @@ fr:
         info-gold:
           name: Développeur Web Full Stack
           suffix: ans
+        missions:
+          1: Réalisation de tutoriels et formation en speedrun
+          2: Réalisation de vidéos en direct
 en:
   stores:
     company:
@@ -91,7 +117,9 @@ en:
         description: AZ Network is a company working on the implementation and maintenance
           of CRM and ERP solutions.
         work: Web Developer Internship
-        workDescription: I worked on updating the Generix ERP at various clients. I performed data retrieval using SQL queries, update files to adapt specific updates via regular expressions.
+        workDescription: I worked on updating the Generix ERP at various clients.
+          I performed data retrieval using SQL queries, update files to adapt specific
+          updates via regular expressions.
         competencies:
           web: Web Development
           database: Database
@@ -99,14 +127,17 @@ en:
         info-gold:
           name: Web Developer Internship
           suffix: Months
+        missions:
+          1: ERP Maintenance
       teliae:
         name: Teliae
         location: Taluyers, France (69)
-        description: Teliae is a company offering logistics solutions for transport companies
-          (Transport Management System).
+        description: Teliae is a company offering logistics solutions for transport
+          companies (Transport Management System).
       teliae-1:
         work: Internship in Web Development
-        workDescription: I began my time at the company with an internship. My role was to maintain and add features to a delivery route management application.
+        workDescription: I began my time at the company with an internship. My role
+          was to maintain and add features to a delivery route management application.
         competencies:
           web: Web Development
           language_php: Back End Programming
@@ -114,9 +145,17 @@ en:
         info-gold:
           name: Internship in Web Development
           suffix: Months
+        missions:
+          1: Design and UX Conception
+          2: Client and User Training to New Interfaces
       teliae-2:
         work: Web Developer Apprentice
-        workDescription: I had the opportunity to be assigned to multiple projects of varying scope. One of my most significant missions involved redesigning the visual interface of an outdated application. I implemented a solution to bring the interface up to modern accessibility standards while maintaining a simple and intuitive user experience. I also supported users throughout the transition process.
+        workDescription: I had the opportunity to be assigned to multiple projects
+          of varying scope. One of my most significant missions involved redesigning
+          the visual interface of an outdated application. I implemented a solution
+          to bring the interface up to modern accessibility standards while maintaining
+          a simple and intuitive user experience. I also supported users throughout
+          the transition process.
         competencies:
           web: Web Development
           palette: UX Design
@@ -124,6 +163,9 @@ en:
         info-gold:
           name: Full Stack Web Developer Apprentice
           suffix: years
+        missions:
+          1: Design and UX Conception
+          2: Client and User Training to New Interfaces
       aife:
         name: Aife
         location: Alençon, France (61)
@@ -131,12 +173,12 @@ en:
           my work as a web developer and my activities as a content creator.
       aife-1:
         work: Créateur de contenu
-        workDescription: I started creating videos for YouTube. The concept is based on
-          explaining and popularizing complex technical subjects in video games. Mainly
-          Glitches and Speedruns. The videos have a primary desire to make complex mechanics
-          understandable in a language accessible to all. I was able to reach over 100,000
-          subscribers and millions of views. I diversified into the production of live
-          videos and streams.
+        workDescription: I started creating videos for YouTube. The concept is based
+          on explaining and popularizing complex technical subjects in video games.
+          Mainly Glitches and Speedruns. The videos have a primary desire to make
+          complex mechanics understandable in a language accessible to all. I was
+          able to reach over 100,000 subscribers and millions of views. I diversified
+          into the production of live videos and streams.
         competencies:
           video: Video Editing
           speak: Stream Hosting
@@ -144,12 +186,16 @@ en:
         info-gold:
           name: Content Creator
           suffix: years
+        missions:
+          1: Réalisation de tutoriels et formation en speedrun
+          2: Réalisation de vidéos en direct
       aife-2:
         work: Web Developer
-        workDescription: My activities are diverse, from creating showcase sites, maintaining
-          existing sites, to content integration. My skills in development, design, and
-          content creation allow me to respond to a wide range of requests. I use my skills
-          to develop various tools to facilitate my work as a content creator.
+        workDescription: My activities are diverse, from creating showcase sites,
+          maintaining existing sites, to content integration. My skills in development,
+          design, and content creation allow me to respond to a wide range of requests.
+          I use my skills to develop various tools to facilitate my work as a content
+          creator.
         competencies:
           web: Web Development
           palette: UX Design
@@ -157,3 +203,6 @@ en:
         info-gold:
           name: Full Stack Web Developer
           suffix: years
+        missions:
+          1: Réalisation de tutoriels et formation en speedrun
+          2: Réalisation de vidéos en direct

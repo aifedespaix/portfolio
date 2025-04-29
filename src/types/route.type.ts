@@ -1,4 +1,4 @@
-export type MainRouteKey = 'index' | 'companies' | 'studies' | 'settings' | 'profile' | 'legal' | 'privacy' | 'technologies' | 'projects'
+export type MainRouteKey = 'index' | 'companies' | 'studies' | 'settings' | 'profile' | 'legal' | 'privacy' | 'technologies' | 'projects' | 'curriculumVitae'
 export type ProjectRouteKey = 'map-game' | 'map-education' | 'interface-administration' | 'video-learning' |
   'bot-chat' | 'mini-games' | 'game-666'
 
@@ -14,5 +14,8 @@ export interface Route {
   name: string
   component: () => Promise<typeof import('*.vue')>
   redirect?: (to: any) => string
+  meta?: {
+    layout?: string
+  }
 }
 export type Routes<T extends MainRouteKey | ProjectRouteKey> = Record<T, Route>
