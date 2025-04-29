@@ -1,0 +1,64 @@
+fr:
+  stores:
+    projects:
+      game-engine:
+        meta:
+          title: Moteur de Jeu Web – Architecture POO, ECS, Physique et Graphique
+          description: Conception d'un moteur de jeu 3D pour navigateur, basé sur une architecture orientée objet et un système ECS (Entity-Component-System), intégrant Three.js pour le rendu graphique et Rapier pour la physique. Un projet axé sur la modularité, la performance et la synchronisation parfaite entre physique et visuel.
+        name: Moteur de Jeu Web
+        short-description: Moteur de jeu 3D flexible pour navigateur.
+        description: J'ai développé un moteur de jeu pour navigateur en TypeScript, structuré selon les meilleurs standards modernes. Il repose sur une architecture orientée objet (POO) combinée à un système ECS (Entity-Component-System), garantissant une modularité, une extensibilité et des performances optimales. J'ai intégré Three.js pour le rendu 3D temps réel et Rapier pour la simulation physique, en assurant une synchronisation précise entre les deux moteurs pour une cohérence parfaite dans les mouvements et collisions.
+        links:
+          '1': Moteur de Jeu Web
+        explains:
+          '1':
+            title: Architecture POO et ECS
+            description: Le moteur repose sur une approche orientée objet, couplée à un système ECS. Chaque entité est composée dynamiquement de composants spécialisés (physique, rendu, contrôleur, etc.), orchestrés par des systèmes dédiés. Cette structure permet d'ajouter, modifier ou retirer des comportements sans rigidité, tout en améliorant la maintenabilité et la scalabilité du projet.
+          '2':
+            title: Synchronisation Physique et Graphique
+            description: Le moteur assure une liaison fiable entre Rapier (physique) et Three.js (graphique). Les entités physiques (RigidBody, Collider) sont créées à partir de composants Hitbox, et leur état est synchronisé à chaque frame avec les objets Three.js correspondants, garantissant des interactions visuellement cohérentes.
+          '3':
+            title: Gestion des Inputs Souris et Clavier
+            description: Le moteur implémente une abstraction complète des entrées utilisateur. Les mouvements de la souris et les touches du clavier sont capturés et convertis en événements accessibles dans les systèmes concernés. Cela permet de contrôler dynamiquement un personnage, déclencher des actions ou manipuler la caméra sans dépendance directe entre les entités et les périphériques d'entrée.
+          '4':
+            title: Systèmes de Caméras Dynamiques
+            description: "J'ai conçu un système de gestion des caméras permettant de basculer dynamiquement entre plusieurs modes : caméra FPS (vue à la première personne), TPS (vue à la troisième personne) et caméra libre aérienne. Chaque mode adapte le comportement de la souris et de la physique pour offrir une expérience fluide et intuitive."
+          '5':
+            title: Service Locator et Architecture Modulaire
+            description: Le moteur repose sur un Service Locator centralisé pour découpler les dépendances critiques (physique, moteur graphique, gestionnaire d'inputs, etc.). Cela permet d'injecter et de remplacer facilement des services sans devoir réécrire la logique des systèmes ou des entités.
+        difficulties:
+          '1': "J'ai dû concevoir une passerelle fiable entre deux moteurs aux fonctionnements très différents (Rapier pour la simulation physique et Three.js pour le rendu 3D). Cela a nécessité une gestion rigoureuse des mises à jour de position, de rotation et des événements de collision, tout en respectant les meilleures pratiques de chaque technologie."
+          '2': "Mettre en place une architecture ECS propre a nécessité de réfléchir profondément à la séparation des responsabilités entre composants et systèmes. Chaque système doit être capable d'orchestrer les entités de manière performante, tout en restant totalement découplé de leur contenu spécifique."
+          '3': "Concevoir un moteur modulaire capable d'accueillir de nouveaux systèmes, entités et composants sans dépendance forte m'a poussé à adopter les meilleurs patterns de design logiciel, tout en assurant des performances compatibles avec des exécutions temps réel dans le navigateur."
+en:
+  stores:
+    projects:
+      game-engine:
+        meta:
+          title: Web Game Engine – OOP Architecture, ECS, Physics and Graphics
+          description: Design of a 3D game engine for the browser, based on an object-oriented architecture and an ECS (Entity-Component-System) approach, integrating Three.js for real-time rendering and Rapier for physics simulation. A project focused on modularity, performance, and perfect synchronization between physics and visuals.
+        name: Web Game Engine
+        short-description: A flexible 3D game engine for the browser.
+        description: I developed a browser-based game engine in TypeScript, following the latest modern standards. It is built on an object-oriented programming (OOP) structure combined with an Entity-Component-System (ECS) model, ensuring optimal modularity, extensibility, and performance. I integrated Three.js for real-time 3D rendering and Rapier for physics simulation, achieving precise synchronization between the two engines to maintain perfect consistency in movements and collisions.
+        links:
+          '1': Web Game Engine
+        explains:
+          '1':
+            title: OOP and ECS Architecture
+            description: The engine is based on an object-oriented approach combined with an ECS structure. Each entity is dynamically composed of specialized components (physics, rendering, controllers, etc.), orchestrated by dedicated systems. This setup enables adding, modifying, or removing behaviors flexibly, improving maintainability and scalability across the project.
+          '2':
+            title: Physics and Graphics Synchronization
+            description: The engine ensures a reliable bridge between Rapier (physics) and Three.js (graphics). Physical entities (RigidBody, Collider) are created from Hitbox components, and their states are synchronized each frame with their corresponding Three.js objects, ensuring visually consistent interactions.
+          '3':
+            title: Mouse and Keyboard Input Management
+            description: The engine implements a complete abstraction layer for user input. Mouse movements and keyboard keys are captured and converted into events accessible to relevant systems. This allows characters to be controlled, actions to be triggered, or cameras to be manipulated without tight coupling between entities and input devices.
+          '4':
+            title: Dynamic Camera Systems
+            description: 'I designed a system to manage multiple camera modes dynamically: first-person view (FPS), third-person view (TPS), and free aerial camera. Each mode adapts the mouse and physics behavior to provide a smooth and intuitive experience.'
+          '5':
+            title: Service Locator and Modular Architecture
+            description: The engine relies on a centralized Service Locator to decouple critical dependencies (physics engine, graphics engine, input manager, etc.). This allows easy injection or replacement of services without rewriting system or entity logic.
+        difficulties:
+          '1': 'I had to design a reliable bridge between two engines with very different workflows (Rapier for physics simulation and Three.js for 3D rendering). This required strict management of position, rotation updates, and collision events, while adhering to the best practices of each technology.'
+          '2': Building a clean ECS architecture required careful separation of responsibilities between components and systems. Each system must orchestrate entities efficiently while remaining completely decoupled from their specific content.
+          '3': 'Designing a modular engine capable of accommodating new systems, entities, and components without strong coupling pushed me to adopt the best software design patterns while ensuring real-time performance suitable for the browser.'

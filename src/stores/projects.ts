@@ -1,13 +1,14 @@
 import type { Project } from '~/types/project.type'
+import type { ProjectRouteKey } from '~/types/route.type'
 import { acceptHMRUpdate, defineStore } from 'pinia'
 import { useChatBotStore } from './projects/chat-bot'
 import { useGame666Store } from './projects/game-666'
+import { useGameEngineStore } from './projects/game-engine'
 import { useInterfaceAdministrationStore } from './projects/interface-administration'
 import { useMapEducationStore } from './projects/map-education'
 import { useMapGameStore } from './projects/map-game'
 import { useMiniGamesStore } from './projects/mini-games'
 import { useVideoLearningStore } from './projects/video-learning'
-import { ProjectRouteKey } from '~/types/route.type'
 
 export const useProjectsStore = defineStore('projects', () => {
   const mapGameStore = useMapGameStore()
@@ -17,8 +18,10 @@ export const useProjectsStore = defineStore('projects', () => {
   const interfaceAdministrationStore = useInterfaceAdministrationStore()
   const mapEducationStore = useMapEducationStore()
   const game666Store = useGame666Store()
+  const gameEngineStore = useGameEngineStore()
 
   const projectList = ref<Record<ProjectRouteKey, Project>>({
+    'game-engine': gameEngineStore.project,
     'map-game': mapGameStore.project,
     'video-learning': videoLearningStore.project,
     'bot-chat': chatBotStore.project,

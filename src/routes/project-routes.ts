@@ -57,4 +57,12 @@ export const projectsRoutes: Routes<ProjectRouteKey> = {
     name: 'Game 666',
     component: () => import('~/pages/projects/[id].vue'),
   },
+  'game-engine': {
+    path: {
+      en: '/projects/game-engine',
+      fr: '/projets/moteur-de-jeu',
+    },
+    name: 'Game Engine',
+    component: () => import('~/pages/projects/[id].vue'),
+  },
 }

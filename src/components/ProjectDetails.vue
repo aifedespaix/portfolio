@@ -76,7 +76,7 @@ const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}
         {{ t('components.project-details.keyPoints') }}
       </TitleH2>
 
-      <div class="grid gap-8 md:grid-cols-2">
+      <div class="grid gap-8 xl:grid-cols-2">
         <div
           v-for="explain in data.explains"
           :key="explain.title"

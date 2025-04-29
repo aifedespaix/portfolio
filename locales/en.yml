@@ -546,6 +546,84 @@ stores:
           interactions with users without setting up a server. I used random
           data mixed with chat messages and puzzle-related information to
           increase the challenge.
+    game-engine:
+      meta:
+        title: Web Game Engine – OOP Architecture, ECS, Physics and Graphics
+        description: >-
+          Design of a 3D game engine for the browser, based on an
+          object-oriented architecture and an ECS (Entity-Component-System)
+          approach, integrating Three.js for real-time rendering and Rapier for
+          physics simulation. A project focused on modularity, performance, and
+          perfect synchronization between physics and visuals.
+      name: Web Game Engine
+      short-description: A flexible 3D game engine for the browser.
+      description: >-
+        I developed a browser-based game engine in TypeScript, following the
+        latest modern standards. It is built on an object-oriented programming
+        (OOP) structure combined with an Entity-Component-System (ECS) model,
+        ensuring optimal modularity, extensibility, and performance. I
+        integrated Three.js for real-time 3D rendering and Rapier for physics
+        simulation, achieving precise synchronization between the two engines to
+        maintain perfect consistency in movements and collisions.
+      links:
+        '1': Web Game Engine
+      explains:
+        '1':
+          title: OOP and ECS Architecture
+          description: >-
+            The engine is based on an object-oriented approach combined with an
+            ECS structure. Each entity is dynamically composed of specialized
+            components (physics, rendering, controllers, etc.), orchestrated by
+            dedicated systems. This setup enables adding, modifying, or removing
+            behaviors flexibly, improving maintainability and scalability across
+            the project.
+        '2':
+          title: Physics and Graphics Synchronization
+          description: >-
+            The engine ensures a reliable bridge between Rapier (physics) and
+            Three.js (graphics). Physical entities (RigidBody, Collider) are
+            created from Hitbox components, and their states are synchronized
+            each frame with their corresponding Three.js objects, ensuring
+            visually consistent interactions.
+        '3':
+          title: Mouse and Keyboard Input Management
+          description: >-
+            The engine implements a complete abstraction layer for user input.
+            Mouse movements and keyboard keys are captured and converted into
+            events accessible to relevant systems. This allows characters to be
+            controlled, actions to be triggered, or cameras to be manipulated
+            without tight coupling between entities and input devices.
+        '4':
+          title: Dynamic Camera Systems
+          description: >-
+            I designed a system to manage multiple camera modes dynamically:
+            first-person view (FPS), third-person view (TPS), and free aerial
+            camera. Each mode adapts the mouse and physics behavior to provide a
+            smooth and intuitive experience.
+        '5':
+          title: Service Locator and Modular Architecture
+          description: >-
+            The engine relies on a centralized Service Locator to decouple
+            critical dependencies (physics engine, graphics engine, input
+            manager, etc.). This allows easy injection or replacement of
+            services without rewriting system or entity logic.
+      difficulties:
+        '1': >-
+          I had to design a reliable bridge between two engines with very
+          different workflows (Rapier for physics simulation and Three.js for 3D
+          rendering). This required strict management of position, rotation
+          updates, and collision events, while adhering to the best practices of
+          each technology.
+        '2': >-
+          Building a clean ECS architecture required careful separation of
+          responsibilities between components and systems. Each system must
+          orchestrate entities efficiently while remaining completely decoupled
+          from their specific content.
+        '3': >-
+          Designing a modular engine capable of accommodating new systems,
+          entities, and components without strong coupling pushed me to adopt
+          the best software design patterns while ensuring real-time performance
+          suitable for the browser.
     interface-administration:
       meta:
         title: Stream Management Interface – Overlays, Polls & Moderation Tools

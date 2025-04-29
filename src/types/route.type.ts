@@ -1,6 +1,6 @@
 export type MainRouteKey = 'index' | 'companies' | 'studies' | 'settings' | 'profile' | 'legal' | 'privacy' | 'technologies' | 'projects' | 'curriculumVitae'
 export type ProjectRouteKey = 'map-game' | 'map-education' | 'interface-administration' | 'video-learning' |
-  'bot-chat' | 'mini-games' | 'game-666'
+  'bot-chat' | 'mini-games' | 'game-666' | 'game-engine'
 
 export type RouteKey = MainRouteKey | ProjectRouteKey
 

@@ -591,6 +591,91 @@ stores:
           mettre en place de serveur. J'ai joué avec des données aléatoires
           mélangées avec des messages du chat et des informations sur l'énigme
           pour accentuer la difficulté.
+    game-engine:
+      meta:
+        title: Moteur de Jeu Web – Architecture POO, ECS, Physique et Graphique
+        description: >-
+          Conception d'un moteur de jeu 3D pour navigateur, basé sur une
+          architecture orientée objet et un système ECS
+          (Entity-Component-System), intégrant Three.js pour le rendu graphique
+          et Rapier pour la physique. Un projet axé sur la modularité, la
+          performance et la synchronisation parfaite entre physique et visuel.
+      name: Moteur de Jeu Web
+      short-description: Moteur de jeu 3D flexible pour navigateur.
+      description: >-
+        J'ai développé un moteur de jeu pour navigateur en TypeScript, structuré
+        selon les meilleurs standards modernes. Il repose sur une architecture
+        orientée objet (POO) combinée à un système ECS
+        (Entity-Component-System), garantissant une modularité, une
+        extensibilité et des performances optimales. J'ai intégré Three.js pour
+        le rendu 3D temps réel et Rapier pour la simulation physique, en
+        assurant une synchronisation précise entre les deux moteurs pour une
+        cohérence parfaite dans les mouvements et collisions.
+      links:
+        '1': Moteur de Jeu Web
+      explains:
+        '1':
+          title: Architecture POO et ECS
+          description: >-
+            Le moteur repose sur une approche orientée objet, couplée à un
+            système ECS. Chaque entité est composée dynamiquement de composants
+            spécialisés (physique, rendu, contrôleur, etc.), orchestrés par des
+            systèmes dédiés. Cette structure permet d'ajouter, modifier ou
+            retirer des comportements sans rigidité, tout en améliorant la
+            maintenabilité et la scalabilité du projet.
+        '2':
+          title: Synchronisation Physique et Graphique
+          description: >-
+            Le moteur assure une liaison fiable entre Rapier (physique) et
+            Three.js (graphique). Les entités physiques (RigidBody, Collider)
+            sont créées à partir de composants Hitbox, et leur état est
+            synchronisé à chaque frame avec les objets Three.js correspondants,
+            garantissant des interactions visuellement cohérentes.
+        '3':
+          title: Gestion des Inputs Souris et Clavier
+          description: >-
+            Le moteur implémente une abstraction complète des entrées
+            utilisateur. Les mouvements de la souris et les touches du clavier
+            sont capturés et convertis en événements accessibles dans les
+            systèmes concernés. Cela permet de contrôler dynamiquement un
+            personnage, déclencher des actions ou manipuler la caméra sans
+            dépendance directe entre les entités et les périphériques d'entrée.
+        '4':
+          title: Systèmes de Caméras Dynamiques
+          description: >-
+            J'ai conçu un système de gestion des caméras permettant de basculer
+            dynamiquement entre plusieurs modes : caméra FPS (vue à la première
+            personne), TPS (vue à la troisième personne) et caméra libre
+            aérienne. Chaque mode adapte le comportement de la souris et de la
+            physique pour offrir une expérience fluide et intuitive.
+        '5':
+          title: Service Locator et Architecture Modulaire
+          description: >-
+            Le moteur repose sur un Service Locator centralisé pour découpler
+            les dépendances critiques (physique, moteur graphique, gestionnaire
+            d'inputs, etc.). Cela permet d'injecter et de remplacer facilement
+            des services sans devoir réécrire la logique des systèmes ou des
+            entités.
+      difficulties:
+        '1': >-
+          J'ai dû concevoir une passerelle fiable entre deux moteurs aux
+          fonctionnements très différents (Rapier pour la simulation physique et
+          Three.js pour le rendu 3D). Cela a nécessité une gestion rigoureuse
+          des mises à jour de position, de rotation et des événements de
+          collision, tout en respectant les meilleures pratiques de chaque
+          technologie.
+        '2': >-
+          Mettre en place une architecture ECS propre a nécessité de réfléchir
+          profondément à la séparation des responsabilités entre composants et
+          systèmes. Chaque système doit être capable d'orchestrer les entités de
+          manière performante, tout en restant totalement découplé de leur
+          contenu spécifique.
+        '3': >-
+          Concevoir un moteur modulaire capable d'accueillir de nouveaux
+          systèmes, entités et composants sans dépendance forte m'a poussé à
+          adopter les meilleurs patterns de design logiciel, tout en assurant
+          des performances compatibles avec des exécutions temps réel dans le
+          navigateur.
     interface-administration:
       meta:
         title: Interface de Gestion pour Stream – Overlays, Sondages & Modération

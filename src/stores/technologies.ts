@@ -28,6 +28,8 @@ type Technologies = 'react'
   | 'puppeteer'
   | 'angular'
   | 'symfony'
+  | 'nuxt'
+  | 'rapier.js'
 
 export const useTechnologiesStore = defineStore('technologies', () => {
   const technologies: Record<Technologies, Technology> = {
@@ -82,6 +84,10 @@ export const useTechnologiesStore = defineStore('technologies', () => {
     wordpress: {
       name: 'Wordpress',
       url: 'https://wordpress.org/',
+    },
+    nuxt: {
+      name: 'Nuxt',
+      url: 'https://nuxt.com/',
     },
     fusejs: {
       name: 'Fuse.js',

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { I18nKey } from '~/types/i18n'
-import { RouteKey } from '~/types/route.type';
+import type { RouteKey } from '~/types/route.type'
 
 const props = defineProps<{
   link: {
@@ -60,4 +60,3 @@ const iconClasses = computed(() => {
     </div>
   </RouterLink>
 </template>
-
