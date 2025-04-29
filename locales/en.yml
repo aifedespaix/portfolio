@@ -51,6 +51,10 @@ pages:
         I'm a freelance web developer. Explore my portfolio, recent projects,
         and the technologies I use to build modern, high-performance websites.
     title: Welcome to my portfolio
+    github:
+      title: My GitHub
+      description: Discover my projects on GitHub
+      button: View my GitHub
     about: About
     work: My Work
     profile:

@@ -54,6 +54,10 @@ pages:
         projets récents, et les technologies que j'utilise pour créer des sites
         modernes et performants.
     title: Bienvenue sur mon portfolio
+    github:
+      title: Mon GitHub
+      description: Découvrez mes projets sur GitHub
+      button: Voir mon GitHub
     about: À propos
     work: Mon Travail
     profile:

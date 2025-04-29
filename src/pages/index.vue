@@ -150,6 +150,23 @@ const colors = [
         </p>
       </div>
     </Card>
+
+    <Card v-reveal class="flex items-center justify-center gap-4 text-purple-600">
+      <div class="flex flex-col items-center gap-2 text-center" transition="transform duration-300" hover="scale-102" dark="text-purple-400">
+        <div class="i-mdi-github text-6xl md:text-7xl" />
+
+        <LinkExtern
+          to="https://github.com/aifedespaix"
+          class="mt-2 rounded-full bg-purple-600 px-6 py-2 text-white decoration-none transition-all dark:bg-purple-400 dark:text-gray-900"
+          hover="bg-purple-700 dark:bg-purple-300"
+        >
+          {{ t('pages.index.github.button') }}
+        </LinkExtern>
+        <p class="text-sm">
+          {{ t('pages.index.github.description') }}
+        </p>
+      </div>
+    </Card>
   </Pager>
 </template>
 

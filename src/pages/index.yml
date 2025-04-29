@@ -5,6 +5,10 @@ fr:
         title: Développeur Web Freelance – Création de sites et d'applications
         description: Je suis développeur web en freelance. Découvrez mon portfolio, mes projets récents, et les technologies que j'utilise pour créer des sites modernes et performants.
       title: Bienvenue sur mon portfolio
+      github:
+        title: Mon GitHub
+        description: Découvrez mes projets sur GitHub
+        button: Voir mon GitHub
       about: À propos
       work: Mon Travail
       profile:
@@ -40,12 +44,15 @@ en:
         title: Freelance Web Developer – Building Modern Websites & Applications
         description: I'm a freelance web developer. Explore my portfolio, recent projects, and the technologies I use to build modern, high-performance websites.
       title: Welcome to my portfolio
+      github:
+        title: My GitHub
+        description: Discover my projects on GitHub
+        button: View my GitHub
       about: About
       work: My Work
       profile:
         role: Freelance Web Developer and Content Creator
         name: Joan Tassel
-
       journey:
         title: My Journey
         discovery:
