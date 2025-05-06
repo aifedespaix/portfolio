@@ -65,4 +65,12 @@ export const projectsRoutes: Routes<ProjectRouteKey> = {
     name: 'Game Engine',
     component: () => import('~/pages/projects/[id].vue'),
   },
+  'groove-box': {
+    path: {
+      en: '/projects/groove-box',
+      fr: '/projets/groove-box',
+    },
+    name: 'Groove Box',
+    component: () => import('~/pages/projects/[id].vue'),
+  },
 }

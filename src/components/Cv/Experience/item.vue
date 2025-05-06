@@ -23,7 +23,7 @@ const dates = computed(() => {
         <div class="font-bold">
           {{ t(mission.name) }}
         </div>
-        <div class="flex flex-col list-disc gap-2">
+        <div class="flex flex-col list-disc">
           <ul v-for="action in mission.actions" :key="action" class="list-circle pl-5">
             <li>{{ t(action) }}</li>
           </ul>

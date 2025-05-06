@@ -43,12 +43,13 @@ const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}
           rel="noopener noreferrer"
           class="relative flex items-center gap-3 rounded-lg p-4 transition-colors duration-300"
           :class="{
-            'bg-red-500 hover:bg-red-600': link.type === 'youtube',
-            'bg-dark-500 hover:bg-dark-600': link.type === 'tiktok',
-            'bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700': !['youtube', 'tiktok'].includes(link.type ?? ''),
+            'bg-red-400 hover:bg-red-600 dark:bg-red-600 dark:hover:bg-red-800': link.type === 'youtube',
+            'bg-light-900 dark:bg-dark-500 hover:bg-dark-700 dark:hover:bg-dark-800': link.type === 'tiktok',
+            'bg-purple-500 dark:bg-purple-800 hover:bg-purple-600 dark:hover:bg-purple-900': link.type === 'github',
+            'bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700': !['youtube', 'tiktok', 'github'].includes(link.type ?? ''),
           }"
         >
-          <div class="text-2xl">
+          <div class="text-2xl text-black dark:text-white">
             <div
               :class="link.icon"
             />
@@ -57,7 +58,7 @@ const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}
             <span
               class="font-medium"
               :class="{
-                'text-white': ['youtube', 'tiktok'].includes(link.type ?? ''),
+                'text-black dark:text-white': ['youtube', 'tiktok'].includes(link.type ?? ''),
                 'text-gray-900 dark:text-white': !['youtube', 'tiktok'].includes(link.type ?? ''),
               }"
             >

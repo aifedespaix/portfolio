@@ -62,19 +62,14 @@ const competences = [
     icon: 'i-mdi:school',
   },
   {
-    name: 'Animation',
-    percentage: 87,
-    icon: 'i-mdi:microphone',
+    name: 'UI/UX',
+    percentage: 85,
+    icon: 'i-mdi:code',
   },
   {
     name: 'Architecture de Projets',
     percentage: 80,
     icon: 'i-mdi:archive-cog',
-  },
-  {
-    name: 'UI/UX',
-    percentage: 85,
-    icon: 'i-mdi:code',
   },
   {
     name: 'Référencement Web',
@@ -86,6 +81,11 @@ const competences = [
     percentage: 95,
     icon: 'i-mdi:video',
   },
+  {
+    name: 'Animation',
+    percentage: 87,
+    icon: 'i-mdi:microphone',
+  },
 ]
 
 const softwaresAndTechnologies: Competence[] = [
@@ -94,6 +94,11 @@ const softwaresAndTechnologies: Competence[] = [
     percentage: 92,
     icon: 'i-logos:javascript',
     moreIcons: ['i-logos:typescript-icon'],
+  },
+  {
+    name: 'Angular',
+    percentage: 75,
+    icon: 'i-logos:angular',
   },
   {
     name: 'Vue.js',
@@ -115,11 +120,11 @@ const softwaresAndTechnologies: Competence[] = [
     percentage: 80,
     icon: 'i-logos:php',
   },
-  {
-    name: 'Wordpress',
-    percentage: 78,
-    icon: 'i-logos:wordpress',
-  },
+  // {
+  //   name: 'Wordpress',
+  //   percentage: 78,
+  //   icon: 'i-logos:wordpress',
+  // },
   {
     name: 'Linux',
     percentage: 90,
@@ -209,7 +214,8 @@ export const useCVStore = defineStore('cv', () => {
     header: {
       name: 'Joan TASSEL',
       job: 'Développeur d\'Applications Web',
-      description: 'Développeur web et créateur de contenus, je conçois des outils numériques interactifs pensés pour sensibiliser, accompagner et éveiller la curiosité.',
+      // description: 'Développeur web et créateur de contenus, je conçois des outils numériques interactifs pensés pour sensibiliser, accompagner et éveiller la curiosité.',
+      description: 'Développeur spécialisé dans la conception, l\'optimisation et la maintenance d\'applications modernes.',
     },
     experiences: {
       title: 'Expériences',

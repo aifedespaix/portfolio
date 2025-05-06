@@ -612,7 +612,7 @@ stores:
         assurant une synchronisation précise entre les deux moteurs pour une
         cohérence parfaite dans les mouvements et collisions.
       links:
-        '1': Moteur de Jeu Web
+        '1': GitHub
       explains:
         '1':
           title: Architecture POO et ECS
@@ -676,6 +676,62 @@ stores:
           adopter les meilleurs patterns de design logiciel, tout en assurant
           des performances compatibles avec des exécutions temps réel dans le
           navigateur.
+    groove-box:
+      meta:
+        title: Groove Box – Séquenceur Musical en Temps Réel pour Navigateur
+        description: >-
+          Développement d'un séquenceur de musique en direct entièrement en
+          JavaScript et Nuxt 3, combinant Web Audio API, architecture modulaire
+          avec Pinia, gestion du tempo, du swing, de plusieurs instruments et de
+          la persistance des patterns. Un projet orienté performance,
+          flexibilité et UX musicale.
+      name: Groove Box
+      short-description: Un séquenceur musical interactif et modulaire dans le navigateur.
+      description: >-
+        Groove Box est une application web permettant de créer et de jouer de la
+        musique en temps réel. Le projet utilise Nuxt 3, Pinia pour
+        l'architecture modulaire, UnoCSS pour le design léger, et la Web Audio
+        API pour la génération et la manipulation sonore. L'utilisateur peut
+        ajouter plusieurs pistes (batterie, synthétiseur...), configurer
+        indépendamment chaque pas (notes, activation, volume), contrôler le
+        tempo, le swing, et sauvegarder ses créations. L'ensemble a été conçu
+        pour garantir des performances fluides et une ergonomie agréable.
+      links:
+        '1': Groove Box
+        '2': GitHub
+      explains:
+        '1':
+          title: Architecture Modulaire basée sur Pinia
+          description: >-
+            Chaque partie de l'application (AudioEngine, Séquenceur, Pistes) est
+            gérée par un store Pinia dédié, assurant une séparation claire des
+            responsabilités. Cette approche facilite l'ajout de nouvelles
+            fonctionnalités comme des effets, des instruments ou des patterns
+            complexes.
+        '2':
+          title: Web Audio API et Génération Sonore
+          description: >-
+            L'application exploite directement la Web Audio API pour générer des
+            oscillateurs, des filtres et jouer des samples audio en temps réel.
+            Les instruments "lead" utilisent des oscillateurs avec contrôle de
+            la hauteur de note par pas, tandis que les instruments de batterie
+            sont joués via des fichiers audio préchargés.
+        '3':
+          title: Contrôle du Tempo, du Swing et de la Persistance
+          description: >-
+            Groove Box permet d'ajuster le tempo et d'appliquer du swing pour
+            donner du groove aux séquences. Les patterns sont sauvegardés
+            automatiquement via Pinia PersistedState, permettant à l'utilisateur
+            de retrouver ses compositions même après avoir fermé l'application.
+      difficulties:
+        '1': >-
+          Adapter la Web Audio API pour un séquençage temps réel précis tout en
+          maintenant une UX fluide, notamment pour gérer correctement le swing
+          et la synchronisation multi-pistes.
+        '2': >-
+          Concevoir une architecture Pinia modulaire propre pour permettre
+          l'évolution future du projet vers plus d'effets, d'instruments et de
+          fonctionnalités avancées tout en restant maintenable.
     interface-administration:
       meta:
         title: Interface de Gestion pour Stream – Overlays, Sondages & Modération

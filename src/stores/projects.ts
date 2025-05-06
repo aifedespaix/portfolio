@@ -4,6 +4,7 @@ import { acceptHMRUpdate, defineStore } from 'pinia'
 import { useChatBotStore } from './projects/chat-bot'
 import { useGame666Store } from './projects/game-666'
 import { useGameEngineStore } from './projects/game-engine'
+import { useGrooveBoxStore } from './projects/groove-box'
 import { useInterfaceAdministrationStore } from './projects/interface-administration'
 import { useMapEducationStore } from './projects/map-education'
 import { useMapGameStore } from './projects/map-game'
@@ -19,12 +20,14 @@ export const useProjectsStore = defineStore('projects', () => {
   const mapEducationStore = useMapEducationStore()
   const game666Store = useGame666Store()
   const gameEngineStore = useGameEngineStore()
+  const grooveBoxStore = useGrooveBoxStore()
 
   const projectList = ref<Record<ProjectRouteKey, Project>>({
     'game-engine': gameEngineStore.project,
     'map-game': mapGameStore.project,
     'video-learning': videoLearningStore.project,
     'bot-chat': chatBotStore.project,
+    'groove-box': grooveBoxStore.project,
     'mini-games': miniGamesStore.project,
     'interface-administration': interfaceAdministrationStore.project,
     'map-education': mapEducationStore.project,

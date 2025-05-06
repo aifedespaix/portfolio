@@ -16,7 +16,15 @@ export const useGameEngineStore = defineStore('gameEngine', () => {
     shortDescription: 'stores.projects.game-engine.short-description',
     description: 'stores.projects.game-engine.description',
     image: 'game-engine',
-    icon: 'i-mdi:administrator',
+    icon: 'i-mdi:gamepad',
+    links: [
+      {
+        name: 'stores.projects.game-engine.links.1',
+        url: 'https://github.com/aifedespaix/game-engine',
+        icon: 'i-mdi:github',
+        type: 'github',
+      },
+    ],
     technologies: [
       technologiesStore.technologies.vue3,
       technologiesStore.technologies.threejs,

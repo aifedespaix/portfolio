@@ -9,7 +9,7 @@ fr:
         short-description: Moteur de jeu 3D flexible pour navigateur.
         description: J'ai développé un moteur de jeu pour navigateur en TypeScript, structuré selon les meilleurs standards modernes. Il repose sur une architecture orientée objet (POO) combinée à un système ECS (Entity-Component-System), garantissant une modularité, une extensibilité et des performances optimales. J'ai intégré Three.js pour le rendu 3D temps réel et Rapier pour la simulation physique, en assurant une synchronisation précise entre les deux moteurs pour une cohérence parfaite dans les mouvements et collisions.
         links:
-          '1': Moteur de Jeu Web
+          '1': GitHub
         explains:
           '1':
             title: Architecture POO et ECS
@@ -41,7 +41,7 @@ en:
         short-description: A flexible 3D game engine for the browser.
         description: I developed a browser-based game engine in TypeScript, following the latest modern standards. It is built on an object-oriented programming (OOP) structure combined with an Entity-Component-System (ECS) model, ensuring optimal modularity, extensibility, and performance. I integrated Three.js for real-time 3D rendering and Rapier for physics simulation, achieving precise synchronization between the two engines to maintain perfect consistency in movements and collisions.
         links:
-          '1': Web Game Engine
+          '1': GitHub
         explains:
           '1':
             title: OOP and ECS Architecture

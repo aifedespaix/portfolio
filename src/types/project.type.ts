@@ -21,7 +21,7 @@ export interface Project {
     more?: I18nKey
     url: string
     icon: string
-    type?: 'youtube' | 'tiktok'
+    type?: 'youtube' | 'tiktok' | 'github'
   }[]
 }
 

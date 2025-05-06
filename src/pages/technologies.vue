@@ -64,6 +64,8 @@ const technologies: Record<string, Technology> = {
           projectsStore.projectList['interface-administration'],
           projectsStore.projectList['game-666'],
           projectsStore.projectList['mini-games'],
+          projectsStore.projectList['game-engine'],
+          projectsStore.projectList['groove-box'],
         ],
       },
       {
@@ -128,9 +130,9 @@ const technologies: Record<string, Technology> = {
         creations: [
           projectsStore.projectList['video-learning'],
           projectsStore.projectList['mini-games'],
+          projectsStore.projectList['game-engine'],
         ],
       },
-
     ],
   },
   php: {
