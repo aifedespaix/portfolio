@@ -46,9 +46,9 @@ pages:
     title: My Professional Experiences
   index:
     meta:
-      title: Freelance Web Developer – Building Modern Websites & Applications
+      title: Full Stack Web Developer – Building Modern Websites & Applications
       description: >-
-        I'm a freelance web developer. Explore my portfolio, recent projects,
+        I'm a full stack web developer. Explore my portfolio, recent projects,
         and the technologies I use to build modern, high-performance websites.
     title: Welcome to my portfolio
     github:
@@ -58,7 +58,7 @@ pages:
     about: About
     work: My Work
     profile:
-      role: Freelance Web Developer and Content Creator
+      role: Full Stack Web Developer
       name: Joan Tassel
     journey:
       title: My Journey

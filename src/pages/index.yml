@@ -2,7 +2,7 @@ fr:
   pages:
     index:
       meta:
-        title: Développeur Web Freelance – Création de sites et d'applications
+        title: Développeur Web full stack – Création de sites et d'applications web
         description: Je suis développeur web en freelance. Découvrez mon portfolio, mes projets récents, et les technologies que j'utilise pour créer des sites modernes et performants.
       title: Bienvenue sur mon portfolio
       github:
@@ -12,7 +12,7 @@ fr:
       about: À propos
       work: Mon Travail
       profile:
-        role: Développeur web freelance et créateur de contenu
+        role: Développeur Web full stack
         name: Joan Tassel
       journey:
         title: Mon parcours
@@ -41,8 +41,8 @@ en:
   pages:
     index:
       meta:
-        title: Freelance Web Developer – Building Modern Websites & Applications
-        description: I'm a freelance web developer. Explore my portfolio, recent projects, and the technologies I use to build modern, high-performance websites.
+        title: Full Stack Web Developer – Building Modern Websites & Applications
+        description: I'm a full stack web developer. Explore my portfolio, recent projects, and the technologies I use to build modern, high-performance websites.
       title: Welcome to my portfolio
       github:
         title: My GitHub
@@ -51,7 +51,7 @@ en:
       about: About
       work: My Work
       profile:
-        role: Freelance Web Developer and Content Creator
+        role: Full Stack Web Developer
         name: Joan Tassel
       journey:
         title: My Journey

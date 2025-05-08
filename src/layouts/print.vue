@@ -18,8 +18,6 @@
   .print-layout {
     border: none !important;
     box-shadow: none !important;
-    width: auto;
-    height: auto;
   }
 
   body {

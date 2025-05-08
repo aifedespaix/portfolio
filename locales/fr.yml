@@ -48,7 +48,7 @@ pages:
     title: Mes expériences Professionnelles
   index:
     meta:
-      title: Développeur Web Freelance – Création de sites et d'applications
+      title: Développeur Web full stack – Création de sites et d'applications web
       description: >-
         Je suis développeur web en freelance. Découvrez mon portfolio, mes
         projets récents, et les technologies que j'utilise pour créer des sites
@@ -61,7 +61,7 @@ pages:
     about: À propos
     work: Mon Travail
     profile:
-      role: Développeur web freelance et créateur de contenu
+      role: Développeur Web full stack
       name: Joan Tassel
     journey:
       title: Mon parcours

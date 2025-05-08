@@ -72,6 +72,11 @@ const competences = [
     icon: 'i-mdi:archive-cog',
   },
   {
+    name: 'Gestion de Projet',
+    percentage: 88,
+    icon: 'i-mdi:clipboard-check',
+  },
+  {
     name: 'Référencement Web',
     percentage: 90,
     icon: 'i-mdi:web',
@@ -99,6 +104,11 @@ const softwaresAndTechnologies: Competence[] = [
     name: 'Angular',
     percentage: 75,
     icon: 'i-logos:angular',
+  },
+  {
+    name: 'React',
+    percentage: 75,
+    icon: 'i-logos:react',
   },
   {
     name: 'Vue.js',
