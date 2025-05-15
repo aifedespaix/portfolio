@@ -135,6 +135,32 @@ const technologies: Record<string, Technology> = {
       },
     ],
   },
+  python: {
+    name: 'Python',
+    description: 'pages.technologies.languages.python.description',
+    utilisation: 'pages.technologies.languages.python.utilisation',
+    experience: new Date().getFullYear() - 2022,
+    icon: 'i-mdi:language-python',
+    url: 'https://www.python.org/',
+    libraries: [
+      {
+        ...technologiesStore.technologies.pygame,
+        description: 'pages.technologies.languages.python.libraries.pygame.description',
+        experience: new Date().getFullYear() - 2024,
+        icon: 'i-mdi:snake',
+        utilisation: 'pages.technologies.languages.python.libraries.pygame.utilisation',
+        apports: 'pages.technologies.languages.python.libraries.pygame.apports',
+      },
+      {
+        ...technologiesStore.technologies.pandas,
+        description: 'pages.technologies.languages.python.libraries.pandas.description',
+        experience: new Date().getFullYear() - 2024,
+        icon: 'i-mdi:panda',
+        utilisation: 'pages.technologies.languages.python.libraries.pandas.utilisation',
+        apports: 'pages.technologies.languages.python.libraries.pandas.apports',
+      },
+    ],
+  },
   php: {
     name: 'PHP',
     description: 'pages.technologies.languages.php.description',

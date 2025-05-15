@@ -27,7 +27,7 @@ components:
       menu:
         reduce: Collapse menu
         extend: Expand menu
-      title: Joan Tassel's Portfolio - Web Developer
+      title: Joan Tassel's Portfolio
       language: Translate the site to French
   project-details:
     title: Project details
@@ -58,7 +58,7 @@ pages:
     about: About
     work: My Work
     profile:
-      role: Full Stack Web Developer
+      role: Open to new opportunities
       name: Joan Tassel
     journey:
       title: My Journey
@@ -96,6 +96,15 @@ pages:
           content creation in video format on YouTube and Twitch. Today, I work
           for various clients while continuing to develop my {link1}.
         projects_link: projects
+      today:
+        title: Still Moving Forward
+        content: >-
+          Today, I keep nurturing my passion for development, content creation,
+          and continuous learning. As a freelancer, I'm open to new
+          opportunities in web development, training, or system administration.
+          I enjoy exploring, sharing knowledge, and tackling technical
+          challenges. Curious and adaptable, I'm driven by the desire to grow
+          and contribute to meaningful projects.
     images:
       profile_alt: Profile Picture of Joan Tassel
       discovery_alt: Discovering Coding
@@ -235,6 +244,45 @@ pages:
               Programming and Design Patterns. I was also able to work with
               Physics engines, notably Rapier, to integrate a collision
               management system.
+      python:
+        description: >-
+          Python is a versatile programming language, known for its clean syntax
+          and vast community. It is used in various fields such as automation,
+          data analysis, web development, and artificial intelligence.
+        utilisation: >-
+          I use Python to automate tasks, handle files, and build scripts
+          related to video creation and content generation. It's also my go-to
+          language for quick prototyping, experimenting with new ideas, and
+          working with tools like Blender or APIs.
+        libraries:
+          pygame:
+            description: >-
+              Pygame is a Python library designed for 2D game development. It
+              provides modules to easily handle graphics, sound, keyboard/mouse
+              input, and more.
+            utilisation: >-
+              I use Pygame to create interactive simulations or simple games,
+              especially for experimental or automated projects. It's a great
+              library for exploring gameplay concepts or quickly testing visual
+              mechanics.
+            apports: >-
+              Pygame helped me understand game loops, real-time event handling,
+              and sprite management. It's a great tool for quickly prototyping
+              ideas or learning the fundamentals of game development without
+              technical overhead.
+          pandas:
+            description: >-
+              Pandas is a Python library specialized in data manipulation and
+              analysis. It provides powerful data structures like DataFrames,
+              which make handling large amounts of information easier.
+            utilisation: >-
+              I use Pandas to explore, transform, and analyze datasets, whether
+              for automation scripts, reports, or interactive tools. It’s also
+              my go-to for processing CSV or Excel files.
+            apports: >-
+              Pandas taught me how to structure and process data efficiently. I
+              developed a better understanding of vectorized operations, joins,
+              and data cleaning—essential skills for any data-related project.
       php:
         description: >-
           PHP is a programming language mainly used for server-side web
@@ -484,7 +532,7 @@ stores:
         '1':
           title: Data Retrieval
           description: >-
-            One of the bot’s tasks is to retrieve information about users. To
+            One of the bot's tasks is to retrieve information about users. To
             achieve this, I use the Twurple library to create a connection to
             the Twitch API, as well as the Discord.js library to connect to the
             Discord API. I collect data such as watch time, messages, commands,
@@ -534,7 +582,7 @@ stores:
           title: CryptoJS
           description: >-
             The puzzle was designed for an online group. I knew they would try
-            to inspect the code to crack the puzzles. I didn’t want to add a
+            to inspect the code to crack the puzzles. I didn't want to add a
             server layer to secure the data—I preferred to focus on content
             rather than security. So, I used CryptoJS to encrypt the
             information. Of course, with the data available on the frontend, all

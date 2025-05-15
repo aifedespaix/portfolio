@@ -27,7 +27,7 @@ components:
       menu:
         reduce: Réduire le menu
         extend: Étendre le menu
-      title: Portfolio de Joan Tassel - Développeur Web
+      title: Portfolio de Joan Tassel
       language: Passer le site en anglais
   project-details:
     title: Détails du projet
@@ -61,7 +61,7 @@ pages:
     about: À propos
     work: Mon Travail
     profile:
-      role: Développeur Web full stack
+      role: Ouvert à de nouvelles opportunités
       name: Joan Tassel
     journey:
       title: Mon parcours
@@ -71,16 +71,16 @@ pages:
           Je me suis passionné d'informatique à l'âge de 12 ans, lorsque j'ai eu
           accès à une connexion internet sur l'ordinateur familial.
         part2: >-
-          Très vite, je me suis intéressé à la structure des sites web. J’ai
+          Très vite, je me suis intéressé à la structure des sites web. J'ai
           appris les bases du HTML et du CSS grâce au Site du Zéro (aujourd'hui
           {link}).
         part3: >-
-          J’ai ensuite commencé à développer mes propres sites, tout en
-          apprenant des langages comme le PHP et le SQL. Cela m’a permis de
+          J'ai ensuite commencé à développer mes propres sites, tout en
+          apprenant des langages comme le PHP et le SQL. Cela m'a permis de
           mieux comprendre la structure des applications web.
         part4: >-
-          J’ai développé divers sites internet, pour des auto-entrepreneurs, des
-          associations, ou encore des projets personnels d’aide sur des jeux
+          J'ai développé divers sites internet, pour des auto-entrepreneurs, des
+          associations, ou encore des projets personnels d'aide sur des jeux
           vidéo.
       professional:
         title: Ma professionnalisation
@@ -89,9 +89,9 @@ pages:
           l'informatique en tant que profession. J'ai passé 6 années dans un
           {link1} axé sur les sciences informatiques et la gestion de projet.
           C'est durant cette période que je me suis convaincu que je voulais
-          travailler dans le domaine du développement web. J’ai aussi eu la
+          travailler dans le domaine du développement web. J'ai aussi eu la
           chance de découvrir le {link2} grâce à différents stages et trois
-          années d’alternance.
+          années d'alternance.
         university_link: cursus universitaire
         company_link: monde professionnel
       freelance:
@@ -100,9 +100,19 @@ pages:
           À la fin de mes études, j'ai décidé de me lancer à mon compte. J'ai
           réalisé diverses missions en tant que développeur web freelance. Je me
           suis également lancé dans la création de contenu vidéo, notamment sur
-          YouTube et Twitch. Je travaille aujourd’hui pour divers clients tout
+          YouTube et Twitch. Je travaille aujourd'hui pour divers clients tout
           en continuant à développer {link1} qui me tiennent à cœur .
         projects_link: mes projets personnels
+      today:
+        title: Aujourd'hui, toujours en mouvement
+        content: >-
+          Aujourd'hui, je continue de me passionner pour le développement, la
+          création de contenus et l'apprentissage continu. En tant que
+          freelance, je suis ouvert à de nouveaux projets dans le développement
+          web, la formation ou l'administration de systèmes. J'aime explorer,
+          transmettre, et relever des défis techniques. Curieux et adaptable, je
+          cherche avant tout à progresser et à collaborer sur des projets qui
+          ont du sens.
     images:
       profile_alt: Photo de Profil Joan Tassel
       discovery_alt: Découverte du code
@@ -198,8 +208,8 @@ pages:
               automatisées grâce à la librairie Remotion. J'en connais les
               bases, mais ne le reserve que pour cette utilisation.
             apports: >-
-              J’ai découvert un nouveau paradigme avec JSX et le rendu
-              déclaratif, mais j’ai préféré la syntaxe de Vue pour mes projets
+              J'ai découvert un nouveau paradigme avec JSX et le rendu
+              déclaratif, mais j'ai préféré la syntaxe de Vue pour mes projets
               web.
           angular:
             description: >-
@@ -255,6 +265,50 @@ pages:
               et les Design Patterns. J'ai également pu travailler avec des
               moteurs Physiques, notamment Rapier, pour intégrer un système de
               gestion des collisions.
+      python:
+        description: >-
+          Python est un langage de programmation polyvalent, apprécié pour sa
+          simplicité de syntaxe et sa large communauté. Il est utilisé dans de
+          nombreux domaines comme l'automatisation, l'analyse de données, le
+          développement web, ou encore l'intelligence artificielle.
+        utilisation: >-
+          J'utilise Python pour automatiser des tâches, manipuler des fichiers,
+          créer des scripts liés à la création de vidéos ou à la génération de
+          contenu. C'est également mon choix principal pour expérimenter des
+          idées rapidement, créer des prototypes, ou interagir avec des outils
+          comme Blender ou des API.
+        libraries:
+          pygame:
+            description: >-
+              Pygame est une bibliothèque Python conçue pour le développement de
+              jeux 2D. Elle fournit des modules pour gérer facilement les
+              graphismes, les sons, les entrées clavier/souris, et plus encore.
+            utilisation: >-
+              J'utilise Pygame pour créer des simulations interactives ou des
+              jeux simples, notamment dans le cadre de projets expérimentaux ou
+              automatisés. C'est une librairie idéale pour explorer des concepts
+              de gameplay ou tester rapidement des mécaniques visuelles.
+            apports: >-
+              Pygame m'a permis de mieux comprendre la boucle de jeu, la gestion
+              des événements en temps réel, et les notions de sprites. C'est un
+              excellent outil pour prototyper rapidement des idées ou apprendre
+              les bases du développement de jeux sans complexité technique.
+          pandas:
+            description: >-
+              Pandas est une bibliothèque Python spécialisée dans la
+              manipulation et l'analyse de données. Elle fournit des structures
+              de données puissantes comme les DataFrames, qui facilitent le
+              traitement de grandes quantités d'informations.
+            utilisation: >-
+              J'utilise Pandas pour explorer, transformer et analyser des jeux
+              de données, que ce soit pour des scripts d'automatisation, des
+              rapports, ou des outils interactifs. Elle m'est aussi utile pour
+              le traitement de fichiers CSV ou Excel.
+            apports: >-
+              Pandas m'a appris à structurer et traiter les données
+              efficacement. J'ai développé une meilleure compréhension des
+              opérations vectorisées, des jointures, et du nettoyage de données,
+              éléments essentiels pour tout projet lié à la donnée.
       php:
         description: >-
           PHP est un langage de programmation principalement utilisé pour le
@@ -348,7 +402,7 @@ pages:
         description: >-
           Docker est une plateforme qui permet de créer, déployer et exécuter
           des applications dans des conteneurs. Ces conteneurs rendent les
-          projets plus portables, reproductibles et isolés de l’environnement de
+          projets plus portables, reproductibles et isolés de l'environnement de
           la machine hôte.
         utilisation: >-
           J'utilise Docker pour créer des environnements de développement
@@ -396,7 +450,7 @@ stores:
         name: Stage Développeur Web
         suffix: Mois
       missions:
-        '1': Maintenance d’ERP
+        '1': Maintenance d'ERP
     teliae:
       name: Teliae
       location: Taluyers, France (69)
@@ -503,11 +557,11 @@ stores:
     chat-bot:
       meta:
         title: >-
-          Création d’un Chat Bot pour Discord & Twitch – Données, LLM et
+          Création d'un Chat Bot pour Discord & Twitch – Données, LLM et
           Automatisations
         description: >-
-          Développement complet d’un chat bot pour Discord et Twitch :
-          récupération de données utilisateur, intégration d’un modèle LLM,
+          Développement complet d'un chat bot pour Discord et Twitch :
+          récupération de données utilisateur, intégration d'un modèle LLM,
           gestion de serveurs et automatisations via APIs. Un projet orienté
           performances, scalabilité et expérience utilisateur.
       name: Chat Bot de Gestion
@@ -552,12 +606,12 @@ stores:
           développement de nouvelles tâches qu'en maintenance et en sécurité.
     game-666:
       meta:
-        title: Énigme d’Halloween – Application Web Interactive & Cryptée
+        title: Énigme d'Halloween – Application Web Interactive & Cryptée
         description: >-
-          Développement d’une application web d’énigmes pour Halloween, mêlant
+          Développement d'une application web d'énigmes pour Halloween, mêlant
           enquête collaborative, interactions Twitch en temps réel,
-          cryptographie avec CryptoJS et déclenchement automatique d’événements
-          nocturnes. Un projet immersif centré sur l’expérience utilisateur et
+          cryptographie avec CryptoJS et déclenchement automatique d'événements
+          nocturnes. Un projet immersif centré sur l'expérience utilisateur et
           la créativité.
       name: Énigme d'Halloween
       short-description: Une enquête collaborative pour Halloween.
@@ -736,10 +790,10 @@ stores:
       meta:
         title: Interface de Gestion pour Stream – Overlays, Sondages & Modération
         description: >-
-          Développement d’une application web destinée à un streamer et son
+          Développement d'une application web destinée à un streamer et son
           équipe de modération. Elle centralise la gestion du stream, des
           vidéos, des sondages, de la musique, des overlays dynamiques et bien
-          plus, avec intégration de l’API Twitch et Firebase.
+          plus, avec intégration de l'API Twitch et Firebase.
       name: Interface d'Administration
       short-description: Application web à destination d'un streamer et de ses modérateurs.
       description: >-
@@ -784,10 +838,10 @@ stores:
       meta:
         title: Carte Interactive Éducative – UI Mobile & Intégration WordPress
         description: >-
-          Création d’une carte interactive destinée à un jeune public, intégrée
+          Création d'une carte interactive destinée à un jeune public, intégrée
           dans un site WordPress. Le projet inclut deux vues cartographiques
           (globale et zoom) avec une interface ergonomique, responsive et
-          optimisée pour la performance et l’accessibilité mobile.
+          optimisée pour la performance et l'accessibilité mobile.
       name: Carte Éducative
       short-description: Une Carte Interactive d'un établissement associatif.
       description: >-
@@ -824,12 +878,12 @@ stores:
     map-game:
       meta:
         title: >-
-          Carte Interactive pour Jeu d’Exploration – Recherche, UX et
+          Carte Interactive pour Jeu d'Exploration – Recherche, UX et
           Optimisation
         description: >-
-          Développement d’une carte interactive pour accompagner un jeu
-          d’exploration. Intégration d’un moteur de recherche (Fuse.js), filtres
-          avancés, découpes d’image personnalisées et UI responsive. Un projet
+          Développement d'une carte interactive pour accompagner un jeu
+          d'exploration. Intégration d'un moteur de recherche (Fuse.js), filtres
+          avancés, découpes d'image personnalisées et UI responsive. Un projet
           orienté performance, lisibilité et ergonomie multi-écrans.
       name: Carte Interactive
       short-description: Une Carte Interactive servant de support à un jeu vidéo d'exploration.
@@ -872,12 +926,12 @@ stores:
           temps de chargement.
     mini-games:
       meta:
-        title: Mini-Jeux Interactifs – Calendrier de l’Avent Ludique et Mobile
+        title: Mini-Jeux Interactifs – Calendrier de l'Avent Ludique et Mobile
         description: >-
-          Création d’un calendrier de l’avant sous forme de mini-jeux.
-          Intégration d’un moteur audio, de filtres et d’un moteur de recherche.
-          Un projet centré sur l’ergonomie et l’expérience
-          utilisateur.Développement d’un Calendrier de l’Avent composé de
+          Création d'un calendrier de l'avant sous forme de mini-jeux.
+          Intégration d'un moteur audio, de filtres et d'un moteur de recherche.
+          Un projet centré sur l'ergonomie et l'expérience
+          utilisateur.Développement d'un Calendrier de l'Avent composé de
           mini-jeux accessibles sur mobile. Mots croisés, taquin, paires,
           énigmes… Chaque jeu intègre une interface tactile optimisée, des
           effets sonores et visuels, et plusieurs niveaux de difficulté pour une
@@ -934,7 +988,7 @@ stores:
       meta:
         title: Génération de Vidéos Éducatives Automatisées – IA, Voix & Remotion
         description: >-
-          Création d’un système complet de vidéos éducatives automatisées :
+          Création d'un système complet de vidéos éducatives automatisées :
           génération des mots via IA, voix synthétiques avec Coqui TTS,
           animation 3D via Remotion et publication automatique sur YouTube et
           TikTok. Un projet alliant innovation, contenu pédagogique et
@@ -1004,9 +1058,9 @@ stores:
       location: Caen, France
       diploma: DUT Informatique
       description: >-
-        Formation en informatique générale. J’ai découvert les bases de
-        l’informatique et de la programmation. Cette formation a confirmé mon
-        intérêt pour le développement web, tout en m’apportant un socle solide
+        Formation en informatique générale. J'ai découvert les bases de
+        l'informatique et de la programmation. Cette formation a confirmé mon
+        intérêt pour le développement web, tout en m'apportant un socle solide
         en sciences informatiques.
       competencies:
         web: Développement Web
@@ -1018,8 +1072,8 @@ stores:
       diploma: Licence Informatique
       description: >-
         Cette année a marqué un tournant dans ma vision du métier que je
-        souhaitais exercer. Bien que je n’aie pas validé cette année, elle m’a
-        permis d’acquérir de solides connaissances en algorithmie et en UX
+        souhaitais exercer. Bien que je n'aie pas validé cette année, elle m'a
+        permis d'acquérir de solides connaissances en algorithmie et en UX
         design.
       competencies:
         web: Développement Web
@@ -1032,10 +1086,10 @@ stores:
       description: >-
         Je me suis orienté vers la gestion de projet informatique. Mes
         connaissances variées et mon intérêt pour toutes les étapes de
-        réalisation de projets m’ont naturellement conduit à réfléchir à des
+        réalisation de projets m'ont naturellement conduit à réfléchir à des
         solutions optimales, tant sur le plan organisationnel que technique.
-        J’ai également eu l’opportunité de former des élèves dans mes domaines
-        de compétence, car la transmission du savoir est une valeur qui m’est
+        J'ai également eu l'opportunité de former des élèves dans mes domaines
+        de compétence, car la transmission du savoir est une valeur qui m'est
         chère.
       competencies:
         web: Développement Web

@@ -3,8 +3,8 @@ fr:
     projects:
       mini-games:
         meta:
-          title: Mini-Jeux Interactifs – Calendrier de l’Avent Ludique et Mobile
-          description: Création d’un calendrier de l’avant sous forme de mini-jeux. Intégration d’un moteur audio, de filtres et d’un moteur de recherche. Un projet centré sur l’ergonomie et l’expérience utilisateur.Développement d’un Calendrier de l’Avent composé de mini-jeux accessibles sur mobile. Mots croisés, taquin, paires, énigmes… Chaque jeu intègre une interface tactile optimisée, des effets sonores et visuels, et plusieurs niveaux de difficulté pour une expérience immersive.
+          title: Mini-Jeux Interactifs – Calendrier de l'Avent Ludique et Mobile
+          description: Création d'un calendrier de l'avant sous forme de mini-jeux. Intégration d'un moteur audio, de filtres et d'un moteur de recherche. Un projet centré sur l'ergonomie et l'expérience utilisateur.Développement d'un Calendrier de l'Avent composé de mini-jeux accessibles sur mobile. Mots croisés, taquin, paires, énigmes… Chaque jeu intègre une interface tactile optimisée, des effets sonores et visuels, et plusieurs niveaux de difficulté pour une expérience immersive.
         name: Mini-Jeux
         short-description: Calendrier de l'Avant sous forme de Mini-Jeux.
         description: Calendrier de l'Avant sous forme de Mini-Jeux.

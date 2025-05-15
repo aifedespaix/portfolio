@@ -149,6 +149,13 @@ const colors = [
           </i18n-t>
         </p>
       </div>
+
+      <div v-reveal class="card-grid">
+        <TitleH3>{{ t('pages.index.journey.today.title') }}</TitleH3>
+        <p>
+          {{ t('pages.index.journey.today.content') }}
+        </p>
+      </div>
     </Card>
 
     <Card v-reveal class="flex items-center justify-center gap-4 text-purple-600">

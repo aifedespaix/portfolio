@@ -3,8 +3,8 @@ fr:
     projects:
       chat-bot:
         meta:
-          title: Création d’un Chat Bot pour Discord & Twitch – Données, LLM et Automatisations
-          description: "Développement complet d’un chat bot pour Discord et Twitch : récupération de données utilisateur, intégration d’un modèle LLM, gestion de serveurs et automatisations via APIs. Un projet orienté performances, scalabilité et expérience utilisateur."
+          title: Création d'un Chat Bot pour Discord & Twitch – Données, LLM et Automatisations
+          description: "Développement complet d'un chat bot pour Discord et Twitch : récupération de données utilisateur, intégration d'un modèle LLM, gestion de serveurs et automatisations via APIs. Un projet orienté performances, scalabilité et expérience utilisateur."
         name: Chat Bot de Gestion
         short-description: Un chat bot pour Discord et Twitch
         description: Un chat bot pour Discord et Twitch. Il permet de gérer des serveurs Discord et des chat Twitch. Il peut récupérer des informations diverses sur les utilisateurs et les stocker dans une base de données. Il peut également interagir avec les utilisateurs.
@@ -31,7 +31,7 @@ en:
         explains:
           1:
             title: Data Retrieval
-            description: One of the bot’s tasks is to retrieve information about users. To achieve this, I use the Twurple library to create a connection to the Twitch API, as well as the Discord.js library to connect to the Discord API. I collect data such as watch time, messages, commands, and presence times. This information is used to power a system of achievements and rewards, encouraging users to actively participate in the community.
+            description: One of the bot's tasks is to retrieve information about users. To achieve this, I use the Twurple library to create a connection to the Twitch API, as well as the Discord.js library to connect to the Discord API. I collect data such as watch time, messages, commands, and presence times. This information is used to power a system of achievements and rewards, encouraging users to actively participate in the community.
           2:
             title: Chat via LLM
             description: I added a chat feature using an LLM. This allows users to chat with the bot via messages. The bot can answer general questions but can also be used for more specific inquiries. It is powered by data from the PostgreSQL and Firebase databases. Initially, the bot was configured with an Ollama model, but I now use a DeepSeek model, which is more efficient, faster, and less resource-intensive.

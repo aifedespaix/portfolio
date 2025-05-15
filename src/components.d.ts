@@ -33,6 +33,7 @@ declare module 'vue' {
     ProjectDetails: typeof import('./components/ProjectDetails.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Sequencer: typeof import('./components/Sequencer.vue')['default']
     Spacer: typeof import('./components/spacer.vue')['default']
     TitleH2: typeof import('./components/title/h2.vue')['default']
     TitleH3: typeof import('./components/title/h3.vue')['default']

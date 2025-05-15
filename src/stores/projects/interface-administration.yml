@@ -4,7 +4,7 @@ fr:
       interface-administration:
         meta:
           title: Interface de Gestion pour Stream – Overlays, Sondages & Modération
-          description: Développement d’une application web destinée à un streamer et son équipe de modération. Elle centralise la gestion du stream, des vidéos, des sondages, de la musique, des overlays dynamiques et bien plus, avec intégration de l’API Twitch et Firebase.
+          description: Développement d'une application web destinée à un streamer et son équipe de modération. Elle centralise la gestion du stream, des vidéos, des sondages, de la musique, des overlays dynamiques et bien plus, avec intégration de l'API Twitch et Firebase.
         name: Interface d'Administration
         short-description: Application web à destination d'un streamer et de ses modérateurs.
         description: Une application web qui regroupe une multitude de fonctionnalités pour la gestion d'un stream et des vidéos. Génération des overlay dynamiques reliés à une base de données Firebase. Génération des commandes, sondages, messages automatiques, modération des messages, gestion de la musique, génération de planning.

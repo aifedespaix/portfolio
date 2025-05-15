@@ -30,6 +30,8 @@ type Technologies = 'react'
   | 'symfony'
   | 'nuxt'
   | 'rapier'
+  | 'pygame'
+  | 'pandas'
 
 export const useTechnologiesStore = defineStore('technologies', () => {
   const technologies: Record<Technologies, Technology> = {
@@ -128,6 +130,14 @@ export const useTechnologiesStore = defineStore('technologies', () => {
     rapier: {
       name: 'Rapier',
       url: 'https://rapier.rs/',
+    },
+    pygame: {
+      name: 'Pygame',
+      url: 'https://www.pygame.org/',
+    },
+    pandas: {
+      name: 'Pandas',
+      url: 'https://pandas.pydata.org/',
     },
   }
 

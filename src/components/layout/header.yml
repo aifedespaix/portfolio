@@ -6,7 +6,7 @@ fr:
         menu:
           reduce: Réduire le menu
           extend: Étendre le menu
-        title: Portfolio de Joan Tassel - Développeur Web
+        title: Portfolio de Joan Tassel
         language: Passer le site en anglais
 en:
   components:
@@ -16,5 +16,5 @@ en:
         menu:
           reduce: Collapse menu
           extend: Expand menu
-        title: "Joan Tassel's Portfolio - Web Developer"
+        title: "Joan Tassel's Portfolio"
         language: Translate the site to French

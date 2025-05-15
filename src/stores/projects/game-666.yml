@@ -3,8 +3,8 @@ fr:
     projects:
       game-666:
         meta:
-          title: Énigme d’Halloween – Application Web Interactive & Cryptée
-          description: Développement d’une application web d’énigmes pour Halloween, mêlant enquête collaborative, interactions Twitch en temps réel, cryptographie avec CryptoJS et déclenchement automatique d’événements nocturnes. Un projet immersif centré sur l’expérience utilisateur et la créativité.
+          title: Énigme d'Halloween – Application Web Interactive & Cryptée
+          description: Développement d'une application web d'énigmes pour Halloween, mêlant enquête collaborative, interactions Twitch en temps réel, cryptographie avec CryptoJS et déclenchement automatique d'événements nocturnes. Un projet immersif centré sur l'expérience utilisateur et la créativité.
         name: Énigme d'Halloween
         short-description: Une enquête collaborative pour Halloween.
         description: J'ai développé une application web pour animer une soirée d'Halloween. L'idée est de proposer aux membres de ma communauté de travailler ensemble pour résoudre un mystère horrifique. Une fois le projet terminé, j'ai décidé de le mettre à disposition, l'énigme se lance tous les jours à partir de 20h. Il se découpe en 4 mystères à résoudre sur 4 heures, si tous les indices sont trouvés, on peut débloquer l'énigme finale disponible de 00h à 02h.
@@ -32,6 +32,6 @@ en:
         explains:
           '1':
             title: CryptoJS
-            description: The puzzle was designed for an online group. I knew they would try to inspect the code to crack the puzzles. I didn’t want to add a server layer to secure the data—I preferred to focus on content rather than security. So, I used CryptoJS to encrypt the information. Of course, with the data available on the frontend, all the decryption keys were accessible, but the process was enough to discourage players from trying to crack the puzzles.
+            description: The puzzle was designed for an online group. I knew they would try to inspect the code to crack the puzzles. I didn't want to add a server layer to secure the data—I preferred to focus on content rather than security. So, I used CryptoJS to encrypt the information. Of course, with the data available on the frontend, all the decryption keys were accessible, but the process was enough to discourage players from trying to crack the puzzles.
         difficulties:
           '1': "I integrated Twitch's API, especially the chat feature, allowing real interactions with users without setting up a server. I used random data mixed with chat messages and puzzle-related information to increase the challenge."

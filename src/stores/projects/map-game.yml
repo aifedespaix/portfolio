@@ -3,8 +3,8 @@ fr:
     projects:
       map-game:
         meta:
-          title: Carte Interactive pour Jeu d’Exploration – Recherche, UX et Optimisation
-          description: Développement d’une carte interactive pour accompagner un jeu d’exploration. Intégration d’un moteur de recherche (Fuse.js), filtres avancés, découpes d’image personnalisées et UI responsive. Un projet orienté performance, lisibilité et ergonomie multi-écrans.
+          title: Carte Interactive pour Jeu d'Exploration – Recherche, UX et Optimisation
+          description: Développement d'une carte interactive pour accompagner un jeu d'exploration. Intégration d'un moteur de recherche (Fuse.js), filtres avancés, découpes d'image personnalisées et UI responsive. Un projet orienté performance, lisibilité et ergonomie multi-écrans.
         name: Carte Interactive
         short-description: Une Carte Interactive servant de support à un jeu vidéo d'exploration.
         description: Une Carte Interactive servant de support à un jeu vidéo d'exploration.

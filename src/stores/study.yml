@@ -5,7 +5,7 @@ fr:
         school: Université de Caen
         location: Caen, France
         diploma: DUT Informatique
-        description: Formation en informatique générale. J’ai découvert les bases de l’informatique et de la programmation. Cette formation a confirmé mon intérêt pour le développement web, tout en m’apportant un socle solide en sciences informatiques.
+        description: Formation en informatique générale. J'ai découvert les bases de l'informatique et de la programmation. Cette formation a confirmé mon intérêt pour le développement web, tout en m'apportant un socle solide en sciences informatiques.
         competencies:
           web: Développement Web
           database: Base de données
@@ -14,7 +14,7 @@ fr:
         school: Université Claude Bernard Lyon 1
         location: Lyon, France
         diploma: Licence Informatique
-        description: Cette année a marqué un tournant dans ma vision du métier que je souhaitais exercer. Bien que je n’aie pas validé cette année, elle m’a permis d’acquérir de solides connaissances en algorithmie et en UX design.
+        description: Cette année a marqué un tournant dans ma vision du métier que je souhaitais exercer. Bien que je n'aie pas validé cette année, elle m'a permis d'acquérir de solides connaissances en algorithmie et en UX design.
 
         competencies:
           web: Développement Web
@@ -24,7 +24,7 @@ fr:
         school: Institut G4
         location: Lyon, France
         diploma: Chef de projet Système d'Information
-        description: Je me suis orienté vers la gestion de projet informatique. Mes connaissances variées et mon intérêt pour toutes les étapes de réalisation de projets m’ont naturellement conduit à réfléchir à des solutions optimales, tant sur le plan organisationnel que technique. J’ai également eu l’opportunité de former des élèves dans mes domaines de compétence, car la transmission du savoir est une valeur qui m’est chère.
+        description: Je me suis orienté vers la gestion de projet informatique. Mes connaissances variées et mon intérêt pour toutes les étapes de réalisation de projets m'ont naturellement conduit à réfléchir à des solutions optimales, tant sur le plan organisationnel que technique. J'ai également eu l'opportunité de former des élèves dans mes domaines de compétence, car la transmission du savoir est une valeur qui m'est chère.
 
         competencies:
           web: Développement Web

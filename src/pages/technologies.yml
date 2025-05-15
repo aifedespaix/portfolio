@@ -26,7 +26,7 @@ fr:
             react:
               description: React est une librairie JavaScript pour la création de pages web interactives. Elle est la librairie la plus utilisée et populaire pour la création d'applications web.
               utilisation: J'utilise principalement React pour la réalisation de vidéos automatisées grâce à la librairie Remotion. J'en connais les bases, mais ne le reserve que pour cette utilisation.
-              apports: 'J’ai découvert un nouveau paradigme avec JSX et le rendu déclaratif, mais j’ai préféré la syntaxe de Vue pour mes projets web.'
+              apports: J'ai découvert un nouveau paradigme avec JSX et le rendu déclaratif, mais j'ai préféré la syntaxe de Vue pour mes projets web.
             angular:
               description: Angular est un framework dédié à la création d'applications web ambitieuses.
               utilisation: Angular fut mon premier framework front end que j'ai découvert. Son approche orientée composants et son architecture imposant une découpe stricte du code m'ont ouvert à de nombreux concepts que j'utilise aujourd'hui.
@@ -46,6 +46,18 @@ fr:
               description: Three.js est une librairie JavaScript pour la création de 3D.
               utilisation: J'utilise souvent cette technologie pour la création de projets où je souhaite intégrer des graphismes 3D sur des projets persos. Que ce soit des petits jeux sur navigateur ou des graphismes 3D pour des sites web.
               apports: Three.js m'a ouvert au monde du développement en 3D et aux jeux vidéos. J'ai beaucoup progressé sur la programmation Orienté Objet et les Design Patterns. J'ai également pu travailler avec des moteurs Physiques, notamment Rapier, pour intégrer un système de gestion des collisions.
+        python:
+          description: Python est un langage de programmation polyvalent, apprécié pour sa simplicité de syntaxe et sa large communauté. Il est utilisé dans de nombreux domaines comme l'automatisation, l'analyse de données, le développement web, ou encore l'intelligence artificielle.
+          utilisation: J'utilise Python pour automatiser des tâches, manipuler des fichiers, créer des scripts liés à la création de vidéos ou à la génération de contenu. C'est également mon choix principal pour expérimenter des idées rapidement, créer des prototypes, ou interagir avec des outils comme Blender ou des API.
+          libraries:
+            pygame:
+              description: Pygame est une bibliothèque Python conçue pour le développement de jeux 2D. Elle fournit des modules pour gérer facilement les graphismes, les sons, les entrées clavier/souris, et plus encore.
+              utilisation: J'utilise Pygame pour créer des simulations interactives ou des jeux simples, notamment dans le cadre de projets expérimentaux ou automatisés. C'est une librairie idéale pour explorer des concepts de gameplay ou tester rapidement des mécaniques visuelles.
+              apports: Pygame m'a permis de mieux comprendre la boucle de jeu, la gestion des événements en temps réel, et les notions de sprites. C'est un excellent outil pour prototyper rapidement des idées ou apprendre les bases du développement de jeux sans complexité technique.
+            pandas:
+              description: Pandas est une bibliothèque Python spécialisée dans la manipulation et l'analyse de données. Elle fournit des structures de données puissantes comme les DataFrames, qui facilitent le traitement de grandes quantités d'informations.
+              utilisation: J'utilise Pandas pour explorer, transformer et analyser des jeux de données, que ce soit pour des scripts d'automatisation, des rapports, ou des outils interactifs. Elle m'est aussi utile pour le traitement de fichiers CSV ou Excel.
+              apports: Pandas m'a appris à structurer et traiter les données efficacement. J'ai développé une meilleure compréhension des opérations vectorisées, des jointures, et du nettoyage de données, éléments essentiels pour tout projet lié à la donnée.
         php:
           description: PHP est un langage de programmation principalement utilisé pour le développement web côté serveur. Il est très populaire pour son utilisation dans le développement web dynamique et son intégration avec HTML.
           utilisation: J'ai débuté la programmation grâce à ce langage, j'ai appris à l'utiliser pour factoriser la création de mes pages web. Jusqu'à concevoir des applications robustes grâce à son approche objet. Jusqu'à m'intéresser à des frameworks pour viser une structure plus propre et plus maintenable.
@@ -81,7 +93,7 @@ fr:
           description: OBS Studio est un logiciel de capture et de streaming de vidéos.
           utilisation: J'utilise OBS Studio pour la gestion de les streams et l'enregistrement de scènes. C'est un logiciel stable et complet. Il m'a permis de concevoir des émissions en direct sur de longues périodes. Que ce soit des streams quotidiens ou des émissions durant plusieurs jours, gérées à distance par une équipe.
         docker:
-          description: Docker est une plateforme qui permet de créer, déployer et exécuter des applications dans des conteneurs. Ces conteneurs rendent les projets plus portables, reproductibles et isolés de l’environnement de la machine hôte.
+          description: Docker est une plateforme qui permet de créer, déployer et exécuter des applications dans des conteneurs. Ces conteneurs rendent les projets plus portables, reproductibles et isolés de l'environnement de la machine hôte.
           utilisation: J'utilise Docker pour créer des environnements de développement uniformes, gérer des bases de données temporaires ou des services externes (comme Plausible, Traefik, Strapi, PostgreSQL, WordPress, etc.), et déployer facilement mes projets sur différents serveurs ou machines. Il m'a permis d'automatiser le setup de mes projets, que ce soit en local ou en production.
           apports: Docker m'a permis de gagner en fiabilité et en productivité, surtout lorsque je travaille sur plusieurs projets ou avec des équipes. Grâce à lui, j'ai réduit les problèmes liés aux différences d'environnement entre développeurs. J'ai aussi découvert des bonnes pratiques de configuration, de sécurité et d'orchestration avec Docker Compose.
 en:
@@ -132,6 +144,19 @@ en:
               description: Three.js is a JavaScript library for creating 3D graphics.
               utilisation: I often use this technology for creating projects where I want to integrate 3D graphics into personal projects. Whether it's small browser games or 3D graphics for websites.
               apports: Three.js opened me up to the world of 3D development and video games. I have made a lot of progress on Object-Oriented Programming and Design Patterns. I was also able to work with Physics engines, notably Rapier, to integrate a collision management system.
+        python:
+          description: Python is a versatile programming language, known for its clean syntax and vast community. It is used in various fields such as automation, data analysis, web development, and artificial intelligence.
+          utilisation: I use Python to automate tasks, handle files, and build scripts related to video creation and content generation. It's also my go-to language for quick prototyping, experimenting with new ideas, and working with tools like Blender or APIs.
+          libraries:
+            pygame:
+              description: Pygame is a Python library designed for 2D game development. It provides modules to easily handle graphics, sound, keyboard/mouse input, and more.
+              utilisation: I use Pygame to create interactive simulations or simple games, especially for experimental or automated projects. It's a great library for exploring gameplay concepts or quickly testing visual mechanics.
+              apports: Pygame helped me understand game loops, real-time event handling, and sprite management. It's a great tool for quickly prototyping ideas or learning the fundamentals of game development without technical overhead.
+            pandas:
+              description: Pandas is a Python library specialized in data manipulation and analysis. It provides powerful data structures like DataFrames, which make handling large amounts of information easier.
+              utilisation: I use Pandas to explore, transform, and analyze datasets, whether for automation scripts, reports, or interactive tools. It’s also my go-to for processing CSV or Excel files.
+              apports: Pandas taught me how to structure and process data efficiently. I developed a better understanding of vectorized operations, joins, and data cleaning—essential skills for any data-related project.
+
         php:
           description: PHP is a programming language mainly used for server-side web development. It is very popular for its use in dynamic web development and its integration with HTML.
           utilisation: I started programming with this language, I learned to use it to factorize the creation of my web pages. Up to designing robust applications thanks to its object-oriented approach. Up to getting interested in frameworks to aim for a cleaner and more maintainable structure.
