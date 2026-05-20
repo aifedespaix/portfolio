@@ -3,7 +3,14 @@
     "allow": [
       "Bash(xargs grep -l \"plausible\\\\|analytics\\\\|domain\")",
       "Bash(Get-ChildItem -Recurse -File)",
-      "Bash(Select-Object FullName)"
+      "Bash(Select-Object FullName)",
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\clape\\\\Documents\\\\dev\\\\portfolio\" -Recurse -Directory)",
+      "Bash(Select-Object -ExpandProperty FullName)",
+      "Bash(Sort-Object)",
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\clape\\\\Documents\\\\dev\\\\portfolio\" -Force)",
+      "Bash(Select-Object Name, FullName)",
+      "Bash(xargs grep -l \"light-\\\\|dark-\")",
+      "Bash(grep -r \"#000\\\\|#0*$\" \"c:\\\\Users\\\\clape\\\\Documents\\\\dev\\\\portfolio\\\\src\")"
     ]
   }
 }

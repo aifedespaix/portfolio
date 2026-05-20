@@ -20,7 +20,7 @@ export const useGameEngineStore = defineStore('gameEngine', () => {
     links: [
       {
         name: 'stores.projects.game-engine.links.1',
-        url: 'https://github.com/aifedespaix/game-engine',
+        url: 'https://github.com/aifedespaix/dropped-in',
         icon: 'i-mdi:github',
         type: 'github',
       },
