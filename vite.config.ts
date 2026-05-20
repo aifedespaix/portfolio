@@ -163,7 +163,7 @@ export default defineConfig({
     excludeRoutes: ['/fr/:all(.*)', '/en/:all(.*)', '/:lang/:all(.*)', '/fr/curriculum-vitae', '/en/curriculum-vitae'],
     onFinished() {
       generateSitemap({
-        hostname: 'https://portfolio.aife.io',
+        hostname: 'https://portfolio.aifedespaix.com',
       })
     },
   } as ViteSSGOptions,

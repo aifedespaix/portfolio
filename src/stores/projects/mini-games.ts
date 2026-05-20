@@ -18,7 +18,7 @@ export const useMiniGamesStore = defineStore('project-mini-games', () => {
     links: [
       {
         name: 'stores.projects.mini-games.links.1',
-        url: 'https://noel.aife.io/',
+        url: 'https://noel.aifedespaix.com/',
         icon: 'i-mdi:calendar',
       },
     ],

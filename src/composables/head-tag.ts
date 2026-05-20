@@ -15,7 +15,7 @@ const langsOg: Record<Lang, string> = {
 }
 
 const siteTitle = 'Portfolio Aife'
-const domain = 'https://portfolio.aife.io'
+const domain = 'https://portfolio.aifedespaix.com'
 const author = 'Joan Tassel'
 
 function getImagePath(enRoutePath: string, defaultImage: boolean) {

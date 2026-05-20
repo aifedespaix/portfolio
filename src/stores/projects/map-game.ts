@@ -18,7 +18,7 @@ export const useMapGameStore = defineStore('project-map-game', () => {
     links: [
       {
         name: 'stores.projects.map-game.links.1',
-        url: 'https://aife.io/map/totk',
+        url: 'https://aifedespaix.com/map/totk',
         icon: 'i-mdi:map',
       },
     ],

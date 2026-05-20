@@ -20,7 +20,7 @@ export const useGrooveBoxStore = defineStore('grooveBox', () => {
     links: [
       {
         name: 'stores.projects.groove-box.links.1',
-        url: 'https://groove.aife.io/',
+        url: 'https://groove.aifedespaix.com/',
         icon: 'i-mdi:music-note',
       },
       {

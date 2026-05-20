@@ -18,7 +18,7 @@ export const useGame666Store = defineStore('project-game-666', () => {
     links: [
       {
         name: 'stores.projects.game-666.links.1',
-        url: 'https://666.aife.io/',
+        url: 'https://666.aifedespaix.com/',
         icon: 'i-mdi:halloween',
       },
     ],

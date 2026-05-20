@@ -8,8 +8,8 @@ export function usePlausible() {
         'fetchpriority': 'low',
         'async': true,
         'defer': true,
-        'src': 'https://plausible.aife.io/js/script.js',
-        'data-domain': 'portfolio.aife.io',
+        'src': 'https://plausible.aifedespaix.com/js/script.js',
+        'data-domain': 'portfolio.aifedespaix.com',
       },
     ],
   })

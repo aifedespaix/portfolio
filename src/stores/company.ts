@@ -170,7 +170,7 @@ export const useCompanyStore = defineStore('company', () => {
         name: 'stores.company.aife-1.info-gold.name',
       },
       urls: [
-        { name: 'stores.company.website.name', url: 'https://aife.io' },
+        { name: 'stores.company.website.name', url: 'https://aifedespaix.com' },
         { name: 'stores.company.website.youtube', url: 'https://www.youtube.com/@aife', icon: 'i-mdi:youtube' },
         { name: 'stores.company.website.twitch', url: 'https://www.twitch.tv/aife', icon: 'i-mdi:twitch' },
       ],

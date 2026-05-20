@@ -16,7 +16,7 @@ const contact = [
   {
     icon: 'i-mdi:web',
     label: 'Portfolio',
-    value: 'portfolio.aife.io',
+    value: 'portfolio.aifedespaix.com',
   },
   {
     icon: 'i-mdi:map-marker',

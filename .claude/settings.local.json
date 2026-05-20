@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xargs grep -l \"plausible\\\\|analytics\\\\|domain\")",
+      "Bash(Get-ChildItem -Recurse -File)",
+      "Bash(Select-Object FullName)"
+    ]
+  }
+}
