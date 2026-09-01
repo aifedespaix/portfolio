@@ -16,6 +16,12 @@ moment de l'audit) illustre le niveau de finition visé : easing `cubic-bezier`
 personnalisé, effet shimmer au survol, gestion explicite de
 `prefers-reduced-motion`. C'est la référence de qualité pour ce travail.
 
+Ce spec a ensuite été audité par deux agents jouant chacun un persona externe
+(recruteur technique, consultant SEO) pour vérifier que le design tient face à
+un lecteur qui n'a pas participé au brainstorming. Leurs constats ont fait
+remonter un angle mort (accès au CV, ci-dessous) et deux garde-fous
+d'implémentation (Parties 2 et 4) intégrés dans ce document.
+
 ## Constat (audit)
 
 - **Couleur** : aucune palette centralisée. `src/styles/colors.css` ne définit
@@ -44,6 +50,13 @@ personnalisé, effet shimmer au survol, gestion explicite de
   `categories` mais une seule catégorie ("projects") y est utilisée, et le seul
   mécanisme de repli est global (`layoutStore.isNavExtended` dans
   `src/stores/layout.ts`, tout-ou-rien).
+- **CV inaccessible** (trouvé par l'audit recruteur) : la route
+  `curriculum-vitae` (`src/routes/main-routes.ts`) et la page
+  `src/pages/curriculum-vitae.vue` existent et sont complètes, mais aucun lien
+  n'y mène — ni `header.vue` (icône profil → `/profile`, une page quasi vide),
+  ni `nav.ts` (`main` = technologies/companies/studies), ni `footer.vue`. Un
+  visiteur qui n'a pas l'URL exacte ne peut pas trouver le CV, alors que
+  `PRODUCT.md` fixe explicitement la conversion en contact comme but du site.
 
 ## Objectifs
 
@@ -53,14 +66,32 @@ personnalisé, effet shimmer au survol, gestion explicite de
 - Généraliser le respect de `prefers-reduced-motion` (actuellement un cas isolé).
 - Faciliter la navigation dans les 11 projets : filtre par catégorie + recherche
   sur la page, repli par catégorie dans le sidenav.
+- Rendre la page CV (déjà existante) accessible en un clic depuis le header et/ou
+  le nav.
 
 ## Non-objectifs
 
 - Pas de refonte de contenu/copywriting (le texte reste tel quel, seule sa forme
   — hiérarchie, contraste — est retravaillée).
-- Pas de nouvelles pages ni de nouvelle structure de routes.
+- Pas de nouvelles pages ni de nouvelle structure de routes. Exception explicite :
+  ajouter un **lien** vers la route `curriculum-vitae`, qui existe déjà, n'est pas
+  une nouvelle route et reste dans le périmètre (Partie 0).
 - Pas de changement du multicolore en une palette monochrome corporate (rejeté en
   brainstorming).
+- Pas de schema.org (`ItemList`/`CreativeWork`) ni de badges de stack technique
+  sur la home dans cette itération — pistes identifiées par l'audit SEO/recruteur,
+  volontairement différées (voir "Pistes différées" en fin de document) pour ne
+  pas élargir le scope déjà défini en brainstorming.
+
+## Partie 0 — Accès au CV
+
+Issu de l'audit recruteur : ajouter un lien vers la route `curriculum-vitae`
+(déjà existante, cf. Constat) directement visible sans navigation supplémentaire
+— ex. dans `src/components/layout/header.vue` (à côté ou à la place du lien
+profil) et/ou en tête de `stores/nav.ts`. Pas de nouvelle page, pas de nouvelle
+route : uniquement un lien manquant à ajouter. Changement isolé, à faire en
+premier (impact conversion élevé, coût quasi nul, aucune dépendance avec les
+autres parties).
 
 ## Partie 1 — Système de couleur
 
@@ -96,6 +127,11 @@ personnalisé, effet shimmer au survol, gestion explicite de
   translation de 20px sur 600ms.
 - `info-gold.vue` n'a pas besoin d'être retouché pour la couleur/motion — il sert
   de modèle, pas de cible de refactor.
+- **Règle CLS** (issue de l'audit SEO) : toute animation, actuelle ou future,
+  n'anime que `opacity`/`transform` — jamais `top`/`margin`/`height`/`width`.
+  C'est déjà le cas de `v-reveal` (translateY + opacity), ce qui le rend neutre
+  vis-à-vis du Cumulative Layout Shift ; cette règle fige cette propriété pour le
+  réarrangement de grille introduit par le filtre de la Partie 4.
 
 ## Partie 3 — Typographie & contraste
 
@@ -122,11 +158,40 @@ personnalisé, effet shimmer au survol, gestion explicite de
   - une **barre de recherche** (filtre sur nom + description) combinée au filtre
     de catégorie (ET logique).
   - Filtrage réactif côté client (11 projets, pas besoin de pagination/backend).
+  - **Garde-fous SEO** (issus de l'audit SEO) : à l'état initial (chargement de
+    la page, avant toute interaction), aucun filtre n'est pré-appliqué — les 11
+    projets sont visibles, y compris si un filtre était mémorisé d'une session
+    précédente (pas de restauration automatique depuis `localStorage`/URL qui
+    changerait le rendu par défaut). Le filtrage masque les cartes non
+    matchées via une classe CSS (`v-show`/équivalent) plutôt que de les démonter
+    du DOM (`v-if`), pour que les 11 liens projets restent toujours présents
+    dans le HTML rendu.
 - **Sidenav** (`src/components/layout/nav.vue`) : chaque catégorie devient une
   section dépliable indépendamment (état local par catégorie, ex. un `Set` de
   catégories ouvertes dans le composant ou un petit store), en plus du repli
   global existant (`layoutStore.isNavExtended`, qui masque/affiche tout le nav et
   reste inchangé). Un chevron/icône par en-tête de catégorie indique l'état.
+
+## Pistes différées (identifiées, hors périmètre de cette itération)
+
+Remontées par les audits recruteur/SEO mais volontairement exclues du scope
+validé en brainstorming, pour ne pas transformer un audit visuel en refonte de
+contenu/structure. À reconsidérer dans une itération ultérieure :
+
+- **Badges de stack technique sur la home** (audit recruteur) : un résumé visuel
+  Vue/TS/Pinia/UnoCSS visible sans clic, pour un scan en quelques secondes —
+  actuellement noyé dans la page profonde `/technologies`.
+- **Projets "phares"** (audit recruteur) : mettre en avant 2-3 projets
+  représentatifs en tête de grille, indépendamment du filtre de catégorie —
+  alternative jugée plus utile qu'une recherche texte pour un visiteur pressé.
+- **Structured data schema.org** (audit SEO) : `ItemList` sur `/projects` et
+  `CreativeWork`/`SoftwareSourceCode` par projet, en s'appuyant sur le nouveau
+  champ `category` — coût faible, gain rich-results, mais distinct du travail
+  visuel/motion couvert ici.
+- **Ancres de section / breadcrumbs par catégorie** (audit SEO) : deep-links
+  thématiques (`#categorie-jeu`) et `BreadcrumbList` sur les pages projet,
+  compatibles avec le non-objectif "pas de nouvelles routes" mais non traités
+  ici pour rester focalisé sur les 4 parties validées.
 
 ## Accessibilité — checklist de vérification
 
@@ -140,14 +205,17 @@ personnalisé, effet shimmer au survol, gestion explicite de
 
 ## Ordre d'implémentation proposé
 
-1. Tokens couleur (Partie 1) + tokens motion (Partie 2) — fondation partagée.
+0. Lien vers le CV (Partie 0) — isolé, sans dépendance, impact conversion élevé.
+1. Tokens couleur (Partie 1) + tokens motion (Partie 2, avec la règle CLS) —
+   fondation partagée.
 2. `v-reveal` + `reveal.css` : reduced-motion (gain accessibilité immédiat, isolé).
 3. Application des tokens motion aux composants listés (Partie 2).
 4. Application des couleurs de catégorie (cartes accueil, page projets, sidenav)
    - audit contraste (Partie 1 + 3).
 5. Typographie / longueur de ligne (Partie 3).
-6. IA projets : champ `category`, filtre + recherche sur `/projects`, repli par
-   catégorie dans le sidenav (Partie 4).
+6. IA projets : champ `category`, filtre + recherche sur `/projects` (avec les
+   garde-fous SEO : état initial non filtré, `v-show` plutôt que `v-if`), repli
+   par catégorie dans le sidenav (Partie 4).
 
 Chaque étape est indépendamment vérifiable (visuellement + `bun run lint` /
 `bun run typecheck`) avant de passer à la suivante.
