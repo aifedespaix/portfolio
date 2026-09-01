@@ -1,3 +1,4 @@
+import type { ConfigEnv } from 'vite'
 import type { ViteSSGOptions } from 'vite-ssg'
 import path from 'node:path'
 import VueI18n from '@intlify/unplugin-vue-i18n/vite'
@@ -18,7 +19,7 @@ import Layouts from 'vite-plugin-vue-layouts'
 import generateSitemap from 'vite-ssg-sitemap'
 import 'vitest/config'
 
-export default defineConfig({
+export default defineConfig(({ mode }: ConfigEnv) => ({
   server: {
     host: true,
     port: 3333,
@@ -147,7 +148,7 @@ export default defineConfig({
     }),
 
     // https://github.com/webfansplz/vite-plugin-vue-devtools
-    VueDevTools(),
+    ...(mode === 'development' ? [VueDevTools()] : []),
   ],
 
   // https://github.com/vitest-dev/vitest
@@ -172,4 +173,4 @@ export default defineConfig({
     // TODO: workaround until they support native ESM
     noExternal: ['workbox-window', /vue-i18n/],
   },
-})
+}))
