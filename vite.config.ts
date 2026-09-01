@@ -155,6 +155,7 @@ export default defineConfig(({ mode }: ConfigEnv) => ({
   test: {
     include: ['test/**/*.test.ts'],
     environment: 'jsdom',
+    setupFiles: ['test/setup.ts'],
   },
 
   // https://github.com/antfu/vite-ssg
