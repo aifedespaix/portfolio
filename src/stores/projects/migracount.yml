@@ -1,0 +1,52 @@
+fr:
+  stores:
+    projects:
+      migracount:
+        meta:
+          title: Migracount – Suivi Personnel des Crises de Migraine (PWA)
+          description: Développement de Migracount, une PWA de suivi personnel des crises de migraine en Vue 3, Vite et Pinia. Formulaire de saisie en plusieurs étapes, graphiques de fréquence et d'intensité avec Chart.js, synchronisation optionnelle via PocketBase et fonctionnement 100% hors-ligne.
+        name: Migracount
+        short-description: Une PWA pour suivre ses crises de migraine, leurs symptômes et leur intensité au fil du temps.
+        description: Migracount est une application de suivi personnel des crises de migraine qui fonctionne entièrement en local, avec synchronisation serveur optionnelle via un compte Google. Un stepper en plusieurs étapes permet de renseigner rapidement le moment, l'intensité, les médicaments pris, les symptômes, la localisation et les déclencheurs de chaque crise. Le tableau de bord affiche des graphiques interactifs (fréquence, intensité) et un calendrier de suivi construits avec Chart.js, tandis que les données sont stockées dans le localStorage puis synchronisées en temps réel sur un serveur PocketBase auto-hébergé lorsque l'utilisateur est connecté.
+        links:
+          '1': Application
+          '2': GitHub
+        explains:
+          '1':
+            title: Un formulaire de saisie guidé en plusieurs étapes
+            description: La saisie d'une crise se fait via un stepper en huit étapes (quand, intensité, médicaments, symptômes, localisation, déclencheurs, notes, récapitulatif), navigable au clic ou par swipe, avec sauvegarde automatique du brouillon en cours de saisie.
+          '2':
+            title: Des graphiques et un calendrier pour suivre l'évolution
+            description: Le tableau de bord synthétise fréquence, intensité et durée moyenne des crises grâce à des graphiques interactifs Chart.js et à un calendrier codé par couleur selon la sévérité, pour repérer les tendances au fil des semaines et des mois.
+          '3':
+            title: Personnalisation, accessibilité et confidentialité
+            description: L'application propose un mode sombre, un mode clair, un mode automatique et un « Mode Migraine » aux animations réduites, ainsi qu'une police adaptée à la dyslexie. Les données peuvent être exportées ou importées en JSON, et la mesure d'audience reste anonyme et sans cookie.
+        difficulties:
+          '1': Concevoir un stepper de saisie à la fois rapide à remplir en pleine crise et suffisamment complet (médicaments, symptômes, déclencheurs) pour produire des statistiques exploitables ensuite.
+          '2': Fiabiliser la synchronisation entre les données stockées en localStorage et le serveur PocketBase, avec une fusion intelligente qui privilégie la donnée la plus récente sans jamais perdre de crise saisie hors-ligne.
+en:
+  stores:
+    projects:
+      migracount:
+        meta:
+          title: Migracount – Personal Migraine Attack Tracker (PWA)
+          description: Development of Migracount, a personal migraine tracking PWA built with Vue 3, Vite and Pinia. Multi-step entry form, frequency and intensity charts powered by Chart.js, optional PocketBase sync, and fully offline-capable.
+        name: Migracount
+        short-description: A PWA to track migraine attacks, their symptoms and intensity over time.
+        description: Migracount is a personal migraine-tracking application that runs entirely locally, with optional server synchronization through a Google account. A multi-step form lets users quickly log the timing, intensity, medication taken, symptoms, location and triggers of each attack. The dashboard displays interactive charts (frequency, intensity) and a tracking calendar built with Chart.js, while data is stored in localStorage and synced in real time to a self-hosted PocketBase server whenever the user is signed in.
+        links:
+          '1': App
+          '2': GitHub
+        explains:
+          '1':
+            title: A guided, multi-step entry form
+            description: Logging an attack goes through an eight-step form (when, intensity, medication, symptoms, location, triggers, notes, summary), navigable by tapping or swiping, with the in-progress draft saved automatically.
+          '2':
+            title: Charts and a calendar to track evolution over time
+            description: The dashboard summarizes attack frequency, intensity and average duration through interactive Chart.js graphs and a severity-coded calendar, making it easy to spot trends across weeks and months.
+          '3':
+            title: Customization, accessibility and privacy
+            description: The app offers a dark mode, a light mode, an automatic mode and a "Migraine Mode" with reduced animations, plus a dyslexia-friendly font option. Data can be exported or imported as JSON, and analytics stay anonymous and cookie-free.
+        difficulties:
+          '1': Designing an entry form that stays quick to fill in during an actual attack while still capturing enough detail (medication, symptoms, triggers) to produce useful statistics afterward.
+          '2': Making the sync between localStorage data and the PocketBase server reliable, with a smart merge that favors the most recent entry without ever losing an attack logged offline.

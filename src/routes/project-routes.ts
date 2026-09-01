@@ -73,4 +73,20 @@ export const projectsRoutes: Routes<ProjectRouteKey> = {
     name: 'Groove Box',
     component: () => import('~/pages/projects/[id].vue'),
   },
+  'shlagemon': {
+    path: {
+      en: '/projects/shlagemon',
+      fr: '/projets/shlagemon',
+    },
+    name: 'Shlagémon',
+    component: () => import('~/pages/projects/[id].vue'),
+  },
+  'migracount': {
+    path: {
+      en: '/projects/migracount',
+      fr: '/projets/migracount',
+    },
+    name: 'Migracount',
+    component: () => import('~/pages/projects/[id].vue'),
+  },
 }

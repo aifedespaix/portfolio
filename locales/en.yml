@@ -853,6 +853,58 @@ stores:
           Creating the base map required cutting a gigantic image at each zoom
           level. I had to develop an algorithm to manage this cutting and
           optimize loading time.
+    migracount:
+      meta:
+        title: Migracount – Personal Migraine Attack Tracker (PWA)
+        description: >-
+          Development of Migracount, a personal migraine tracking PWA built with
+          Vue 3, Vite and Pinia. Multi-step entry form, frequency and intensity
+          charts powered by Chart.js, optional PocketBase sync, and fully
+          offline-capable.
+      name: Migracount
+      short-description: A PWA to track migraine attacks, their symptoms and intensity over time.
+      description: >-
+        Migracount is a personal migraine-tracking application that runs
+        entirely locally, with optional server synchronization through a Google
+        account. A multi-step form lets users quickly log the timing, intensity,
+        medication taken, symptoms, location and triggers of each attack. The
+        dashboard displays interactive charts (frequency, intensity) and a
+        tracking calendar built with Chart.js, while data is stored in
+        localStorage and synced in real time to a self-hosted PocketBase server
+        whenever the user is signed in.
+      links:
+        '1': App
+        '2': GitHub
+      explains:
+        '1':
+          title: A guided, multi-step entry form
+          description: >-
+            Logging an attack goes through an eight-step form (when, intensity,
+            medication, symptoms, location, triggers, notes, summary), navigable
+            by tapping or swiping, with the in-progress draft saved
+            automatically.
+        '2':
+          title: Charts and a calendar to track evolution over time
+          description: >-
+            The dashboard summarizes attack frequency, intensity and average
+            duration through interactive Chart.js graphs and a severity-coded
+            calendar, making it easy to spot trends across weeks and months.
+        '3':
+          title: Customization, accessibility and privacy
+          description: >-
+            The app offers a dark mode, a light mode, an automatic mode and a
+            "Migraine Mode" with reduced animations, plus a dyslexia-friendly
+            font option. Data can be exported or imported as JSON, and analytics
+            stay anonymous and cookie-free.
+      difficulties:
+        '1': >-
+          Designing an entry form that stays quick to fill in during an actual
+          attack while still capturing enough detail (medication, symptoms,
+          triggers) to produce useful statistics afterward.
+        '2': >-
+          Making the sync between localStorage data and the PocketBase server
+          reliable, with a smart merge that favors the most recent entry without
+          ever losing an attack logged offline.
     mini-games:
       meta:
         title: Interactive Mini-Games – Playful Mobile Advent Calendar
@@ -906,6 +958,62 @@ stores:
           elements—music and sound effects. I created a small engine to manage
           them efficiently: Enable/Disable, Pause, Adjust Volume, Block
           interactions while a sound is playing, and Load assets.
+    shlagemon:
+      meta:
+        title: Shlagémon – Parodic Creature-Collecting Clicker RPG
+        description: >-
+          Development of Shlagémon, a parodic clicker RPG built with Vue 3, Vite
+          and TypeScript where players capture, battle and evolve completely
+          absurd creatures. Persisted Pinia architecture, attributify UnoCSS,
+          interactive Leaflet map, PWA support and internationalization.
+      name: Shlagémon
+      short-description: >-
+        A parodic clicker RPG where you capture, battle and evolve absurd
+        creatures.
+      description: >-
+        Shlagémon drops the player into a delirious universe filled with utterly
+        absurd creatures to capture, battle and evolve in order to complete the
+        Shlagedex and become the ultimate trainer. Built with Vue 3, Vite and
+        TypeScript, the project relies on Pinia with persistence for state
+        management, attributify UnoCSS for a mobile-first design, and an
+        interactive Leaflet map to explore the world. The app is installable as
+        a PWA, works offline, and bundles several mini-games (Tic Tac Toe,
+        Battleship, Connect Four, Mastermind, Memory, Sliding Puzzle) as extra
+        ways to earn Shlagidolars.
+      links:
+        '1': Play now
+        '2': GitHub
+      explains:
+        '1':
+          title: Turn-based battles and type effectiveness
+          description: >-
+            Every creature belongs to one or more improbable types that
+            determine attack effectiveness in battle. Capture odds depend on the
+            enemy's remaining health and level, encouraging players to smartly
+            weaken a Shlagémon before attempting to catch it.
+        '2':
+          title: An interactive map to explore
+          description: >-
+            A map built with Leaflet lets players navigate between the different
+            zones and villages of the Shlagémon world. Each area hosts specific
+            creatures, a shop, a dojo and mini-games, encouraging exploration to
+            complete the collection.
+        '3':
+          title: The Shlagedex, a collection that evolves
+          description: >-
+            Every captured creature is logged in the Shlagedex with its stats
+            (health, attack, defense, stench) and its absurd description. Some
+            creatures can evolve past a given level, adding a progression layer
+            to the collection.
+      difficulties:
+        '1': >-
+          Designing a balanced capture and battle system (type effectiveness,
+          capture odds tied to remaining health) while keeping the interface
+          readable and fun on both mobile and desktop.
+        '2': >-
+          Structuring a large-scale Vue 3 project (170+ creatures, several
+          mini-games, interactive map, PWA, i18n) while keeping a clean Pinia
+          architecture and smooth performance.
     video-learning:
       meta:
         title: Automated Educational Video Generation – AI, Voice & Remotion

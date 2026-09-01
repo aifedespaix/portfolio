@@ -924,11 +924,71 @@ stores:
           à chaque niveau de zoom d'une image gigantesque. Il m'a fallu
           développer un algorithme pour gérer cette découpe et optimiser le
           temps de chargement.
+    migracount:
+      meta:
+        title: Migracount – Suivi Personnel des Crises de Migraine (PWA)
+        description: >-
+          Développement de Migracount, une PWA de suivi personnel des crises de
+          migraine en Vue 3, Vite et Pinia. Formulaire de saisie en plusieurs
+          étapes, graphiques de fréquence et d'intensité avec Chart.js,
+          synchronisation optionnelle via PocketBase et fonctionnement 100%
+          hors-ligne.
+      name: Migracount
+      short-description: >-
+        Une PWA pour suivre ses crises de migraine, leurs symptômes et leur
+        intensité au fil du temps.
+      description: >-
+        Migracount est une application de suivi personnel des crises de migraine
+        qui fonctionne entièrement en local, avec synchronisation serveur
+        optionnelle via un compte Google. Un stepper en plusieurs étapes permet
+        de renseigner rapidement le moment, l'intensité, les médicaments pris,
+        les symptômes, la localisation et les déclencheurs de chaque crise. Le
+        tableau de bord affiche des graphiques interactifs (fréquence,
+        intensité) et un calendrier de suivi construits avec Chart.js, tandis
+        que les données sont stockées dans le localStorage puis synchronisées en
+        temps réel sur un serveur PocketBase auto-hébergé lorsque l'utilisateur
+        est connecté.
+      links:
+        '1': Application
+        '2': GitHub
+      explains:
+        '1':
+          title: Un formulaire de saisie guidé en plusieurs étapes
+          description: >-
+            La saisie d'une crise se fait via un stepper en huit étapes (quand,
+            intensité, médicaments, symptômes, localisation, déclencheurs,
+            notes, récapitulatif), navigable au clic ou par swipe, avec
+            sauvegarde automatique du brouillon en cours de saisie.
+        '2':
+          title: Des graphiques et un calendrier pour suivre l'évolution
+          description: >-
+            Le tableau de bord synthétise fréquence, intensité et durée moyenne
+            des crises grâce à des graphiques interactifs Chart.js et à un
+            calendrier codé par couleur selon la sévérité, pour repérer les
+            tendances au fil des semaines et des mois.
+        '3':
+          title: Personnalisation, accessibilité et confidentialité
+          description: >-
+            L'application propose un mode sombre, un mode clair, un mode
+            automatique et un « Mode Migraine » aux animations réduites, ainsi
+            qu'une police adaptée à la dyslexie. Les données peuvent être
+            exportées ou importées en JSON, et la mesure d'audience reste
+            anonyme et sans cookie.
+      difficulties:
+        '1': >-
+          Concevoir un stepper de saisie à la fois rapide à remplir en pleine
+          crise et suffisamment complet (médicaments, symptômes, déclencheurs)
+          pour produire des statistiques exploitables ensuite.
+        '2': >-
+          Fiabiliser la synchronisation entre les données stockées en
+          localStorage et le serveur PocketBase, avec une fusion intelligente
+          qui privilégie la donnée la plus récente sans jamais perdre de crise
+          saisie hors-ligne.
     mini-games:
       meta:
         title: Mini-Jeux Interactifs – Calendrier de l'Avent Ludique et Mobile
         description: >-
-          Création d'un calendrier de l'avant sous forme de mini-jeux.
+          Création d'un calendrier de l'avent sous forme de mini-jeux.
           Intégration d'un moteur audio, de filtres et d'un moteur de recherche.
           Un projet centré sur l'ergonomie et l'expérience
           utilisateur.Développement d'un Calendrier de l'Avent composé de
@@ -937,10 +997,10 @@ stores:
           effets sonores et visuels, et plusieurs niveaux de difficulté pour une
           expérience immersive.
       name: Mini-Jeux
-      short-description: Calendrier de l'Avant sous forme de Mini-Jeux.
-      description: Calendrier de l'Avant sous forme de Mini-Jeux.
+      short-description: Calendrier de l'Avent sous forme de Mini-Jeux.
+      description: Calendrier de l'Avent sous forme de Mini-Jeux.
       links:
-        '1': Calendrier de l'Avant
+        '1': Calendrier de l'Avent
       explains:
         '1':
           title: Mots Croisés Simplifiés
@@ -984,6 +1044,64 @@ stores:
           moteur qui permet de les gérer efficacement : Activer/Désactiver,
           Mettre en pause, Ajuster le volume, Bloquer l'interaction tant qu'un
           son est joué, Chargement des assets.
+    shlagemon:
+      meta:
+        title: Shlagémon – Clicker RPG Parodique de Capture de Créatures
+        description: >-
+          Développement de Shlagémon, un clicker RPG parodique en Vue 3, Vite et
+          TypeScript où l'on capture, fait combattre et fait évoluer des
+          créatures totalement barrées. Architecture Pinia persistée, UnoCSS en
+          mode attributify, carte interactive Leaflet, PWA et
+          internationalisation.
+      name: Shlagémon
+      short-description: >-
+        Un clicker RPG parodique où l'on capture, combat et fait évoluer des
+        créatures loufoques.
+      description: >-
+        Shlagémon plonge le joueur dans un univers délirant peuplé de créatures
+        totalement absurdes à capturer, faire combattre et faire évoluer pour
+        compléter le Shlagedex et devenir le dresseur ultime. Développé avec Vue
+        3, Vite et TypeScript, le projet s'appuie sur Pinia avec persistance
+        pour la gestion d'état, UnoCSS en mode attributify pour un design mobile
+        first, et une carte interactive Leaflet pour explorer le monde.
+        L'application est installable en PWA, fonctionne hors-ligne et embarque
+        plusieurs mini-jeux (Tic Tac Toe, Bataille navale, Puissance 4,
+        Mastermind, Memory, Taquin) pour varier les sources de Shlagidolar.
+      links:
+        '1': Jouer maintenant
+        '2': GitHub
+      explains:
+        '1':
+          title: Combats au tour par tour et efficacité des types
+          description: >-
+            Chaque créature appartient à un ou plusieurs types improbables qui
+            déterminent l'efficacité des attaques en combat. Les chances de
+            capture dépendent de la vie restante et du niveau de l'ennemi, ce
+            qui pousse à affaiblir intelligemment un Shlagémon avant de tenter
+            de le capturer.
+        '2':
+          title: Un monde à explorer sur une carte interactive
+          description: >-
+            Une carte construite avec Leaflet permet de naviguer entre les
+            différentes zones et villages du monde de Shlagémon. Chaque secteur
+            héberge des créatures spécifiques, un magasin, un dojo et des
+            mini-jeux, encourageant l'exploration pour compléter la collection.
+        '3':
+          title: Le Shlagedex, une collection à faire évoluer
+          description: >-
+            Chaque créature capturée est enregistrée dans le Shlagedex avec ses
+            statistiques (vie, attaque, défense, puanteur) et sa description
+            absurde. Certaines créatures peuvent évoluer à partir d'un niveau
+            donné, ajoutant une couche de progression à la collection.
+      difficulties:
+        '1': >-
+          Concevoir un système de combat et de capture équilibré (efficacité des
+          types, chances de capture liées à la vie restante) tout en gardant une
+          interface lisible et amusante sur mobile comme sur grand écran.
+        '2': >-
+          Structurer un projet Vue 3 de grande ampleur (plus de 170 créatures,
+          plusieurs mini-jeux, carte interactive, PWA, i18n) en gardant une
+          architecture Pinia claire et des performances fluides.
     video-learning:
       meta:
         title: Génération de Vidéos Éducatives Automatisées – IA, Voix & Remotion

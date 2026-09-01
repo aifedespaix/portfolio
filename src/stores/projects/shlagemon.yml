@@ -1,0 +1,52 @@
+fr:
+  stores:
+    projects:
+      shlagemon:
+        meta:
+          title: Shlagémon – Clicker RPG Parodique de Capture de Créatures
+          description: Développement de Shlagémon, un clicker RPG parodique en Vue 3, Vite et TypeScript où l'on capture, fait combattre et fait évoluer des créatures totalement barrées. Architecture Pinia persistée, UnoCSS en mode attributify, carte interactive Leaflet, PWA et internationalisation.
+        name: Shlagémon
+        short-description: Un clicker RPG parodique où l'on capture, combat et fait évoluer des créatures loufoques.
+        description: Shlagémon plonge le joueur dans un univers délirant peuplé de créatures totalement absurdes à capturer, faire combattre et faire évoluer pour compléter le Shlagedex et devenir le dresseur ultime. Développé avec Vue 3, Vite et TypeScript, le projet s'appuie sur Pinia avec persistance pour la gestion d'état, UnoCSS en mode attributify pour un design mobile first, et une carte interactive Leaflet pour explorer le monde. L'application est installable en PWA, fonctionne hors-ligne et embarque plusieurs mini-jeux (Tic Tac Toe, Bataille navale, Puissance 4, Mastermind, Memory, Taquin) pour varier les sources de Shlagidolar.
+        links:
+          '1': Jouer maintenant
+          '2': GitHub
+        explains:
+          '1':
+            title: Combats au tour par tour et efficacité des types
+            description: Chaque créature appartient à un ou plusieurs types improbables qui déterminent l'efficacité des attaques en combat. Les chances de capture dépendent de la vie restante et du niveau de l'ennemi, ce qui pousse à affaiblir intelligemment un Shlagémon avant de tenter de le capturer.
+          '2':
+            title: Un monde à explorer sur une carte interactive
+            description: Une carte construite avec Leaflet permet de naviguer entre les différentes zones et villages du monde de Shlagémon. Chaque secteur héberge des créatures spécifiques, un magasin, un dojo et des mini-jeux, encourageant l'exploration pour compléter la collection.
+          '3':
+            title: Le Shlagedex, une collection à faire évoluer
+            description: Chaque créature capturée est enregistrée dans le Shlagedex avec ses statistiques (vie, attaque, défense, puanteur) et sa description absurde. Certaines créatures peuvent évoluer à partir d'un niveau donné, ajoutant une couche de progression à la collection.
+        difficulties:
+          '1': Concevoir un système de combat et de capture équilibré (efficacité des types, chances de capture liées à la vie restante) tout en gardant une interface lisible et amusante sur mobile comme sur grand écran.
+          '2': Structurer un projet Vue 3 de grande ampleur (plus de 170 créatures, plusieurs mini-jeux, carte interactive, PWA, i18n) en gardant une architecture Pinia claire et des performances fluides.
+en:
+  stores:
+    projects:
+      shlagemon:
+        meta:
+          title: Shlagémon – Parodic Creature-Collecting Clicker RPG
+          description: Development of Shlagémon, a parodic clicker RPG built with Vue 3, Vite and TypeScript where players capture, battle and evolve completely absurd creatures. Persisted Pinia architecture, attributify UnoCSS, interactive Leaflet map, PWA support and internationalization.
+        name: Shlagémon
+        short-description: A parodic clicker RPG where you capture, battle and evolve absurd creatures.
+        description: Shlagémon drops the player into a delirious universe filled with utterly absurd creatures to capture, battle and evolve in order to complete the Shlagedex and become the ultimate trainer. Built with Vue 3, Vite and TypeScript, the project relies on Pinia with persistence for state management, attributify UnoCSS for a mobile-first design, and an interactive Leaflet map to explore the world. The app is installable as a PWA, works offline, and bundles several mini-games (Tic Tac Toe, Battleship, Connect Four, Mastermind, Memory, Sliding Puzzle) as extra ways to earn Shlagidolars.
+        links:
+          '1': Play now
+          '2': GitHub
+        explains:
+          '1':
+            title: Turn-based battles and type effectiveness
+            description: Every creature belongs to one or more improbable types that determine attack effectiveness in battle. Capture odds depend on the enemy's remaining health and level, encouraging players to smartly weaken a Shlagémon before attempting to catch it.
+          '2':
+            title: An interactive map to explore
+            description: A map built with Leaflet lets players navigate between the different zones and villages of the Shlagémon world. Each area hosts specific creatures, a shop, a dojo and mini-games, encouraging exploration to complete the collection.
+          '3':
+            title: The Shlagedex, a collection that evolves
+            description: Every captured creature is logged in the Shlagedex with its stats (health, attack, defense, stench) and its absurd description. Some creatures can evolve past a given level, adding a progression layer to the collection.
+        difficulties:
+          '1': Designing a balanced capture and battle system (type effectiveness, capture odds tied to remaining health) while keeping the interface readable and fun on both mobile and desktop.
+          '2': Structuring a large-scale Vue 3 project (170+ creatures, several mini-games, interactive map, PWA, i18n) while keeping a clean Pinia architecture and smooth performance.

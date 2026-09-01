@@ -32,6 +32,11 @@ type Technologies = 'react'
   | 'rapier'
   | 'pygame'
   | 'pandas'
+  | 'vite'
+  | 'pinia'
+  | 'howler'
+  | 'chartjs'
+  | 'pocketbase'
 
 export const useTechnologiesStore = defineStore('technologies', () => {
   const technologies: Record<Technologies, Technology> = {
@@ -138,6 +143,26 @@ export const useTechnologiesStore = defineStore('technologies', () => {
     pandas: {
       name: 'Pandas',
       url: 'https://pandas.pydata.org/',
+    },
+    vite: {
+      name: 'Vite',
+      url: 'https://vite.dev/',
+    },
+    pinia: {
+      name: 'Pinia',
+      url: 'https://pinia.vuejs.org/',
+    },
+    howler: {
+      name: 'Howler.js',
+      url: 'https://howlerjs.com/',
+    },
+    chartjs: {
+      name: 'Chart.js',
+      url: 'https://www.chartjs.org/',
+    },
+    pocketbase: {
+      name: 'PocketBase',
+      url: 'https://pocketbase.io/',
     },
   }
 

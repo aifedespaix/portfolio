@@ -8,7 +8,9 @@ import { useGrooveBoxStore } from './projects/groove-box'
 import { useInterfaceAdministrationStore } from './projects/interface-administration'
 import { useMapEducationStore } from './projects/map-education'
 import { useMapGameStore } from './projects/map-game'
+import { useMigracountStore } from './projects/migracount'
 import { useMiniGamesStore } from './projects/mini-games'
+import { useShlagemonStore } from './projects/shlagemon'
 import { useVideoLearningStore } from './projects/video-learning'
 
 export const useProjectsStore = defineStore('projects', () => {
@@ -21,6 +23,8 @@ export const useProjectsStore = defineStore('projects', () => {
   const game666Store = useGame666Store()
   const gameEngineStore = useGameEngineStore()
   const grooveBoxStore = useGrooveBoxStore()
+  const shlagemonStore = useShlagemonStore()
+  const migracountStore = useMigracountStore()
 
   const projectList = ref<Record<ProjectRouteKey, Project>>({
     'game-engine': gameEngineStore.project,
@@ -32,6 +36,8 @@ export const useProjectsStore = defineStore('projects', () => {
     'interface-administration': interfaceAdministrationStore.project,
     'map-education': mapEducationStore.project,
     'game-666': game666Store.project,
+    'shlagemon': shlagemonStore.project,
+    'migracount': migracountStore.project,
   })
 
   return {
