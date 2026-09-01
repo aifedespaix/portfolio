@@ -17,6 +17,7 @@ components:
     app-bar:
       index: Home
       projects: Projects
+      cv: Resume
       profile: Profile
     footer:
       copyright: All rights reserved
@@ -24,6 +25,7 @@ components:
       legal: Legal Notice
     header:
       profile: Profile
+      cv: View resume
       menu:
         reduce: Collapse menu
         extend: Expand menu
@@ -513,6 +515,9 @@ stores:
       projects:
         title: Projects
         description: My personal projects
+      curriculumVitae:
+        title: Resume
+        description: My resume
   projects:
     chat-bot:
       meta:

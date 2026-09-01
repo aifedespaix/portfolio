@@ -14,4 +14,5 @@ const i18n = createI18n({
 
 beforeEach(() => {
   config.global.plugins = [createPinia(), i18n]
+  config.global.renderStubDefaultSlot = true
 })

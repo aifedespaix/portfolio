@@ -17,6 +17,7 @@ components:
     app-bar:
       index: Accueil
       projects: Projets
+      cv: CV
       profile: Profil
     footer:
       copyright: Tous droits réservés
@@ -24,6 +25,7 @@ components:
       legal: Mentions légales
     header:
       profile: Profil
+      cv: Voir le CV
       menu:
         reduce: Réduire le menu
         extend: Étendre le menu
@@ -553,6 +555,9 @@ stores:
       projects:
         title: Projets
         description: Mes projets personnels
+      curriculumVitae:
+        title: CV
+        description: Mon curriculum vitae
   projects:
     chat-bot:
       meta:

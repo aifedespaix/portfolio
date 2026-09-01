@@ -3,6 +3,7 @@ fr:
     layout:
       header:
         profile: Profil
+        cv: Voir le CV
         menu:
           reduce: Réduire le menu
           extend: Étendre le menu
@@ -13,6 +14,7 @@ en:
     layout:
       header:
         profile: Profile
+        cv: View resume
         menu:
           reduce: Collapse menu
           extend: Expand menu

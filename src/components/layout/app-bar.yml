@@ -2,15 +2,16 @@ fr:
   components:
     layout:
       app-bar:
-        index: 'Accueil'
-        projects: 'Projets'
-        profile: 'Profil'
+        index: Accueil
+        projects: Projets
+        cv: CV
+        profile: Profil
 
 en:
   components:
     layout:
       app-bar:
-        index: 'Home'
-        projects: 'Projects'
-        profile: 'Profile'
-
+        index: Home
+        projects: Projects
+        cv: Resume
+        profile: Profile

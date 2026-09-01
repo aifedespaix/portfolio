@@ -27,9 +27,17 @@ export const useNavStore = defineStore('nav', () => {
     description: 'stores.nav.top.projects.description',
   })
 
+  const curriculumVitae = ref<NavItem>({
+    name: 'stores.nav.top.curriculumVitae.title',
+    to: 'curriculumVitae',
+    icon: 'i-carbon-document',
+    description: 'stores.nav.top.curriculumVitae.description',
+  })
+
   return {
     main,
     projects,
+    curriculumVitae,
     home,
     settings,
   }

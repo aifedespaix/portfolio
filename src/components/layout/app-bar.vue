@@ -28,6 +28,11 @@ const links: Link[] = [
     big: true,
   },
   {
+    label: 'components.layout.app-bar.cv',
+    to: 'curriculumVitae',
+    icon: 'i-carbon-document',
+  },
+  {
     label: 'components.layout.app-bar.profile',
     to: 'profile',
     icon: 'i-carbon-user',

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { I18nKey } from '~/types/i18n'
+import type { RouteKey } from '~/types/route.type'
 import { useNavStore } from '~/stores/nav'
-import { RouteKey } from '~/types/route.type'
 
 interface Link {
   name: I18nKey
@@ -31,6 +31,7 @@ const { t } = useTranslationsStore()
 const links = ref<Links>({
   top: [
     { name: navStore.home, to: 'index', icon: 'i-carbon-home' },
+    { ...navStore.curriculumVitae },
     ...navStore.main,
   ],
 
