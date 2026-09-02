@@ -84,7 +84,7 @@ const cards = computed(() => [navStore.projects].concat(navStore.main))
           class="float-right m-2 max-w-40"
           :width="160" :height="160"
         />
-        <p>
+        <p class="max-w-[65ch]">
           {{ t('pages.index.journey.discovery.part1') }}<br>
           <i18n-t keypath="pages.index.journey.discovery.part2" tag="span" scope="global">
             <template #link>
@@ -106,7 +106,7 @@ const cards = computed(() => [navStore.projects].concat(navStore.main))
           class="float-left m-2 max-w-40"
           :width="160" :height="160"
         />
-        <p class="align-middle">
+        <p class="max-w-[65ch] align-middle">
           <i18n-t keypath="pages.index.journey.professional.content" tag="span" scope="global">
             <template #link1>
               <LinkIntern :to="getUrlLocale('studies')">
@@ -130,7 +130,7 @@ const cards = computed(() => [navStore.projects].concat(navStore.main))
           class="float-right m-2 max-w-40"
           :width="160" :height="160"
         />
-        <p>
+        <p class="max-w-[65ch]">
           <i18n-t keypath="pages.index.journey.freelance.content" tag="span" scope="global">
             <template #link1>
               <LinkIntern :to="getUrlLocale('projects')" :title="t('pages.index.journey.freelance.projects_link')">
@@ -143,7 +143,7 @@ const cards = computed(() => [navStore.projects].concat(navStore.main))
 
       <div v-reveal class="card-grid">
         <TitleH3>{{ t('pages.index.journey.today.title') }}</TitleH3>
-        <p>
+        <p class="max-w-[65ch]">
           {{ t('pages.index.journey.today.content') }}
         </p>
       </div>

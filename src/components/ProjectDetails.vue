@@ -24,7 +24,7 @@ const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}
         :height="288"
         :transparent="false"
       />
-      <p class="text-justify text-lg">
+      <p class="max-w-[65ch] text-justify text-lg">
         {{ t(data.description) }}
       </p>
     </header>
@@ -98,7 +98,7 @@ const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}
             <h3 class="mb-2 text-xl font-semibold">
               {{ t(explain.title) }}
             </h3>
-            <p class="text-justify">
+            <p class="max-w-[65ch] text-justify">
               {{ t(explain.description) }}
             </p>
           </div>
