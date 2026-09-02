@@ -17,14 +17,6 @@ useHeadTag({
 
 const navStore = useNavStore()
 const cards = computed(() => [navStore.projects].concat(navStore.main))
-
-const colors = [
-  'text-red-600 dark:text-red-400',
-  'text-blue-600 dark:text-blue-400',
-  'text-green-700 dark:text-green-400',
-  'text-purple-800 dark:text-yellow-400',
-  'text-purple-600 dark:text-purple-400',
-]
 </script>
 
 <template>
@@ -61,10 +53,9 @@ const colors = [
       lg="grid-cols-4"
     >
       <Card
-        v-for="(card, index) in cards" :key="card.name" v-reveal
+        v-for="card in cards" :key="card.name" v-reveal
         :to="card.to"
-        :class="colors[index % colors.length]"
-        class="flex items-center justify-center"
+        class="flex items-center justify-center text-blue-600 dark:text-blue-400"
         lg="aspect-square"
         hover="scale-102" transition="transition-transform duration-motion-base"
       >

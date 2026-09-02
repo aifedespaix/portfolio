@@ -35,7 +35,7 @@ useHeadTag({
         transition="transition-transform duration-motion-base"
       >
         <Card is-hoverable :footer="t('pages.projects.discover')" class="h-full">
-          <h2 v-reveal class="flex items-center gap-2 text-lg font-bold">
+          <h2 v-reveal class="flex items-center gap-2 text-lg font-bold" :class="getProjectCategory(project.category).textClass">
             <div :class="project.icon" class="min-w-4" />
             {{ t(project.name) }}
           </h2>
