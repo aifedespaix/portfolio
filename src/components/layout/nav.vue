@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { ProjectCategory } from '~/composables/project-categories'
 import type { I18nKey } from '~/types/i18n'
 import type { RouteKey } from '~/types/route.type'
 import { useNavStore } from '~/stores/nav'
@@ -12,7 +13,8 @@ interface Link {
 interface Category {
   name: I18nKey
   links: Link[]
-  to?: RouteKey
+  id: ProjectCategory
+  textClass: string
   icon: string
 }
 
@@ -31,27 +33,38 @@ const { t } = useTranslationsStore()
 const links = ref<Links>({
   top: [
     { name: navStore.home, to: 'index', icon: 'i-carbon-home' },
+    { ...navStore.projects },
     { ...navStore.curriculumVitae },
     ...navStore.main,
   ],
-
-  categories: [
-    {
-      ...navStore.projects,
-      links: [
-        ...Object.values(projectStore.projectList).map(project => ({
-          name: project.name,
-          to: project.id,
-          icon: project.icon,
-        })),
-      ],
-    },
-
-  ],
+  categories: PROJECT_CATEGORIES.map(category => ({
+    name: category.labelKey,
+    id: category.id,
+    icon: category.icon,
+    textClass: category.textClass,
+    links: Object.values(projectStore.projectList)
+      .filter(project => project.category === category.id)
+      .map(project => ({ name: project.name, to: project.id, icon: project.icon })),
+  })),
   bottom: [
     { name: navStore.settings, to: 'settings', icon: 'i-carbon-settings' },
   ],
 })
+
+const expandedCategories = reactive(new Set<ProjectCategory>(PROJECT_CATEGORIES.map(category => category.id)))
+
+function isExpanded(id: ProjectCategory) {
+  return expandedCategories.has(id)
+}
+
+function toggleCategory(id: ProjectCategory) {
+  if (expandedCategories.has(id)) {
+    expandedCategories.delete(id)
+  }
+  else {
+    expandedCategories.add(id)
+  }
+}
 
 const route = useRoute()
 function isActive(to: string) {
@@ -72,24 +85,28 @@ function isActive(to: string) {
 
     <Spacer />
 
-    <div v-for="category in links.categories" :key="category.name" class="flex flex-col gap-1px">
-      <template v-if="category.to">
-        <NavLink
-          class="p-2 font-bold"
-          :link="{ name: category.name, to: category.to, icon: layoutStore.isNavExtended ? undefined : category.icon }"
-          :active="isActive(category.to)"
-        />
-      </template>
-
-      <template v-else>
-        <div class="p-2 font-bold">
+    <div v-for="category in links.categories" v-show="layoutStore.isNavExtended" :key="category.name" class="flex flex-col gap-1px">
+      <button
+        type="button"
+        class="flex items-center justify-between gap-2 rounded-md p-2 text-left font-bold transition-colors duration-motion-fast ease-motion"
+        :class="category.textClass"
+        hover="bg-light-600 dark:bg-dark-700"
+        :aria-expanded="isExpanded(category.id)"
+        @click="toggleCategory(category.id)"
+      >
+        <span class="flex items-center gap-2">
+          <div :class="category.icon" class="min-w-4" />
           {{ t(category.name) }}
-        </div>
-      </template>
+        </span>
+        <div
+          class="i-carbon-chevron-down transition-transform duration-motion-fast"
+          :class="{ 'rotate-180': isExpanded(category.id) }"
+        />
+      </button>
 
       <NavLink
         v-for="link in category.links"
-        v-show="layoutStore.isNavExtended"
+        v-show="isExpanded(category.id)"
         :key="link.name"
         :link="link"
         :active="isActive(link.to)"
