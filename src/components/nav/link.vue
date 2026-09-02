@@ -49,7 +49,7 @@ const iconClasses = computed(() => {
   <RouterLink
     :to="getUrlLocale(link.to)"
     :class="classes"
-    transition="colors duration-200 ease-in-out"
+    transition="colors duration-motion-fast ease-motion"
     :title="t(link.name)"
     active-class="bg-light-700 dark:bg-dark-700"
   >

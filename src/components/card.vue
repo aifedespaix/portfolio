@@ -43,7 +43,7 @@ const classes = computed(() => {
     :is="to ? 'RouterLink' : 'div'"
     :to="to ? getUrlLocale(to) : undefined"
     :class="classes"
-    transition="background-color duration-300"
+    transition="background-color duration-motion-base"
   >
     <slot />
 

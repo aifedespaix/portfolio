@@ -66,7 +66,7 @@ const colors = [
         :class="colors[index % colors.length]"
         class="flex items-center justify-center"
         lg="aspect-square"
-        hover="scale-102" transition="transition-transform duration-300"
+        hover="scale-102" transition="transition-transform duration-motion-base"
       >
         <TitleH3 class="h-10">
           {{ t(card.name) }}
@@ -159,7 +159,7 @@ const colors = [
     </Card>
 
     <Card v-reveal class="flex items-center justify-center gap-4 text-purple-600">
-      <div class="flex flex-col items-center gap-2 text-center" transition="transform duration-300" hover="scale-102" dark="text-purple-400">
+      <div class="flex flex-col items-center gap-2 text-center" transition="transform duration-motion-base" hover="scale-102" dark="text-purple-400">
         <div class="i-mdi-github text-6xl md:text-7xl" />
 
         <LinkExtern

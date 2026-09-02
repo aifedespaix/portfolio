@@ -47,7 +47,7 @@ const links: Link[] = [
         :href="link.url"
         target="_blank"
         class="text-xl" :class="[link.hover]"
-        transition="text duration-300 ease-in-out"
+        transition="text duration-motion-base ease-motion"
         :title="link.name"
       >
         <div :class="link.icon" />
