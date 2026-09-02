@@ -863,6 +863,10 @@ pages:
         modern websites, interactive apps, and technical experiments.
     title: My projects
     discover: Discover the project
+    filters:
+      categoryLabel: Filter by category
+      searchLabel: Search a project
+      searchPlaceholder: Search a project…
     id:
       error:
         title: This project is not detailed for the moment

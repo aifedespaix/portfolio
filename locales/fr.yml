@@ -931,6 +931,10 @@ pages:
         applications interactives et expérimentations techniques.
     title: Mes projets
     discover: Découvrir le projet
+    filters:
+      categoryLabel: Filtrer par catégorie
+      searchLabel: Rechercher un projet
+      searchPlaceholder: Rechercher un projet…
     id:
       error:
         title: Ce Projet n'est pas détaillé pour le moment

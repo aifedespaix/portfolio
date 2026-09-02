@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import type { ProjectCategory } from '~/composables/project-categories'
+import type { Project } from '~/types/project.type'
+
 const { t, getUrlLocale } = useTranslationsStore()
 const projectsStore = useProjectsStore()
 const imagePath = (id: string, image: string) => `/assets/projects/${id}/${image}`
@@ -9,6 +12,19 @@ useHeadTag({
   description: computed(() => t('pages.projects.meta.description')),
   type: 'website',
 })
+
+const selectedCategories = ref<ProjectCategory[]>([])
+const searchQuery = ref('')
+
+function toggleCategory(id: ProjectCategory) {
+  selectedCategories.value = selectedCategories.value.includes(id)
+    ? selectedCategories.value.filter(category => category !== id)
+    : [...selectedCategories.value, id]
+}
+
+function isProjectVisible(project: Project) {
+  return matchesProjectFilter(project, t(project.name), t(project.shortDescription), selectedCategories.value, searchQuery.value)
+}
 </script>
 
 <template>
@@ -16,6 +32,31 @@ useHeadTag({
     <TitleMain v-reveal>
       {{ t('pages.projects.title') }}
     </TitleMain>
+
+    <div class="flex flex-col gap-3 px-2" md="px-4">
+      <div class="flex flex-wrap gap-2" role="group" :aria-label="t('pages.projects.filters.categoryLabel')">
+        <button
+          v-for="category in PROJECT_CATEGORIES"
+          :key="category.id"
+          type="button"
+          class="rounded-full px-3 py-1 text-sm font-medium transition-colors duration-motion-fast ease-motion"
+          :class="[category.chipClass, selectedCategories.includes(category.id) ? 'ring-2 ring-offset-1' : 'opacity-60 hover:opacity-100']"
+          :aria-pressed="selectedCategories.includes(category.id)"
+          @click="toggleCategory(category.id)"
+        >
+          {{ t(category.labelKey) }}
+        </button>
+      </div>
+
+      <input
+        v-model="searchQuery"
+        type="search"
+        class="rounded-lg p-2"
+        bg="light-100 dark:dark-700"
+        :aria-label="t('pages.projects.filters.searchLabel')"
+        :placeholder="t('pages.projects.filters.searchPlaceholder')"
+      >
+    </div>
 
     <div
       class="grid grid-cols-1 gap-4 overflow-hidden"
@@ -26,6 +67,7 @@ useHeadTag({
     >
       <router-link
         v-for="project in projectsStore.projectList"
+        v-show="isProjectVisible(project)"
         :key="project.name"
         :to="projectUrl(project.id)"
         class="aspect-square"
