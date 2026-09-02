@@ -40,7 +40,7 @@ describe('card', () => {
   it('devrait être un RouterLink quand to est fourni', () => {
     const wrapper = mount(Card, {
       props: {
-        to: '/test',
+        to: 'index',
       },
       global: {
         stubs: {

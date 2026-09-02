@@ -16,7 +16,7 @@ const toggleDark = useToggle(isDark)
     <span
       class="bg-sup inline-block h-6 w-6 rounded-full shadow-lg ease-in-out"
       :class="[isDark ? 'translate-x-7' : 'translate-x-1']"
-      transition="transform duration-900 ease-in-out"
+      transition="transform duration-motion-base ease-motion"
     >
       <div
         class="h-full w-full flex items-center justify-center"

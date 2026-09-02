@@ -30,6 +30,9 @@ const navButtonTitle = computed(() =>
         :title="t('components.layout.header.language')"
         @click="layoutStore.toggleLanguage"
       />
+      <router-link :to="getUrlLocale('curriculumVitae')">
+        <ButtonIcon icon="i-carbon-document" :title="t('components.layout.header.cv')" />
+      </router-link>
       <router-link :to="getUrlLocale('profile')">
         <ButtonIcon icon="i-carbon-user" :title="t('components.layout.header.profile')" />
       </router-link>

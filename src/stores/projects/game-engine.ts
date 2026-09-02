@@ -8,6 +8,7 @@ export const useGameEngineStore = defineStore('gameEngine', () => {
   const explains = 4
   const project: Project = {
     id: 'game-engine',
+    category: 'game',
     meta: {
       title: 'stores.projects.game-engine.meta.title',
       description: 'stores.projects.game-engine.meta.description',

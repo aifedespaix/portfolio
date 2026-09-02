@@ -16,6 +16,9 @@ fr:
         projects:
           title: Projets
           description: Mes projets personnels
+        curriculumVitae:
+          title: CV
+          description: Mon curriculum vitae
 en:
   stores:
     nav:
@@ -34,3 +37,6 @@ en:
         projects:
           title: Projects
           description: My personal projects
+        curriculumVitae:
+          title: Resume
+          description: My resume

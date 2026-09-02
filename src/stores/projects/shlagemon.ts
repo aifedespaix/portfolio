@@ -7,6 +7,7 @@ export const useShlagemonStore = defineStore('shlagemon', () => {
   const explains = 3
   const project: Project = {
     id: 'shlagemon',
+    category: 'game',
     meta: {
       title: 'stores.projects.shlagemon.meta.title',
       description: 'stores.projects.shlagemon.meta.description',

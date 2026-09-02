@@ -23,6 +23,12 @@ export default defineConfig({
       ],
     },
   },
+  rules: [
+    ['duration-motion-fast', { 'transition-duration': 'var(--motion-fast)' }],
+    ['duration-motion-base', { 'transition-duration': 'var(--motion-base)' }],
+    ['duration-motion-slow', { 'transition-duration': 'var(--motion-slow)' }],
+    ['ease-motion', { 'transition-timing-function': 'var(--motion-ease)' }],
+  ],
   theme: {
     breakpoints: {
       xs: '420px',

@@ -6,6 +6,7 @@ export const useMiniGamesStore = defineStore('project-mini-games', () => {
 
   const project: Project = {
     id: 'mini-games',
+    category: 'game',
     meta: {
       title: 'stores.projects.mini-games.meta.title',
       description: 'stores.projects.mini-games.meta.description',

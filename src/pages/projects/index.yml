@@ -6,6 +6,10 @@ fr:
         description: Parcourez une sélection de mes projets web, entre sites vitrines, applications interactives et expérimentations techniques.
       title: Mes projets
       discover: Découvrir le projet
+      filters:
+        categoryLabel: Filtrer par catégorie
+        searchLabel: Rechercher un projet
+        searchPlaceholder: Rechercher un projet…
 en:
   pages:
     projects:
@@ -14,3 +18,7 @@ en:
         description: Explore a curated selection of my web development projects, including modern websites, interactive apps, and technical experiments.
       title: My projects
       discover: Discover the project
+      filters:
+        categoryLabel: Filter by category
+        searchLabel: Search a project
+        searchPlaceholder: Search a project…

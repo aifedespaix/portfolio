@@ -17,14 +17,6 @@ useHeadTag({
 
 const navStore = useNavStore()
 const cards = computed(() => [navStore.projects].concat(navStore.main))
-
-const colors = [
-  'text-red-600 dark:text-red-400',
-  'text-blue-600 dark:text-blue-400',
-  'text-green-700 dark:text-green-400',
-  'text-purple-800 dark:text-yellow-400',
-  'text-purple-600 dark:text-purple-400',
-]
 </script>
 
 <template>
@@ -61,12 +53,11 @@ const colors = [
       lg="grid-cols-4"
     >
       <Card
-        v-for="(card, index) in cards" :key="card.name" v-reveal
+        v-for="card in cards" :key="card.name" v-reveal
         :to="card.to"
-        :class="colors[index % colors.length]"
-        class="flex items-center justify-center"
+        class="flex items-center justify-center text-blue-600 dark:text-blue-400"
         lg="aspect-square"
-        hover="scale-102" transition="transition-transform duration-300"
+        hover="scale-102" transition="transition-transform duration-motion-base"
       >
         <TitleH3 class="h-10">
           {{ t(card.name) }}
@@ -93,7 +84,7 @@ const colors = [
           class="float-right m-2 max-w-40"
           :width="160" :height="160"
         />
-        <p>
+        <p class="max-w-[65ch]">
           {{ t('pages.index.journey.discovery.part1') }}<br>
           <i18n-t keypath="pages.index.journey.discovery.part2" tag="span" scope="global">
             <template #link>
@@ -115,7 +106,7 @@ const colors = [
           class="float-left m-2 max-w-40"
           :width="160" :height="160"
         />
-        <p class="align-middle">
+        <p class="max-w-[65ch] align-middle">
           <i18n-t keypath="pages.index.journey.professional.content" tag="span" scope="global">
             <template #link1>
               <LinkIntern :to="getUrlLocale('studies')">
@@ -139,7 +130,7 @@ const colors = [
           class="float-right m-2 max-w-40"
           :width="160" :height="160"
         />
-        <p>
+        <p class="max-w-[65ch]">
           <i18n-t keypath="pages.index.journey.freelance.content" tag="span" scope="global">
             <template #link1>
               <LinkIntern :to="getUrlLocale('projects')" :title="t('pages.index.journey.freelance.projects_link')">
@@ -152,14 +143,14 @@ const colors = [
 
       <div v-reveal class="card-grid">
         <TitleH3>{{ t('pages.index.journey.today.title') }}</TitleH3>
-        <p>
+        <p class="max-w-[65ch]">
           {{ t('pages.index.journey.today.content') }}
         </p>
       </div>
     </Card>
 
     <Card v-reveal class="flex items-center justify-center gap-4 text-purple-600">
-      <div class="flex flex-col items-center gap-2 text-center" transition="transform duration-300" hover="scale-102" dark="text-purple-400">
+      <div class="flex flex-col items-center gap-2 text-center" transition="transform duration-motion-base" hover="scale-102" dark="text-purple-400">
         <div class="i-mdi-github text-6xl md:text-7xl" />
 
         <LinkExtern

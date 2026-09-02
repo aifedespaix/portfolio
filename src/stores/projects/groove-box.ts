@@ -8,6 +8,7 @@ export const useGrooveBoxStore = defineStore('grooveBox', () => {
   const explains = 3
   const project: Project = {
     id: 'groove-box',
+    category: 'tool',
     meta: {
       title: 'stores.projects.groove-box.meta.title',
       description: 'stores.projects.groove-box.meta.description',

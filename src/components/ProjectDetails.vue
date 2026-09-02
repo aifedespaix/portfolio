@@ -24,7 +24,7 @@ const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}
         :height="288"
         :transparent="false"
       />
-      <p class="text-justify text-lg">
+      <p class="max-w-[65ch] text-justify text-lg">
         {{ t(data.description) }}
       </p>
     </header>
@@ -41,7 +41,7 @@ const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}
           :href="link.url"
           target="_blank"
           rel="noopener noreferrer"
-          class="relative flex items-center gap-3 rounded-lg p-4 transition-colors duration-300"
+          class="relative flex items-center gap-3 rounded-lg p-4 transition-colors duration-motion-base"
           :class="{
             'bg-red-400 hover:bg-red-600 dark:bg-red-600 dark:hover:bg-red-800': link.type === 'youtube',
             'bg-light-900 dark:bg-dark-500 hover:bg-dark-700 dark:hover:bg-dark-800': link.type === 'tiktok',
@@ -98,7 +98,7 @@ const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}
             <h3 class="mb-2 text-xl font-semibold">
               {{ t(explain.title) }}
             </h3>
-            <p class="text-justify">
+            <p class="max-w-[65ch] text-justify">
               {{ t(explain.description) }}
             </p>
           </div>
@@ -140,7 +140,7 @@ const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}
           :href="tech.url"
           target="_blank"
           rel="noopener noreferrer"
-          transition="colors duration-300 ease-in-out"
+          transition="colors duration-motion-base ease-motion"
           class="rounded-full px-4 py-2"
           bg="gray-100 dark:gray-800"
           hover="bg-gray-200 dark:bg-gray-900"
@@ -155,7 +155,7 @@ const imagePath = (image: string) => `/assets/projects/${props.data.id}/${image}
 <style scoped>
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.3s ease;
+  transition: opacity var(--motion-base) var(--motion-ease);
 }
 
 .fade-enter-from,

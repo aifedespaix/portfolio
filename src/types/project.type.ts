@@ -1,9 +1,11 @@
 import type { I18nKey } from './i18n'
 import type { ProjectRouteKey } from './route.type'
+import type { ProjectCategory } from '~/composables/project-categories'
 import type { Technology } from '~/stores/technologies'
 
 export interface Project {
   id: ProjectRouteKey
+  category: ProjectCategory
   meta: {
     title: I18nKey
     description: I18nKey

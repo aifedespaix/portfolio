@@ -7,6 +7,7 @@ export const useMigracountStore = defineStore('migracount', () => {
   const explains = 3
   const project: Project = {
     id: 'migracount',
+    category: 'tool',
     meta: {
       title: 'stores.projects.migracount.meta.title',
       description: 'stores.projects.migracount.meta.description',
