@@ -3,9 +3,10 @@ import { acceptHMRUpdate, defineStore } from 'pinia'
 
 export const useGame666Store = defineStore('project-game-666', () => {
   const technologiesStore = useTechnologiesStore()
-    
+
   const project: Project = {
     id: 'game-666',
+    category: 'game',
     meta: {
       title: 'stores.projects.game-666.meta.title',
       description: 'stores.projects.game-666.meta.description',

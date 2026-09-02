@@ -6,6 +6,7 @@ export const useChatBotStore = defineStore('project-chat-bot', () => {
   const technologiesStore = useTechnologiesStore()
   const project: Project = {
     id: 'bot-chat',
+    category: 'tool',
     meta: {
       title: 'stores.projects.chat-bot.meta.title',
       description: 'stores.projects.chat-bot.meta.description',

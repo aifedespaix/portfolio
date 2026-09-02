@@ -1,0 +1,12 @@
+fr:
+  stores:
+    projectCategories:
+      game: Jeu
+      tool: Outil
+      education: Éducation
+en:
+  stores:
+    projectCategories:
+      game: Game
+      tool: Tool
+      education: Education

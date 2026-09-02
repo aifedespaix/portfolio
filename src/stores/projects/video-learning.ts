@@ -6,6 +6,7 @@ export const useVideoLearningStore = defineStore('project-video-learning', () =>
 
   const project: Project = {
     id: 'video-learning',
+    category: 'education',
     meta: {
       title: 'stores.projects.video-learning.meta.title',
       description: 'stores.projects.video-learning.meta.description',

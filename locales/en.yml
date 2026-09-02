@@ -37,360 +37,11 @@ components:
     technologies: Tools and technologies
     difficulties: Challenges
     keyPoints: Key points
-pages:
-  companies:
-    meta:
-      title: Companies I've Worked With and Trusted
-      description: >-
-        Discover the companies and agencies that have entrusted me with their
-        web projects. A look back at my freelance collaborations and
-        professional experience.
-    title: My Professional Experiences
-  index:
-    meta:
-      title: Full Stack Web Developer – Building Modern Websites & Applications
-      description: >-
-        I'm a full stack web developer. Explore my portfolio, recent projects,
-        and the technologies I use to build modern, high-performance websites.
-    title: Welcome to my portfolio
-    github:
-      title: My GitHub
-      description: Discover my projects on GitHub
-      button: View my GitHub
-    about: About
-    work: My Work
-    profile:
-      role: Open to new opportunities
-      name: Joan Tassel
-    journey:
-      title: My Journey
-      discovery:
-        title: Discovering Computer Science
-        part1: >-
-          I became passionate about computer science at the age of 12 when I
-          gained access to an internet connection on the family computer.
-        part2: >-
-          I quickly became interested in the structure of websites and learned
-          the basics of HTML and CSS thanks to Site du Zéro (now {link}).
-        part3: >-
-          I soon started developing my own websites and learning programming
-          languages. I strengthened my skills in PHP and SQL, which allowed me
-          to deeply understand the structure of the applications I wanted to
-          create.
-        part4: >-
-          I then developed various websites, whether for freelancers,
-          associations, or personal sites offering help with video games.
-      professional:
-        title: My Professionalization
-        content: >-
-          After high school, I decided to pursue computer science as a career. I
-          spent six years in a {link1} focused on computer science and project
-          management. During this time, I became convinced that I wanted to work
-          in web development. I also had the opportunity to take my first steps
-          {link2} through various internships and three years of work-study.
-        university_link: academic background
-        company_link: in company
-      freelance:
-        title: My Freelance Journey
-        content: >-
-          At the end of my studies, I decided to go freelance. I carried out
-          various projects as a freelance web developer and also turned to
-          content creation in video format on YouTube and Twitch. Today, I work
-          for various clients while continuing to develop my {link1}.
-        projects_link: projects
-      today:
-        title: Still Moving Forward
-        content: >-
-          Today, I keep nurturing my passion for development, content creation,
-          and continuous learning. As a freelancer, I'm open to new
-          opportunities in web development, training, or system administration.
-          I enjoy exploring, sharing knowledge, and tackling technical
-          challenges. Curious and adaptable, I'm driven by the desire to grow
-          and contribute to meaningful projects.
-    images:
-      profile_alt: Profile Picture of Joan Tassel
-      discovery_alt: Discovering Coding
-      university_alt: University
-      freelance_alt: Freelance
-  profile:
-    meta:
-      title: My profile
-      description: Settings and personal information.
-    profile:
-      myProfile: My profile
-      settings: Settings
-  projects:
-    meta:
-      title: Recent Web Projects – Websites, Applications & Interactive Work
-      description: >-
-        Explore a curated selection of my web development projects, including
-        modern websites, interactive apps, and technical experiments.
-    title: My projects
-    discover: Discover the project
-    id:
-      error:
-        title: This project is not detailed for the moment
-        back: Back
-  settings:
-    title: Settings
-    meta:
-      title: Settings
-      description: Settings and personal information.
-    theme:
-      title: Theme
-      label: Theme
-      description: Switch the app theme
-    language:
-      title: Language
-  studies:
-    meta:
-      title: Studies
-      description: My studies and diplomas.
-  technologies:
-    meta:
-      title: Technologies & Software
-      description: >-
-        The technologies, languages, frameworks, libraries, software and tools
-        that I use.
-    description: >-
-      My experience as a web developer has led me to discover several
-      programming languages, as well as multiple frameworks, libraries, and
-      tools. I have also learned to use various software for my work as a
-      content creator. This space centralizes the technologies I have adopted in
-      my workflow.
-    titles:
-      languages: Programming Languages
-      softwares: Software I Regularly Use
-      libraries: Associated Libraries and Frameworks
-      creations: Creations
-    documentation: Documentation
-    experience: '{count} year of experience | {count} years of experience'
-    website:
-      title: Official Website
-    languages:
-      javascript:
-        description: >-
-          JavaScript is a client-side programming language used to create
-          interactive web pages. It was initially designed to add dynamic
-          features to web pages, but today it is used to create complex web
-          applications.
-        utilisation: >-
-          I used JavaScript to create interactive websites. I quickly turned to
-          TypeScript to improve code quality and ease of development.
-        libraries:
-          vue:
-            description: >-
-              Vue.js is a JavaScript framework for creating interactive web
-              pages. It is designed to facilitate the creation of applications
-              and websites of any size.
-            utilisation: >-
-              I used Vue.js to create websites, management interfaces, and
-              interactive overlays.
-            apports: >-
-              Vue is the framework that attracted me the most, due to its
-              HTML-oriented approach to logic. It was with the arrival of Vue 3
-              that I integrated it into a majority of my projects.
-          react:
-            description: >-
-              React is a JavaScript library for creating interactive web pages.
-              It is the most used and popular library for creating web
-              applications.
-            utilisation: >-
-              I mainly use React for the creation of automated videos thanks to
-              the Remotion library. I know the basics, but only use it for this
-              purpose.
-            apports: >-
-              I discovered a new paradigm with JSX and declarative rendering,
-              but I preferred the syntax of Vue for my web projects.
-          angular:
-            description: >-
-              Angular is a framework dedicated to the creation of ambitious web
-              applications.
-            utilisation: >-
-              Angular was my first front-end framework that I discovered. Its
-              component-oriented approach and its architecture imposing a strict
-              code division opened me up to many concepts that I use today.
-          leaflet:
-            description: Leaflet is a JavaScript library for creating interactive maps.
-            utilisation: I use Leaflet to create interactive maps.
-            apports: Leaflet's ease of use saved me time when creating maps.
-          nestjs:
-            description: >-
-              NestJS is a framework for creating Node.js applications. It
-              imposes a framework for the code structure, but offers great
-              flexibility to meet various needs.
-            utilisation: >-
-              I used NestJS to create REST and GraphQL APIs, authentication
-              services, and file storage.
-            apports: >-
-              Having worked quite a bit on AngularJS, I immediately took to the
-              philosophy of NestJS. Today I use it for many backend projects,
-              large or small.
-          firebase:
-            description: Firebase is a NoSQL database service for web development.
-            utilisation: >-
-              I used Firebase for data backup, authentication, and real-time
-              data in projects where I needed a quick-to-set-up service.
-            apports: >-
-              Firebase saves me a lot of time when I have to design and store
-              data for a project where results need to be fast.
-          threejs:
-            description: Three.js is a JavaScript library for creating 3D graphics.
-            utilisation: >-
-              I often use this technology for creating projects where I want to
-              integrate 3D graphics into personal projects. Whether it's small
-              browser games or 3D graphics for websites.
-            apports: >-
-              Three.js opened me up to the world of 3D development and video
-              games. I have made a lot of progress on Object-Oriented
-              Programming and Design Patterns. I was also able to work with
-              Physics engines, notably Rapier, to integrate a collision
-              management system.
-      python:
-        description: >-
-          Python is a versatile programming language, known for its clean syntax
-          and vast community. It is used in various fields such as automation,
-          data analysis, web development, and artificial intelligence.
-        utilisation: >-
-          I use Python to automate tasks, handle files, and build scripts
-          related to video creation and content generation. It's also my go-to
-          language for quick prototyping, experimenting with new ideas, and
-          working with tools like Blender or APIs.
-        libraries:
-          pygame:
-            description: >-
-              Pygame is a Python library designed for 2D game development. It
-              provides modules to easily handle graphics, sound, keyboard/mouse
-              input, and more.
-            utilisation: >-
-              I use Pygame to create interactive simulations or simple games,
-              especially for experimental or automated projects. It's a great
-              library for exploring gameplay concepts or quickly testing visual
-              mechanics.
-            apports: >-
-              Pygame helped me understand game loops, real-time event handling,
-              and sprite management. It's a great tool for quickly prototyping
-              ideas or learning the fundamentals of game development without
-              technical overhead.
-          pandas:
-            description: >-
-              Pandas is a Python library specialized in data manipulation and
-              analysis. It provides powerful data structures like DataFrames,
-              which make handling large amounts of information easier.
-            utilisation: >-
-              I use Pandas to explore, transform, and analyze datasets, whether
-              for automation scripts, reports, or interactive tools. It’s also
-              my go-to for processing CSV or Excel files.
-            apports: >-
-              Pandas taught me how to structure and process data efficiently. I
-              developed a better understanding of vectorized operations, joins,
-              and data cleaning—essential skills for any data-related project.
-      php:
-        description: >-
-          PHP is a programming language mainly used for server-side web
-          development. It is very popular for its use in dynamic web development
-          and its integration with HTML.
-        utilisation: >-
-          I started programming with this language, I learned to use it to
-          factorize the creation of my web pages. Up to designing robust
-          applications thanks to its object-oriented approach. Up to getting
-          interested in frameworks to aim for a cleaner and more maintainable
-          structure.
-        libraries:
-          symfony:
-            description: >-
-              Symfony is a PHP framework for web development. It is designed to
-              facilitate the creation of robust and scalable web applications.
-            utilisation: >-
-              I worked with Symfony on many school projects. The objective was
-              to work efficiently as a group, the framework of such a framework
-              to effectively organize the different production milestones.
-            apports: >-
-              I learned to implement good development practices, such as strict
-              division and effective error management.
-          wordpress:
-            description: >-
-              WordPress is an open-source content management system (CMS)
-              designed to facilitate website creation. It is widely used for
-              creating blogs and showcase sites.
-            utilisation: >-
-              I used WordPress to create websites for self-employed
-              entrepreneurs and associations. The main interest of WordPress is
-              to allow the client to manage their content without needing
-              programming knowledge. My work mainly consists of designing
-              WordPress themes adapted to their needs.
-            apports: >-
-              I learned to work on natural referencing, good security practices,
-              and accessibility.
-    softwares:
-      photoshop:
-        description: Photoshop is an image editing software.
-        utilisation: >-
-          I use Photoshop for image editing, creating visuals for my projects,
-          or quickly working on visual media.
-      illustrator:
-        description: Illustrator is a vector graphics creation software.
-        utilisation: I use Illustrator for creating and modifying logos or illustrations.
-      premierePro:
-        description: Premiere Pro is a video editing software.
-        utilisation: >-
-          I use Premiere Pro to produce a large part of the videos. My mastery
-          of the software combined with good organization allows me to work very
-          efficiently to create dynamic and impactful edits.
-      afterEffects:
-        description: >-
-          After Effects is a motion graphics software, used for motion design
-          and special effects.
-        utilisation: >-
-          I use this software to streamline my video editing. I don't have
-          expert-level mastery, but I use it to complement the use of Premiere
-          Pro.
-      davinciResolve:
-        description: DaVinci Resolve is a video editing software.
-        utilisation: >-
-          I trained in DaVinci Resolve because it is a very complete and free
-          software. It allowed me to progress in color grading and think about
-          new ways to edit my videos.
-      vscode:
-        description: VSCode is a free and open-source multi-platform code editor.
-        utilisation: >-
-          I use VSCode for most of my projects and scripts. Former subscriber to
-          the JetBrains suite during my studies, I did not want to pay for an
-          IDE. I adopted VSCode and its ecosystem. I appreciate having control
-          over my work environment.
-      obsStudio:
-        description: OBS Studio is a video capture and streaming software.
-        utilisation: >-
-          I use OBS Studio for managing streams and recording scenes. It is
-          stable and complete software. It allowed me to design live broadcasts
-          over long periods. Whether it's daily streams or broadcasts lasting
-          several days managed by a remote team.
-      docker:
-        description: >-
-          Docker is a platform that allows you to build, deploy, and run
-          applications in containers. These containers make projects more
-          portable, reproducible, and isolated from the host machine
-          environment.
-        utilisation: >-
-          I use Docker to create consistent development environments, manage
-          temporary databases or external services (like Strapi, Plausible,
-          Traefik, PostgreSQL, WordPress, etc.), and easily deploy my projects
-          across different servers or machines. It allowed me to automate
-          project setups, whether locally or in production.
-        apports: >-
-          Docker helped me improve reliability and productivity, especially when
-          working on multiple projects or with teams. It reduced
-          environment-related issues between developers. I also learned best
-          practices in configuration, security, and orchestration using Docker
-          Compose.
-  not-found:
-    meta:
-      title: Page not found
-      description: Page not found
-    title: Page not found
-    buttons:
-      back: Back
 stores:
+  projectCategories:
+    game: Game
+    tool: Tool
+    education: Education
   company:
     website:
       name: Company Website
@@ -1122,3 +773,356 @@ stores:
         web: Web Development
         work: Project Management
         school: Training
+pages:
+  companies:
+    meta:
+      title: Companies I've Worked With and Trusted
+      description: >-
+        Discover the companies and agencies that have entrusted me with their
+        web projects. A look back at my freelance collaborations and
+        professional experience.
+    title: My Professional Experiences
+  index:
+    meta:
+      title: Full Stack Web Developer – Building Modern Websites & Applications
+      description: >-
+        I'm a full stack web developer. Explore my portfolio, recent projects,
+        and the technologies I use to build modern, high-performance websites.
+    title: Welcome to my portfolio
+    github:
+      title: My GitHub
+      description: Discover my projects on GitHub
+      button: View my GitHub
+    about: About
+    work: My Work
+    profile:
+      role: Open to new opportunities
+      name: Joan Tassel
+    journey:
+      title: My Journey
+      discovery:
+        title: Discovering Computer Science
+        part1: >-
+          I became passionate about computer science at the age of 12 when I
+          gained access to an internet connection on the family computer.
+        part2: >-
+          I quickly became interested in the structure of websites and learned
+          the basics of HTML and CSS thanks to Site du Zéro (now {link}).
+        part3: >-
+          I soon started developing my own websites and learning programming
+          languages. I strengthened my skills in PHP and SQL, which allowed me
+          to deeply understand the structure of the applications I wanted to
+          create.
+        part4: >-
+          I then developed various websites, whether for freelancers,
+          associations, or personal sites offering help with video games.
+      professional:
+        title: My Professionalization
+        content: >-
+          After high school, I decided to pursue computer science as a career. I
+          spent six years in a {link1} focused on computer science and project
+          management. During this time, I became convinced that I wanted to work
+          in web development. I also had the opportunity to take my first steps
+          {link2} through various internships and three years of work-study.
+        university_link: academic background
+        company_link: in company
+      freelance:
+        title: My Freelance Journey
+        content: >-
+          At the end of my studies, I decided to go freelance. I carried out
+          various projects as a freelance web developer and also turned to
+          content creation in video format on YouTube and Twitch. Today, I work
+          for various clients while continuing to develop my {link1}.
+        projects_link: projects
+      today:
+        title: Still Moving Forward
+        content: >-
+          Today, I keep nurturing my passion for development, content creation,
+          and continuous learning. As a freelancer, I'm open to new
+          opportunities in web development, training, or system administration.
+          I enjoy exploring, sharing knowledge, and tackling technical
+          challenges. Curious and adaptable, I'm driven by the desire to grow
+          and contribute to meaningful projects.
+    images:
+      profile_alt: Profile Picture of Joan Tassel
+      discovery_alt: Discovering Coding
+      university_alt: University
+      freelance_alt: Freelance
+  profile:
+    meta:
+      title: My profile
+      description: Settings and personal information.
+    profile:
+      myProfile: My profile
+      settings: Settings
+  projects:
+    meta:
+      title: Recent Web Projects – Websites, Applications & Interactive Work
+      description: >-
+        Explore a curated selection of my web development projects, including
+        modern websites, interactive apps, and technical experiments.
+    title: My projects
+    discover: Discover the project
+    id:
+      error:
+        title: This project is not detailed for the moment
+        back: Back
+  settings:
+    title: Settings
+    meta:
+      title: Settings
+      description: Settings and personal information.
+    theme:
+      title: Theme
+      label: Theme
+      description: Switch the app theme
+    language:
+      title: Language
+  studies:
+    meta:
+      title: Studies
+      description: My studies and diplomas.
+  technologies:
+    meta:
+      title: Technologies & Software
+      description: >-
+        The technologies, languages, frameworks, libraries, software and tools
+        that I use.
+    description: >-
+      My experience as a web developer has led me to discover several
+      programming languages, as well as multiple frameworks, libraries, and
+      tools. I have also learned to use various software for my work as a
+      content creator. This space centralizes the technologies I have adopted in
+      my workflow.
+    titles:
+      languages: Programming Languages
+      softwares: Software I Regularly Use
+      libraries: Associated Libraries and Frameworks
+      creations: Creations
+    documentation: Documentation
+    experience: '{count} year of experience | {count} years of experience'
+    website:
+      title: Official Website
+    languages:
+      javascript:
+        description: >-
+          JavaScript is a client-side programming language used to create
+          interactive web pages. It was initially designed to add dynamic
+          features to web pages, but today it is used to create complex web
+          applications.
+        utilisation: >-
+          I used JavaScript to create interactive websites. I quickly turned to
+          TypeScript to improve code quality and ease of development.
+        libraries:
+          vue:
+            description: >-
+              Vue.js is a JavaScript framework for creating interactive web
+              pages. It is designed to facilitate the creation of applications
+              and websites of any size.
+            utilisation: >-
+              I used Vue.js to create websites, management interfaces, and
+              interactive overlays.
+            apports: >-
+              Vue is the framework that attracted me the most, due to its
+              HTML-oriented approach to logic. It was with the arrival of Vue 3
+              that I integrated it into a majority of my projects.
+          react:
+            description: >-
+              React is a JavaScript library for creating interactive web pages.
+              It is the most used and popular library for creating web
+              applications.
+            utilisation: >-
+              I mainly use React for the creation of automated videos thanks to
+              the Remotion library. I know the basics, but only use it for this
+              purpose.
+            apports: >-
+              I discovered a new paradigm with JSX and declarative rendering,
+              but I preferred the syntax of Vue for my web projects.
+          angular:
+            description: >-
+              Angular is a framework dedicated to the creation of ambitious web
+              applications.
+            utilisation: >-
+              Angular was my first front-end framework that I discovered. Its
+              component-oriented approach and its architecture imposing a strict
+              code division opened me up to many concepts that I use today.
+          leaflet:
+            description: Leaflet is a JavaScript library for creating interactive maps.
+            utilisation: I use Leaflet to create interactive maps.
+            apports: Leaflet's ease of use saved me time when creating maps.
+          nestjs:
+            description: >-
+              NestJS is a framework for creating Node.js applications. It
+              imposes a framework for the code structure, but offers great
+              flexibility to meet various needs.
+            utilisation: >-
+              I used NestJS to create REST and GraphQL APIs, authentication
+              services, and file storage.
+            apports: >-
+              Having worked quite a bit on AngularJS, I immediately took to the
+              philosophy of NestJS. Today I use it for many backend projects,
+              large or small.
+          firebase:
+            description: Firebase is a NoSQL database service for web development.
+            utilisation: >-
+              I used Firebase for data backup, authentication, and real-time
+              data in projects where I needed a quick-to-set-up service.
+            apports: >-
+              Firebase saves me a lot of time when I have to design and store
+              data for a project where results need to be fast.
+          threejs:
+            description: Three.js is a JavaScript library for creating 3D graphics.
+            utilisation: >-
+              I often use this technology for creating projects where I want to
+              integrate 3D graphics into personal projects. Whether it's small
+              browser games or 3D graphics for websites.
+            apports: >-
+              Three.js opened me up to the world of 3D development and video
+              games. I have made a lot of progress on Object-Oriented
+              Programming and Design Patterns. I was also able to work with
+              Physics engines, notably Rapier, to integrate a collision
+              management system.
+      python:
+        description: >-
+          Python is a versatile programming language, known for its clean syntax
+          and vast community. It is used in various fields such as automation,
+          data analysis, web development, and artificial intelligence.
+        utilisation: >-
+          I use Python to automate tasks, handle files, and build scripts
+          related to video creation and content generation. It's also my go-to
+          language for quick prototyping, experimenting with new ideas, and
+          working with tools like Blender or APIs.
+        libraries:
+          pygame:
+            description: >-
+              Pygame is a Python library designed for 2D game development. It
+              provides modules to easily handle graphics, sound, keyboard/mouse
+              input, and more.
+            utilisation: >-
+              I use Pygame to create interactive simulations or simple games,
+              especially for experimental or automated projects. It's a great
+              library for exploring gameplay concepts or quickly testing visual
+              mechanics.
+            apports: >-
+              Pygame helped me understand game loops, real-time event handling,
+              and sprite management. It's a great tool for quickly prototyping
+              ideas or learning the fundamentals of game development without
+              technical overhead.
+          pandas:
+            description: >-
+              Pandas is a Python library specialized in data manipulation and
+              analysis. It provides powerful data structures like DataFrames,
+              which make handling large amounts of information easier.
+            utilisation: >-
+              I use Pandas to explore, transform, and analyze datasets, whether
+              for automation scripts, reports, or interactive tools. It’s also
+              my go-to for processing CSV or Excel files.
+            apports: >-
+              Pandas taught me how to structure and process data efficiently. I
+              developed a better understanding of vectorized operations, joins,
+              and data cleaning—essential skills for any data-related project.
+      php:
+        description: >-
+          PHP is a programming language mainly used for server-side web
+          development. It is very popular for its use in dynamic web development
+          and its integration with HTML.
+        utilisation: >-
+          I started programming with this language, I learned to use it to
+          factorize the creation of my web pages. Up to designing robust
+          applications thanks to its object-oriented approach. Up to getting
+          interested in frameworks to aim for a cleaner and more maintainable
+          structure.
+        libraries:
+          symfony:
+            description: >-
+              Symfony is a PHP framework for web development. It is designed to
+              facilitate the creation of robust and scalable web applications.
+            utilisation: >-
+              I worked with Symfony on many school projects. The objective was
+              to work efficiently as a group, the framework of such a framework
+              to effectively organize the different production milestones.
+            apports: >-
+              I learned to implement good development practices, such as strict
+              division and effective error management.
+          wordpress:
+            description: >-
+              WordPress is an open-source content management system (CMS)
+              designed to facilitate website creation. It is widely used for
+              creating blogs and showcase sites.
+            utilisation: >-
+              I used WordPress to create websites for self-employed
+              entrepreneurs and associations. The main interest of WordPress is
+              to allow the client to manage their content without needing
+              programming knowledge. My work mainly consists of designing
+              WordPress themes adapted to their needs.
+            apports: >-
+              I learned to work on natural referencing, good security practices,
+              and accessibility.
+    softwares:
+      photoshop:
+        description: Photoshop is an image editing software.
+        utilisation: >-
+          I use Photoshop for image editing, creating visuals for my projects,
+          or quickly working on visual media.
+      illustrator:
+        description: Illustrator is a vector graphics creation software.
+        utilisation: I use Illustrator for creating and modifying logos or illustrations.
+      premierePro:
+        description: Premiere Pro is a video editing software.
+        utilisation: >-
+          I use Premiere Pro to produce a large part of the videos. My mastery
+          of the software combined with good organization allows me to work very
+          efficiently to create dynamic and impactful edits.
+      afterEffects:
+        description: >-
+          After Effects is a motion graphics software, used for motion design
+          and special effects.
+        utilisation: >-
+          I use this software to streamline my video editing. I don't have
+          expert-level mastery, but I use it to complement the use of Premiere
+          Pro.
+      davinciResolve:
+        description: DaVinci Resolve is a video editing software.
+        utilisation: >-
+          I trained in DaVinci Resolve because it is a very complete and free
+          software. It allowed me to progress in color grading and think about
+          new ways to edit my videos.
+      vscode:
+        description: VSCode is a free and open-source multi-platform code editor.
+        utilisation: >-
+          I use VSCode for most of my projects and scripts. Former subscriber to
+          the JetBrains suite during my studies, I did not want to pay for an
+          IDE. I adopted VSCode and its ecosystem. I appreciate having control
+          over my work environment.
+      obsStudio:
+        description: OBS Studio is a video capture and streaming software.
+        utilisation: >-
+          I use OBS Studio for managing streams and recording scenes. It is
+          stable and complete software. It allowed me to design live broadcasts
+          over long periods. Whether it's daily streams or broadcasts lasting
+          several days managed by a remote team.
+      docker:
+        description: >-
+          Docker is a platform that allows you to build, deploy, and run
+          applications in containers. These containers make projects more
+          portable, reproducible, and isolated from the host machine
+          environment.
+        utilisation: >-
+          I use Docker to create consistent development environments, manage
+          temporary databases or external services (like Strapi, Plausible,
+          Traefik, PostgreSQL, WordPress, etc.), and easily deploy my projects
+          across different servers or machines. It allowed me to automate
+          project setups, whether locally or in production.
+        apports: >-
+          Docker helped me improve reliability and productivity, especially when
+          working on multiple projects or with teams. It reduced
+          environment-related issues between developers. I also learned best
+          practices in configuration, security, and orchestration using Docker
+          Compose.
+  not-found:
+    meta:
+      title: Page not found
+      description: Page not found
+    title: Page not found
+    buttons:
+      back: Back

@@ -6,6 +6,7 @@ export const useMapEducationStore = defineStore('project-map-education', () => {
 
   const project: Project = {
     id: 'map-education',
+    category: 'education',
     meta: {
       title: 'stores.projects.map-education.meta.title',
       description: 'stores.projects.map-education.meta.description',

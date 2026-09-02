@@ -6,6 +6,7 @@ export const useInterfaceAdministrationStore = defineStore('project-interface-ad
 
   const project: Project = {
     id: 'interface-administration',
+    category: 'tool',
     meta: {
       title: 'stores.projects.interface-administration.meta.title',
       description: 'stores.projects.interface-administration.meta.description',
